@@ -1,0 +1,56 @@
+{
+  "name": "BudgetAppDevelopers",
+  "version": "0.0.1",
+  "description": "Budget management app for the modern world",
+  "main": "server.js",
+  "author": {
+    "name": "Dave McCauley @McDaveATX",
+    "email": "info@davemccauley.net",
+    "url": "http://www.davemccauley.net/"
+  },
+  "homepage": "https://github.com/DaveMcCauley/BudgetAppAPI",
+  "private": "true",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveMcCauley/BudgetAppAPI"
+  },
+  "bugs": {
+    "url": "https://github.com/DaveMcCauley/budgetappapi/issues"
+  },
+  "devDependencies": {
+    "grunt": "0.x.x",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "0.4.x",
+    "grunt-contrib-csslint": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-htmlhint": "latest",
+    "grunt-newer": "latest",
+    "grunt-notify": "latest",
+    "grunt-open": "0.2.3",
+    "grunt-targethtml": "latest",
+    "load-grunt-tasks": "latest",
+    "grunt-express": "latest",
+    "grunt-scss-lint": "latest",
+    "normalize.css": "latest"
+  },
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "express": "~4.7.2",
+    "jshint-stylish": "latest",
+    "mddir": "^1.0.9",
+    "method-override": "~2.1.2",
+    "mongoose": "latest",
+    "morgan": "~1.2.2",
+    "normalize.css": "latest",
+    "time-grunt": "^1.0.0"
+  }
+}
