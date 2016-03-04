@@ -50,7 +50,6 @@
     "method-override": "~2.1.2",
     "mongoose": "latest",
     "morgan": "~1.2.2",
-    "normalize.css": "latest",
     "time-grunt": "^1.0.0"
   }
 }

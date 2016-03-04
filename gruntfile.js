@@ -342,7 +342,7 @@ module.exports = function(grunt) {
 
 // SCSSLINT =========================================================
    scsslint : {
-        allFiles: ['src/**/*.scss'],
+        allFiles: ['src/**/*.scss','!src/**/_normalize.scss'],
         options: {
           config: '.sass-lint.yml',
           colorizeOutput: true,
