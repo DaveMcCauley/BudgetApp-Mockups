@@ -33,16 +33,16 @@ module.exports = function(grunt) {
         ],*/
         browsers: ['last 5 versions', 'ie 8', 'ie 9', '> 1%'],
         map: {
-          prev: 'src/assets/css'
+          prev: 'dev/assets/css'
         },
         diff: true,
       },
 
       dev: {
         expand : true,
-        cwd    : 'src/assets/',
+        cwd    : 'dev/assets/',
         src    : ['css/**/*.css','!css/normalize.css'],
-        dest   : 'src/assets/'
+        dest   : 'dev/assets/'
       },
 
       prod: {
@@ -79,8 +79,8 @@ module.exports = function(grunt) {
           sourceMap   : true,
         },
         files: {
-          'src/assets/css/core.css' : ['src/assets/css/scss/test.css',
-                                       'src/assets/css/scss/test2.css'
+          'dev/assets/css/core.css' : ['dev/assets/css/scss/test.css',
+                                       'dev/assets/css/scss/test2.css'
                                       ]
         }
       }
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
       },
       deps: {
         files: {
-          'src/assets/css/scss/base/normalize.css' : 'node_modules/normalize.css/normalize.css',
+          'dev/assets/css/scss/base/normalize.css' : 'node_modules/normalize.css/normalize.css',
         }
       }
     },
@@ -110,14 +110,14 @@ module.exports = function(grunt) {
         options: {
           import: false
         },
-        src: ['src/assets/css/*.css']
+        src: ['dev/assets/css/*.css']
       },
 
       dev_lax : {
         options: {
           csslintrc: '.csslintrc'
         },
-        src: ['src/assets/css/*.css']
+        src: ['dev/assets/css/*.css']
       },
 
       prod_strict: {
@@ -158,9 +158,9 @@ module.exports = function(grunt) {
       dev: {
         files: [{
           expand: true,
-          cwd: 'src/',
+          cwd: 'dev/',
           src: ['**/*.css'],
-          dest: 'src/'
+          dest: 'dev/'
         }]
       }
     },
@@ -172,7 +172,7 @@ module.exports = function(grunt) {
         options: {
           port: 3000,
           hostname: 'localhost',
-          bases:['./src'],
+          bases:['./dev'],
           livereload: true
 
         }
@@ -199,7 +199,7 @@ module.exports = function(grunt) {
           force: false
       },
       all: {
-        src: ['src/**/*.html']
+        src: ['dev/**/*.html']
       }
     },
 
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
         },
         files: [{
             expand: true,
-            cwd: 'src/',
+            cwd: 'dev/',
             src: ['**/*.html'],
             dest: 'prod/'
         }]
@@ -241,7 +241,7 @@ module.exports = function(grunt) {
 
         files: [{
             expand: true,
-            cwd: 'src/',
+            cwd: 'dev/',
             src: ['**/*.{png,jpg,gif}'],
             dest: 'prod/'
         }]
@@ -255,9 +255,9 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish')
       },
-      // lint everything in src except external libraries
-      prod: ['Gruntfile.js','src/**/*.js','!src/assets/lib/**/*.js'],
-      dev: ['Gruntfile.js','src/**/*.js','!src/assets/lib/**/*.js']
+      // lint everything in dev except external libraries
+      prod: ['Gruntfile.js','dev/**/*.js','!dev/assets/lib/**/*.js'],
+      dev: ['Gruntfile.js','dev/**/*.js','!dev/assets/lib/**/*.js']
     },
 
 
@@ -313,14 +313,14 @@ module.exports = function(grunt) {
           lineNumbers: true,
         },
         //files: {
-        //  'src/assets/css/test.css' : 'src/assets/css/test.scss',
-        //  'src/assets/css/test2.css' : 'src/assets/css/test2.scss'
+        //  'dev/assets/css/test.css' : 'dev/assets/css/test.scss',
+        //  'dev/assets/css/test2.css' : 'dev/assets/css/test2.scss'
         //}
         files: [{
           expand: true,
-          cwd: 'src/assets/css/scss',
+          cwd: 'dev/assets/css/scss',
           src: ['*.scss'],
-          dest: 'src/assets/css',
+          dest: 'dev/assets/css',
           ext: '.css'
         }]
       },
@@ -330,7 +330,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'src/assets/css/scss',
+          cwd: 'dev/assets/css/scss',
           src: ['*.scss'],
           dest: 'prod/assets/css',
           ext: '.css'
@@ -342,7 +342,7 @@ module.exports = function(grunt) {
 
 // SCSSLINT =========================================================
    scsslint : {
-        allFiles: ['src/**/*.scss','!src/**/_normalize.scss'],
+        allFiles: ['dev/**/*.scss','!dev/**/_normalize.scss'],
         options: {
           config: '.sass-lint.yml',
           colorizeOutput: true,
@@ -357,7 +357,7 @@ module.exports = function(grunt) {
       prod: {
         files: {
           // desitination : source
-          'public/index.html' : 'src/index.html'
+          'public/index.html' : 'dev/index.html'
           // add as necessary...
         }
       }
@@ -377,17 +377,17 @@ module.exports = function(grunt) {
       concsamp: { // in-house files
         files: {
           //TODO: assign wildcards?
-          //'dist/js/magic.min.js':'src/js/magic.js',
-          //'dist/js/test.js':'src/js/test.js'
-          //'dist/js/budgetapp.min.js': ['src/js/magic.js','src/js/test.js']
-          'prod/assets/core.js' : ['src/**/*.js','!src/assets/lib/**/*.js']
+          //'dist/js/magic.min.js':'dev/js/magic.js',
+          //'dist/js/test.js':'dev/js/test.js'
+          //'dist/js/budgetapp.min.js': ['dev/js/magic.js','dev/js/test.js']
+          'prod/assets/core.js' : ['dev/**/*.js','!dev/assets/lib/**/*.js']
         }
       },
 
       prod: {
         files: [{
           expand: true,
-          cwd: 'src/',
+          cwd: 'dev/',
           src: ['**/*.js','!assets/js/lib/**/*.js'],
           dest: 'prod/'
         }]
@@ -396,7 +396,7 @@ module.exports = function(grunt) {
       libraries: { // libraries
         files: [{
           expand  : true,                // allow dynamic build
-          cwd     : 'src/assets/lib',    // curernt working dir
+          cwd     : 'dev/assets/lib',    // curernt working dir
           src     : '**/*.js',           // source files
           dest    : 'prod/assets/lib', 	 // destination
           ext     : '.min.js',           // replace .js to .min.js
@@ -412,18 +412,18 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: 'src/**/*.js',
+        files: 'dev/**/*.js',
         tasks: ['jshint']
       },
       sass: {
         options: {
           livereload: true
         },
-        files: ['src/**/*.scss'],
+        files: ['dev/**/*.scss'],
         tasks: ['scsslint','sass']
       },
       html: {
-        files: ['src/**/*.html'],
+        files: ['dev/**/*.html'],
         tasks: ['htmlhint']
       }
 

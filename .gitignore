@@ -1,7 +1,7 @@
 node_modules
 prod
 .sass-cache/
-src/assets/**/*.map
-src/assets/**/*.diff
-src/assets/js/lib
+dev/assets/**/*.map
+dev/assets/**/*.diff
+dev/assets/js/lib
 
