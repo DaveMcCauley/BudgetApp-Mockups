@@ -1,0 +1,13 @@
+// import the Lato font face (use Google fonts for now)
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900,700italic);
+
+// font face stacks
+$font-normal-stack: 'Lato', 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-mono-stack:   Monaco, Consolas, 'Courier New', monospace;
+
+// Basic Text weight definitions
+$font-wt-light:       300;
+$font-wt-normal:      400;
+$font-wt-heavy:       700;
+$font-wt-extra-heavy: 900;
+

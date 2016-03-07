@@ -40,7 +40,8 @@
     "load-grunt-tasks": "latest",
     "grunt-express": "latest",
     "grunt-scss-lint": "latest",
-    "normalize.css": "latest"
+    "bootstrap-sass": "latest",
+    "jquery": "latest"
   },
   "dependencies": {
     "body-parser": "~1.5.2",

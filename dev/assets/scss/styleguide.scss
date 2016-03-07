@@ -1,0 +1,50 @@
+@import 'main';
+
+
+// Palette support
+
+.palette-section {
+	margin-bottom: 1.5em;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.palette-item {
+	display: inline-block;
+	font-size: .8em;
+	margin: 8px;
+	text-align: left;
+	vertical-align: top;
+	width: 200px
+}
+
+.palette-item-color {
+	box-sizing: border-box;
+	padding:.3em .6em;
+	position:relative
+}
+
+.palette-item-color:first-child {
+	border-radius: .4em .4em 0 0
+}
+
+.palette-item-color:last-child {
+	border-radius: 0 0 .4em .4em
+}
+
+.palette-item-color-header {
+	margin: 0;
+	padding-bottom: 1em
+}
+
+.palette-item-color-weight{
+	margin: 0
+}
+
+.palette-item-color-hex {
+	margin: 0;
+	position: absolute;
+	bottom: .3em;
+	right: .6em
+}

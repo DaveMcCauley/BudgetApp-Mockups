@@ -2,6 +2,11 @@
 
 // our wrapper function
 module.exports = function(grunt) {
+  // setup command line option to pass filename for the [prod|dev]-start-[mac|win]
+  // by default it calls the file index.html. But calling, for example:
+  // dev-start-win --fileName='ungabunga.html' you can redirect the target to
+  // ungabunga.html, rather than just 'index.html'.
+  var fileName = grunt.option('fileName') || 'index.html';
 
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
@@ -12,6 +17,7 @@ module.exports = function(grunt) {
    //pull config info from package.json
     pkg: grunt.file.readJSON('package.json'),
     // all configuration goes here
+
 
 
 // AUTOPREFIXER =====================================================
@@ -31,7 +37,19 @@ module.exports = function(grunt) {
           'Opera >= 12',
           'Safari >= 6'
         ],*/
-        browsers: ['last 5 versions', 'ie 8', 'ie 9', '> 1%'],
+        /* my normal browser list */
+        //browsers: ['last 5 versions', 'ie 8', 'ie 9', '> 1%'], <<--this is my
+        /* bootstrap compliant browser list */
+        browsers: [
+          "Android 2.3",
+          "Android >= 4",
+          "Chrome >= 20",
+          "Firefox >= 24",
+          "Explorer >= 8",
+          "iOS >= 6",
+          "Opera >= 12",
+          "Safari >= 6"
+        ],
         map: {
           prev: 'dev/assets/css'
         },
@@ -83,7 +101,37 @@ module.exports = function(grunt) {
                                        'dev/assets/css/scss/test2.css'
                                       ]
         }
-      }
+      },
+
+      dev: {
+        options: {
+          sourceMap   : true,
+        },
+        files: {
+          'dev/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.js',
+                                        'dev/assets/js/vendor/bootstrap/bootstrap.js',
+                                        'dev/assets/js/src/preload/**/*.js'
+                                    ],
+          'dev/assets/js/postload.js' : ['dev/assets/js/src/postload/**/*.js']
+        },
+      },
+      prod: {
+          options: {
+            sourceMap   : false,
+          },
+        files: {
+          /*'dev/assets/js/main.js' : ['dev/assets/js/src/*.js',
+                                     'dev/assets/js/vendor/jquery/jquery.js',
+                                     'dev/assets/js/vendor/bootstrap/bootstrap.js'
+                                    ]*/
+          // TODO: Add future vendor libraries as necesary
+          'prod/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.min.js',
+                                         'dev/assets/js/vendor/bootstrap/bootstrap.min.js',
+                                         'prod/assets/js/src/preload/**/*.min.js'
+                                        ],
+          'prod/assets/js/postload.js' : ['prod/assets/js/src/postload/**/*.min.js']
+        }
+      },
     },
 
 
@@ -96,9 +144,32 @@ module.exports = function(grunt) {
         }
       },
       deps: {
-        files: {
-          'dev/assets/css/scss/base/normalize.css' : 'node_modules/normalize.css/normalize.css',
-        }
+        files: [
+          {
+            expand: true,
+            cwd: 'node_modules/bootstrap-sass/assets/stylesheets',
+            src: ['**/*.scss'],
+            dest: 'dev/assets/scss/vendor/'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/bootstrap-sass/assets/javascripts',
+            src: ['**/*.*'],
+            dest: 'dev/assets/js/vendor/bootstrap/'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/bootstrap-sass/assets/fonts',
+            src: ['**/*.*'],
+            dest: 'dev/assets/fonts'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/jquery/dist',
+            src: ['*.*'],
+            dest: 'dev/assets/js/vendor/jquery/'
+          },
+        ]
       }
     },
 
@@ -255,9 +326,9 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish')
       },
-      // lint everything in dev except external libraries
-      prod: ['Gruntfile.js','dev/**/*.js','!dev/assets/lib/**/*.js'],
-      dev: ['Gruntfile.js','dev/**/*.js','!dev/assets/lib/**/*.js']
+      // lint grundfile.js, everything in dev, except external libraries
+      prod: ['Gruntfile.js','dev/src/**/*.js','!dev/assets/js/vendor/**/*.js'],
+      dev: ['Gruntfile.js','dev/src/**/*.js','!dev/assets/js/vendor/**/*.js']
     },
 
 
@@ -290,15 +361,15 @@ module.exports = function(grunt) {
 // OPEN =============================================================
  open: {
     dev: {
-        path: 'http://localhost:3000/index.html',
+        path: 'http://localhost:3000/' + fileName,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
     prod: {
-        path: 'http://localhost:3000/index.html',
+        path: fileName,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
     mac: {
-        path: 'http://localhost:3000/index.html',
+        path: fileName,
         app: 'FirefoxDeveloperEdition'
     }
 
@@ -307,30 +378,28 @@ module.exports = function(grunt) {
 
 // SASS =============================================================
     sass: {
+
       dev: {
         options: {
           sourcemap: "auto",
           lineNumbers: true,
         },
-        //files: {
-        //  'dev/assets/css/test.css' : 'dev/assets/css/test.scss',
-        //  'dev/assets/css/test2.css' : 'dev/assets/css/test2.scss'
-        //}
         files: [{
           expand: true,
-          cwd: 'dev/assets/css/scss',
+          cwd: 'dev/assets/scss',
           src: ['*.scss'],
           dest: 'dev/assets/css',
           ext: '.css'
         }]
       },
+
       prod: {
         options: {
             sourcemap: "none"
         },
         files: [{
           expand: true,
-          cwd: 'dev/assets/css/scss',
+          cwd: 'dev/assets/scss',
           src: ['*.scss'],
           dest: 'prod/assets/css',
           ext: '.css'
@@ -342,7 +411,7 @@ module.exports = function(grunt) {
 
 // SCSSLINT =========================================================
    scsslint : {
-        allFiles: ['dev/**/*.scss','!dev/**/_normalize.scss'],
+        allFiles: ['dev/**/*.scss','!dev/assets/scss/vendor/**/*.scss'],
         options: {
           config: '.sass-lint.yml',
           colorizeOutput: true,
@@ -372,6 +441,8 @@ module.exports = function(grunt) {
         mangle: true,
         mangleProperties: true,
         preserveComments: false,
+        sourceMap: true,
+        sourceMapIncludeSources: true,
       },
 
       concsamp: { // in-house files
@@ -384,13 +455,46 @@ module.exports = function(grunt) {
         }
       },
 
+      dev: {
+        options: {
+          banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+          mangle: false,
+          mangleProperties: false,
+          preserveComments: 'all',
+          sourceMap: true,
+          sourceMapIncludeSources: true,
+        },
+        files: {
+          'dev/assets/js/main.js' : ['dev/assets/js/src/*.js','dev/assets/js/lib/boostrap/bootstrap.js']
+        }
+      },
+
       prod: {
+          options: {
+            banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+            compress: true,
+            mangle: true,
+            mangleProperties: false,
+            preserveComments: 'some',
+            sourceMap: false,
+        },
         files: [{
-          expand: true,
-          cwd: 'dev/',
-          src: ['**/*.js','!assets/js/lib/**/*.js'],
-          dest: 'prod/'
-        }]
+            expand  : true,
+            cwd     : 'dev/assets/js/src/preload',
+            src     : '**/*.js',
+            dest    : 'prod/assets/js/src/preload',
+            ext     : '.min.js',
+            extDot  : 'last'
+          },
+          {
+            expand  : true,
+            cwd     : 'dev/assets/js/src/postload',
+            src     : '**/*.js',
+            dest    : 'prod/assets/js/src/postload',
+            ext     : '.min.js',
+            extDot  : 'last'
+          }
+        ]
       },
 
       libraries: { // libraries
@@ -413,7 +517,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: 'dev/**/*.js',
-        tasks: ['jshint']
+        tasks: ['jshint','concat:dev']
       },
       sass: {
         options: {
@@ -431,15 +535,13 @@ module.exports = function(grunt) {
 
   });
 
-
-
   // create the tasks
   grunt.registerTask('dev-start-win',['express:dev','open:dev','watch']);
   grunt.registerTask('dev-start-mac',['express:dev','open:mac','watch']);
-  grunt.registerTask('dev-build',['copy:deps','scsslint','sass','csslint:dev_lax','autoprefixer:dev','jshint:dev','htmlhint']);
+
+  grunt.registerTask('dev-build',['copy:deps','scsslint','sass','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:dev','htmlhint']);
   grunt.registerTask('prod-start-win',['express:prod','open:prod','watch']);
 	grunt.registerTask('prod-start-mac',['express:prod','open:mac','watch']);
-  grunt.registerTask('prod-build',['copy:deps','clean','scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','htmlhint','htmlmin:prod','imagemin']);
-
+  grunt.registerTask('prod-build',['copy:deps','clean','scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:prod', 'htmlhint','htmlmin:prod','imagemin']);
 
 };

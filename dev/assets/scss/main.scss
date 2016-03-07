@@ -1,12 +1,14 @@
 @import 'base/all';
+@import 'vendor/bootstrap';
+
 
 .unga-bunga {
-  font-weight: $font-heavy;
+  font-weight: $font-wt-heavy;
   color: $orange-500;
   background-color: $green-100;
 
 }
 .unga-bunga p {
-	font-weight: $font-normal;
+	font-weight: $font-wt-normal;
 	color: $blue-500;
 }
