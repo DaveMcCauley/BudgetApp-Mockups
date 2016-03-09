@@ -110,6 +110,8 @@ module.exports = function(grunt) {
         files: {
           'dev/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.js',
                                         'dev/assets/js/vendor/bootstrap/bootstrap.js',
+                                        'dev/assets/js/vendor/moment/moment.js',
+                                        'dev/assets/js/vendor/datetime-picker/datepicker.js',
                                         'dev/assets/js/src/preload/**/*.js'
                                     ],
           'dev/assets/js/postload.js' : ['dev/assets/js/src/postload/**/*.js']
@@ -127,6 +129,8 @@ module.exports = function(grunt) {
           // TODO: Add future vendor libraries as necesary
           'prod/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.min.js',
                                          'dev/assets/js/vendor/bootstrap/bootstrap.min.js',
+                                         'dev/assets/js/vendor/moment/moment.min.js',
+                                         'dev/assets/js/vendor/datetime-picker/datepicker.min.js',
                                          'prod/assets/js/src/preload/**/*.min.js'
                                         ],
           'prod/assets/js/postload.js' : ['prod/assets/js/src/postload/**/*.min.js']
@@ -149,7 +153,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'node_modules/bootstrap-sass/assets/stylesheets',
             src: ['**/*.scss'],
-            dest: 'dev/assets/scss/vendor/'
+            dest: 'dev/assets/scss/vendor/bootstrap-sass'
           },
           {
             expand: true,
@@ -169,6 +173,11 @@ module.exports = function(grunt) {
             src: ['*.*'],
             dest: 'dev/assets/js/vendor/jquery/'
           },
+          {'dev/assets/js/vendor/moment/moment.js': 'node_modules/moment/src/moment.js',
+          'dev/assets/js/vendor/moment/moment.min.js': 'node_modules/moment/min/moment.min.js',
+          'dev/assets/js/vendor/datetime-picker/datepicker.js': 'node_modules/datetime-picker/dist/datepicker.js',
+          'dev/assets/scss/vendor/datetime-picker/_datepicker.scss': 'node_modules/datetime-picker/example/main.scss'
+          }
         ]
       }
     },
@@ -493,19 +502,22 @@ module.exports = function(grunt) {
             dest    : 'prod/assets/js/src/postload',
             ext     : '.min.js',
             extDot  : 'last'
-          }
+          },
         ]
       },
 
-      libraries: { // libraries
-        files: [{
-          expand  : true,                // allow dynamic build
-          cwd     : 'dev/assets/lib',    // curernt working dir
-          src     : '**/*.js',           // source files
-          dest    : 'prod/assets/lib', 	 // destination
-          ext     : '.min.js',           // replace .js to .min.js
-          extDot  : 'last'               // use the last dot to append to.
-        }],
+      vendor: { // libraries
+        //files: [{
+        //  expand  : true,                // allow dynamic build
+        //  cwd     : 'dev/assets/lib',    // curernt working dir
+        //  src     : '**/*.js',           // source files
+        //  dest    : 'prod/assets/lib', 	 // destination
+        // ext     : '.min.js',           // replace .js to .min.js
+        //  extDot  : 'last'               // use the last dot to append to.
+        //}],
+        files: {
+          'dev/assets/js/vendor/datetime-picker/datepicker.min.js': 'dev/assets/js/vendor/datetime-picker/datepicker.js'
+        }
       }
     },
 
@@ -539,9 +551,9 @@ module.exports = function(grunt) {
   grunt.registerTask('dev-start-win',['express:dev','open:dev','watch']);
   grunt.registerTask('dev-start-mac',['express:dev','open:mac','watch']);
 
-  grunt.registerTask('dev-build',['copy:deps','scsslint','sass','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:dev','htmlhint']);
+  grunt.registerTask('dev-build',['copy:deps','uglify:vendor','scsslint','sass:dev','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:dev','htmlhint']);
   grunt.registerTask('prod-start-win',['express:prod','open:prod','watch']);
 	grunt.registerTask('prod-start-mac',['express:prod','open:mac','watch']);
-  grunt.registerTask('prod-build',['copy:deps','clean','scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:prod', 'htmlhint','htmlmin:prod','imagemin']);
+  grunt.registerTask('prod-build',['copy:deps','uglify:vendor', 'clean','scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:prod', 'htmlhint','htmlmin:prod','imagemin']);
 
 };
