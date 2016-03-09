@@ -111,6 +111,7 @@ module.exports = function(grunt) {
           'dev/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.js',
                                         'dev/assets/js/vendor/bootstrap/bootstrap.js',
                                         'dev/assets/js/vendor/moment/moment.js',
+                                        'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js',
                                         'dev/assets/js/vendor/datetime-picker/datepicker.js',
                                         'dev/assets/js/src/preload/**/*.js'
                                     ],
@@ -130,6 +131,7 @@ module.exports = function(grunt) {
           'prod/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.min.js',
                                          'dev/assets/js/vendor/bootstrap/bootstrap.min.js',
                                          'dev/assets/js/vendor/moment/moment.min.js',
+                                         'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js',
                                          'dev/assets/js/vendor/datetime-picker/datepicker.min.js',
                                          'prod/assets/js/src/preload/**/*.min.js'
                                         ],
@@ -173,10 +175,17 @@ module.exports = function(grunt) {
             src: ['*.*'],
             dest: 'dev/assets/js/vendor/jquery/'
           },
-          {'dev/assets/js/vendor/moment/moment.js': 'node_modules/moment/src/moment.js',
-          'dev/assets/js/vendor/moment/moment.min.js': 'node_modules/moment/min/moment.min.js',
-          'dev/assets/js/vendor/datetime-picker/datepicker.js': 'node_modules/datetime-picker/dist/datepicker.js',
-          'dev/assets/scss/vendor/datetime-picker/_datepicker.scss': 'node_modules/datetime-picker/example/main.scss'
+          { // individual files
+            // moment
+            'dev/assets/js/vendor/moment/moment.js': 'node_modules/moment/src/moment.js',
+            'dev/assets/js/vendor/moment/moment.min.js': 'node_modules/moment/min/moment.min.js',
+            // datetime-picker
+            'dev/assets/js/vendor/datetime-picker/datepicker.js': 'node_modules/datetime-picker/dist/datepicker.js',
+            'dev/assets/scss/vendor/datetime-picker/_datepicker.scss': 'node_modules/datetime-picker/example/main.scss',
+            // bootstrap-datepicker
+            'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+            'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+            'dev/assets/scss/vendor/bootstrap-datepicker/_bootstrap-datepicker3.scss': 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css'
           }
         ]
       }
