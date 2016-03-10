@@ -1,6 +1,13 @@
 @import 'base/all';
 @import 'vendor/all';
 
+// * 	NOTE!! If sourcemaps suddenly stop working... check the
+// * 	bootstrap-datepicker3.css file. Last line in file is a sourcemap
+// *  reference that needs to be deleted. Delete the line in the node_module
+// *  directory, or rebuild the project wiht LESS sourcemaps turned OFF.
+
+
+
 
 .unga-bunga {
   font-weight: $font-wt-heavy;
