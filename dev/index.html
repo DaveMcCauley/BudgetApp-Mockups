@@ -319,7 +319,7 @@ extra small button class (.btn-xs).
 
 <h3>3.1.3 Email input form</h3>
 <label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" />
 <pre>
   <code>
     &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
@@ -329,7 +329,7 @@ extra small button class (.btn-xs).
 
 <h3>3.1.4 File input</h3>
 <label for="exampleInputFile">File input</label>
-<input type="file" id="exampleInputFile">
+<input type="file" id="exampleInputFile" />
 <pre>
   <code>
 &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
@@ -337,10 +337,27 @@ extra small button class (.btn-xs).
   </code>
 </pre>
 
-<label for="exampledate">File input</label>
-<input type="date" id="exampledate">
-
-
+<h3>3.1.5 Date/Time input</h3>
+As text input...
+<div class="date-range-picker example">
+    <input type="text" name="start" class="" />
+</div>
+Prefilled value (in markup)...
+<div class="prefilled-picker example">
+  <input type="text" name="schedule" value="12/12/2020 2:00 PM" />
+</div>
+As a clickable link...
+<div class="button-picker example">
+  <a href="#">Schedule</a>
+  <input type="text" name="schedule" />
+</div>
+As a button...
+<div class="datebutton">
+  <button type="button" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
+  </button>
+  <input type="text" name="butt-test" />
+</div>
 
 </body>
 

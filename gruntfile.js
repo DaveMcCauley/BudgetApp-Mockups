@@ -2,6 +2,7 @@
 
 // our wrapper function
 module.exports = function(grunt) {
+
   // setup command line option to pass filename for the [prod|dev]-start-[mac|win]
   // by default it calls the file index.html. But calling, for example:
   // dev-start-win --fileName='ungabunga.html' you can redirect the target to
@@ -177,7 +178,7 @@ module.exports = function(grunt) {
           },
           { // individual files
             // moment
-            'dev/assets/js/vendor/moment/moment.js': 'node_modules/moment/src/moment.js',
+            'dev/assets/js/vendor/moment/moment.js': 'node_modules/moment/moment.js',
             'dev/assets/js/vendor/moment/moment.min.js': 'node_modules/moment/min/moment.min.js',
             // datetime-picker
             'dev/assets/js/vendor/datetime-picker/datepicker.js': 'node_modules/datetime-picker/dist/datepicker.js',
