@@ -114,9 +114,17 @@ module.exports = function(grunt) {
                                         'dev/assets/js/vendor/moment/moment.js',
                                         'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js',
                                         'dev/assets/js/vendor/datetime-picker/datepicker.js',
-                                        'dev/assets/js/src/preload/**/*.js'
+                                        'dev/assets/js/vendor/highlight/highlight.pack.js',
+                                        'dev/assets/js/src/preload/**/*.js',
                                     ],
-          'dev/assets/js/postload.js' : ['dev/assets/js/src/postload/**/*.js']
+          'dev/assets/js/postload.js' : [//'dev/assets/js/src/postload/**/*.js',
+                                          'dev/assets/js/src/postload/styleguide-palette.js',
+                                          'dev/assets/js/src/postload/codesamp.js',
+                                          'dev/assets/js/src/postload/init-highlight.js'
+                                        ],
+          'dev/assets/css/styleguide.css' : ['dev/assets/css/styleguide.css',
+                                             'dev/assets/css/vendor/highlight/xcode.css',
+                                            ],
         },
       },
       prod: {
@@ -134,9 +142,16 @@ module.exports = function(grunt) {
                                          'dev/assets/js/vendor/moment/moment.min.js',
                                          'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js',
                                          'dev/assets/js/vendor/datetime-picker/datepicker.min.js',
+                                         'dev/assets/js/vendor/highlight.pack.min.js',
                                          'prod/assets/js/src/preload/**/*.min.js'
                                         ],
-          'prod/assets/js/postload.js' : ['prod/assets/js/src/postload/**/*.min.js']
+          'prod/assets/js/postload.js' : [//'prod/assets/js/src/postload/**/*.min.js']
+                                          'prod/assets/js/src/postload/styleguide-palette.min.js',
+                                          'prod/assets/js/src/postload/codesamp.min.js'
+                                        ],
+          'prod/assets/css/styleguide.css' : ['prod/assets/css/styleguide.css',
+                                              'prod/assets/css/vendor/highlight/xcode.css',
+                                            ],
         }
       },
     },
@@ -186,7 +201,7 @@ module.exports = function(grunt) {
             // bootstrap-datepicker
             'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
             'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-            'dev/assets/scss/vendor/bootstrap-datepicker/_bootstrap-datepicker3.scss': 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css'
+            'dev/assets/scss/vendor/bootstrap-datepicker/_bootstrap-datepicker3.scss': 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css',
           }
         ]
       }
@@ -538,7 +553,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: 'dev/**/*.js',
+        files: 'dev/assets/js/src/**/*.js',
         tasks: ['jshint','concat:dev']
       },
       sass: {

@@ -1,0 +1,81 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #3f3f3f;
+  color: #dcdcdc;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-tag {
+  color: #e3ceab;
+}
+
+.hljs-template-tag {
+  color: #dcdcdc;
+}
+
+.hljs-number {
+  color: #8cd0d3;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute {
+  color: #efdcbc;
+}
+
+.hljs-literal {
+  color: #efefaf;
+}
+
+.hljs-subst {
+  color: #8f8f8f;
+}
+
+.hljs-title,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-section,
+.hljs-type {
+  color: #efef8f;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: #dca3a3;
+}
+
+.hljs-deletion,
+.hljs-string,
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #cc9393;
+}
+
+.hljs-addition,
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #7f9f7f;
+}
+
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInplbmJ1cm4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7OztFQUtFOztBQUVGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2Ysb0JBQW9CO0VBQ3BCLGVBQWU7Q0FDaEI7O0FBRUQ7OztFQUdFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDs7O0VBR0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEOzs7Ozs7RUFNRSxlQUFlO0NBQ2hCOztBQUVEOzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVEOzs7O0VBSUUsZUFBZTtDQUNoQjs7QUFFRDs7OztFQUlFLGVBQWU7Q0FDaEI7OztBQUdEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0Usa0JBQWtCO0NBQ25CIiwiZmlsZSI6InplbmJ1cm4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcblxuWmVuYnVybiBzdHlsZSBmcm9tIHZvbGRtYXIucnUgKGMpIFZsYWRpbWlyIEVwaWZhbm92IDx2b2xkbWFyQHZvbGRtYXIucnU+XG5iYXNlZCBvbiBkYXJrLmNzcyBieSBJdmFuIFNhZ2FsYWV2XG5cbiovXG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIHBhZGRpbmc6IDAuNWVtO1xuICBiYWNrZ3JvdW5kOiAjM2YzZjNmO1xuICBjb2xvcjogI2RjZGNkYztcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLXRhZyB7XG4gIGNvbG9yOiAjZTNjZWFiO1xufVxuXG4uaGxqcy10ZW1wbGF0ZS10YWcge1xuICBjb2xvcjogI2RjZGNkYztcbn1cblxuLmhsanMtbnVtYmVyIHtcbiAgY29sb3I6ICM4Y2QwZDM7XG59XG5cbi5obGpzLXZhcmlhYmxlLFxuLmhsanMtdGVtcGxhdGUtdmFyaWFibGUsXG4uaGxqcy1hdHRyaWJ1dGUge1xuICBjb2xvcjogI2VmZGNiYztcbn1cblxuLmhsanMtbGl0ZXJhbCB7XG4gIGNvbG9yOiAjZWZlZmFmO1xufVxuXG4uaGxqcy1zdWJzdCB7XG4gIGNvbG9yOiAjOGY4ZjhmO1xufVxuXG4uaGxqcy10aXRsZSxcbi5obGpzLW5hbWUsXG4uaGxqcy1zZWxlY3Rvci1pZCxcbi5obGpzLXNlbGVjdG9yLWNsYXNzLFxuLmhsanMtc2VjdGlvbixcbi5obGpzLXR5cGUge1xuICBjb2xvcjogI2VmZWY4Zjtcbn1cblxuLmhsanMtc3ltYm9sLFxuLmhsanMtYnVsbGV0LFxuLmhsanMtbGluayB7XG4gIGNvbG9yOiAjZGNhM2EzO1xufVxuXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLXN0cmluZyxcbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtYnVpbHRpbi1uYW1lIHtcbiAgY29sb3I6ICNjYzkzOTM7XG59XG5cbi5obGpzLWFkZGl0aW9uLFxuLmhsanMtY29tbWVudCxcbi5obGpzLXF1b3RlLFxuLmhsanMtbWV0YSB7XG4gIGNvbG9yOiAjN2Y5ZjdmO1xufVxuXG5cbi5obGpzLWVtcGhhc2lzIHtcbiAgZm9udC1zdHlsZTogaXRhbGljO1xufVxuXG4uaGxqcy1zdHJvbmcge1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cbiJdfQ== */

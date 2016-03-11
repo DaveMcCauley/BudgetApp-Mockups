@@ -1,0 +1,73 @@
+/*
+
+School Book style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 15px 0.5em 0.5em 30px;
+  font-size: 11px;
+  line-height:16px;
+}
+
+pre{
+  background:#f6f6ae url(./school-book.png);
+  border-top: solid 2px #d2e8b9;
+  border-bottom: solid 1px #d2e8b9;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal {
+  color:#005599;
+  font-weight:bold;
+}
+
+.hljs,
+.hljs-subst {
+  color: #3e5915;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-link {
+  color: #2c009f;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #e60415;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-name,
+.hljs-selector-id,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjaG9vbC1ib29rLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztFQUlFOztBQUVGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQiwrQkFBK0I7RUFDL0IsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtDQUNsQjs7QUFFRDtFQUNFLDBDQUEwQztFQUMxQyw4QkFBOEI7RUFDOUIsaUNBQWlDO0NBQ2xDOztBQUVEOzs7RUFHRSxjQUFjO0VBQ2QsaUJBQWlCO0NBQ2xCOztBQUVEOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7Ozs7Ozs7Ozs7O0VBY0UsZUFBZTtDQUNoQjs7QUFFRDs7OztFQUlFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7Ozs7Ozs7RUFVRSxrQkFBa0I7Q0FDbkI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEIiLCJmaWxlIjoic2Nob29sLWJvb2suY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcblxuU2Nob29sIEJvb2sgc3R5bGUgZnJvbSBnb2xkYmxvZy5jb20udWEgKGMpIFphcmlwb3YgWXVyYSA8eXVyNGlrN0B1a3IubmV0PlxuXG4qL1xuXG4uaGxqcyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBvdmVyZmxvdy14OiBhdXRvO1xuICBwYWRkaW5nOiAxNXB4IDAuNWVtIDAuNWVtIDMwcHg7XG4gIGZvbnQtc2l6ZTogMTFweDtcbiAgbGluZS1oZWlnaHQ6MTZweDtcbn1cblxucHJle1xuICBiYWNrZ3JvdW5kOiNmNmY2YWUgdXJsKC4vc2Nob29sLWJvb2sucG5nKTtcbiAgYm9yZGVyLXRvcDogc29saWQgMnB4ICNkMmU4Yjk7XG4gIGJvcmRlci1ib3R0b206IHNvbGlkIDFweCAjZDJlOGI5O1xufVxuXG4uaGxqcy1rZXl3b3JkLFxuLmhsanMtc2VsZWN0b3ItdGFnLFxuLmhsanMtbGl0ZXJhbCB7XG4gIGNvbG9yOiMwMDU1OTk7XG4gIGZvbnQtd2VpZ2h0OmJvbGQ7XG59XG5cbi5obGpzLFxuLmhsanMtc3Vic3Qge1xuICBjb2xvcjogIzNlNTkxNTtcbn1cblxuLmhsanMtc3RyaW5nLFxuLmhsanMtdGl0bGUsXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtdHlwZSxcbi5obGpzLXN5bWJvbCxcbi5obGpzLWJ1bGxldCxcbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtYnVpbHRpbi1uYW1lLFxuLmhsanMtYWRkaXRpb24sXG4uaGxqcy12YXJpYWJsZSxcbi5obGpzLXRlbXBsYXRlLXRhZyxcbi5obGpzLXRlbXBsYXRlLXZhcmlhYmxlLFxuLmhsanMtbGluayB7XG4gIGNvbG9yOiAjMmMwMDlmO1xufVxuXG4uaGxqcy1jb21tZW50LFxuLmhsanMtcXVvdGUsXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLW1ldGEge1xuICBjb2xvcjogI2U2MDQxNTtcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy1kb2N0YWcsXG4uaGxqcy10aXRsZSxcbi5obGpzLXNlY3Rpb24sXG4uaGxqcy10eXBlLFxuLmhsanMtbmFtZSxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5cbi5obGpzLWVtcGhhc2lzIHtcbiAgZm9udC1zdHlsZTogaXRhbGljO1xufVxuIl19 */

@@ -1,0 +1,109 @@
+/*
+
+Gruvbox style (dark) (c) Pavel Pertsev (original style at https://github.com/morhetz/gruvbox)
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #282828;
+}
+
+.hljs,
+.hljs-subst {
+  color: #ebdbb2;
+}
+
+/* Gruvbox Red */
+.hljs-deletion,
+.hljs-formula,
+.hljs-keyword,
+.hljs-link,
+.hljs-selector-tag {
+  color: #fb4934;
+}
+
+/* Gruvbox Blue */
+.hljs-built_in,
+.hljs-emphasis,
+.hljs-name,
+.hljs-quote,
+.hljs-strong,
+.hljs-title,
+.hljs-variable {
+  color: #83a598;
+}
+
+/* Gruvbox Yellow */
+.hljs-attr,
+.hljs-params,
+.hljs-template-tag,
+.hljs-type {
+  color: #fabd2f;
+}
+
+/* Gruvbox Purple */
+.hljs-builtin-name,
+.hljs-doctag,
+.hljs-literal,
+.hljs-number {
+  color: #8f3f71;
+}
+
+/* Gruvbox Orange */
+.hljs-code,
+.hljs-meta,
+.hljs-regexp,
+.hljs-selector-id,
+.hljs-template-variable {
+  color: #fe8019;
+}
+
+/* Gruvbox Green */
+.hljs-addition,
+.hljs-meta-string,
+.hljs-section,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-string,
+.hljs-symbol {
+  color: #b8bb26;
+}
+
+/* Gruvbox Aqua */
+.hljs-attribute,
+.hljs-bullet,
+.hljs-class,
+.hljs-function,
+.hljs-function .hljs-keyword,
+.hljs-meta-keyword,
+.hljs-selector-pseudo,
+.hljs-tag {
+  color: #8ec07c;
+}
+
+/* Gruvbox Gray */
+.hljs-comment {
+  color: #928374;
+}
+
+/* Gruvbox Purple */
+.hljs-link_label,
+.hljs-literal,
+.hljs-number {
+  color: #d3869b;
+}
+
+.hljs-comment,
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-section,
+.hljs-strong,
+.hljs-tag {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImdydXZib3gtZGFyay5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjtFQUNFLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsZUFBZTtFQUNmLG9CQUFvQjtDQUNyQjs7QUFFRDs7RUFFRSxlQUFlO0NBQ2hCOztBQUVELGlCQUFpQjtBQUNqQjs7Ozs7RUFLRSxlQUFlO0NBQ2hCOztBQUVELGtCQUFrQjtBQUNsQjs7Ozs7OztFQU9FLGVBQWU7Q0FDaEI7O0FBRUQsb0JBQW9CO0FBQ3BCOzs7O0VBSUUsZUFBZTtDQUNoQjs7QUFFRCxvQkFBb0I7QUFDcEI7Ozs7RUFJRSxlQUFlO0NBQ2hCOztBQUVELG9CQUFvQjtBQUNwQjs7Ozs7RUFLRSxlQUFlO0NBQ2hCOztBQUVELG1CQUFtQjtBQUNuQjs7Ozs7OztFQU9FLGVBQWU7Q0FDaEI7O0FBRUQsa0JBQWtCO0FBQ2xCOzs7Ozs7OztFQVFFLGVBQWU7Q0FDaEI7O0FBRUQsa0JBQWtCO0FBQ2xCO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRCxvQkFBb0I7QUFDcEI7OztFQUdFLGVBQWU7Q0FDaEI7O0FBRUQ7O0VBRUUsbUJBQW1CO0NBQ3BCOztBQUVEOzs7RUFHRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoiZ3J1dmJveC1kYXJrLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG5cbkdydXZib3ggc3R5bGUgKGRhcmspIChjKSBQYXZlbCBQZXJ0c2V2IChvcmlnaW5hbCBzdHlsZSBhdCBodHRwczovL2dpdGh1Yi5jb20vbW9yaGV0ei9ncnV2Ym94KVxuXG4qL1xuXG4uaGxqcyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBvdmVyZmxvdy14OiBhdXRvO1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgYmFja2dyb3VuZDogIzI4MjgyODtcbn1cblxuLmhsanMsXG4uaGxqcy1zdWJzdCB7XG4gIGNvbG9yOiAjZWJkYmIyO1xufVxuXG4vKiBHcnV2Ym94IFJlZCAqL1xuLmhsanMtZGVsZXRpb24sXG4uaGxqcy1mb3JtdWxhLFxuLmhsanMta2V5d29yZCxcbi5obGpzLWxpbmssXG4uaGxqcy1zZWxlY3Rvci10YWcge1xuICBjb2xvcjogI2ZiNDkzNDtcbn1cblxuLyogR3J1dmJveCBCbHVlICovXG4uaGxqcy1idWlsdF9pbixcbi5obGpzLWVtcGhhc2lzLFxuLmhsanMtbmFtZSxcbi5obGpzLXF1b3RlLFxuLmhsanMtc3Ryb25nLFxuLmhsanMtdGl0bGUsXG4uaGxqcy12YXJpYWJsZSB7XG4gIGNvbG9yOiAjODNhNTk4O1xufVxuXG4vKiBHcnV2Ym94IFllbGxvdyAqL1xuLmhsanMtYXR0cixcbi5obGpzLXBhcmFtcyxcbi5obGpzLXRlbXBsYXRlLXRhZyxcbi5obGpzLXR5cGUge1xuICBjb2xvcjogI2ZhYmQyZjtcbn1cblxuLyogR3J1dmJveCBQdXJwbGUgKi9cbi5obGpzLWJ1aWx0aW4tbmFtZSxcbi5obGpzLWRvY3RhZyxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy1udW1iZXIge1xuICBjb2xvcjogIzhmM2Y3MTtcbn1cblxuLyogR3J1dmJveCBPcmFuZ2UgKi9cbi5obGpzLWNvZGUsXG4uaGxqcy1tZXRhLFxuLmhsanMtcmVnZXhwLFxuLmhsanMtc2VsZWN0b3ItaWQsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSB7XG4gIGNvbG9yOiAjZmU4MDE5O1xufVxuXG4vKiBHcnV2Ym94IEdyZWVuICovXG4uaGxqcy1hZGRpdGlvbixcbi5obGpzLW1ldGEtc3RyaW5nLFxuLmhsanMtc2VjdGlvbixcbi5obGpzLXNlbGVjdG9yLWF0dHIsXG4uaGxqcy1zZWxlY3Rvci1jbGFzcyxcbi5obGpzLXN0cmluZyxcbi5obGpzLXN5bWJvbCB7XG4gIGNvbG9yOiAjYjhiYjI2O1xufVxuXG4vKiBHcnV2Ym94IEFxdWEgKi9cbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLWJ1bGxldCxcbi5obGpzLWNsYXNzLFxuLmhsanMtZnVuY3Rpb24sXG4uaGxqcy1mdW5jdGlvbiAuaGxqcy1rZXl3b3JkLFxuLmhsanMtbWV0YS1rZXl3b3JkLFxuLmhsanMtc2VsZWN0b3ItcHNldWRvLFxuLmhsanMtdGFnIHtcbiAgY29sb3I6ICM4ZWMwN2M7XG59XG5cbi8qIEdydXZib3ggR3JheSAqL1xuLmhsanMtY29tbWVudCB7XG4gIGNvbG9yOiAjOTI4Mzc0O1xufVxuXG4vKiBHcnV2Ym94IFB1cnBsZSAqL1xuLmhsanMtbGlua19sYWJlbCxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy1udW1iZXIge1xuICBjb2xvcjogI2QzODY5Yjtcbn1cblxuLmhsanMtY29tbWVudCxcbi5obGpzLWVtcGhhc2lzIHtcbiAgZm9udC1zdHlsZTogaXRhbGljO1xufVxuXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtc3Ryb25nLFxuLmhsanMtdGFnIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

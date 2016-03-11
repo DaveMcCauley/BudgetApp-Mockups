@@ -1,0 +1,70 @@
+/* Base16 Atelier Dune Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Dune Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #999580;
+}
+
+/* Atelier-Dune Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #d73737;
+}
+
+/* Atelier-Dune Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #b65611;
+}
+
+/* Atelier-Dune Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #60ac39;
+}
+
+/* Atelier-Dune Blue */
+.hljs-title,
+.hljs-section {
+  color: #6684e1;
+}
+
+/* Atelier-Dune Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b854d4;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #20201d;
+  color: #a6a28c;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF0ZWxpZXItZHVuZS1kYXJrLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxzQ0FBc0M7QUFDdEMsNkZBQTZGO0FBQzdGLDRGQUE0Rjs7QUFFNUYsMEJBQTBCO0FBQzFCOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQsc0JBQXNCO0FBQ3RCOzs7Ozs7Ozs7O0VBVUUsZUFBZTtDQUNoQjs7QUFFRCx5QkFBeUI7QUFDekI7Ozs7Ozs7RUFPRSxlQUFlO0NBQ2hCOztBQUVELHdCQUF3QjtBQUN4Qjs7O0VBR0UsZUFBZTtDQUNoQjs7QUFFRCx1QkFBdUI7QUFDdkI7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRCx5QkFBeUI7QUFDekI7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLGVBQWU7RUFDZixlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0Usa0JBQWtCO0NBQ25CIiwiZmlsZSI6ImF0ZWxpZXItZHVuZS1kYXJrLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEJhc2UxNiBBdGVsaWVyIER1bmUgRGFyayAtIFRoZW1lICovXG4vKiBieSBCcmFtIGRlIEhhYW4gKGh0dHA6Ly9hdGVsaWVyYnJhbS5naXRodWIuaW8vc3ludGF4LWhpZ2hsaWdodGluZy9hdGVsaWVyLXNjaGVtZXMvZHVuZSkgKi9cbi8qIE9yaWdpbmFsIEJhc2UxNiBjb2xvciBzY2hlbWUgYnkgQ2hyaXMgS2VtcHNvbiAoaHR0cHM6Ly9naXRodWIuY29tL2Nocmlza2VtcHNvbi9iYXNlMTYpICovXG5cbi8qIEF0ZWxpZXItRHVuZSBDb21tZW50ICovXG4uaGxqcy1jb21tZW50LFxuLmhsanMtcXVvdGUge1xuICBjb2xvcjogIzk5OTU4MDtcbn1cblxuLyogQXRlbGllci1EdW5lIFJlZCAqL1xuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLXRhZyxcbi5obGpzLW5hbWUsXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1saW5rLFxuLmhsanMtbmFtZSxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc2VsZWN0b3ItY2xhc3Mge1xuICBjb2xvcjogI2Q3MzczNztcbn1cblxuLyogQXRlbGllci1EdW5lIE9yYW5nZSAqL1xuLmhsanMtbnVtYmVyLFxuLmhsanMtbWV0YSxcbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtYnVpbHRpbi1uYW1lLFxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLXR5cGUsXG4uaGxqcy1wYXJhbXMge1xuICBjb2xvcjogI2I2NTYxMTtcbn1cblxuLyogQXRlbGllci1EdW5lIEdyZWVuICovXG4uaGxqcy1zdHJpbmcsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy1idWxsZXQge1xuICBjb2xvcjogIzYwYWMzOTtcbn1cblxuLyogQXRlbGllci1EdW5lIEJsdWUgKi9cbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbiB7XG4gIGNvbG9yOiAjNjY4NGUxO1xufVxuXG4vKiBBdGVsaWVyLUR1bmUgUHVycGxlICovXG4uaGxqcy1rZXl3b3JkLFxuLmhsanMtc2VsZWN0b3ItdGFnIHtcbiAgY29sb3I6ICNiODU0ZDQ7XG59XG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIGJhY2tncm91bmQ6ICMyMDIwMWQ7XG4gIGNvbG9yOiAjYTZhMjhjO1xuICBwYWRkaW5nOiAwLjVlbTtcbn1cblxuLmhsanMtZW1waGFzaXMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5obGpzLXN0cm9uZyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuIl19 */

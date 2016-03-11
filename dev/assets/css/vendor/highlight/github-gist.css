@@ -1,0 +1,72 @@
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+  display: block;
+  background: white;
+  padding: 0.5em;
+  color: #333333;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #969896;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #a71d5d;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #63a35c;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #795da3;
+}
+
+.hljs-addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.hljs-deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImdpdGh1Yi1naXN0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0dBR0c7O0FBRUg7RUFDRSxlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixlQUFlO0VBQ2YsaUJBQWlCO0NBQ2xCOztBQUVEOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7OztFQU1FLGVBQWU7Q0FDaEI7O0FBRUQ7OztFQUdFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7RUFJRSxlQUFlO0NBQ2hCOztBQUVEOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEOzs7Ozs7RUFNRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsZUFBZTtFQUNmLDBCQUEwQjtDQUMzQjs7QUFFRDtFQUNFLGVBQWU7RUFDZiwwQkFBMEI7Q0FDM0I7O0FBRUQ7RUFDRSwyQkFBMkI7Q0FDNUIiLCJmaWxlIjoiZ2l0aHViLWdpc3QuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBHaXRIdWIgR2lzdCBUaGVtZVxuICogQXV0aG9yIDogTG91aXMgQmFycmFucXVlaXJvIC0gaHR0cHM6Ly9naXRodWIuY29tL0xvdWlzQmFycmFucXVlaXJvXG4gKi9cblxuLmhsanMge1xuICBkaXNwbGF5OiBibG9jaztcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIHBhZGRpbmc6IDAuNWVtO1xuICBjb2xvcjogIzMzMzMzMztcbiAgb3ZlcmZsb3cteDogYXV0bztcbn1cblxuLmhsanMtY29tbWVudCxcbi5obGpzLW1ldGEge1xuICBjb2xvcjogIzk2OTg5Njtcbn1cblxuLmhsanMtc3RyaW5nLFxuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLXN0cm9uZyxcbi5obGpzLWVtcGhhc2lzLFxuLmhsanMtcXVvdGUge1xuICBjb2xvcjogI2RmNTAwMDtcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLXR5cGUge1xuICBjb2xvcjogI2E3MWQ1ZDtcbn1cblxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLXN5bWJvbCxcbi5obGpzLWJ1bGxldCxcbi5obGpzLWF0dHJpYnV0ZSB7XG4gIGNvbG9yOiAjMDA4NmIzO1xufVxuXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtbmFtZSB7XG4gIGNvbG9yOiAjNjNhMzVjO1xufVxuXG4uaGxqcy10YWcge1xuICBjb2xvcjogIzMzMzMzMztcbn1cblxuLmhsanMtdGl0bGUsXG4uaGxqcy1hdHRyLFxuLmhsanMtc2VsZWN0b3ItaWQsXG4uaGxqcy1zZWxlY3Rvci1jbGFzcyxcbi5obGpzLXNlbGVjdG9yLWF0dHIsXG4uaGxqcy1zZWxlY3Rvci1wc2V1ZG8ge1xuICBjb2xvcjogIzc5NWRhMztcbn1cblxuLmhsanMtYWRkaXRpb24ge1xuICBjb2xvcjogIzU1YTUzMjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VhZmZlYTtcbn1cblxuLmhsanMtZGVsZXRpb24ge1xuICBjb2xvcjogI2JkMmMwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZWNlYztcbn1cblxuLmhsanMtbGluayB7XG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuIl19 */

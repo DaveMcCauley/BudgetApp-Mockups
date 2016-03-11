@@ -1,0 +1,89 @@
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+.hljs,
+.hljs-subst {
+  color: #434f54;
+}
+
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
+  color: #00979D;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #D35400;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #00979D;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #005C5F;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: rgba(149,165,166,.8);
+}
+
+.hljs-meta-keyword {
+  color: #728E00;
+}
+
+.hljs-meta {
+  color: #728E00;
+  color: #434f54;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-function {
+  color: #728E00;
+}
+
+.hljs-number {
+  color: #8A7B52;  
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFyZHVpbm8tbGlnaHQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7O0VBSUU7O0FBRUY7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGVBQWU7RUFDZixvQkFBb0I7Q0FDckI7O0FBRUQ7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRDs7Ozs7RUFLRSxlQUFlO0NBQ2hCOztBQUVEOzs7OztFQUtFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7Ozs7RUFPRSxlQUFlO0NBQ2hCOztBQUVEOzs7Ozs7O0VBT0UsZUFBZTtDQUNoQjs7QUFFRDs7RUFFRSxlQUFlO0VBQ2Ysa0JBQWtCO0NBQ25COztBQUVEO0VBQ0UsNEJBQTRCO0NBQzdCOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7RUFDZixlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0Usa0JBQWtCO0NBQ25COztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEIiLCJmaWxlIjoiYXJkdWluby1saWdodC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuXG5BcmR1aW5vwq4gTGlnaHQgVGhlbWUgLSBTdGVmYW5pYSBNZWxsYWkgPHMubWVsbGFpQGFyZHVpbm8uY2M+XG5cbiovXG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIHBhZGRpbmc6IDAuNWVtO1xuICBiYWNrZ3JvdW5kOiAjRkZGRkZGO1xufVxuXG4uaGxqcyxcbi5obGpzLXN1YnN0IHtcbiAgY29sb3I6ICM0MzRmNTQ7XG59XG5cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1hdHRyaWJ1dGUsXG4uaGxqcy1zZWxlY3Rvci10YWcsXG4uaGxqcy1kb2N0YWcsXG4uaGxqcy1uYW1lIHtcbiAgY29sb3I6ICMwMDk3OUQ7XG59XG5cbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLWJ1bGxldCxcbi5obGpzLWNvZGUsXG4uaGxqcy1hZGRpdGlvbiB7XG4gIGNvbG9yOiAjRDM1NDAwO1xufVxuXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy12YXJpYWJsZSxcbi5obGpzLXRlbXBsYXRlLXZhcmlhYmxlLFxuLmhsanMtbGluayxcbi5obGpzLXNlbGVjdG9yLWF0dHIsXG4uaGxqcy1zZWxlY3Rvci1wc2V1ZG8ge1xuICBjb2xvcjogIzAwOTc5RDtcbn1cblxuLmhsanMtdHlwZSxcbi5obGpzLXN0cmluZyxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc2VsZWN0b3ItY2xhc3MsXG4uaGxqcy1xdW90ZSxcbi5obGpzLXRlbXBsYXRlLXRhZyxcbi5obGpzLWRlbGV0aW9uIHtcbiAgY29sb3I6ICMwMDVDNUY7XG59XG5cbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbiB7XG4gIGNvbG9yOiAjODgwMDAwO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmhsanMtY29tbWVudCB7XG4gIGNvbG9yOiByZ2JhKDE0OSwxNjUsMTY2LC44KTtcbn1cblxuLmhsanMtbWV0YS1rZXl3b3JkIHtcbiAgY29sb3I6ICM3MjhFMDA7XG59XG5cbi5obGpzLW1ldGEge1xuICBjb2xvcjogIzcyOEUwMDtcbiAgY29sb3I6ICM0MzRmNTQ7XG59XG5cbi5obGpzLWVtcGhhc2lzIHtcbiAgZm9udC1zdHlsZTogaXRhbGljO1xufVxuXG4uaGxqcy1zdHJvbmcge1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmhsanMtZnVuY3Rpb24ge1xuICBjb2xvcjogIzcyOEUwMDtcbn1cblxuLmhsanMtbnVtYmVyIHtcbiAgY29sb3I6ICM4QTdCNTI7ICBcbn1cbiJdfQ== */

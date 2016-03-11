@@ -1,0 +1,89 @@
+/*
+Description: Foundation 4 docs style for highlight.js
+Author: Dan Allen <dan.j.allen@gmail.com>
+Website: http://foundation.zurb.com/docs/
+Version: 1.0
+Date: 2013-04-02
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #eee; color: black;
+}
+
+.hljs-link,
+.hljs-emphasis,
+.hljs-attribute,
+.hljs-addition {
+  color: #070;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong,
+.hljs-string,
+.hljs-deletion {
+  color: #d14;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-quote,
+.hljs-comment {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-section,
+.hljs-title {
+  color: #900;
+}
+
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #458;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #336699;
+}
+
+.hljs-bullet {
+  color: #997700;
+}
+
+.hljs-meta {
+  color: #3344bb;
+}
+
+.hljs-code,
+.hljs-number,
+.hljs-literal,
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #099;
+}
+
+.hljs-regexp {
+  background-color: #fff0ff;
+  color: #880088;
+}
+
+.hljs-symbol {
+  color: #990073;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #007700;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvdW5kYXRpb24uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7RUFNRTs7QUFFRjtFQUNFLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGlCQUFpQixDQUFDLGFBQWE7Q0FDaEM7O0FBRUQ7Ozs7RUFJRSxZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7OztFQUdFLFlBQVk7Q0FDYjs7QUFFRDtFQUNFLGtCQUFrQjtDQUNuQjs7QUFFRDs7RUFFRSxZQUFZO0VBQ1osbUJBQW1CO0NBQ3BCOztBQUVEOztFQUVFLFlBQVk7Q0FDYjs7QUFFRDs7RUFFRSxZQUFZO0NBQ2I7O0FBRUQ7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEOzs7OztFQUtFLFlBQVk7Q0FDYjs7QUFFRDtFQUNFLDBCQUEwQjtFQUMxQixlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDs7OztFQUlFLGVBQWU7Q0FDaEIiLCJmaWxlIjoiZm91bmRhdGlvbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuRGVzY3JpcHRpb246IEZvdW5kYXRpb24gNCBkb2NzIHN0eWxlIGZvciBoaWdobGlnaHQuanNcbkF1dGhvcjogRGFuIEFsbGVuIDxkYW4uai5hbGxlbkBnbWFpbC5jb20+XG5XZWJzaXRlOiBodHRwOi8vZm91bmRhdGlvbi56dXJiLmNvbS9kb2NzL1xuVmVyc2lvbjogMS4wXG5EYXRlOiAyMDEzLTA0LTAyXG4qL1xuXG4uaGxqcyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBvdmVyZmxvdy14OiBhdXRvO1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgYmFja2dyb3VuZDogI2VlZTsgY29sb3I6IGJsYWNrO1xufVxuXG4uaGxqcy1saW5rLFxuLmhsanMtZW1waGFzaXMsXG4uaGxqcy1hdHRyaWJ1dGUsXG4uaGxqcy1hZGRpdGlvbiB7XG4gIGNvbG9yOiAjMDcwO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cblxuLmhsanMtc3Ryb25nLFxuLmhsanMtc3RyaW5nLFxuLmhsanMtZGVsZXRpb24ge1xuICBjb2xvcjogI2QxNDtcbn1cblxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5cbi5obGpzLXF1b3RlLFxuLmhsanMtY29tbWVudCB7XG4gIGNvbG9yOiAjOTk4O1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5obGpzLXNlY3Rpb24sXG4uaGxqcy10aXRsZSB7XG4gIGNvbG9yOiAjOTAwO1xufVxuXG4uaGxqcy1jbGFzcyAuaGxqcy10aXRsZSxcbi5obGpzLXR5cGUge1xuICBjb2xvcjogIzQ1ODtcbn1cblxuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSB7XG4gIGNvbG9yOiAjMzM2Njk5O1xufVxuXG4uaGxqcy1idWxsZXQge1xuICBjb2xvcjogIzk5NzcwMDtcbn1cblxuLmhsanMtbWV0YSB7XG4gIGNvbG9yOiAjMzM0NGJiO1xufVxuXG4uaGxqcy1jb2RlLFxuLmhsanMtbnVtYmVyLFxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcge1xuICBjb2xvcjogIzA5OTtcbn1cblxuLmhsanMtcmVnZXhwIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjBmZjtcbiAgY29sb3I6ICM4ODAwODg7XG59XG5cbi5obGpzLXN5bWJvbCB7XG4gIGNvbG9yOiAjOTkwMDczO1xufVxuXG4uaGxqcy10YWcsXG4uaGxqcy1uYW1lLFxuLmhsanMtc2VsZWN0b3ItaWQsXG4uaGxqcy1zZWxlY3Rvci1jbGFzcyB7XG4gIGNvbG9yOiAjMDA3NzAwO1xufVxuIl19 */

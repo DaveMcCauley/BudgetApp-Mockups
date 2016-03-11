@@ -1,0 +1,70 @@
+/* Base16 Atelier Forest Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Forest Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #9c9491;
+}
+
+/* Atelier-Forest Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #f22c40;
+}
+
+/* Atelier-Forest Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #df5320;
+}
+
+/* Atelier-Forest Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #7b9726;
+}
+
+/* Atelier-Forest Blue */
+.hljs-title,
+.hljs-section {
+  color: #407ee7;
+}
+
+/* Atelier-Forest Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #6666ea;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1b1918;
+  color: #a8a19f;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF0ZWxpZXItZm9yZXN0LWRhcmsuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHdDQUF3QztBQUN4QywrRkFBK0Y7QUFDL0YsNEZBQTRGOztBQUU1Riw0QkFBNEI7QUFDNUI7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRCx3QkFBd0I7QUFDeEI7Ozs7Ozs7Ozs7RUFVRSxlQUFlO0NBQ2hCOztBQUVELDJCQUEyQjtBQUMzQjs7Ozs7OztFQU9FLGVBQWU7Q0FDaEI7O0FBRUQsMEJBQTBCO0FBQzFCOzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVELHlCQUF5QjtBQUN6Qjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVELDJCQUEyQjtBQUMzQjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsZUFBZTtFQUNmLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoiYXRlbGllci1mb3Jlc3QtZGFyay5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBCYXNlMTYgQXRlbGllciBGb3Jlc3QgRGFyayAtIFRoZW1lICovXG4vKiBieSBCcmFtIGRlIEhhYW4gKGh0dHA6Ly9hdGVsaWVyYnJhbS5naXRodWIuaW8vc3ludGF4LWhpZ2hsaWdodGluZy9hdGVsaWVyLXNjaGVtZXMvZm9yZXN0KSAqL1xuLyogT3JpZ2luYWwgQmFzZTE2IGNvbG9yIHNjaGVtZSBieSBDaHJpcyBLZW1wc29uIChodHRwczovL2dpdGh1Yi5jb20vY2hyaXNrZW1wc29uL2Jhc2UxNikgKi9cblxuLyogQXRlbGllci1Gb3Jlc3QgQ29tbWVudCAqL1xuLmhsanMtY29tbWVudCxcbi5obGpzLXF1b3RlIHtcbiAgY29sb3I6ICM5Yzk0OTE7XG59XG5cbi8qIEF0ZWxpZXItRm9yZXN0IFJlZCAqL1xuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLXRhZyxcbi5obGpzLW5hbWUsXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1saW5rLFxuLmhsanMtbmFtZSxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc2VsZWN0b3ItY2xhc3Mge1xuICBjb2xvcjogI2YyMmM0MDtcbn1cblxuLyogQXRlbGllci1Gb3Jlc3QgT3JhbmdlICovXG4uaGxqcy1udW1iZXIsXG4uaGxqcy1tZXRhLFxuLmhsanMtYnVpbHRfaW4sXG4uaGxqcy1idWlsdGluLW5hbWUsXG4uaGxqcy1saXRlcmFsLFxuLmhsanMtdHlwZSxcbi5obGpzLXBhcmFtcyB7XG4gIGNvbG9yOiAjZGY1MzIwO1xufVxuXG4vKiBBdGVsaWVyLUZvcmVzdCBHcmVlbiAqL1xuLmhsanMtc3RyaW5nLFxuLmhsanMtc3ltYm9sLFxuLmhsanMtYnVsbGV0IHtcbiAgY29sb3I6ICM3Yjk3MjY7XG59XG5cbi8qIEF0ZWxpZXItRm9yZXN0IEJsdWUgKi9cbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbiB7XG4gIGNvbG9yOiAjNDA3ZWU3O1xufVxuXG4vKiBBdGVsaWVyLUZvcmVzdCBQdXJwbGUgKi9cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcge1xuICBjb2xvcjogIzY2NjZlYTtcbn1cblxuLmhsanMge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3cteDogYXV0bztcbiAgYmFja2dyb3VuZDogIzFiMTkxODtcbiAgY29sb3I6ICNhOGExOWY7XG4gIHBhZGRpbmc6IDAuNWVtO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cblxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

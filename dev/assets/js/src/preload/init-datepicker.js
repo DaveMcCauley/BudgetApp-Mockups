@@ -2,25 +2,25 @@
 
 $(function() {
   $('.date-range-picker input').picker({
-    onInitialize: function() {
-      console.log(this.formattedVal());
-    }
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+    //}
   });
 
   $('.button-picker a').picker({
     outputTo: $('.button-picker input'),
     prefill: true,
-    onInitialize: function() {
-      console.log(this.formattedVal());
-    }
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+   // }
   });
 
   $('.datebutton').picker({
     outputTo: $('.datebutton input'),
     prefill: true,
-    onInitialize: function() {
-      console.log(this.formattedVal());
-    }
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+    //}
   });
 
   $('.prefilled-picker input').picker();

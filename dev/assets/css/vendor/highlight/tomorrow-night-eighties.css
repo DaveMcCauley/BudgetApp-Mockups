@@ -1,0 +1,75 @@
+/* Tomorrow Night Eighties Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #999999;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #f2777a;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #f99157;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #ffcc66;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #99cc99;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #6699cc;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #cc99cc;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #2d2d2d;
+  color: #cccccc;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvbW9ycm93LW5pZ2h0LWVpZ2h0aWVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxtQ0FBbUM7QUFDbkMscUVBQXFFO0FBQ3JFLHVFQUF1RTs7QUFFdkUsc0JBQXNCO0FBQ3RCOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQsa0JBQWtCO0FBQ2xCOzs7Ozs7OztFQVFFLGVBQWU7Q0FDaEI7O0FBRUQscUJBQXFCO0FBQ3JCOzs7Ozs7OztFQVFFLGVBQWU7Q0FDaEI7O0FBRUQscUJBQXFCO0FBQ3JCO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRCxvQkFBb0I7QUFDcEI7Ozs7RUFJRSxlQUFlO0NBQ2hCOztBQUVELG1CQUFtQjtBQUNuQjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVELHFCQUFxQjtBQUNyQjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsZUFBZTtFQUNmLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoidG9tb3Jyb3ctbmlnaHQtZWlnaHRpZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogVG9tb3Jyb3cgTmlnaHQgRWlnaHRpZXMgVGhlbWUgKi9cbi8qIE9yaWdpbmFsIHRoZW1lIC0gaHR0cHM6Ly9naXRodWIuY29tL2Nocmlza2VtcHNvbi90b21vcnJvdy10aGVtZSAqL1xuLyogaHR0cDovL2ptYmxvZy5naXRodWIuY29tL2NvbG9yLXRoZW1lcy1mb3ItZ29vZ2xlLWNvZGUtaGlnaGxpZ2h0anMgKi9cblxuLyogVG9tb3Jyb3cgQ29tbWVudCAqL1xuLmhsanMtY29tbWVudCxcbi5obGpzLXF1b3RlIHtcbiAgY29sb3I6ICM5OTk5OTk7XG59XG5cbi8qIFRvbW9ycm93IFJlZCAqL1xuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLXRhZyxcbi5obGpzLW5hbWUsXG4uaGxqcy1zZWxlY3Rvci1pZCxcbi5obGpzLXNlbGVjdG9yLWNsYXNzLFxuLmhsanMtcmVnZXhwLFxuLmhsanMtZGVsZXRpb24ge1xuICBjb2xvcjogI2YyNzc3YTtcbn1cblxuLyogVG9tb3Jyb3cgT3JhbmdlICovXG4uaGxqcy1udW1iZXIsXG4uaGxqcy1idWlsdF9pbixcbi5obGpzLWJ1aWx0aW4tbmFtZSxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy10eXBlLFxuLmhsanMtcGFyYW1zLFxuLmhsanMtbWV0YSxcbi5obGpzLWxpbmsge1xuICBjb2xvcjogI2Y5OTE1Nztcbn1cblxuLyogVG9tb3Jyb3cgWWVsbG93ICovXG4uaGxqcy1hdHRyaWJ1dGUge1xuICBjb2xvcjogI2ZmY2M2Njtcbn1cblxuLyogVG9tb3Jyb3cgR3JlZW4gKi9cbi5obGpzLXN0cmluZyxcbi5obGpzLXN5bWJvbCxcbi5obGpzLWJ1bGxldCxcbi5obGpzLWFkZGl0aW9uIHtcbiAgY29sb3I6ICM5OWNjOTk7XG59XG5cbi8qIFRvbW9ycm93IEJsdWUgKi9cbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbiB7XG4gIGNvbG9yOiAjNjY5OWNjO1xufVxuXG4vKiBUb21vcnJvdyBQdXJwbGUgKi9cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcge1xuICBjb2xvcjogI2NjOTljYztcbn1cblxuLmhsanMge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3cteDogYXV0bztcbiAgYmFja2dyb3VuZDogIzJkMmQyZDtcbiAgY29sb3I6ICNjY2NjY2M7XG4gIHBhZGRpbmc6IDAuNWVtO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cblxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

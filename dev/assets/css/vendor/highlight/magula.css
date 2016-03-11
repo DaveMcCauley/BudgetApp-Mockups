@@ -1,0 +1,71 @@
+/*
+Description: Magula style for highligh.js
+Author: Ruslan Keba <rukeba@gmail.com>
+Website: http://rukeba.com/
+Version: 1.0
+Date: 2009-01-03
+Music: Aphex Twin / Xtal
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background-color: #f4f4f4;
+}
+
+.hljs,
+.hljs-subst {
+  color: black;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #050;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #777;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-type,
+.hljs-link {
+  color: #800;
+}
+
+.hljs-deletion,
+.hljs-meta {
+  color: #00e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-tag,
+.hljs-name {
+  font-weight: bold;
+  color: navy;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1hZ3VsYS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7RUFPRTs7QUFFRjtFQUNFLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsZUFBZTtFQUNmLDBCQUEwQjtDQUMzQjs7QUFFRDs7RUFFRSxhQUFhO0NBQ2Q7O0FBRUQ7Ozs7Ozs7OztFQVNFLFlBQVk7Q0FDYjs7QUFFRDs7RUFFRSxZQUFZO0NBQ2I7O0FBRUQ7Ozs7O0VBS0UsWUFBWTtDQUNiOztBQUVEOztFQUVFLFlBQVk7Q0FDYjs7QUFFRDs7Ozs7Ozs7RUFRRSxrQkFBa0I7RUFDbEIsWUFBWTtDQUNiOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0Usa0JBQWtCO0NBQ25CIiwiZmlsZSI6Im1hZ3VsYS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuRGVzY3JpcHRpb246IE1hZ3VsYSBzdHlsZSBmb3IgaGlnaGxpZ2guanNcbkF1dGhvcjogUnVzbGFuIEtlYmEgPHJ1a2ViYUBnbWFpbC5jb20+XG5XZWJzaXRlOiBodHRwOi8vcnVrZWJhLmNvbS9cblZlcnNpb246IDEuMFxuRGF0ZTogMjAwOS0wMS0wM1xuTXVzaWM6IEFwaGV4IFR3aW4gLyBYdGFsXG4qL1xuXG4uaGxqcyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBvdmVyZmxvdy14OiBhdXRvO1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjRmNDtcbn1cblxuLmhsanMsXG4uaGxqcy1zdWJzdCB7XG4gIGNvbG9yOiBibGFjaztcbn1cblxuLmhsanMtc3RyaW5nLFxuLmhsanMtdGl0bGUsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy1idWxsZXQsXG4uaGxqcy1hdHRyaWJ1dGUsXG4uaGxqcy1hZGRpdGlvbixcbi5obGpzLXZhcmlhYmxlLFxuLmhsanMtdGVtcGxhdGUtdGFnLFxuLmhsanMtdGVtcGxhdGUtdmFyaWFibGUge1xuICBjb2xvcjogIzA1MDtcbn1cblxuLmhsanMtY29tbWVudCxcbi5obGpzLXF1b3RlIHtcbiAgY29sb3I6ICM3Nzc7XG59XG5cbi5obGpzLW51bWJlcixcbi5obGpzLXJlZ2V4cCxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy10eXBlLFxuLmhsanMtbGluayB7XG4gIGNvbG9yOiAjODAwO1xufVxuXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLW1ldGEge1xuICBjb2xvcjogIzAwZTtcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWRvY3RhZyxcbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbixcbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtdGFnLFxuLmhsanMtbmFtZSB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBjb2xvcjogbmF2eTtcbn1cblxuLmhsanMtZW1waGFzaXMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5obGpzLXN0cm9uZyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuIl19 */

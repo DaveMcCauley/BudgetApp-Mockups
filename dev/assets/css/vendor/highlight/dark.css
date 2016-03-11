@@ -1,0 +1,64 @@
+/*
+
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #444;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: white;
+}
+
+.hljs,
+.hljs-subst {
+  color: #ddd;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #d88;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #777;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhcmsuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7O0VBSUU7O0FBRUY7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGVBQWU7RUFDZixpQkFBaUI7Q0FDbEI7O0FBRUQ7Ozs7O0VBS0UsYUFBYTtDQUNkOztBQUVEOztFQUVFLFlBQVk7Q0FDYjs7QUFFRDs7Ozs7Ozs7Ozs7O0VBWUUsWUFBWTtDQUNiOztBQUVEOzs7O0VBSUUsWUFBWTtDQUNiOztBQUVEOzs7Ozs7Ozs7RUFTRSxrQkFBa0I7Q0FDbkI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEIiLCJmaWxlIjoiZGFyay5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuXG5EYXJrIHN0eWxlIGZyb20gc29mdHdhcmVtYW5pYWNzLm9yZyAoYykgSXZhbiBTYWdhbGFldiA8TWFuaWFjQFNvZnR3YXJlTWFuaWFjcy5Pcmc+XG5cbiovXG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIHBhZGRpbmc6IDAuNWVtO1xuICBiYWNrZ3JvdW5kOiAjNDQ0O1xufVxuXG4uaGxqcy1rZXl3b3JkLFxuLmhsanMtc2VsZWN0b3ItdGFnLFxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLXNlY3Rpb24sXG4uaGxqcy1saW5rIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uaGxqcyxcbi5obGpzLXN1YnN0IHtcbiAgY29sb3I6ICNkZGQ7XG59XG5cbi5obGpzLXN0cmluZyxcbi5obGpzLXRpdGxlLFxuLmhsanMtbmFtZSxcbi5obGpzLXR5cGUsXG4uaGxqcy1hdHRyaWJ1dGUsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy1idWxsZXQsXG4uaGxqcy1idWlsdF9pbixcbi5obGpzLWFkZGl0aW9uLFxuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS10YWcsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSB7XG4gIGNvbG9yOiAjZDg4O1xufVxuXG4uaGxqcy1jb21tZW50LFxuLmhsanMtcXVvdGUsXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLW1ldGEge1xuICBjb2xvcjogIzc3Nztcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy10aXRsZSxcbi5obGpzLXNlY3Rpb24sXG4uaGxqcy1kb2N0YWcsXG4uaGxqcy10eXBlLFxuLmhsanMtbmFtZSxcbi5obGpzLXN0cm9uZyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cbiJdfQ== */

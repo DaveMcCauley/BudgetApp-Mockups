@@ -1,0 +1,75 @@
+/*
+    Name:     Kimbie (light)
+    Author:   Jan T. Sott
+    License:  Creative Commons Attribution-ShareAlike 4.0 Unported License
+    URL:      https://github.com/idleberg/Kimbie-highlight.js
+*/
+
+/* Kimbie Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #a57a4c;
+}
+
+/* Kimbie Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-meta {
+  color: #dc3958;
+}
+
+/* Kimbie Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-deletion,
+.hljs-link {
+  color: #f79a32;
+}
+
+/* Kimbie Yellow */
+.hljs-title,
+.hljs-section,
+.hljs-attribute {
+  color: #f06431;
+}
+
+/* Kimbie Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #889b4a;
+}
+
+/* Kimbie Purple */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-function {
+  color: #98676a;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #fbebd4;
+  color: #84613d;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImtpbWJpZS5saWdodC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7O0VBS0U7O0FBRUYsb0JBQW9CO0FBQ3BCOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQsZ0JBQWdCO0FBQ2hCOzs7Ozs7OztFQVFFLGVBQWU7Q0FDaEI7O0FBRUQsbUJBQW1CO0FBQ25COzs7Ozs7OztFQVFFLGVBQWU7Q0FDaEI7O0FBRUQsbUJBQW1CO0FBQ25COzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVELGtCQUFrQjtBQUNsQjs7OztFQUlFLGVBQWU7Q0FDaEI7O0FBRUQsbUJBQW1CO0FBQ25COzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsZUFBZTtFQUNmLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoia2ltYmllLmxpZ2h0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gICAgTmFtZTogICAgIEtpbWJpZSAobGlnaHQpXG4gICAgQXV0aG9yOiAgIEphbiBULiBTb3R0XG4gICAgTGljZW5zZTogIENyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24tU2hhcmVBbGlrZSA0LjAgVW5wb3J0ZWQgTGljZW5zZVxuICAgIFVSTDogICAgICBodHRwczovL2dpdGh1Yi5jb20vaWRsZWJlcmcvS2ltYmllLWhpZ2hsaWdodC5qc1xuKi9cblxuLyogS2ltYmllIENvbW1lbnQgKi9cbi5obGpzLWNvbW1lbnQsXG4uaGxqcy1xdW90ZSB7XG4gIGNvbG9yOiAjYTU3YTRjO1xufVxuXG4vKiBLaW1iaWUgUmVkICovXG4uaGxqcy12YXJpYWJsZSxcbi5obGpzLXRlbXBsYXRlLXZhcmlhYmxlLFxuLmhsanMtdGFnLFxuLmhsanMtbmFtZSxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc2VsZWN0b3ItY2xhc3MsXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1tZXRhIHtcbiAgY29sb3I6ICNkYzM5NTg7XG59XG5cbi8qIEtpbWJpZSBPcmFuZ2UgKi9cbi5obGpzLW51bWJlcixcbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtYnVpbHRpbi1uYW1lLFxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLXR5cGUsXG4uaGxqcy1wYXJhbXMsXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLWxpbmsge1xuICBjb2xvcjogI2Y3OWEzMjtcbn1cblxuLyogS2ltYmllIFllbGxvdyAqL1xuLmhsanMtdGl0bGUsXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtYXR0cmlidXRlIHtcbiAgY29sb3I6ICNmMDY0MzE7XG59XG5cbi8qIEtpbWJpZSBHcmVlbiAqL1xuLmhsanMtc3RyaW5nLFxuLmhsanMtc3ltYm9sLFxuLmhsanMtYnVsbGV0LFxuLmhsanMtYWRkaXRpb24ge1xuICBjb2xvcjogIzg4OWI0YTtcbn1cblxuLyogS2ltYmllIFB1cnBsZSAqL1xuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWZ1bmN0aW9uIHtcbiAgY29sb3I6ICM5ODY3NmE7XG59XG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIGJhY2tncm91bmQ6ICNmYmViZDQ7XG4gIGNvbG9yOiAjODQ2MTNkO1xuICBwYWRkaW5nOiAwLjVlbTtcbn1cblxuLmhsanMtZW1waGFzaXMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5obGpzLXN0cm9uZyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuIl19 */

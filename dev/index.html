@@ -87,48 +87,41 @@
 <h1>2.0 Components</h1>
 
 <h2>2.1 Buttons</h2>
+
 <p>Our buttons are created with standard bootstrap construction. For example:</p>
+<div class="js-codesamp">
 <button type="button" class="btn btn-default btn-sm"> Preferences </button>
 <button type="button" class="btn btn-default btn-sm"> Ok </button>
 <button type="button" class="btn btn-default btn-sm"> Schedule </button>
-<pre>
-	<code>
-		&lt;button type="button" class="btn btn-default btn-sm"&gt; Preferences &lt;/button&gt;
-		&lt;button type="button" class="btn btn-default btn-sm"&gt; Ok &lt;/button&gt;
-		&lt;button type="button" class="btn btn-default btn-sm"&gt; Schedule &lt;/button&gt;
-	</code>
-</pre>
+</div>
+
 
 <h3>2.1.1 Button Color</h3>
-	<p>There are six basic button colors.</p>
-	<button type="button" class="btn btn-default btn-sm">Default</button>
-	<button type="button" class="btn btn-primary btn-sm">Primary</button>
-	<button type="button" class="btn btn-success btn-sm">Success</button>
-	<button type="button" class="btn btn-info btn-sm">Info</button>
-	<button type="button" class="btn btn-warning btn-sm">Warning</button>
-	<button type="button" class="btn btn-danger btn-sm">Danger</button>
-	<pre>
-		<code>
-			&lt;button type="button" class="btn btn-default btn-sm"&gt;Default&lt;/button&gt;
-			&lt;button type="button" class="btn btn-primary btn-sm"&gt;Primary&lt;/button&gt;
-			&lt;button type="button" class="btn btn-success btn-sm"&gt;Success&lt;/button&gt;
-			&lt;button type="button" class="btn btn-info btn-sm"&gt;Info&lt;/button&gt;
-			&lt;button type="button" class="btn btn-warning btn-sm"&gt;Warning&lt;/button&gt;
-			&lt;button type="button" class="btn btn-danger btn-sm"&gt;Danger&lt;/button&gt;
-		</code>
-	</pre>
+
+<p>There are six basic button colors.</p>
+<div class="js-codesamp">
+<button type="button" class="btn btn-default btn-sm">Default</button>
+<button type="button" class="btn btn-primary btn-sm">Primary</button>
+<button type="button" class="btn btn-success btn-sm">Success</button>
+<button type="button" class="btn btn-info btn-sm">Info</button>
+<button type="button" class="btn btn-warning btn-sm">Warning</button>
+<button type="button" class="btn btn-danger btn-sm">Danger</button>
+</div>
+
 
 <h3>2.1.2 Button Size</h3>
+
 BudgetApp buttons are sized with .btn-sm by default. Only use alternate sizes of
 the bootstrap default (no included class) or large (.btn-lg). Never use the
 extra small button class (.btn-xs).
 
 <h3>2.1.2 Buttons with Glyphs</h3>
+
 <p>Buttons with glyphs provide a fast way of picking choices. Use these in places
 	 where the user is presented an option, or many options to aid in quickly
 	 recognizing the deisred action.
 </p>
-
+<div class="js-codesamp">
 <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Preferences
 </button>
@@ -138,22 +131,10 @@ extra small button class (.btn-xs).
 <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
 </button>
-
-<pre>
-	<code>
-		&lt;button type="button" class="btn btn-default btn-sm"&gt;
-  		&lt;span class="glyphicon glyphicon-cog" aria-hidden="true"&gt;&lt;/span&gt; Preferences
-		&lt;/button&gt;
-		&lt;button type="button" class="btn btn-default btn-sm"&gt;
-  		&lt;span class="glyphicon glyphicon-ok" aria-hidden="true"&gt;&lt;/span&gt; Ok
-		&lt;/button&gt;
-		&lt;button type="button" class="btn btn-default btn-sm"&gt;
-  		&lt;span class="glyphicon glyphicon-time" aria-hidden="true"&gt;&lt;/span&gt; Schedule
-		&lt;/button&gt;
-	</code>
-</pre>
+</div>
 
 <p>Button can also use glyphs without any text, such as:</p>
+<div class="js-codesamp">
 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
 </button>
@@ -163,39 +144,21 @@ extra small button class (.btn-xs).
 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
 </button>
-<pre>
-	<code>
-		&lt;button type="button" class="btn btn-default" aria-label="Left Align"&gt;
-  		&lt;span class="glyphicon glyphicon-align-left" aria-hidden="true"&gt;&lt;/span&gt;
-		&lt;/button&gt;
-		&lt;button type="button" class="btn btn-default" aria-label="Left Align"&gt;
-		  &lt;span class="glyphicon glyphicon-align-center" aria-hidden="true"&gt;&lt;/span&gt;
-		&lt;/button&gt;
-		&lt;button type="button" class="btn btn-default" aria-label="Left Align"&gt;
-		  &lt;span class="glyphicon glyphicon-align-right" aria-hidden="true"&gt;&lt;/span&gt;
-		&lt;/button&gt;
-	</code>
-</pre>
+</div>
 
 <h3>2.1.3 Button Groups</h3>
+
 <p>Buttons can may grouped when they share a common useage. Basic sample is to wrap
 	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
 	 the group, and not each button.
 </p>
+<div class="js-codesamp">
 <div class="btn-group btn-group-sm" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
 </div>
-<pre>
-	<code>
-		&lt;div class="btn-group btn-group-sm" role="group" aria-label="..."&gt;
-			&lt;button type="button" class="btn btn-default "&gt;Left&lt;/button&gt;
-			&lt;button type="button" class="btn btn-default"&gt;Middle&lt;/button&gt;
-			&lt;button type="button" class="btn btn-default"&gt;Right&lt;/button&gt;
-		&lt;/div&gt;
-	</code>
-</pre>
+</div>
 <blockquote>
 	<b>Tooltips and popovers in button groups require special setting</b>
 	When using tooltips or popovers on elements within a .btn-group, you'll have
@@ -206,6 +169,7 @@ extra small button class (.btn-xs).
 
 <h3>Button Dropdowns</h3>
 <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
+<div class="js-codesamp">
 <div class="btn-group btn-group-sm">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Default <span class="caret"></span>
@@ -278,121 +242,240 @@ extra small button class (.btn-xs).
     <li><a href="#">Separated link</a></li>
   </ul>
 </div>
+</div>
 
-<pre>
-	<code>
-		&lt;div class="btn-group btn-group-sm"&gt;
-		  &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
-		    Action &lt;span class="caret"&gt;&lt;/span&gt;
-		  &lt;/button&gt;
-		  &lt;ul class="dropdown-menu"&gt;
-		    &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-		    &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-		    &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-		    &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
-		    &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-		  &lt;/ul&gt;
-		&lt;/div&gt;
-	</code>
-</pre>
 
 <h1>3.0 Forms</h1>
+
 <h2>3.1 Controls</h2>
+
 <h3>3.1.1 Text input form</h3>
+<div class="js-codesamp">
 <label for="usr">Name:</label>
 <input type="text" class="form-control" id="usr" />
-<pre>
-  <code>
-    &lt;label for="usr"&gt;Name:&lt;/label&gt;
-    &lt;input type="text" class="form-control" id="usr"&gt;
-  </code>
-</pre>
+</div>
+
 <h3>3.1.2 Password input form</h3>
+<div class="js-codesamp">
 <label for="pwd">Name:</label>
 <input type="password" class="form-control" id="pwd" />
-<pre>
-  <code>
-    &lt;label for="pwd"&gt;Name:&lt;/label&gt;
-    &lt;input type="password" class="form-control" id="pwd"&gt;
-  </code>
-</pre>
+</div>
 
 <h3>3.1.3 Email input form</h3>
+The input is evaluated by browser. (Developer should still santize it!)
+<div class="js-codesamp">
 <label for="exampleInputEmail1">Email address</label>
 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" />
-<pre>
-  <code>
-    &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
-    &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"&gt;
-  </code>
-</pre>
+</div>
 
 <h3>3.1.4 File input</h3>
+<div class="js-codesamp">
 <label for="exampleInputFile">File input</label>
 <input type="file" id="exampleInputFile" />
-<pre>
-  <code>
-&lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
-&lt;input type="file" id="exampleInputFile"&gt;
-  </code>
-</pre>
+</div>
 
 <h3>3.1.5 Date/Time input</h3>
 
 As text input...
+<div class="js-codesamp">
 <div class="date-range-picker example">
-    <input type="text" name="start" class="" />
+  <input type="text" name="start" class="" />
 </div>
-<pre>
-  <code>
-&lt;div class="date-range-picker example"&gt;
-&lt;input type="text" name="start" class="" /&gt;
-  </code>
-</pre>
+</div>
 
 Prefilled value (in markup)...
+<div class="js-codesamp">
 <div class="prefilled-picker example">
   <input type="text" name="schedule" value="12/12/2020 2:00 PM" />
 </div>
-<pre>
-  <code>
-&lt;div class="prefilled-picker example"&gt;
-&lt;input type="text" name="schedule" value="12/12/2020 2:00 PM" /&gt;
-  </code>
-</pre>
-
+</div>
 
 As a clickable link...
+<div class="js-codesamp">
 <div class="button-picker example">
   <a href="#">Schedule</a>
   <input type="text" name="schedule" />
 </div>
-<pre>
-  <code>
-&lt;div class="button-picker example"&gt;
-  &lt;a href="#"&gt;Schedule&lt;/a&gt;
-  &lt;input type="text" name="schedule" /&gt;
-&lt;/div&gt;
-  </code>
-</pre>
+</div>
 
 As a button...
+<div class="js-codesamp">
 <div class="datebutton">
   <button type="button" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
   </button>
   <input type="text" name="butt-test" />
 </div>
+</div>
+
+Initialize the markup with something like the following in the document head. See the
+README.md for further options provided by the plug in in the dependency file folder.
 <pre>
   <code>
-&lt;div class="datebutton"&gt;
-  &lt;button type="button" class="btn btn-default btn-sm"&gt;
-    &lt;span class="glyphicon glyphicon-time" aria-hidden="true"&gt;&lt;/span&gt; Schedule
-  &lt;/button&gt;
-  &lt;input type="text" name="butt-test" /&gt;
-&lt;/div&gt;
+$('.button-picker a').picker({
+  outputTo: $('.button-picker input'),
+  prefill: true,
+});
   </code>
 </pre>
+
+<h3>3.1.6 Text Area</h3>
+Use this for multi-line text entry. Adjust the vertical height with the "rows"
+attribute
+<div class="js-codesamp">
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+<h3>3.1.7 Checkboxes</h3>
+<div class="js-codesamp">
+  <label>
+    <input type="checkbox" value="">
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+<div class="checkbox disabled">
+  <label>
+    <input type="checkbox" value="" disabled>
+    Option two is disabled
+  </label>
+</div>
+</div>
+
+Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
+cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
+<code>.disabled</code> class to the parent <code>.radio</code>,
+<code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
+
+<h3>3.1.8 Radio Buttons</h3>
+
+<div class="js-codesamp">
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div>
+<div class="radio disabled">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Option three is disabled
+  </label>
+</div>
+</div>
+
+<h3>3.1.9 Inline checkboxes and radio buttons</h3>
+
+Use the .checkbox-inline or .radio-inline classes on a series of
+checkboxes or radios for controls that appear on the same line.
+
+<div class="js-codesamp">
+<label class="checkbox-inline">
+  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="checkbox-inline">
+  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+</label>
+<label class="checkbox-inline">
+  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+</label>
+
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+</label>
+</div>
+
+<h3>3.1.10 Selects</h3>
+
+Note that many native select menus—namely in Safari and Chrome—have rounded
+corners that cannot be modified via border-radius properties.
+<div class="js-codesamp">
+<select class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+
+For &lt;select&gt; controls with the multiple attribute, multiple options are
+shown by default.
+
+<div class="js-codesamp">
+<select multiple class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+
+
+<h3>3.1.11 Static contorls</h3>
+
+When you need to place plain text next to a form label within a form, use
+the .form-control-static class on a &lt;p&gt;.
+
+<div class="js-codesamp">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">email@example.com</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+</form>
+</div>
+
+Works as an inline as well...
+<div class="js-codesamp">
+<form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only">Email</label>
+    <p class="form-control-static">email@example.com</p>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Confirm identity</button>
+</form>
+</div>
+
+<pre><code>
+[
+  {
+    "title": "apples",
+    "count": [12000, 20000],
+    "description": {"text": "...", "sensitive": false}
+  },
+  {
+    "title": "oranges",
+    "count": [17500, null],
+    "description": {"text": "...", "sensitive": false}
+  }
+]
+</code></pre>
+
+
 
 </body>
 

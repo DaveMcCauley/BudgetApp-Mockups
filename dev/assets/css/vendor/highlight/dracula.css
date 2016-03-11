@@ -1,0 +1,77 @@
+/*
+
+Dracula Theme v1.2.0
+
+https://github.com/zenorocha/dracula-theme
+
+Copyright 2015, All rights reserved
+
+Code licensed under the MIT license
+http://zenorocha.mit-license.org
+
+@author Éverton Ribeiro <nuxlli@gmail.com>
+@author Zeno Rocha <hi@zenorocha.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #282a36;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: #8be9fd;
+}
+
+.hljs-function .hljs-keyword {
+  color: #ff79c6;
+}
+
+.hljs,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #f1fa8c;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #6272a4;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRyYWN1bGEuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7OztFQWNFOztBQUVGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2Ysb0JBQW9CO0NBQ3JCOztBQUVEOzs7OztFQUtFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7Ozs7Ozs7O0VBV0UsZUFBZTtDQUNoQjs7QUFFRDs7OztFQUlFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7Ozs7OztFQVNFLGtCQUFrQjtDQUNuQjs7QUFFRDtFQUNFLG1CQUFtQjtDQUNwQiIsImZpbGUiOiJkcmFjdWxhLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG5cbkRyYWN1bGEgVGhlbWUgdjEuMi4wXG5cbmh0dHBzOi8vZ2l0aHViLmNvbS96ZW5vcm9jaGEvZHJhY3VsYS10aGVtZVxuXG5Db3B5cmlnaHQgMjAxNSwgQWxsIHJpZ2h0cyByZXNlcnZlZFxuXG5Db2RlIGxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgbGljZW5zZVxuaHR0cDovL3plbm9yb2NoYS5taXQtbGljZW5zZS5vcmdcblxuQGF1dGhvciDDiXZlcnRvbiBSaWJlaXJvIDxudXhsbGlAZ21haWwuY29tPlxuQGF1dGhvciBaZW5vIFJvY2hhIDxoaUB6ZW5vcm9jaGEuY29tPlxuXG4qL1xuXG4uaGxqcyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBvdmVyZmxvdy14OiBhdXRvO1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgYmFja2dyb3VuZDogIzI4MmEzNjtcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtbGluayB7XG4gIGNvbG9yOiAjOGJlOWZkO1xufVxuXG4uaGxqcy1mdW5jdGlvbiAuaGxqcy1rZXl3b3JkIHtcbiAgY29sb3I6ICNmZjc5YzY7XG59XG5cbi5obGpzLFxuLmhsanMtc3Vic3Qge1xuICBjb2xvcjogI2Y4ZjhmMjtcbn1cblxuLmhsanMtc3RyaW5nLFxuLmhsanMtdGl0bGUsXG4uaGxqcy1uYW1lLFxuLmhsanMtdHlwZSxcbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLXN5bWJvbCxcbi5obGpzLWJ1bGxldCxcbi5obGpzLWFkZGl0aW9uLFxuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS10YWcsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSB7XG4gIGNvbG9yOiAjZjFmYThjO1xufVxuXG4uaGxqcy1jb21tZW50LFxuLmhsanMtcXVvdGUsXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLW1ldGEge1xuICBjb2xvcjogIzYyNzJhNDtcbn1cblxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy10aXRsZSxcbi5obGpzLXNlY3Rpb24sXG4uaGxqcy1kb2N0YWcsXG4uaGxqcy10eXBlLFxuLmhsanMtbmFtZSxcbi5obGpzLXN0cm9uZyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cbiJdfQ== */

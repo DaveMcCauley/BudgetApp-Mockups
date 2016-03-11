@@ -1,0 +1,73 @@
+/*
+    Paraíso (light)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+
+/* Paraíso Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #776e71;
+}
+
+/* Paraíso Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-link,
+.hljs-meta {
+  color: #ef6155;
+}
+
+/* Paraíso Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-deletion {
+  color: #f99b15;
+}
+
+/* Paraíso Yellow */
+.hljs-title,
+.hljs-section,
+.hljs-attribute {
+  color: #fec418;
+}
+
+/* Paraíso Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #48b685;
+}
+
+/* Paraíso Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #815ba4;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #e7e9db;
+  color: #4f424c;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhcmFpc28tbGlnaHQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7O0VBSUU7O0FBRUYscUJBQXFCO0FBQ3JCOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQsaUJBQWlCO0FBQ2pCOzs7Ozs7Ozs7RUFTRSxlQUFlO0NBQ2hCOztBQUVELG9CQUFvQjtBQUNwQjs7Ozs7OztFQU9FLGVBQWU7Q0FDaEI7O0FBRUQsb0JBQW9CO0FBQ3BCOzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVELG1CQUFtQjtBQUNuQjs7OztFQUlFLGVBQWU7Q0FDaEI7O0FBRUQsb0JBQW9CO0FBQ3BCOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLG9CQUFvQjtFQUNwQixlQUFlO0VBQ2YsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGtCQUFrQjtDQUNuQiIsImZpbGUiOiJwYXJhaXNvLWxpZ2h0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gICAgUGFyYcOtc28gKGxpZ2h0KVxuICAgIENyZWF0ZWQgYnkgSmFuIFQuIFNvdHQgKGh0dHA6Ly9naXRodWIuY29tL2lkbGViZXJnKVxuICAgIEluc3BpcmVkIGJ5IHRoZSBhcnQgb2YgUnViZW5zIExQIChodHRwOi8vd3d3LnJ1YmVuc2xwLmNvbS5icilcbiovXG5cbi8qIFBhcmHDrXNvIENvbW1lbnQgKi9cbi5obGpzLWNvbW1lbnQsXG4uaGxqcy1xdW90ZSB7XG4gIGNvbG9yOiAjNzc2ZTcxO1xufVxuXG4vKiBQYXJhw61zbyBSZWQgKi9cbi5obGpzLXZhcmlhYmxlLFxuLmhsanMtdGVtcGxhdGUtdmFyaWFibGUsXG4uaGxqcy10YWcsXG4uaGxqcy1uYW1lLFxuLmhsanMtc2VsZWN0b3ItaWQsXG4uaGxqcy1zZWxlY3Rvci1jbGFzcyxcbi5obGpzLXJlZ2V4cCxcbi5obGpzLWxpbmssXG4uaGxqcy1tZXRhIHtcbiAgY29sb3I6ICNlZjYxNTU7XG59XG5cbi8qIFBhcmHDrXNvIE9yYW5nZSAqL1xuLmhsanMtbnVtYmVyLFxuLmhsanMtYnVpbHRfaW4sXG4uaGxqcy1idWlsdGluLW5hbWUsXG4uaGxqcy1saXRlcmFsLFxuLmhsanMtdHlwZSxcbi5obGpzLXBhcmFtcyxcbi5obGpzLWRlbGV0aW9uIHtcbiAgY29sb3I6ICNmOTliMTU7XG59XG5cbi8qIFBhcmHDrXNvIFllbGxvdyAqL1xuLmhsanMtdGl0bGUsXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtYXR0cmlidXRlIHtcbiAgY29sb3I6ICNmZWM0MTg7XG59XG5cbi8qIFBhcmHDrXNvIEdyZWVuICovXG4uaGxqcy1zdHJpbmcsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy1idWxsZXQsXG4uaGxqcy1hZGRpdGlvbiB7XG4gIGNvbG9yOiAjNDhiNjg1O1xufVxuXG4vKiBQYXJhw61zbyBQdXJwbGUgKi9cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcge1xuICBjb2xvcjogIzgxNWJhNDtcbn1cblxuLmhsanMge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3cteDogYXV0bztcbiAgYmFja2dyb3VuZDogI2U3ZTlkYjtcbiAgY29sb3I6ICM0ZjQyNGM7XG4gIHBhZGRpbmc6IDAuNWVtO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cblxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

@@ -1,0 +1,74 @@
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #000;
+  color: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #7c7c7c;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-tag,
+.hljs-name {
+  color: #96cbfe;
+}
+
+.hljs-attribute,
+.hljs-selector-id {
+  color: #ffffb6;
+}
+
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition {
+  color: #a8ff60;
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-doctag {
+  color: #ffffb6;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-literal {
+  color: #c6c5fe;
+}
+
+.hljs-number,
+.hljs-deletion {
+  color:#ff73fd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImlyLWJsYWNrLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7RUFFRTs7QUFFRjtFQUNFLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixlQUFlO0NBQ2hCOztBQUVEOzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVEOzs7O0VBSUUsZUFBZTtDQUNoQjs7QUFFRDs7RUFFRSxlQUFlO0NBQ2hCOztBQUVEOzs7O0VBSUUsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEI7O0FBRUQ7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRDs7OztFQUlFLGVBQWU7Q0FDaEI7O0FBRUQ7Ozs7O0VBS0UsZUFBZTtDQUNoQjs7QUFFRDs7RUFFRSxjQUFjO0NBQ2Y7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoiaXItYmxhY2suY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAgSVJfQmxhY2sgc3R5bGUgKGMpIFZhc2lseSBNaWtoYWlsaXRjaGVua28gPHZhc2thc0Bwcm9ncmFtaWNhLnJ1PlxuKi9cblxuLmhsanMge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3cteDogYXV0bztcbiAgcGFkZGluZzogMC41ZW07XG4gIGJhY2tncm91bmQ6ICMwMDA7XG4gIGNvbG9yOiAjZjhmOGY4O1xufVxuXG4uaGxqcy1jb21tZW50LFxuLmhsanMtcXVvdGUsXG4uaGxqcy1tZXRhIHtcbiAgY29sb3I6ICM3YzdjN2M7XG59XG5cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcsXG4uaGxqcy10YWcsXG4uaGxqcy1uYW1lIHtcbiAgY29sb3I6ICM5NmNiZmU7XG59XG5cbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLXNlbGVjdG9yLWlkIHtcbiAgY29sb3I6ICNmZmZmYjY7XG59XG5cbi5obGpzLXN0cmluZyxcbi5obGpzLXNlbGVjdG9yLWF0dHIsXG4uaGxqcy1zZWxlY3Rvci1wc2V1ZG8sXG4uaGxqcy1hZGRpdGlvbiB7XG4gIGNvbG9yOiAjYThmZjYwO1xufVxuXG4uaGxqcy1zdWJzdCB7XG4gIGNvbG9yOiAjZGFlZmEzO1xufVxuXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1saW5rIHtcbiAgY29sb3I6ICNlOWMwNjI7XG59XG5cbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbixcbi5obGpzLXR5cGUsXG4uaGxqcy1kb2N0YWcge1xuICBjb2xvcjogI2ZmZmZiNjtcbn1cblxuLmhsanMtc3ltYm9sLFxuLmhsanMtYnVsbGV0LFxuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLWxpdGVyYWwge1xuICBjb2xvcjogI2M2YzVmZTtcbn1cblxuLmhsanMtbnVtYmVyLFxuLmhsanMtZGVsZXRpb24ge1xuICBjb2xvcjojZmY3M2ZkO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cblxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

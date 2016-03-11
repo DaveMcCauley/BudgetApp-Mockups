@@ -1,0 +1,85 @@
+/* Base16 Atelier Plateau Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/plateau) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Plateau Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #7e7777;
+}
+
+/* Atelier-Plateau Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #ca4949;
+}
+
+/* Atelier-Plateau Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #b45a3c;
+}
+
+/* Atelier-Plateau Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #4b8b8b;
+}
+
+/* Atelier-Plateau Blue */
+.hljs-title,
+.hljs-section {
+  color: #7272ca;
+}
+
+/* Atelier-Plateau Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #8464c4;
+}
+
+.hljs-deletion,
+.hljs-addition {
+  color: #1b1818;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #ca4949;
+}
+
+.hljs-addition {
+  background-color: #4b8b8b;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1b1818;
+  color: #8a8585;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF0ZWxpZXItcGxhdGVhdS1kYXJrLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSx5Q0FBeUM7QUFDekMsZ0dBQWdHO0FBQ2hHLDRGQUE0Rjs7QUFFNUYsNkJBQTZCO0FBQzdCOztFQUVFLGVBQWU7Q0FDaEI7O0FBRUQseUJBQXlCO0FBQ3pCOzs7Ozs7Ozs7O0VBVUUsZUFBZTtDQUNoQjs7QUFFRCw0QkFBNEI7QUFDNUI7Ozs7Ozs7RUFPRSxlQUFlO0NBQ2hCOztBQUVELDJCQUEyQjtBQUMzQjs7O0VBR0UsZUFBZTtDQUNoQjs7QUFFRCwwQkFBMEI7QUFDMUI7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRCw0QkFBNEI7QUFDNUI7O0VBRUUsZUFBZTtDQUNoQjs7QUFFRDs7RUFFRSxlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLFlBQVk7Q0FDYjs7QUFFRDtFQUNFLDBCQUEwQjtDQUMzQjs7QUFFRDtFQUNFLDBCQUEwQjtDQUMzQjs7QUFFRDtFQUNFLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLGVBQWU7RUFDZixlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0Usa0JBQWtCO0NBQ25CIiwiZmlsZSI6ImF0ZWxpZXItcGxhdGVhdS1kYXJrLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEJhc2UxNiBBdGVsaWVyIFBsYXRlYXUgRGFyayAtIFRoZW1lICovXG4vKiBieSBCcmFtIGRlIEhhYW4gKGh0dHA6Ly9hdGVsaWVyYnJhbS5naXRodWIuaW8vc3ludGF4LWhpZ2hsaWdodGluZy9hdGVsaWVyLXNjaGVtZXMvcGxhdGVhdSkgKi9cbi8qIE9yaWdpbmFsIEJhc2UxNiBjb2xvciBzY2hlbWUgYnkgQ2hyaXMgS2VtcHNvbiAoaHR0cHM6Ly9naXRodWIuY29tL2Nocmlza2VtcHNvbi9iYXNlMTYpICovXG5cbi8qIEF0ZWxpZXItUGxhdGVhdSBDb21tZW50ICovXG4uaGxqcy1jb21tZW50LFxuLmhsanMtcXVvdGUge1xuICBjb2xvcjogIzdlNzc3Nztcbn1cblxuLyogQXRlbGllci1QbGF0ZWF1IFJlZCAqL1xuLmhsanMtdmFyaWFibGUsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLXRhZyxcbi5obGpzLW5hbWUsXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1saW5rLFxuLmhsanMtbmFtZSxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc2VsZWN0b3ItY2xhc3Mge1xuICBjb2xvcjogI2NhNDk0OTtcbn1cblxuLyogQXRlbGllci1QbGF0ZWF1IE9yYW5nZSAqL1xuLmhsanMtbnVtYmVyLFxuLmhsanMtbWV0YSxcbi5obGpzLWJ1aWx0X2luLFxuLmhsanMtYnVpbHRpbi1uYW1lLFxuLmhsanMtbGl0ZXJhbCxcbi5obGpzLXR5cGUsXG4uaGxqcy1wYXJhbXMge1xuICBjb2xvcjogI2I0NWEzYztcbn1cblxuLyogQXRlbGllci1QbGF0ZWF1IEdyZWVuICovXG4uaGxqcy1zdHJpbmcsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy1idWxsZXQge1xuICBjb2xvcjogIzRiOGI4Yjtcbn1cblxuLyogQXRlbGllci1QbGF0ZWF1IEJsdWUgKi9cbi5obGpzLXRpdGxlLFxuLmhsanMtc2VjdGlvbiB7XG4gIGNvbG9yOiAjNzI3MmNhO1xufVxuXG4vKiBBdGVsaWVyLVBsYXRlYXUgUHVycGxlICovXG4uaGxqcy1rZXl3b3JkLFxuLmhsanMtc2VsZWN0b3ItdGFnIHtcbiAgY29sb3I6ICM4NDY0YzQ7XG59XG5cbi5obGpzLWRlbGV0aW9uLFxuLmhsanMtYWRkaXRpb24ge1xuICBjb2xvcjogIzFiMTgxODtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmhsanMtZGVsZXRpb24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2E0OTQ5O1xufVxuXG4uaGxqcy1hZGRpdGlvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0YjhiOGI7XG59XG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIGJhY2tncm91bmQ6ICMxYjE4MTg7XG4gIGNvbG9yOiAjOGE4NTg1O1xuICBwYWRkaW5nOiAwLjVlbTtcbn1cblxuLmhsanMtZW1waGFzaXMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5obGpzLXN0cm9uZyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuIl19 */

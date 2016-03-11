@@ -1,0 +1,86 @@
+/* Base16 Atelier Cave Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/cave) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Cave Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #655f6d;
+}
+
+/* Atelier-Cave Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #be4678;
+}
+
+/* Atelier-Cave Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #aa573c;
+}
+
+/* Atelier-Cave Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #2a9292;
+}
+
+/* Atelier-Cave Blue */
+.hljs-title,
+.hljs-section {
+  color: #576ddb;
+}
+
+/* Atelier-Cave Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #955ae7;
+}
+
+.hljs-deletion,
+.hljs-addition {
+  color: #19171c;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #be4678;
+}
+
+.hljs-addition {
+  background-color: #2a9292;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #efecf4;
+  color: #585260;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF0ZWxpZXItY2F2ZS1saWdodC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsdUNBQXVDO0FBQ3ZDLDZGQUE2RjtBQUM3Riw0RkFBNEY7O0FBRTVGLDBCQUEwQjtBQUMxQjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVELHNCQUFzQjtBQUN0Qjs7Ozs7Ozs7Ozs7RUFXRSxlQUFlO0NBQ2hCOztBQUVELHlCQUF5QjtBQUN6Qjs7Ozs7OztFQU9FLGVBQWU7Q0FDaEI7O0FBRUQsd0JBQXdCO0FBQ3hCOzs7RUFHRSxlQUFlO0NBQ2hCOztBQUVELHVCQUF1QjtBQUN2Qjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVELHlCQUF5QjtBQUN6Qjs7RUFFRSxlQUFlO0NBQ2hCOztBQUVEOztFQUVFLGVBQWU7RUFDZixzQkFBc0I7RUFDdEIsWUFBWTtDQUNiOztBQUVEO0VBQ0UsMEJBQTBCO0NBQzNCOztBQUVEO0VBQ0UsMEJBQTBCO0NBQzNCOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsZUFBZTtFQUNmLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoiYXRlbGllci1jYXZlLWxpZ2h0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEJhc2UxNiBBdGVsaWVyIENhdmUgTGlnaHQgLSBUaGVtZSAqL1xuLyogYnkgQnJhbSBkZSBIYWFuIChodHRwOi8vYXRlbGllcmJyYW0uZ2l0aHViLmlvL3N5bnRheC1oaWdobGlnaHRpbmcvYXRlbGllci1zY2hlbWVzL2NhdmUpICovXG4vKiBPcmlnaW5hbCBCYXNlMTYgY29sb3Igc2NoZW1lIGJ5IENocmlzIEtlbXBzb24gKGh0dHBzOi8vZ2l0aHViLmNvbS9jaHJpc2tlbXBzb24vYmFzZTE2KSAqL1xuXG4vKiBBdGVsaWVyLUNhdmUgQ29tbWVudCAqL1xuLmhsanMtY29tbWVudCxcbi5obGpzLXF1b3RlIHtcbiAgY29sb3I6ICM2NTVmNmQ7XG59XG5cbi8qIEF0ZWxpZXItQ2F2ZSBSZWQgKi9cbi5obGpzLXZhcmlhYmxlLFxuLmhsanMtdGVtcGxhdGUtdmFyaWFibGUsXG4uaGxqcy1hdHRyaWJ1dGUsXG4uaGxqcy10YWcsXG4uaGxqcy1uYW1lLFxuLmhsanMtcmVnZXhwLFxuLmhsanMtbGluayxcbi5obGpzLW5hbWUsXG4uaGxqcy1uYW1lLFxuLmhsanMtc2VsZWN0b3ItaWQsXG4uaGxqcy1zZWxlY3Rvci1jbGFzcyB7XG4gIGNvbG9yOiAjYmU0Njc4O1xufVxuXG4vKiBBdGVsaWVyLUNhdmUgT3JhbmdlICovXG4uaGxqcy1udW1iZXIsXG4uaGxqcy1tZXRhLFxuLmhsanMtYnVpbHRfaW4sXG4uaGxqcy1idWlsdGluLW5hbWUsXG4uaGxqcy1saXRlcmFsLFxuLmhsanMtdHlwZSxcbi5obGpzLXBhcmFtcyB7XG4gIGNvbG9yOiAjYWE1NzNjO1xufVxuXG4vKiBBdGVsaWVyLUNhdmUgR3JlZW4gKi9cbi5obGpzLXN0cmluZyxcbi5obGpzLXN5bWJvbCxcbi5obGpzLWJ1bGxldCB7XG4gIGNvbG9yOiAjMmE5MjkyO1xufVxuXG4vKiBBdGVsaWVyLUNhdmUgQmx1ZSAqL1xuLmhsanMtdGl0bGUsXG4uaGxqcy1zZWN0aW9uIHtcbiAgY29sb3I6ICM1NzZkZGI7XG59XG5cbi8qIEF0ZWxpZXItQ2F2ZSBQdXJwbGUgKi9cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcge1xuICBjb2xvcjogIzk1NWFlNztcbn1cblxuLmhsanMtZGVsZXRpb24sXG4uaGxqcy1hZGRpdGlvbiB7XG4gIGNvbG9yOiAjMTkxNzFjO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uaGxqcy1kZWxldGlvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNiZTQ2Nzg7XG59XG5cbi5obGpzLWFkZGl0aW9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzJhOTI5Mjtcbn1cblxuLmhsanMge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3cteDogYXV0bztcbiAgYmFja2dyb3VuZDogI2VmZWNmNDtcbiAgY29sb3I6ICM1ODUyNjA7XG4gIHBhZGRpbmc6IDAuNWVtO1xufVxuXG4uaGxqcy1lbXBoYXNpcyB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbn1cblxuLmhsanMtc3Ryb25nIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

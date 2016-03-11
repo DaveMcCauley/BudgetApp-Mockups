@@ -1,0 +1,71 @@
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #272822; color: #ddd;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  color: #f92672;
+}
+
+.hljs-code {
+  color: #66d9ef;
+}
+
+.hljs-class .hljs-title {
+  color: white;
+}
+
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vbm9rYWkuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztFQUVFOztBQUVGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2Ysb0JBQW9CLENBQUMsWUFBWTtDQUNsQzs7QUFFRDs7Ozs7O0VBTUUsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7Ozs7RUFJRSxlQUFlO0NBQ2hCOztBQUVEOzs7Ozs7Ozs7Ozs7Ozs7RUFlRSxlQUFlO0NBQ2hCOztBQUVEOzs7O0VBSUUsZUFBZTtDQUNoQjs7QUFFRDs7Ozs7Ozs7RUFRRSxrQkFBa0I7Q0FDbkIiLCJmaWxlIjoibW9ub2thaS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuTW9ub2thaSBzdHlsZSAtIHBvcnRlZCBieSBMdWlnaSBNYXNlbGxpIC0gaHR0cDovL2dyaWdpby5vcmdcbiovXG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIHBhZGRpbmc6IDAuNWVtO1xuICBiYWNrZ3JvdW5kOiAjMjcyODIyOyBjb2xvcjogI2RkZDtcbn1cblxuLmhsanMtdGFnLFxuLmhsanMta2V5d29yZCxcbi5obGpzLXNlbGVjdG9yLXRhZyxcbi5obGpzLWxpdGVyYWwsXG4uaGxqcy1zdHJvbmcsXG4uaGxqcy1uYW1lIHtcbiAgY29sb3I6ICNmOTI2NzI7XG59XG5cbi5obGpzLWNvZGUge1xuICBjb2xvcjogIzY2ZDllZjtcbn1cblxuLmhsanMtY2xhc3MgLmhsanMtdGl0bGUge1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5obGpzLWF0dHJpYnV0ZSxcbi5obGpzLXN5bWJvbCxcbi5obGpzLXJlZ2V4cCxcbi5obGpzLWxpbmsge1xuICBjb2xvcjogI2JmNzlkYjtcbn1cblxuLmhsanMtc3RyaW5nLFxuLmhsanMtYnVsbGV0LFxuLmhsanMtc3Vic3QsXG4uaGxqcy10aXRsZSxcbi5obGpzLXNlY3Rpb24sXG4uaGxqcy1lbXBoYXNpcyxcbi5obGpzLXR5cGUsXG4uaGxqcy1idWlsdF9pbixcbi5obGpzLWJ1aWx0aW4tbmFtZSxcbi5obGpzLXNlbGVjdG9yLWF0dHIsXG4uaGxqcy1zZWxlY3Rvci1wc2V1ZG8sXG4uaGxqcy1hZGRpdGlvbixcbi5obGpzLXZhcmlhYmxlLFxuLmhsanMtdGVtcGxhdGUtdGFnLFxuLmhsanMtdGVtcGxhdGUtdmFyaWFibGUge1xuICBjb2xvcjogI2E2ZTIyZTtcbn1cblxuLmhsanMtY29tbWVudCxcbi5obGpzLXF1b3RlLFxuLmhsanMtZGVsZXRpb24sXG4uaGxqcy1tZXRhIHtcbiAgY29sb3I6ICM3NTcxNWU7XG59XG5cbi5obGpzLWtleXdvcmQsXG4uaGxqcy1zZWxlY3Rvci10YWcsXG4uaGxqcy1saXRlcmFsLFxuLmhsanMtZG9jdGFnLFxuLmhsanMtdGl0bGUsXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtdHlwZSxcbi5obGpzLXNlbGVjdG9yLWlkIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4iXX0= */

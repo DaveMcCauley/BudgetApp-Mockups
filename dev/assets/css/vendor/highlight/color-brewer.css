@@ -1,0 +1,72 @@
+/*
+
+Colorbrewer theme
+Original: https://github.com/mbostock/colorbrewer-theme (c) Mike Bostock <mike@ocks.org>
+Ported by Fabrício Tavares de Oliveira
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fff;
+}
+
+.hljs,
+.hljs-subst {
+  color: #000;
+}
+
+.hljs-string,
+.hljs-meta,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
+  color: #756bb1;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #636363;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-bullet,
+.hljs-link {
+  color: #31a354;
+}
+
+.hljs-deletion,
+.hljs-variable {
+  color: #88f;
+}
+
+
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-doctag,
+.hljs-type,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-strong {
+  color: #3182bd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-attribute {
+  color: #e6550d;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbG9yLWJyZXdlci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztFQU1FOztBQUVGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2YsaUJBQWlCO0NBQ2xCOztBQUVEOztFQUVFLFlBQVk7Q0FDYjs7QUFFRDs7Ozs7O0VBTUUsZUFBZTtDQUNoQjs7QUFFRDs7RUFFRSxlQUFlO0NBQ2hCOztBQUVEOzs7OztFQUtFLGVBQWU7Q0FDaEI7O0FBRUQ7O0VBRUUsWUFBWTtDQUNiOzs7O0FBSUQ7Ozs7Ozs7Ozs7OztFQVlFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCIiwiZmlsZSI6ImNvbG9yLWJyZXdlci5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuXG5Db2xvcmJyZXdlciB0aGVtZVxuT3JpZ2luYWw6IGh0dHBzOi8vZ2l0aHViLmNvbS9tYm9zdG9jay9jb2xvcmJyZXdlci10aGVtZSAoYykgTWlrZSBCb3N0b2NrIDxtaWtlQG9ja3Mub3JnPlxuUG9ydGVkIGJ5IEZhYnLDrWNpbyBUYXZhcmVzIGRlIE9saXZlaXJhXG5cbiovXG5cbi5obGpzIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93LXg6IGF1dG87XG4gIHBhZGRpbmc6IDAuNWVtO1xuICBiYWNrZ3JvdW5kOiAjZmZmO1xufVxuXG4uaGxqcyxcbi5obGpzLXN1YnN0IHtcbiAgY29sb3I6ICMwMDA7XG59XG5cbi5obGpzLXN0cmluZyxcbi5obGpzLW1ldGEsXG4uaGxqcy1zeW1ib2wsXG4uaGxqcy10ZW1wbGF0ZS10YWcsXG4uaGxqcy10ZW1wbGF0ZS12YXJpYWJsZSxcbi5obGpzLWFkZGl0aW9uIHtcbiAgY29sb3I6ICM3NTZiYjE7XG59XG5cbi5obGpzLWNvbW1lbnQsXG4uaGxqcy1xdW90ZSB7XG4gIGNvbG9yOiAjNjM2MzYzO1xufVxuXG4uaGxqcy1udW1iZXIsXG4uaGxqcy1yZWdleHAsXG4uaGxqcy1saXRlcmFsLFxuLmhsanMtYnVsbGV0LFxuLmhsanMtbGluayB7XG4gIGNvbG9yOiAjMzFhMzU0O1xufVxuXG4uaGxqcy1kZWxldGlvbixcbi5obGpzLXZhcmlhYmxlIHtcbiAgY29sb3I6ICM4OGY7XG59XG5cblxuXG4uaGxqcy1rZXl3b3JkLFxuLmhsanMtc2VsZWN0b3ItdGFnLFxuLmhsanMtdGl0bGUsXG4uaGxqcy1zZWN0aW9uLFxuLmhsanMtYnVpbHRfaW4sXG4uaGxqcy1kb2N0YWcsXG4uaGxqcy10eXBlLFxuLmhsanMtdGFnLFxuLmhsanMtbmFtZSxcbi5obGpzLXNlbGVjdG9yLWlkLFxuLmhsanMtc2VsZWN0b3ItY2xhc3MsXG4uaGxqcy1zdHJvbmcge1xuICBjb2xvcjogIzMxODJiZDtcbn1cblxuLmhsanMtZW1waGFzaXMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5obGpzLWF0dHJpYnV0ZSB7XG4gIGNvbG9yOiAjZTY1NTBkO1xufVxuIl19 */
