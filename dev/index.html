@@ -167,7 +167,7 @@ extra small button class (.btn-xs).
 	tooltip or popover is triggered).
 </blockquote>
 
-<h3>Button Dropdowns</h3>
+<h3>2.1.4 Button Dropdowns</h3>
 <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
 <div class="js-codesamp">
 <div class="btn-group btn-group-sm">
@@ -244,6 +244,32 @@ extra small button class (.btn-xs).
 </div>
 </div>
 
+<h3>2.1.5 Diabled state</h3>
+<p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
+
+<div class="js-codesamp">
+<button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
+<button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
+</div>
+
+<h4>For anchor elements shown as buttons...</h4>
+Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
+
+<div class="js=codesamp">
+<a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
+<a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
+</div>
+
+<p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
+   requried
+</p>
+<blockquote>
+  <b>Link funtionality caveat</b>
+  This class uses <code>pointer-events: none</code> to try to disable the link funcationaly of the
+  <code>&lt;a&gt;</code> elements, bu that CSS property is not yet standardized and isn't fully supported
+  in older browsers. Also, keyboard naviation remain unaffected, so users can still activate thse links.
+  To be safe we have a javascript that disables links programatically.
+</blockquote>
 
 <h1>3.0 Forms</h1>
 
@@ -459,6 +485,179 @@ Works as an inline as well...
   <button type="submit" class="btn btn-default">Confirm identity</button>
 </form>
 </div>
+
+<h3>3.1.12 Help text</h3>
+<p>Block level help text for for controls. Help text should be explicity associated with the form control it relates
+   to using the <code>aria-describedby</code> attribute. This ensure that assitive technologies, such as screen
+   readers, will announce this help thest when the user focuses or enters the control.
+</p>
+
+<div class="js-codesamp">
+<label class="sr-only" for="inputHelpBlock">Input with help text</label>
+<input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+<span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend
+  beyond one line
+</span>
+</div>
+
+<h2>3.2 Control States
+
+<h3>3.2.1 Focus state</h3>
+The is an example of the <code>:focus</code> state on a <code>.form-control</code>.
+<form>
+  <input id="focusInputSample" class="form-control" type="text" value="Dmonstrate focus state"></input>
+</form>
+
+<h3>3.2.2 Disabled state</h3>
+
+<p>Add teh <code>diabled</code> boolean attribute on an imput to prevent user interaction.</p>
+
+<div class="js-codesamp">
+  <input class="form-control" id="disabledInput" type="text" placeholder="Disambled input here..." disabled />
+</div>
+
+<h3>3.2.3 Disabled fieldsets</h3>
+<p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls
+  within the <code>&lt;fieldset&gt;</code> at once.
+  <blockquote>
+    We will use custom javascrpt to disable any links within a disabled fieldset. IE11, Opera &lt;18 and others
+    do not treat these consistently.
+  </blockquote>
+</p>
+
+<div class="js-codesamp">
+<form>
+  <fieldset disabled>
+    <div class="form-group">
+      <label for="disabledTextInput">Disabled input</input>
+      <select id="disabledSelect" class="form-control">
+        <option>Disabled select</option>
+      </select>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">Can't check this
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+</div>
+
+<h3>3.2.4 Readonly state</h3>
+
+<p>Add the <code>readonly</code> boolean attribute on an input to pevent modification of the input's value. Read-only
+   inputs look like disabled inputs, but retain the standard cursor.
+</p>
+
+<div class="js-codesamp">
+<input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+</div>
+
+<h3>3.2.5 Validation states</h3>
+
+<p>To show validation results add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code>
+   to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code>
+   within htat element will receive the validation styles.
+   <blockquote>
+      NOTE:Depricated in next release. Use only validation with glyphs as described in the following section
+   </blockquote>
+</p>
+
+<div class="js-codesamp">
+<div class="form-group has-success">
+  <label class="control-label" for="inputSuccess1">Input with success</label>
+  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+  <span id="helpBlock2" class="help-block">A black on help text that breaks onto a new line and may extend
+    beyond one lne.
+  </span>
+</div>
+<div class="form-group has-warning">
+  <label class="control-label" for="inputWarning1">Input with warning</label>
+  <input type="text" class="form-control" id="inputWarning1">
+</div>
+<div class="form-group has-error">
+  <label class="control-label" for="inputError1">Input with error</label>
+  <input type="text" class="form-control" id="inputError1">
+</div>
+<div class="has-success">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxSuccess" value="option1">
+      Checkbox with success
+    </label>
+  </div>
+</div>
+<div class="has-warning">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxWarning" value="option1">
+      Checkbox with warning
+    </label>
+  </div>
+</div>
+<div class="has-error">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxError" value="option1">
+      Checkbox with error
+    </label>
+  </div>
+</div>
+</div>
+
+<h3>3.2.6 Validation states with icons</h3>
+
+<blockquote>Depreication notice: In the next version, all validation states will be required to use icons
+  to improve usability
+</blockquote>
+<p>Add feedback icons with the addtion of <code>.has feedback</code> and the suitable icon.</p>
+<h4>Icons, labels, and input groups</h4>
+<blockquote>Manual positioning of feedback icons is reqiured for inputs without a label and for input groups with an
+   add-on on the right.
+</blockquote>
+<blockquote>
+  Note the use of the help text span class. By using the class <code>.sr-only</code> the help text is hidden from
+  view. But through use of the <code>aria-describedby</code> atttribute, will be availabe to assitive technologies
+  such as screen readers.
+</blockquote>
+
+<div class="js-codesamp">
+<div class="form-group has-success has-feedback">
+  <label class="control-label" for="inputSuccess2">Input with success</label>
+  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  <span id="inputSuccess2Status" class="sr-only">(Success)</span>
+</div>
+<div class="form-group has-warning has-feedback">
+  <label class="control-label" for="inputWarning2">Input with warning</label>
+  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+  <span id="inputWarning2Status" class="sr-only">(Warning)</span>
+</div>
+<div class="form-group has-error has-feedback">
+  <label class="control-label" for="inputError2">Input with error</label>
+  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+  <span id="inputError2Status" class="sr-only">(error)</span>
+</div>
+<div class="form-group has-success has-feedback">
+  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+  <div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+  </div>
+  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+</div>
+</div>
+
+<h2>3.3 Form layouts</h2>
+
+
+
+
+
 
 <pre><code>
 [
