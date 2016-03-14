@@ -399,11 +399,11 @@ module.exports = function(grunt) {
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
     prod: {
-        path: fileName,
+        path: 'http://localhost:3000/' + fileName,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
     mac: {
-        path: fileName,
+        path: 'http://localhost:3000/' + fileName,
         app: 'FirefoxDeveloperEdition'
     }
 
