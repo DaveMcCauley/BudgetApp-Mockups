@@ -143,4 +143,7 @@ hljs.initHighlighting();
 
 hljs.initHighlightingOnLoad();
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 //# sourceMappingURL=postload.js.map

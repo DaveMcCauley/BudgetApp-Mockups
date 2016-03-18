@@ -111,6 +111,7 @@ module.exports = function(grunt) {
         files: {
           'dev/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.js',
                                         'dev/assets/js/vendor/bootstrap/bootstrap.js',
+										                    //'dev/assets/js/vendor/bootstrap/bootstrap/alert.js',
                                         'dev/assets/js/vendor/moment/moment.js',
                                         'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js',
                                         'dev/assets/js/vendor/datetime-picker/datepicker.js',
@@ -120,7 +121,8 @@ module.exports = function(grunt) {
           'dev/assets/js/postload.js' : [//'dev/assets/js/src/postload/**/*.js',
                                           'dev/assets/js/src/postload/styleguide-palette.js',
                                           'dev/assets/js/src/postload/codesamp.js',
-                                          'dev/assets/js/src/postload/init-highlight.js'
+                                          'dev/assets/js/src/postload/init-highlight.js',
+										                      'dev/assets/js/src/postload/init-tooltip.js'
                                         ],
           'dev/assets/css/styleguide.css' : ['dev/assets/css/styleguide.css',
                                              'dev/assets/css/vendor/highlight/xcode.css',
@@ -147,7 +149,9 @@ module.exports = function(grunt) {
                                         ],
           'prod/assets/js/postload.js' : [//'prod/assets/js/src/postload/**/*.min.js']
                                           'prod/assets/js/src/postload/styleguide-palette.min.js',
-                                          'prod/assets/js/src/postload/codesamp.min.js'
+                                          'prod/assets/js/src/postload/codesamp.min.js',
+                                          'prod/assets/js/src/postload/init-highlight.js',
+                                          'prod/assets/js/src/postload/init-tooltip.js'
                                         ],
           'prod/assets/css/styleguide.css' : ['prod/assets/css/styleguide.css',
                                               'prod/assets/css/vendor/highlight/xcode.css',
