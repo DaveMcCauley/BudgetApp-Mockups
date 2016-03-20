@@ -3,125 +3,131 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/styleguide.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <link rel="stylesheet" href="assets/css/styleguide.css" >
   <script type="text/javascript" src="assets/js/preload.js"></script>
   <title>Styleguide</title>
 </head>
 
 <body>
 
-<h1>1 Branding</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" role="main">
 
-<h2>1.1 Logo</h2>
-<p>TBA</p>
+      <h1>1 Branding</h1>
 
-<h2>1.2 Colors</h2>
-<div class="palette-section js-fill-palette"> </div>
+      <h2>1.1 Logo</h2>
+      <p>TBA</p>
 
-<h2>1.3 Typography</h2>
-<p>BudgetApp uses Lato exclusively. The only exception is when a monospaced font
-   is required. The Lato typeface is imported in the _fonts.scss partial file.
-   Although it should always be available, the _fonts.scss includes alternates
-   for fallback.
-</p>
-<ul>
-	<li>For normal purposes use the <b>$font-normal-stack</b> definition.</li>
-	<li>For monospaced type use the <b>$font-mono-stack</b> definition.</li>
-</ul>
+      <h2>1.2 Colors</h2>
+      <div class="palette-section js-fill-palette"> </div>
 
-<h3>1.3.1 Typefaces and Weights</h3>
-<p>There are four type weights available for use with the normal font stack.
-	 For the monospaced font stack ONLY the normal weight should be used.
-</p>
+      <h2>1.3 Typography</h2>
+      <p>BudgetApp uses Lato exclusively. The only exception is when a monospaced font
+         is required. The Lato typeface is imported in the _fonts.scss partial file.
+         Although it should always be available, the _fonts.scss includes alternates
+         for fallback.
+      </p>
+      <ul>
+      	<li>For normal purposes use the <b>$font-normal-stack</b> definition.</li>
+      	<li>For monospaced type use the <b>$font-mono-stack</b> definition.</li>
+      </ul>
 
-<h4>$normal-font-stack + $font-wt-light</h4>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmopqrstuvwxyz<br />1234567890</p>
-<h4>$normal-font-stack + $font-wt-normal</h4>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmopqrstuvwxyz<br />1234567890</p>
-<h4>$normal-font-stack + $font-wt-heavy</h4>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmopqrstuvwxyz<br />1234567890</p>
-<h4>$normal-font-stack + $font-wt-extra-heavy</h4>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmopqrstuvwxyz<br />1234567890</p>
-<h4>$mono-font-stack + $font-wt-normal</h4>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmopqrstuvwxyz<br />1234567890</p>
+      <h3>1.3.1 Typefaces and Weights</h3>
+      <p>There are four type weights available for use with the normal font stack.
+      	 For the monospaced font stack ONLY the normal weight should be used.
+      </p>
 
-<h3>1.3.2 Hierarchy</h3>
-<p>Try to use the predefined text sizes. This gives a consistent visual hierachy
-	 across the application. If you find it necessary to change from the standard
-	 text sizes, ensure you size the text in em units, so that the text resizes
-	 in proportion to the standard sizes. PX sized text should be avoided unless
-	 absolutely necessary.
-</p>
-<h4>$font-normal-stack + $font-wt-normal + $font-size-larger</h4>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <h4>$normal-font-stack + $font-wt-light</h4>
+      <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h4>$normal-font-stack + $font-wt-normal</h4>
+      <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h4>$normal-font-stack + $font-wt-heavy</h4>
+      <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h4>$normal-font-stack + $font-wt-extra-heavy</h4>
+      <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h4>$mono-font-stack + $font-wt-normal</h4>
+      <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
 
-<h4>$font-normal-stack + $font-wt-normal + $font-size-large</h4>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <h3>1.3.2 Hierarchy</h3>
+      <p>Try to use the predefined text sizes. This gives a consistent visual hierachy
+      	 across the application. If you find it necessary to change from the standard
+      	 text sizes, ensure you size the text in em units, so that the text resizes
+      	 in proportion to the standard sizes. PX sized text should be avoided unless
+      	 absolutely necessary.
+      </p>
+      <h4>$font-normal-stack + $font-wt-normal + $font-size-larger</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-<h4>$font-normal-stack + $font-wt-normal + $font-size-normal</h4>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <h4>$font-normal-stack + $font-wt-normal + $font-size-large</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-<h4>$font-normal-stack + $font-wt-normal + $font-size-small</h4>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <h4>$font-normal-stack + $font-wt-normal + $font-size-normal</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-<h4>$font-normal-stack + $font-wt-normal + $font-size-smaller</h4>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <h4>$font-normal-stack + $font-wt-normal + $font-size-small</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-<h4>$font-normal-stack + $font-wt-normal + $font-size-smallest</h4>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <h4>$font-normal-stack + $font-wt-normal + $font-size-smaller</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-<h2>1.4 Iconography</h2>
-<p>BudgetApp ustilizes Bootstrap 3 as a base framework. Bootstrap comes with
-   a large set of glyphs pre-installed. In most cases attempt to find a glyph
-   that fits your needs from these icons. A handy tool for locating Bootstrap
- 	 icons can be found over at
- 	 <a href="http://glyphicons.bootstrapcheatsheets.com" target="_blank">Cheatsheets.com</a>
-</p>
-<p>You may also use Google's Material icons by including the _material-icons.scss
-	 partial in a page specific sass file. Icons and insertion codes can be found
-	 over at <a href="https://design.google.com/icons/" target="_blank">design.google.com</a>
-</p>
-<p>Create new icons only as a last resort (for now.)</p>
+      <h4>$font-normal-stack + $font-wt-normal + $font-size-smallest</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-<h1>2.0 Components</h1>
+      <h2>1.4 Iconography</h2>
+      <p>BudgetApp ustilizes Bootstrap 3 as a base framework. Bootstrap comes with
+         a large set of glyphs pre-installed. In most cases attempt to find a glyph
+         that fits your needs from these icons. A handy tool for locating Bootstrap
+       	 icons can be found over at
+       	 <a href="http://glyphicons.bootstrapcheatsheets.com" target="_blank">Cheatsheets.com</a>
+      </p>
+      <p>You may also use Google's Material icons by including the _material-icons.scss
+      	 partial in a page specific sass file. Icons and insertion codes can be found
+      	 over at <a href="https://design.google.com/icons/" target="_blank">design.google.com</a>
+      </p>
+      <p>Create new icons only as a last resort (for now.)</p>
 
-<h2>2.1 Buttons</h2>
+      <h1>2.0 Components</h1>
 
-<p>Our buttons are created with standard bootstrap construction. For example:</p>
-<div class="js-codesamp">
+      <h2>2.1 Buttons</h2>
+
+      <p>Our buttons are created with standard bootstrap construction. For example:</p>
+      <div class="js-codesamp">
 <button type="button" class="btn btn-default btn-sm"> Preferences </button>
 <button type="button" class="btn btn-default btn-sm"> Ok </button>
 <button type="button" class="btn btn-default btn-sm"> Schedule </button>
-</div>
+      </div>
 
 
-<h3>2.1.1 Button Color</h3>
+      <h3>2.1.1 Button Color</h3>
 
-<p>There are six basic button colors.</p>
-<div class="js-codesamp">
+      <p>There are six basic button colors.</p>
+      <div class="js-codesamp">
 <button type="button" class="btn btn-default btn-sm">Default</button>
 <button type="button" class="btn btn-primary btn-sm">Primary</button>
 <button type="button" class="btn btn-success btn-sm">Success</button>
 <button type="button" class="btn btn-info btn-sm">Info</button>
 <button type="button" class="btn btn-warning btn-sm">Warning</button>
 <button type="button" class="btn btn-danger btn-sm">Danger</button>
-</div>
+      </div>
 
 
-<h3>2.1.2 Button Size</h3>
+      <h3>2.1.2 Button Size</h3>
 
-BudgetApp buttons are sized with .btn-sm by default. Only use alternate sizes of
-the bootstrap default (no included class) or large (.btn-lg). Never use the
-extra small button class (.btn-xs).
+      BudgetApp buttons are sized with .btn-sm by default. Only use alternate sizes of
+      the bootstrap default (no included class) or large (.btn-lg). Never use the
+      extra small button class (.btn-xs).
 
-<h3>2.1.2 Buttons with Glyphs</h3>
+      <h3>2.1.2 Buttons with Glyphs</h3>
 
-<p>Buttons with glyphs provide a fast way of picking choices. Use these in places
-	 where the user is presented an option, or many options to aid in quickly
-	 recognizing the deisred action.
-</p>
-<div class="js-codesamp">
+      <p>Buttons with glyphs provide a fast way of picking choices. Use these in places
+      	 where the user is presented an option, or many options to aid in quickly
+      	 recognizing the deisred action.
+      </p>
+      <div class="js-codesamp">
 <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Preferences
 </button>
@@ -131,10 +137,10 @@ extra small button class (.btn-xs).
 <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
 </button>
-</div>
+      </div>
 
-<p>Button can also use glyphs without any text, such as:</p>
-<div class="js-codesamp">
+      <p>Button can also use glyphs without any text, such as:</p>
+      <div class="js-codesamp">
 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
 </button>
@@ -144,32 +150,32 @@ extra small button class (.btn-xs).
 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
 </button>
-</div>
+      </div>
 
-<h3>2.1.3 Button Groups</h3>
+      <h3>2.1.3 Button Groups</h3>
 
-<p>Buttons can may grouped when they share a common useage. Basic sample is to wrap
-	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
-	 the group, and not each button.
-</p>
-<div class="js-codesamp">
+      <p>Buttons can may grouped when they share a common useage. Basic sample is to wrap
+      	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
+      	 the group, and not each button.
+      </p>
+      <div class="js-codesamp">
 <div class="btn-group btn-group-sm" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
 </div>
-</div>
-<blockquote>
-	<b>Tooltips and popovers in button groups require special setting</b>
-	When using tooltips or popovers on elements within a .btn-group, you'll have
-	to specify the option container: 'body' to avoid unwanted side effects (such
-	as the element growing wider and/or losing its rounded corners when the
-	tooltip or popover is triggered).
-</blockquote>
+      </div>
+      <blockquote>
+      	<b>Tooltips and popovers in button groups require special setting</b>
+      	When using tooltips or popovers on elements within a .btn-group, you'll have
+      	to specify the option container: 'body' to avoid unwanted side effects (such
+      	as the element growing wider and/or losing its rounded corners when the
+      	tooltip or popover is triggered).
+      </blockquote>
 
-<h3>2.1.4 Button Dropdowns</h3>
-<p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
-<div class="js-codesamp">
+      <h3>2.1.4 Button Dropdowns</h3>
+      <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
+      <div class="js-codesamp">
 <div class="btn-group btn-group-sm">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Default <span class="caret"></span>
@@ -242,138 +248,330 @@ extra small button class (.btn-xs).
     <li><a href="#">Separated link</a></li>
   </ul>
 </div>
-</div>
+      </div>
 
-<h3>2.1.5 Diabled state</h3>
-<p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
+      <h3>2.1.5 Diabled state</h3>
+      <p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
 <button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
+      </div>
+
+      <h4>For anchor elements shown as buttons...</h4>
+      Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
+
+      <div class="js=codesamp">
+      <a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
+      <a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
+      </div>
+
+      <p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
+         requried
+      </p>
+      <blockquote>
+        <b>Link funtionality caveat</b>
+        This class uses <code>pointer-events: none</code> to try to disable the link funcationaly of the
+        <code>&lt;a&gt;</code> elements, bu that CSS property is not yet standardized and isn't fully supported
+        in older browsers. Also, keyboard naviation remain unaffected, so users can still activate thse links.
+        To be safe we have a javascript that disables links programatically.
+      </blockquote>
+
+      <h2>2.2 Labels</h2>
+
+      <p>Use labels to emphasize certain information.</p>
+
+      <div class="js-codesamp">
+<h1>Example heading <span class="label label-default">New</span></h1>
+<h2>Example heading <span class="label label-default">New</span></h2>
+<h3>Example heading <span class="label label-default">New</span></h3>
+      </div>
+
+      <h3>2.2.1 Variations</h3>
+
+      <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
+      <div class="js-codesamp">
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+      </div>
+
+
+      <blockquote>
+        <b>Have tons of labels?</b><br >
+        Rendering problems can arise when you have dozens of inline labels within a narrow container, each containing
+        its own inline-block element (like an icon). The way around this is setting display: inline-block;. For context
+        and an example, see #13219.
+      </blockquote>
+
+      <h3>2.3 Badges</h3>
+
+      <p>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more. When
+         there are no new or unread items, badges will simply collapse (via CSS's :empty selector) provided no content
+         exists within.
+      </p>
+
+      <div class="js-codesamp">
+<a href="#">Inbox <span class="badge">42</span></a>
+
+<button class="btn btn-primary" type="button">
+  Messages <span class="badge">4</span>
+</button>
+      </div>
+
+      <h2>2.4 Alerts</h2>
+      <h3>2.4.1 Basic alerts</h3>
+      <p>Provide contextual feedback messages for user actions with the following alert messages. Wrap any text and an
+         optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g.,
+         <code>.alert-success</code>) for basic alert messages.
+      </p>
+
+      <div class="js-codesamp">
+<div class="alert alert-success" role="alert">...</div>
+<div class="alert alert-info" role="alert">...</div>
+<div class="alert alert-warning" role="alert">...</div>
+<div class="alert alert-danger" role="alert">...</div>
+      </div>
+
+      <h3>2.4.2 Dismissible alerts</h3>
+      <p>Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.
+        Requires JavaScript alert plugin. For fully functioning, dismissible alerts, you must use the alerts
+        JavaScript plugin. <b>Be sure to use the <code>&lt;button&gt;</code> element with the
+        <code>data-dismiss="alert"</code> data attribute.</b>
+      </p>
+
+      <div class="js-codesamp">
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
 </div>
+      </div>
 
-<h4>For anchor elements shown as buttons...</h4>
-Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
+      <h3>2.4.3 Links in alerts</h3>
+      Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.
 
-<div class="js=codesamp">
-<a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
-<a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
+      <div class="js-codesamp">
+<div class="alert alert-success" role="alert">
+  <a href="#" class="alert-link">...</a>
 </div>
+<div class="alert alert-info" role="alert">
+  <a href="#" class="alert-link">...</a>
+</div>
+<div class="alert alert-warning" role="alert">
+  <a href="#" class="alert-link">...</a>
+</div>
+<div class="alert alert-danger" role="alert">
+  <a href="#" class="alert-link">...</a>
+</div>
+      </div>
 
-<p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
-   requried
-</p>
-<blockquote>
-  <b>Link funtionality caveat</b>
-  This class uses <code>pointer-events: none</code> to try to disable the link funcationaly of the
-  <code>&lt;a&gt;</code> elements, bu that CSS property is not yet standardized and isn't fully supported
-  in older browsers. Also, keyboard naviation remain unaffected, so users can still activate thse links.
-  To be safe we have a javascript that disables links programatically.
-</blockquote>
+      <h3>2.4.4 Usage</h3>
+      <p>
+        Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.
+        Closing an alert removes it from the DOM. To have your alerts use animation when closing, add the <code>.fade</code>
+        and <code>.in</code> classes already applied to them.
+      </p>
 
-<h1>3.0 Forms</h1>
+      <pre><code>
+&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+  &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+&lt;/button&gt;
+      </code></pre>
 
-<h2>3.1 Controls</h2>
+      <h3>2.4.5 Methods</h3>
 
-<h3>3.1.1 Text input form</h3>
-<div class="js-codesamp">
+      <h4><code>$().alert()</code></h4>
+      <p>
+        Makes an alert listen for click events on descendant elements which have the <code>data-dismiss="alert"</code>
+        attribute. (Not necessary when using the data-api's auto-initialization).
+      </p>
+
+      <h4><code>$().alert('close')</code></h4>
+      <p>
+        Closes an alert by removing it from the DOM. If the <code>.fade</code> and <code>.in</code> classes are present
+        on the element, the alert will fade out before it is removed.
+      </p>
+
+      <h3>2.4.6 Events</h3>
+      <p>Alerts expose a few events for hooking into alert functionality. </p>
+
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Event Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>close.bs.alert</td>
+          <td>This event fires immediately when the <code>close</code> instance method is called.</td>
+        </tr>
+        <tr>
+          <td>closed.bs.alert</td>
+          <td>This event is fired when teh alert has been closed (will wait for CSS transitions to complete).</td>
+        </tr>
+      </table>
+
+      <pre><code>
+$('#myAlert').on('closed.bs.alert', function() {
+  // do something
+})
+      </code></pre>
+
+      <h2>2.5 Progress bars</h2>
+
+      <p>Provide real-time feedback on the progress of a long work item or action with the pre-defined progress bars.</p>
+
+      <h3>2.5.1 Basic progress bar</h3>
+      <p>This is the default progress bar</p>
+
+      <div class="js-codesamp">
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    <span class="sr-only">60% Complete</span>
+  </div>
+</div>
+      </div>
+
+      <h3>2.5.2 Porgress bar with label </h3>
+
+      <p>Remove the <code>&lt;span&gt;</code> with <code>.sr-only</code> class from within the progress bar to show a
+         visible percentage.
+      </p>
+
+      <div class="js-codesamp">
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    60%
+  </div>
+</div>
+      </div>
+
+      <h3>2.5.3 Use <code>min-width</code></h3>
+
+      <p>To ensure the label text remains legible even for low percentages, add <code>min-width</code> to the progress bars.</p>
+
+      <div class="js-codesamp">
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
+    0%
+  </div>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">
+    2%
+  </div>
+</div>
+      </div>
+
+
+
+
+
+      <h1>3.0 Forms</h1>
+
+      <h2>3.1 Controls</h2>
+
+      <h3>3.1.1 Text input form</h3>
+      <div class="js-codesamp">
 <label for="usr">Name:</label>
-<input type="text" class="form-control" id="usr" />
-</div>
+<input type="text" class="form-control" id="usr">
+      </div>
 
-<h3>3.1.2 Password input form</h3>
-<div class="js-codesamp">
+      <h3>3.1.2 Password input form</h3>
+      <div class="js-codesamp">
 <label for="pwd">Name:</label>
-<input type="password" class="form-control" id="pwd" />
-</div>
+<input type="password" class="form-control" id="pwd">
+      </div>
 
-<h3>3.1.3 Email input form</h3>
-The input is evaluated by browser. (Developer should still santize it!)
-<div class="js-codesamp">
+      <h3>3.1.3 Email input form</h3>
+      The input is evaluated by browser. (Developer should still santize it!)
+      <div class="js-codesamp">
 <label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" />
-</div>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+      </div>
 
-<h3>3.1.4 File input</h3>
-<div class="js-codesamp">
+      <h3>3.1.4 File input</h3>
+      <div class="js-codesamp">
 <label for="exampleInputFile">File input</label>
-<input type="file" id="exampleInputFile" />
-</div>
+<input type="file" id="exampleInputFile">
+      </div>
 
-<h3>3.1.5 Date/Time input</h3>
+      <h3>3.1.5 Date/Time input</h3>
 
-As text input...
-<div class="js-codesamp">
+      As text input...
+      <div class="js-codesamp">
 <div class="date-range-picker example">
-  <input type="text" name="start" class="" />
+  <input type="text" name="start" class="">
 </div>
-</div>
+      </div>
 
-Prefilled value (in markup)...
-<div class="js-codesamp">
+      Prefilled value (in markup)...
+      <div class="js-codesamp">
 <div class="prefilled-picker example">
-  <input type="text" name="schedule" value="12/12/2020 2:00 PM" />
+  <input type="text" name="schedule" value="12/12/2020 2:00 PM">
 </div>
-</div>
+      </div>
 
-As a clickable link...
-<div class="js-codesamp">
+      As a clickable link...
+      <div class="js-codesamp">
 <div class="button-picker example">
   <a href="#">Schedule</a>
-  <input type="text" name="schedule" />
+  <input type="text" name="schedule">
 </div>
-</div>
+      </div>
 
-As a button...
-<div class="js-codesamp">
+      As a button...
+      <div class="js-codesamp">
 <div class="datebutton">
   <button type="button" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
   </button>
-  <input type="text" name="butt-test" />
+  <input type="text" name="butt-test">
 </div>
-</div>
+      </div>
 
-Initialize the markup with something like the following in the document head. See the
-README.md for further options provided by the plug in in the dependency file folder.
-<pre>
-  <code>
+      Initialize the markup with something like the following in the document head. See the
+      README.md for further options provided by the plug in in the dependency file folder.
+      <pre>
+        <code>
 $('.button-picker a').picker({
   outputTo: $('.button-picker input'),
   prefill: true,
 });
-  </code>
-</pre>
+        </code>
+      </pre>
 
-<h3>3.1.6 Text Area</h3>
-Use this for multi-line text entry. Adjust the vertical height with the "rows"
-attribute
-<div class="js-codesamp">
+      <h3>3.1.6 Text Area</h3>
+      Use this for multi-line text entry. Adjust the vertical height with the "rows"
+      attribute
+      <div class="js-codesamp">
 <textarea class="form-control" rows="3"></textarea>
-</div>
+      </div>
 
-<h3>3.1.7 Checkboxes</h3>
-<div class="js-codesamp">
-  <label>
-    <input type="checkbox" value="">
-    Option one is this and that&mdash;be sure to include why it's great
-  </label>
+      <h3>3.1.7 Checkboxes</h3>
+      <div class="js-codesamp">
+<label>
+  <input type="checkbox" value="">
+  Option one is this and that&mdash;be sure to include why it's great
+</label>
 <div class="checkbox disabled">
   <label>
     <input type="checkbox" value="" disabled>
     Option two is disabled
   </label>
 </div>
-</div>
+      </div>
 
-Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
-cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
-<code>.disabled</code> class to the parent <code>.radio</code>,
-<code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
+      Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
+      cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
+      <code>.disabled</code> class to the parent <code>.radio</code>,
+      <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
 
-<h3>3.1.8 Radio Buttons</h3>
+      <h3>3.1.8 Radio Buttons</h3>
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -392,14 +590,14 @@ cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
     Option three is disabled
   </label>
 </div>
-</div>
+      </div>
 
-<h3>3.1.9 Inline checkboxes and radio buttons</h3>
+      <h3>3.1.9 Inline checkboxes and radio buttons</h3>
 
-Use the .checkbox-inline or .radio-inline classes on a series of
-checkboxes or radios for controls that appear on the same line.
+      Use the .checkbox-inline or .radio-inline classes on a series of
+      checkboxes or radios for controls that appear on the same line.
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <label class="checkbox-inline">
   <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
 </label>
@@ -417,15 +615,15 @@ checkboxes or radios for controls that appear on the same line.
   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
 </label>
 <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 3
 </label>
-</div>
+      </div>
 
-<h3>3.1.10 Selects</h3>
+      <h3>3.1.10 Selects</h3>
 
-Note that many native select menus—namely in Safari and Chrome—have rounded
-corners that cannot be modified via border-radius properties.
-<div class="js-codesamp">
+      Note that many native select menus—namely in Safari and Chrome—have rounded
+      corners that cannot be modified via border-radius properties.
+      <div class="js-codesamp">
 <select class="form-control">
   <option>1</option>
   <option>2</option>
@@ -433,12 +631,12 @@ corners that cannot be modified via border-radius properties.
   <option>4</option>
   <option>5</option>
 </select>
-</div>
+      </div>
 
-For &lt;select&gt; controls with the multiple attribute, multiple options are
-shown by default.
+      For &lt;select&gt; controls with the multiple attribute, multiple options are
+      shown by default.
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <select multiple class="form-control">
   <option>1</option>
   <option>2</option>
@@ -446,15 +644,15 @@ shown by default.
   <option>4</option>
   <option>5</option>
 </select>
-</div>
+      </div>
 
 
-<h3>3.1.11 Static contorls</h3>
+      <h3>3.1.11 Static contorls</h3>
 
-When you need to place plain text next to a form label within a form, use
-the .form-control-static class on a &lt;p&gt;.
+      When you need to place plain text next to a form label within a form, use
+      the .form-control-static class on a &lt;p&gt;.
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <form class="form-horizontal">
   <div class="form-group">
     <label class="col-sm-2 control-label">Email</label>
@@ -465,14 +663,14 @@ the .form-control-static class on a &lt;p&gt;.
   <div class="form-group">
     <label for="inputPassword" class="col-sm-2 control-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password" >
     </div>
   </div>
 </form>
-</div>
+      </div>
 
-Works as an inline as well...
-<div class="js-codesamp">
+      Works as an inline as well...
+      <div class="js-codesamp">
 <form class="form-inline">
   <div class="form-group">
     <label class="sr-only">Email</label>
@@ -480,110 +678,110 @@ Works as an inline as well...
   </div>
   <div class="form-group">
     <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password" >
   </div>
   <button type="submit" class="btn btn-default">Confirm identity</button>
 </form>
-</div>
+      </div>
 
-<h3>3.1.12 Help text</h3>
-<p>Block level help text for for controls. Help text should be explicity associated with the form control it relates
-   to using the <code>aria-describedby</code> attribute. This ensure that assitive technologies, such as screen
-   readers, will announce this help thest when the user focuses or enters the control.
-</p>
+      <h3>3.1.12 Help text</h3>
+      <p>Block level help text for for controls. Help text should be explicity associated with the form control it relates
+         to using the <code>aria-describedby</code> attribute. This ensure that assitive technologies, such as screen
+         readers, will announce this help thest when the user focuses or enters the control.
+      </p>
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <label class="sr-only" for="inputHelpBlock">Input with help text</label>
-<input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+<input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock" >
 <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend
   beyond one line
 </span>
-</div>
+      </div>
 
-<h2>3.2 Control States
+      <h2>3.2 Control States</h2>
 
-<h3>3.2.1 Focus state</h3>
-The is an example of the <code>:focus</code> state on a <code>.form-control</code>.
-<form>
-  <input id="focusInputSample" class="form-control" type="text" value="Dmonstrate focus state"></input>
-</form>
+      <h3>3.2.1 Focus state</h3>
+      The is an example of the <code>:focus</code> state on a <code>.form-control</code>.
+      <form>
+        <input id="focusInputSample" class="form-control" type="text" value="Dmonstrate focus state" >
+      </form>
 
-<h3>3.2.2 Disabled state</h3>
+      <h3>3.2.2 Disabled state</h3>
 
-<p>Add teh <code>diabled</code> boolean attribute on an imput to prevent user interaction.</p>
+      <p>Add teh <code>diabled</code> boolean attribute on an imput to prevent user interaction.</p>
 
-<div class="js-codesamp">
-  <input class="form-control" id="disabledInput" type="text" placeholder="Disambled input here..." disabled />
-</div>
+      <div class="js-codesamp">
+<input class="form-control" id="disabledInput" type="text" placeholder="Disambled input here..." disabled >
+      </div>
 
-<h3>3.2.3 Disabled fieldsets</h3>
-<p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls
-  within the <code>&lt;fieldset&gt;</code> at once.
-  <blockquote>
-    We will use custom javascrpt to disable any links within a disabled fieldset. IE11, Opera &lt;18 and others
-    do not treat these consistently.
-  </blockquote>
-</p>
+      <h3>3.2.3 Disabled fieldsets</h3>
+      <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls
+        within the <code>&lt;fieldset&gt;</code> at once.
+        <blockquote>
+          We will use custom javascrpt to disable any links within a disabled fieldset. IE11, Opera &lt;18 and others
+          do not treat these consistently.
+        </blockquote>
+      </p>
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</input>
+      <label for="disabledTextInput">Disabled input</label>
       <select id="disabledSelect" class="form-control">
         <option>Disabled select</option>
       </select>
     </div>
     <div class="checkbox">
       <label>
-        <input type="checkbox">Can't check this
+        <input type="checkbox" >Can't check this
       </label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
-</div>
+      </div>
 
-<h3>3.2.4 Readonly state</h3>
+      <h3>3.2.4 Readonly state</h3>
 
-<p>Add the <code>readonly</code> boolean attribute on an input to pevent modification of the input's value. Read-only
-   inputs look like disabled inputs, but retain the standard cursor.
-</p>
+      <p>Add the <code>readonly</code> boolean attribute on an input to pevent modification of the input's value. Read-only
+         inputs look like disabled inputs, but retain the standard cursor.
+      </p>
 
-<div class="js-codesamp">
-<input class="form-control" type="text" placeholder="Readonly input here..." readonly>
-</div>
+      <div class="js-codesamp">
+<input class="form-control" type="text" placeholder="Readonly input here..." readonly >
+      </div>
 
-<h3>3.2.5 Validation states</h3>
+      <h3>3.2.5 Validation states</h3>
 
-<p>To show validation results add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code>
-   to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code>
-   within htat element will receive the validation styles.
-   <blockquote>
-      NOTE:Depricated in next release. Use only validation with glyphs as described in the following section
-   </blockquote>
-</p>
+      <p>To show validation results add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code>
+         to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code>
+         within htat element will receive the validation styles.
+         <blockquote>
+            NOTE:Depricated in next release. Use only validation with glyphs as described in the following section
+         </blockquote>
+      </p>
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <div class="form-group has-success">
   <label class="control-label" for="inputSuccess1">Input with success</label>
-  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" >
   <span id="helpBlock2" class="help-block">A black on help text that breaks onto a new line and may extend
     beyond one lne.
   </span>
 </div>
 <div class="form-group has-warning">
   <label class="control-label" for="inputWarning1">Input with warning</label>
-  <input type="text" class="form-control" id="inputWarning1">
+  <input type="text" class="form-control" id="inputWarning1" >
 </div>
 <div class="form-group has-error">
   <label class="control-label" for="inputError1">Input with error</label>
-  <input type="text" class="form-control" id="inputError1">
+  <input type="text" class="form-control" id="inputError1" >
 </div>
 <div class="has-success">
   <div class="checkbox">
     <label>
-      <input type="checkbox" id="checkboxSuccess" value="option1">
+      <input type="checkbox" id="checkboxSuccess" value="option1" >
       Checkbox with success
     </label>
   </div>
@@ -604,25 +802,25 @@ The is an example of the <code>:focus</code> state on a <code>.form-control</cod
     </label>
   </div>
 </div>
-</div>
+      </div>
 
-<h3>3.2.6 Validation states with icons</h3>
+      <h3>3.2.6 Validation states with icons</h3>
 
-<blockquote>Depreication notice: In the next version, all validation states will be required to use icons
-  to improve usability
-</blockquote>
-<p>Add feedback icons with the addtion of <code>.has feedback</code> and the suitable icon.</p>
-<h4>Icons, labels, and input groups</h4>
-<blockquote>Manual positioning of feedback icons is reqiured for inputs without a label and for input groups with an
-   add-on on the right.
-</blockquote>
-<blockquote>
-  Note the use of the help text span class. By using the class <code>.sr-only</code> the help text is hidden from
-  view. But through use of the <code>aria-describedby</code> atttribute, will be availabe to assitive technologies
-  such as screen readers.
-</blockquote>
+      <blockquote>Depreication notice: In the next version, all validation states will be required to use icons
+        to improve usability
+      </blockquote>
+      <p>Add feedback icons with the addtion of <code>.has feedback</code> and the suitable icon.</p>
+      <h4>Icons, labels, and input groups</h4>
+      <blockquote>Manual positioning of feedback icons is reqiured for inputs without a label and for input groups with an
+         add-on on the right.
+      </blockquote>
+      <blockquote>
+        Note the use of the help text span class. By using the class <code>.sr-only</code> the help text is hidden from
+        view. But through use of the <code>aria-describedby</code> atttribute, will be availabe to assitive technologies
+        such as screen readers.
+      </blockquote>
 
-<div class="js-codesamp">
+      <div class="js-codesamp">
 <div class="form-group has-success has-feedback">
   <label class="control-label" for="inputSuccess2">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
@@ -650,30 +848,730 @@ The is an example of the <code>:focus</code> state on a <code>.form-control</cod
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
   <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
 </div>
+      </div>
+
+      <h2>3.3 Form layouts</h2>
+
+      <h3>3.3.1 Inline Forms</h3>
+      <p>Add <code>.form-inline</code> to your form for left-aligned and inline-block controls for viewports that are at
+         least 768px wide.
+      </p>
+
+      <div class="js-codesamp">
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+  <button type="submit" class="btn btn-default">Send invitation</button>
+</form>
+      </div>
+
+      <div class="js-codesamp">
+<form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword3">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Sign in</button>
+</form>
+      </div>
+
+      <h3>3.3.2 Horizontal form</h3>
+
+      <p>Use BudgetApp's predefined grid classes to align labels and groups of form controls in a horizontal
+       layout by adding <code>.form-horizontal</code> to the form (which doesn't have to be a <code>&lt;form&gt;</code>).
+       Doing so changes <code>.form-groups</code> to behave as grid rows, so no need for <code>.row</code>.
+      </p>
+
+      <div class="js-codesamp">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+      </div>
+
+      <h2>3.4 Modals</h2>
+
+      <p>Never attempt to show more than one modal at a time. Only one-level of modal
+         is acceptable from a UX point of view. Also, Always try to place a
+         modal's HTML code in a top-level position in your document to avoid other
+         components affecting the modal's appearance and/or functionality.
+      </p>
+
+      <h3>3.4.1 Static example</h3>
+
+      <p>A rendered modal with header, body, and set of actions in the footer.</p>
+
+      <div class="js-codesamp">
+<div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+      </div>
+
+
+      <h3>3.4.2 Live demo</h3>
+
+      <p>Toggle a modal via JavaScript by clicking the button below. It will slide
+         down and fade in from the top of the page.
+      </p>
+
+      <div class="js-codesamp">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <h3>3.4.3 Sizing</h3>
+
+      <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog.</code></p>
+
+      <div class="js-codesamp">
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
 </div>
 
-<h2>3.3 Form layouts</h2>
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+      </div>
+
+      <h3>3.4.5 Modal Layouts</h3>
+
+      <p>
+        To take advantage of the Bootstrap grid system within a modal, just nest
+        <code>.rows</code> within the <code>.modal-body</code> and then use the
+        normal grid system classes.
+      </p>
+
+      <div class="js-codesamp">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGridSample">
+  Launch demo modal
+</button>
+
+<div class="modal fade" id="modalGridSample" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+        <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-xs-8 col-sm-6">
+              Level 2: .col-xs-8 .col-sm-6
+            </div>
+            <div class="col-xs-4 col-sm-6">
+              Level 2: .col-xs-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+      </div>
+
+      <h3>3.4.6 Modal usage</h3>
+
+      <p>
+        The modal plugin toggles your hidden content on demand, via data attributes
+        or JavaScript. It also adds M<code>.modal-open</code> to the
+        <code>&lt;body&gt;</code> to override default scrolling behavior and
+        generates a <code>.modal-backdrop</code> to provide a click area for
+        dismissing shown modals when clicking outside the modal.
+      </p>
+
+      <h4>Via data attributes</h4>
+
+      Activate a modal without writing JavaScript. Set data-toggle="modal" on a controller element, like a button, along with a data-target="#foo" or href="#foo" to target a specific modal to toggle.
+      Copy
+
+      <div class="js-codesamp">
+<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+      </div>
+
+      <h4>Via JavaScript</h4>
+
+      <p>Call a modal with id myModal with a single line of JavaScript:</p>
+
+      <pre><code>
+$('#myModal').modal(options)
+      </code></pre>
+
+      <h3>3.4.7 Options</h3>
+
+      <p>
+        Options can be passed via data attributes or JavaScript. For data attributes,
+        append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.
+      </p>
+
+      <table class="table table-striped table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>type</th>
+        <th>default</th>
+        <th>description</th>
+      </tr>
+      <tr>
+        <td>backdrop</td>
+        <td>boolean or the string <code>'static'</code></td>
+        <td>true</td>
+        <td>
+          Includes a modal-backdrop element. Alternatively, specify <code>static</code>
+          for a backdrop which doesn't close the modal on click.
+        </td>
+      </tr>
+      <tr>
+        <td>keyboard</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Closes the modal when escape key is pressed</td>
+      </tr>
+      <tr>
+        <td>show</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Shows the modal when initialized.</td>
+      </tr>
+      </table>
+
+      <h3>x.x.x Methods</h3>
+
+      <h4><code>.modal(options)</code></h4>
+
+      <p>Activates your content as a modal. Accepts an optional options object.</p>
+
+      <pre><code>
+$('#myModal').modal({
+  keyboard: false
+})
+      </code></pre>
+
+      <h4><code>.modal('toggle')</code></h4>
+      <p>
+        Manually toggles a modal. <b>Returns to the caller before the modal has
+        actually been shown or hidden</b> (i.e. before the<code>shown.bs.modal</code>
+        or <code>hidden.bs.modal</code> event occurs).
+      </p>
+
+      <pre><code>
+$('#myModal').modal('toggle')
+      </code></pre>
+
+      <h4><code>.modal('show')</code></h4>
+      <p>
+        Manually opens a modal. <b>Returns to the caller before the modal has actually
+        been shown</b> (i.e. before the <code>shown.bs.modal</code> event occurs).
+      </p>
+      <pre><code>
+$('#myModal').modal('show')
+      </code></pre>
+
+      <h4><code>.modal('hide')</code></h4>
+      <p>
+        Manually hides a modal. <b>Returns to the caller beofre the modal has
+        acutally been hidden</b> (i.e. bfore the <code>hidden.bs.modal</code> event
+        occurs).
+      </p>
+
+      <pre><code>
+$('#myModal').modal('hide')
+      </code></pre>
+
+      <h4><code>.modal('handleUpdate')</code></h4>
+      <p>
+        Readjusts the modal's position to couter a scrollbar in case one should appear,
+        which would make the modal jump to the left. Only needed when the height of
+        the modal changes while it is open.
+      </p>
+
+      <pre><code>
+$('#myModal').modal('handleUpdate')
+      </code></pre>
+
+      <h3>3.4.8 Modal Events</h3>
+      <p>
+        Use the following events to hook into modal functionality. Note: all modal
+        events are fired at the modal itself (i.e. at the
+        <code>&lt;div class="modal"&gt;</code>).
+      </p>
+
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Event type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>show.bs.modal</td>
+          <td>
+            This event fires immediately when the <code>show</code>instance method is
+            called. If caused by a click, the clicked element is available as the
+            <code>relatedTarget</code> property of the event.
+          </td>
+        </tr>
+        <tr>
+          <td>shown.bs.modal</td>
+          <td>
+            this event is fired when the modal has been made visible to the user (will
+            wait for CSS transitions to complete). If caused by a click, the clicked
+            element is available as the <code>relatedTarget</code> property of the
+            event.
+          </td>
+        </tr>
+        <tr>
+          <td>hide.bs.modal</td>
+          <td>
+            this event is fired immediately when the <code>hide</code> instnace method
+            has been called.
+          </td>
+        </tr>
+        <tr>
+          <td>hidden.bs.modal</td>
+          <td>
+            This event is fired when the modal has finished being hidden from the user
+            (will wait for CSS transitions to complete).
+          </td>
+        </tr>
+      </table>
+
+      <pre><code>
+$('#myModal').on('hidden.bs.modal',function(e){
+  // do something...
+})
+      </code></pre>
+
+      <h2>3.5 Tooltips</h2>
+      <p>
+        Tooltips proved a great way to give feedback to the user. You must specifically
+        include dev/assets/js/vendor/bootstrap/bootstrap/tooltip.js to display tooltips
+        on your page.
+      </p>
+      <blockquote class="danger">
+        <h4>Intialization required</h4>
+        <p>
+          For performance reasons, the Tooltip functionality must be initialized manually.
+          One way to initialize all tooltips on a page would be to select them by their
+          <code>data-toggle</code> attribute:
+        </p>
+
+        <pre><code>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+        </code></pre>
+
+      </blockquote>
+
+      <h3>3.5.1 Examples</h3>
+      Hover over the links below to see tooltips in action:
+      <div class="js-codesamp">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vera viam <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a> comparaverit historiae equos fructuosam, significet praesidium congressus perpetuam liberalitati affecti cupiditatibusque regula. Dicent. Fore philosophi conflixisse. <a href="#" data-toggle="tooltip" title="Some tooltip text!">Labefactetur</a> exitum ipsarum dici mirari, placet interesse quosvis humili redeamus erant, sanguinem morborum consilia corpore debilitati tranquillae locum intuemur bonum sollicitudines, amicum multis. Retinent.
+      </div>
+
+      <h3>3.5.2 Tooltip Directions</h3>
+
+      <p>Tooltips have for directions: top, right, bottom, and left.</p>
+
+      <div class="js-codesamp">
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+      </div>
+
+      <h3>3.5.3 Usage</h3>
+
+      <p>
+        The tooltip plugin generates content and markup on demand, and by default places tooltips after their triggering
+        element. Ititialize the tooltip via Javascript:
+      </p>
+
+      <pre><code>
+$('#example').tooltip(options)
+      </code></pre>
+
+      <h3>3.5.4 Markup</h3>
+
+      <p>
+        The required markup for a tooltip is only a <code>data</code> attribute and a <code>title</code> on the HTML element
+        you wish to have a tooltip. The generated markup is rather simple, though it does require a position if the desired
+        location is somehting other than the default <code>top</code>.
+      </p>
+
+      <pre><code>
+&lt;!-- HTML to write --&gt;
+&lt;a href="#" data-toggle="tooltip" title="Some tooltip text!"&gt;Hover over me&lt;/a&gt;
+
+&lt;!-- Generated markup by the plugin --&gt;
+&lt;div class="tooltip top" role="tooltip"&gt;
+  &lt;div class="tooltip-arrow"&gt;&lt;/div&gt;
+  &lt;div class="tooltip-inner"&gt;
+    Some tooltip text!
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+
+      <blockquote>
+        <h4>Multiple-line elements</h4>
+        Sometimes you want to add a tooltip to a hyperlink or other element that wraps multiple lines. The default behavior
+        of the tooltip is to center it horizontally and vertically. In this case, add <code>white-space: nowrap;</code> to
+        your anchors to avoid this.
+      </blockquote>
+
+      <blockquote>
+        <h4>Tooltips in button groups, input groups and tables require special setting</h4>
+        When using tootips on elements within a <code>.btn-group</code> or an <code>.input-group</code>, or on a table-related
+        element (<code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;thead&gt;</code>,
+        <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>), you'll have to specify the option <code>container: 'body'</code>
+        (documented below) to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners
+        when the tooltip is triggered).
+      </blockquote>
+
+      <blockquote>
+        <h4>Don't try to show tooltips on hidden elements</h4>
+        Invoking <code>$(...).tooltip('show')</code> when the target element is <code>display: none</code> will cause the
+        tooltip to be incorrectly positioned.
+      </blockquote>
+
+      <blockquote>
+        <h4>Tooltips on disabled elements require wrapper elements</h4>
+        To add a tooltip to a <code>disabled</code> or <code>.disabled</code> element, pu t the element insde of a
+        <code>&lt;div&gt;</code> and apply the tooltip to that <code>&lt;div&gt;</code>
+      </blockquote>
+
+      <h3>3.5.5 Options</h3>
+
+      <p>
+        Options can be passed via data attributes or JavaScript. For data attributes, append the option <code>data-</code>,
+        as in <code>data-animation=""</code>.
+      </p>
+
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>animation</td>
+          <td>boolean</td>
+          <td>true</td>
+          <td>Apply a CSS fade transition to the tooltip</td>
+        </tr>
+        <tr>
+          <td>container</td>
+          <td>string|false</td>
+          <td>false</td>
+          <td>
+            Appends the tooltip to a specific element. Example: <code>container:'body'</code>. THis option is particularly
+            useful in that it allows you to position the tooltip in the flow of the document near the triggering element -
+            which will prevent the tooltip from floating away from the triggering element during window resize.
+          </td>
+        </tr>
+        <tr>
+          <td>dealy</td>
+          <td>number|object</td>
+          <td>0</td>
+          <td>
+            Delay showing and hiding the tooltip in milliseconds. Does not apply to manual trigger type. If a number is
+            supplied, dealy is applied to both hide/show. Object structure is: <code>delay: {"show":500, "hide":100}</code>
+          </td>
+        </tr>
+        <tr>
+          <td>html</td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>
+            Insert HTML into the tooltip. If false, jQuery's <code>text</code> method will be used to insert content into the
+            DOM. Use text if you're worried about XSS attacks.
+          </td>
+        </tr>
+        <tr>
+          <td>placement</td>
+          <td>string|function</td>
+          <td>'top'</td>
+          <td>
+            <p>
+              How to position the tooltip - top|botton|left|right|auto.<br>
+              When "auto" is specified, it will dynamically reorient the tooltip. For exmple, if placement is "auto left" the
+              tooltip will display to the left when possible, otherwise it will display right.
+            </p>
+            <p>
+              When a function is used to determine the placement, it is called with the tooltip DOM node as its first
+              argument and the triggering element DOM node as its second. The <code>this</code> context is set to the
+              tooltip instance.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>string</td>
+          <td>false</td>
+          <td>
+            If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used
+            to enable dynamic HTML content ot have tooltips added. See
+            <a href="http://jsbin.com/zopod/1/edit" target=".blank">this example</a>
+          </td>
+        </tr>
+        <tr>
+          <td>template</td>
+          <td>string</td>
+          <td>
+            <code>
+              '&lt;div class="tooltip" role="tooltip"&gt;&lt;div class="tooltip-arrow"&gt;&lt;/div&gt;&lt;
+              div class="tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'
+            </code>
+          </td>
+          <td>
+            <p>Base HTML to use when crateing the tooltip</p>
+            <p>The tooltip's <code>title</code> will be injected into the <code>.tooltip-inner</code>.</p>
+            <p><code>.tooltop-arrow</code> will become the tooltip's arrow.</p>
+            <p>The outermost wrapper element should have the <code>.tooltip</code> class</p>
+          </td>
+        </tr>
+        <tr>
+          <td>title</td>
+          <td>string|function</td>
+          <td>''</td>
+          <td>
+            <p>
+              Default title value if <code>title</code> attribute isn't present.
+            </p>
+            <p>
+              If a function is given, it will be called with its <code>this</code> reference set to the
+              element that the tooltip is attached to.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>trigger</td>
+          <td>string</td>
+          <td>'hover focus'</td>
+          <td>
+            <p>
+              How the tooltip is triggered - click|hover|focus|manual. You may pass multiple
+              triggers; separate them with a sapce. <code>manual</code> cannot be combined
+              with any other trigger.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>viewport</td>
+          <td>string|object|function</td>
+          <td>{selector: 'body', padding: 0}</td>
+          <td>
+            <p>
+              Keeps the tooltip within the bounds of this element. Example: <code>
+              viewport: '#viewport'</code> or <code>{"selector": "#viewport","padding":0}</code>
+            </p>
+            <p>
+              If a function is given, it is called with the triggering element DOM node as its only argument. The
+              <code>this</code> context is set to the tooltip instance.
+            </p>
+          </td>
+        </tr>
+      </table>
+
+      <h3>3.5.6 Methods</h3>
+
+      <h4><code>$().tooltip(options)</code></h4>
+      <p>Attaches a tooltip handler to an element collection.</p>
+
+      <h4><code>.tooltip('show')</code></h4>
+      <p>
+        Reveals an element's tooltip. <b>Returns to the caller before the tooltip has actually been shown</b> (i.e. before
+        the <code>shown.bs.tooltip</code> event occurs). This is considered a 'manual' trigering of the tooltip. Tooltips
+        with zero-length titles are never displayed.
+      </p>
+      <pre><code>
+$('#element').tooltip('show')
+      </code></pre>
+
+      <h4><code>.tooltip('hide')</code></h4>
+      <p>
+        Hides an element's tooltip. <b>Returns to the caller before the tooltip has actually been hidden</b> (i.e. before
+        the <code>hidden.bs.tooltip</code> event occurs). This is considered a "manual" triggering of the tooltip.
+      </p>
+      <pre><code>
+$('#element').tooltip('hide')
+      </code></pre>
+
+      <h4><code>.tooltip('toggle')</code></h4>
+      <p>
+        Toggles an element's tooltip. <b>Returns to the caller before the tooltip has actually been shown or hidden</b> (i.e.
+        before the <code>shown.bs.tooltip</code> or <code>hidden.bs.tooltip</code> event occurs). This is considered a
+        "manual" triggering of the tooltip.
+      </p>
+      <pre><code>
+$('#element').tooltip('toggle')
+      </code></pre>
+
+      <h4><code>.tooltip('destroy')</code></h4>
+      <p>
+        Hides and destroys an element's tooltip. Tooltips that use delegation (which are created using the <code>selector</code>
+        option) cannot be individually destroyed on descendent trigger elements.
+      </p>
+      <pre><code>
+$('#element').tooltip('destroy')
+      </code></pre>
+
+      <h3>3.5.7 Events</h3>
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Event Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>show.bs.tooltip</td>
+          <td>This event fires immediately when teh <code>show</code> instance method is called.</td>
+        </tr>
+        <tr>
+          <td>shown.bs.tooltip</td>
+          <td>
+            This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions
+            to complete).
+          </td>
+        </tr>
+        <tr>
+          <td>hide.bs.tooltip</td>
+          <td>
+            This event is fired immeidately when the <code>hide</code>instance method has been called.
+          </td>
+        </tr>
+        <tr>
+          <td>hidden.bs.tooltip</td>
+          <td>
+            This event is fired when the tooltip has finished being hidden fro the user (Will wait for CSS
+            transitions to complete).
+          </td>
+        </tr>
+        <tr>
+          <td>inserted.bs.tooltip</td>
+          <td>
+            This event is fired after the <code>show.bs.tooltip</code> event when the tooltip template has been
+            added to the DOM.
+          </td>
+        </tr>
+      </table>
+      <pre><code>
+$('#myTooltip').on('hidden.bs.tooltip', functino() {
+  // do something
+})
+      </code></pre>
 
 
-
-
-
-
-<pre><code>
-[
-  {
-    "title": "apples",
-    "count": [12000, 20000],
-    "description": {"text": "...", "sensitive": false}
-  },
-  {
-    "title": "oranges",
-    "count": [17500, null],
-    "description": {"text": "...", "sensitive": false}
-  }
-]
-</code></pre>
-
+    </div>
+  </div>
+</div>
 
 
 </body>
