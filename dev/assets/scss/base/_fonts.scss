@@ -11,3 +11,55 @@ $font-wt-normal:      400;
 $font-wt-heavy:       700;
 $font-wt-extra-heavy: 900;
 
+// definition classes
+.font-normal {
+  font-family: $font-normal-stack;
+}
+
+.font-mono {
+  font-family: $font-mono-stack;
+}
+
+.font-wt-light {
+  font-weight: $font-wt-light;
+}
+
+.font-wt-normal {
+  font-weight: $font-wt-normal;
+}
+
+.font-wt-heavy {
+  font-weight: $font-wt-heavy;
+}
+
+.font-wt-extra-heavy {
+  font-weight: $font-wt-extra-heavy;
+}
+
+.font-size-largest {
+  font-size: 2em;
+}
+
+.font-size-larger {
+  font-size: 1.5em;
+}
+
+.font-size-large {
+  font-size: 1.25em;
+}
+
+.font-size-normal {
+  font-size: 1em;
+}
+
+.font-size-small {
+  font-size: .95em;
+}
+
+.font-size-smaller {
+  font-size: .85em;
+}
+
+.font-size-smallest {
+  font-size: .75em;
+}
