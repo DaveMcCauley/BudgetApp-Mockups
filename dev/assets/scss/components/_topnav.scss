@@ -1,0 +1,102 @@
+
+// Top navigation bar
+
+// Used in the main section of the app.
+
+// Usage:
+// <div class="component">
+//   <p class="component-decendant">
+//     <span class="component-decendant-descendant"></span>
+//   </p>
+// </div>
+//
+
+// Put any other notes here, too.
+
+
+// variables for tweeking
+$topnav-height: 70px;
+$topnav-bg-color: #fff;
+$topnav-avatar-size: 36px;
+
+
+.topnav {
+  background-color: $topnav-bg-color;
+  border-bottom-color: $light-gray-500;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  box-sizing: border-box;
+  height: $topnav-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.topnav-title {
+  color: $black;
+  display: inline-block;
+  float: left;
+  font-size: 1.5em;
+  font-weight: $font-wt-heavy;
+  letter-spacing: -1px;
+  margin-top: ($topnav-height - $topnav-avatar-size) / 2;
+}
+
+.topnav-title a {
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topnav-title a:hover {
+  color: $black;
+  text-decoration: none;
+}
+
+.topnav-avatar {
+  height: $topnav-avatar-size;
+  margin-left: 15px;
+  margin-right: 10px;
+  width: $topnav-avatar-size;
+}
+
+.topnav-buttons {
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+  margin-top: 7px
+}
+
+.topnav-buttons a {
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: .9rem 1rem .4rem;
+  text-align: center;
+}
+
+.topnav-buttons a:hover {
+  color: $light-gray-400;
+  text-decoration: none;
+}
+
+.topnav-buttons-icon {
+  font-size: 1.5em;
+  margin-top: 3px;
+}
+
+.topnav-button-label {
+  color: $light-gray-900;
+  display: block;
+  font-size: .9em;
+  font-weight: $font-wt-heavy;
+}
+
+

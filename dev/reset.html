@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <link rel="stylesheet" href="assets/css/main.css" >
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <script type="text/javascript" src="assets/js/preload.js"></script>
+  <script type="text/javascript" src="assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.js"></script>
+  <title>Reset Your BudgetApp Password</title>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row" style="min-height: 150px;">
+	</div>
+	<div class="row">
+		<div class="col-md-4"></div>
+    <div class="col-md-4" role="main">
+    	<p class="font-normal font-wt-extra-heavy font-size-largest">
+    		Enter Your New BudgetApp Password
+    	</p>
+    	<p class="font-size-normal">
+    		Enter your new password. Passwords must contain atleast 8 characters. One
+    		uppercase letter and atleast one number must be included.
+    	</p>
+    	<form>
+    		<div id="enter" class="form-group">
+    			<label for="enterPass">Enter password</label>
+    			<input type="password" class="form-control" id="enterPass" placeholder="e.g.,********">
+    		</div>
+    		<div id="confirm" class="form-group">
+    			<label for="confirmPass">Re-enter to confirm</label>
+    			<input type="password" class="form-control" id="confirmPass" placeholder="e.g. *********">
+    		</div>
+    		<button type="button" class="btn btn-primary">Submit</button>
+    	</form>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="assets/js/postload.js"></script>
+<script>
+	$('#enterPass').pwstrength();
+</script>
+
+</html>

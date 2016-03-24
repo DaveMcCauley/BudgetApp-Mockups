@@ -125,8 +125,11 @@ module.exports = function(grunt) {
 										                      'dev/assets/js/src/postload/init-tooltip.js'
                                         ],
           'dev/assets/css/styleguide.css' : ['dev/assets/css/styleguide.css',
-                                             'dev/assets/css/vendor/highlight/xcode.css',
+                                             'dev/assets/css/vendor/highlight/xcode.css'
                                             ],
+          'dev/assets/css/main.css': ['dev/assets/css/main.css',
+                                      'dev/assets/css/vendor/simple-line-icons/simple-line-icons.css'
+                                     ]
         },
       },
       prod: {
@@ -145,7 +148,7 @@ module.exports = function(grunt) {
                                          'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js',
                                          'dev/assets/js/vendor/datetime-picker/datepicker.min.js',
                                          'dev/assets/js/vendor/highlight.pack.min.js',
-                                         'prod/assets/js/src/preload/**/*.min.js'
+                                         'prod/assets/js/src/preload/**/*.min.js',
                                         ],
           'prod/assets/js/postload.js' : [//'prod/assets/js/src/postload/**/*.min.js']
                                           'prod/assets/js/src/postload/styleguide-palette.min.js',
@@ -206,6 +209,10 @@ module.exports = function(grunt) {
             'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
             'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
             'dev/assets/scss/vendor/bootstrap-datepicker/_bootstrap-datepicker3.scss': 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css',
+            // pwstrength-bootstrap
+            'dev/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.js': 'node_modules/pwstrength-bootstrap/dist/pwstrength-bootstrap-1.2.10.js',
+            'dev/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.min.js': 'node_modules/pwstrength-bootstrap/dist/pwstrength-bootstrap-1.2.10.min.js',
+
           }
         ]
       }
@@ -532,6 +539,9 @@ module.exports = function(grunt) {
             ext     : '.min.js',
             extDot  : 'last'
           },
+          {
+            'prod/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.js': 'dev/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.min.js'
+          }
         ]
       },
 
@@ -561,11 +571,8 @@ module.exports = function(grunt) {
         tasks: ['jshint','concat:dev']
       },
       sass: {
-        options: {
-          livereload: true
-        },
-        files: ['dev/**/*.scss'],
-        tasks: ['scsslint','sass']
+        files: ['dev/assets/scss/**/*.scss'],
+        tasks: ['scsslint','sass','concat:dev']
       },
       html: {
         files: ['dev/**/*.html'],

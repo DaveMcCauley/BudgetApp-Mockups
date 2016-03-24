@@ -1,0 +1,14 @@
+
+// redefine the defaults for reset.html ONLY
+
+.progress {
+  float: left;
+  height: 5px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  width: 75%;
+}
+
+.password-verdict {
+  float: right;
+}

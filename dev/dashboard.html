@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <link rel="stylesheet" href="assets/css/main.css" >
+  <script type="text/javascript" src="assets/js/preload.js"></script>
+  <title>BudgetApp Dashboard</title>
+</head>
+
+<body>
+<div class="topnav">
+  <div class="topnav-title">
+    <a href="/login.html">
+      <img class="topnav-avatar" src="/assets/img/tina-avatar.png" alt="User's avatar">
+      Hey There Tina Belcher!
+    </a>
+  </div>
+  <div class="topnav-buttons">
+    <a id="budget-switcher">
+      <span aria-hidden="true" class="topnav-buttons-icon icon-grid"></span>
+      <span class="topnav-button-label">Budgets</span>
+    </a>
+    <a href="/user-prefs.html">
+      <span aria-hidden="true" class="topnav-buttons-icon icon-settings"></span>
+      <span class="topnav-button-label">Prefs</span>
+    </a>
+    <a href="/login.html">
+      <span aria-hidden="true" class="topnav-buttons-icon icon-support"></span>
+      <span class="topnav-button-label">Help</span>
+    </a>
+
+  </div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4"></div>
+    <div id="main" class="col-md-4" role="main">
+      <div class="row" style="min-height: 50px;"></div>
+      <div class="row" style="min-height: 75px;">
+           <div class="alert alert-danger hidden" role="alert">
+        </div>
+      </div>
+
+    	<p class="font-normal font-wt-extra-heavy font-size-largest">
+    		Log in to BudgetApp
+    	</p>
+    	<form>
+    		<div id="email" class="form-group">
+    			<label for="inputEmail">Email <span class="light-gray-600">(or Username)</span></label>
+    			<input type="email" class="form-control" id="inputEmail" placeholder="e.g.,myname@server.com">
+    		</div>
+    		<div id="password" class="form-group">
+    			<label for="inputPassword">Password</label>
+    			<input type="password" class="form-control" id="inputPassword" placeholder="e.g. *********">
+    		</div>
+    		<button id="login" type="button" class="btn btn-primary">Log in</button>
+    		<p class="help-block light-gray-600">Forgot your password? <a href="/forgot.html">Reset it.</a></p>
+    		<p class="help-block light-gray-600">Don't have an account? <a href="">Create a BudgetApp account</a></p>
+    	</form>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="assets/js/postload.js"></script>
+
+<script>
+var globalCount =1;
+  $("#login").click(function(){
+    switch(globalCount) {
+      case 1:
+        $(".alert").removeClass("hidden");
+        $(".alert").html("There is no account for this email. <a class='alert-link' href='signup.html'>Sign up?</a>");
+        $("#email").addClass("has-error");
+        globalCount =2;
+        break;
+
+      case 2:
+
+        $("#email").removeClass("has-error");
+        $(".alert").html("Invalid password. <a class='alert-link' href='forgot.html'>Reset it?</a>");
+        $("#password").addClass("has-error");
+        globalCount=3;
+        break;
+
+      case 3:
+        $(".alert").addClass("hidden");
+        $("#password").removeClass("has-error");
+        globalCount=1;
+        break;
+    }
+  });
+</script>
+
+</html>

@@ -1,5 +1,6 @@
 @import 'base/all';
 @import 'vendor/all';
+@import 'components/all';
 
 // *  NOTE!! If sourcemaps suddenly stop working... check the
 // *  bootstrap-datepicker3.css file. Last line in file is a sourcemap
@@ -154,4 +155,7 @@ textarea {
   background: $red-800;
 }
 
-
+// define the default font face
+body {
+  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

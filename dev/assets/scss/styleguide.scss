@@ -87,3 +87,12 @@
   margin-bottom: 50px;
   margin-top: 20px;
 }
+
+// use generic sans serif font for the
+// styleguide ONLY. We do this so the
+// definition of the acutal used font
+// faces is clear.
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
