@@ -1,0 +1,98 @@
+@import 'main';
+
+
+// Palette support
+
+.palette-section {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.palette-item {
+  display: inline-block;
+  font-size: .8em;
+  margin: 8px;
+  text-align: left;
+  vertical-align: top;
+  width: 200px;
+}
+
+.palette-item-color {
+  box-sizing: border-box;
+  padding: .3em .6em;
+  position: relative;
+}
+
+.palette-item-color:first-child {
+  border-radius: .4em .4em 0 0;
+}
+
+.palette-item-color:last-child {
+  border-radius: 0 0 .4em .4em;
+}
+
+.palette-item-color-header {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.palette-item-color-weight {
+  margin: 0;
+}
+
+.palette-item-color-hex {
+  bottom: .3em;
+  margin: 0;
+  position: absolute;
+  right: .6em;
+}
+
+// styleguide customizations for the styleguide.
+
+
+#datepicker {
+  background: #f7f7f7;
+  border-radius: 3px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 300px;
+
+  input {
+    margin-bottom: 15px;
+  }
+
+  .datepicker-inline {
+    width: 100%;
+  }
+
+  .datepicker table {
+    width: 100% !important;
+  }
+}
+
+
+// For example
+
+.example + .example {
+  margin-top: 00px;
+}
+
+
+// add some spacing to js-codesamp
+.js-codesamp {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+// use generic sans serif font for the
+// styleguide ONLY. We do this so the
+// definition of the acutal used font
+// faces is clear.
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
