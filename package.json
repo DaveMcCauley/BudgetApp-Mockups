@@ -33,7 +33,6 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-htmlhint": "latest",
-    "grunt-newer": "latest",
     "grunt-notify": "latest",
     "grunt-open": "0.2.3",
     "load-grunt-tasks": "latest",
