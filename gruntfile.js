@@ -76,15 +76,15 @@ module.exports = function(grunt) {
     },
     // CLEAN ============================================================
     clean: {
-      dev_pre: {
+      predev: {
         src: ['dev/assets/js/*.*',
               'dev/assets/css/*.*'
              ]
       },
-      prod_pre: {
+      preprod: {
         src: 'prod/*'
       },
-      prod_post: {
+      postprod: {
         src: 'prod/assets/js/*/'
       }
     },
@@ -580,10 +580,10 @@ grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js file
   // create the tasks
   grunt.registerTask('dev-start-win',['dev-build','express:dev','open:dev','watch']);
   grunt.registerTask('dev-start-mac',['dev-build','express:dev','open:mac','watch']);
-  grunt.registerTask('dev-build',['clean:dev_pre','copy:deps','uglify:vendor','scsslint','sass:dev','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:pages_dev','concat:core_dev','htmlhint']);
+  grunt.registerTask('dev-build',['clean:predev','copy:deps','uglify:vendor','scsslint','sass:dev','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:pages_dev','concat:core_dev','htmlhint']);
 
   grunt.registerTask('prod-start-win',['express:prod','open:prod','watch']);
 	grunt.registerTask('prod-start-mac',['express:prod','open:mac','watch']);
-  grunt.registerTask('prod-build',['clean:prod_pre','copy:deps','uglify:vendor', 'scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:pages_prod','concat:core_prod', 'htmlhint','htmlmin:prod','imagemin', 'clean:prod_post']);
+  grunt.registerTask('prod-build',['clean:preprod','copy:deps','uglify:vendor', 'scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:pages_prod','concat:core_prod', 'htmlhint','htmlmin:prod','imagemin', 'clean:postprod']);
 
 };
