@@ -1,6 +1,3 @@
-// http://editcode.info/questions/35939835/grunt-not-able-to-read-external-text-file-in-gruntfile-js
-// http://www.itdaan.com/faq/2015/12/19/101640159.html
-// READ THE COMMENT ON THIS ANSWER http://stackoverflow.com/questions/20347429/use-grunt-to-concat-ember-files-in-proper-order
 // https://www.npmjs.com/package/grunt-neuter
 // http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
 
@@ -149,15 +146,7 @@ module.exports = function(grunt) {
                                           ]
         }
       },
-      temptest : {
-        options: {
-          sourceMap : true,
-        },
-        files: {
-          src: require('dev/assets/js/pages/styleguide-post/build.json'),
-          dest: 'dev/assets/js/styleguide-post'
-        }
-      }
+
     },
 
 
@@ -538,6 +527,41 @@ module.exports = function(grunt) {
 
   });
 
+
+
+// dynamically build a pages task.
+grunt.registerTask("concat:testme", "Finds and prepares page-specifc js files for concatenation.", function() {
+
+    // get all module directories
+    grunt.file.expand("dev/assets/js/pages/*").forEach(function (dir) {
+
+        // get the module name from the directory name
+        var dirName = dir.substr(dir.lastIndexOf('/')+1);
+
+        // get the current concat object from initConfig
+        var concat = grunt.config.get('concat') || {};
+
+        var jsfiles = grunt.file.read(dir + '/export.txt');
+
+        console.log(jsfiles.split(','));
+        // create a subtask for each module, find all src files
+        // and combine into a single js file per module
+        concat[dirName] = {
+            options: {sourceMap: true,},
+            src:  jsfiles.split(','),
+            dest: 'dev/assets/js/' + dirName + '.js'
+        };
+
+        // add module subtasks to the concat task in initConfig
+        grunt.config.set('concat', concat);
+        grunt.task.run('concat:' + dirName);
+    });
+});
+
+
+
+
+
 // dynamically build a pages task.
 grunt.registerTask("concat:pages_dev", "Finds and prepares page-specifc js files for concatenation.", function() {
 
@@ -554,7 +578,7 @@ grunt.registerTask("concat:pages_dev", "Finds and prepares page-specifc js files
         // and combine into a single js file per module
         concat[dirName] = {
             options: {sourceMap: true,},
-            src: require(dir + '/build.json'),
+            src: [dir + '/**/*.js'],
             dest: 'dev/assets/js/' + dirName + '.js'
         };
 
