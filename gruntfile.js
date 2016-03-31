@@ -1,4 +1,8 @@
-
+// http://editcode.info/questions/35939835/grunt-not-able-to-read-external-text-file-in-gruntfile-js
+// http://www.itdaan.com/faq/2015/12/19/101640159.html
+// READ THE COMMENT ON THIS ANSWER http://stackoverflow.com/questions/20347429/use-grunt-to-concat-ember-files-in-proper-order
+// https://www.npmjs.com/package/grunt-neuter
+// http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
 
 // our wrapper function
 module.exports = function(grunt) {
