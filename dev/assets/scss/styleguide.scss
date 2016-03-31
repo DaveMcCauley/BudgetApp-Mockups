@@ -1,4 +1,19 @@
-@import 'main';
+@import 'core';
+
+.container {
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+}
+
+.container-content {
+  background-color: $white;
+  width: 100%;
+  max-width: 50rem;
+}
+
+
 
 
 // Palette support

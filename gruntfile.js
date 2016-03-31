@@ -145,6 +145,15 @@ module.exports = function(grunt) {
                                           ]
         }
       },
+      temptest : {
+        options: {
+          sourceMap : true,
+        },
+        files: {
+          src: require('dev/assets/js/pages/styleguide-post/build.json'),
+          dest: 'dev/assets/js/styleguide-post'
+        }
+      }
     },
 
 
@@ -157,8 +166,9 @@ module.exports = function(grunt) {
         }
       },
       deps: {
-        files: [
-               ]
+        files: {
+                'dev/assets/scss/vendor/normalize/_normalize.scss' : 'node_modules/normalize.css/normalize.css'
+               }
       }
     },
 
@@ -513,7 +523,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['dev/assets/scss/**/*.scss'],
-        tasks: ['scsslint','sass','concat:dev']
+        tasks: ['scsslint','sass']
       },
       html: {
         files: ['dev/**/*.html'],
@@ -540,7 +550,7 @@ grunt.registerTask("concat:pages_dev", "Finds and prepares page-specifc js files
         // and combine into a single js file per module
         concat[dirName] = {
             options: {sourceMap: true,},
-            src: [dir + '/**/*.js'],
+            src: require(dir + '/build.json'),
             dest: 'dev/assets/js/' + dirName + '.js'
         };
 
