@@ -467,9 +467,14 @@ module.exports = function(grunt) {
   });
 
 
+	
 
-// Build a set of dynamic tasks to compile javascripts.
-// See the wiki @https://github.com/DaveMcCauley/BudgetApp-Mockups/wiki/How-the-Javascript-files-are-compiled
+// DYNAMIC CONCAT TASK TO BUILD JS-FILES =======================================================
+//   Poor man's version of a module loader in lieu of a major (complexity) solution like
+//   browserify, requireJS or similar. See the wiki: 
+//   @https://github.com/DaveMcCauley/BudgetApp-Mockups/wiki/How-the-Javascript-files-are-compiled
+
+
   grunt.registerTask("concat:js", "Finds and prepares page-specifc js files for concatenation.", function() {
 
     // get all module directories
