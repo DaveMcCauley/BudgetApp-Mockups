@@ -21,7 +21,7 @@
   "devDependencies": {
     "grunt": "0.x.x",
     "grunt-autoprefixer": "latest",
-    "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-clean": "1.0.x",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-copy": "0.4.x",
     "grunt-contrib-csslint": "latest",
@@ -33,19 +33,17 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-htmlhint": "latest",
-    "grunt-newer": "latest",
     "grunt-notify": "latest",
     "grunt-open": "0.2.3",
-    "grunt-targethtml": "latest",
     "load-grunt-tasks": "latest",
     "grunt-express": "latest",
     "grunt-scss-lint": "latest",
-    "bootstrap-sass": "latest",
     "jquery": "latest",
     "datetime-picker": ">=0.6.0",
     "moment": ">=2.12.0",
     "bootstrap-datepicker": ">=1.3.0",
-    "pwstrength-bootstrap": ">=1.2.10"
+    "pwstrength-bootstrap": ">=1.2.10",
+    "normalize.css": "latest"
   },
   "dependencies": {
     "body-parser": "~1.5.2",

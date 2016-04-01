@@ -1,0 +1,13 @@
+
+// NORMALIZE ACROSS BROWSERS ==================================================
+@import 'vendor/normalize/normalize';
+
+
+// LOAD CORE COMPONENTS =======================================================
+@import 'core/colors';
+@import 'core/fonts';
+
+
+// LOAD LINE ICONS (manually managed vendor file) =============================
+@import 'vendor/simple-line-icons/simple-line-icons';
+

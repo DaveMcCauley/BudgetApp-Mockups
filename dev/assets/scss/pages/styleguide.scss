@@ -1,21 +1,4 @@
-@import 'core';
-@import 'vendor/highlight/xcode';
-
-
-.container {
-  width: 100%;
-  background-color: $white;
-  display: flex;
-  justify-content: center;
-}
-
-.container-content {
-  background-color: $white;
-  width: 100%;
-  max-width: 50rem;
-}
-
-
+@import 'main';
 
 
 // Palette support

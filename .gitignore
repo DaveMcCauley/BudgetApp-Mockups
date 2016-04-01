@@ -3,8 +3,7 @@ prod
 .sass-cache/
 dev/assets/**/*.map
 dev/assets/**/*.diff
-dev/assets/js/vendor/*
-!dev/assets/js/vendor/highlight
 
-dev/assets/scss/vendor/**/
+
+
 

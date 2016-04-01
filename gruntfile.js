@@ -1,5 +1,4 @@
 
-
 // our wrapper function
 module.exports = function(grunt) {
 
@@ -15,10 +14,8 @@ module.exports = function(grunt) {
   // configure grunt
   grunt.initConfig({
 
-   //pull config info from package.json
+		//pull config info from package.json
     pkg: grunt.file.readJSON('package.json'),
-    // all configuration goes here
-
 
 
 // AUTOPREFIXER =====================================================
@@ -28,16 +25,6 @@ module.exports = function(grunt) {
     autoprefixer: {
 
       options: {
-        /*browsers: [
-          'Android 2.3',
-          'Android >= 4',
-          'Chrome >= 20',
-          'Firefox >= 24', // Firefox 24 is the latest ESR
-          'Explorer >= 8',
-          'iOS >= 6',
-          'Opera >= 12',
-          'Safari >= 6'
-        ],*/
         /* my normal browser list */
         //browsers: ['last 5 versions', 'ie 8', 'ie 9', '> 1%'], <<--this is my
         /* bootstrap compliant browser list */
@@ -74,147 +61,60 @@ module.exports = function(grunt) {
         dest   : 'prod/assets/'
       }
     },
-    // CLEAN ============================================================
+
+
+
+ // CLEAN ============================================================
     clean: {
-      src: 'prod/**/*.*'
+      predev: {
+        src: ['dev/assets/js/*.*',
+              'dev/assets/css/*.*'
+             ]
+      },
+      preprod: {
+        src: 'prod/*'
+      },
+      postprod: {
+        src: 'prod/assets/js/*/'
+      }
     },
 
 
 // CONCAT ===========================================================
+// NOTE: Tasks concat:pages_dev and pages_prod are found below
+//       they are dynamically assigned tasks.
     concat: {
-      devcss: {
-        // if some scripts depend upon eachother,
-        // make sure to list them here in order
-        // rather than just using the '*' wildcard.
-        // src: [BUILD_DIR_JS + '*.js'],
-        // dest: BUILD_FILE_JS
 
-        //for multiples...
-        //files: {
-        //  'dist/basic.js': ['src/main.js'],
-        //  'dist/with_extras.js': ['src/main.js', 'src/extras.js'],
-        //},
+      core_dev: {
         options: {
           sourceMap   : true,
         },
         files: {
-          'dev/assets/css/core.css' : ['dev/assets/css/scss/test.css',
-                                       'dev/assets/css/scss/test2.css'
-                                      ]
-        }
-      },
+          'dev/assets/js/core-pre.js' : ['node_modules/jquery/dist/jquery.js',
+                                         'node_modules/moment/moment.js',
+                                         'dev/assets/js/core-pre/**/*.js',
+                                        ],
+          'dev/assets/js/core-post.js' : [
+                                         'dev/assets/js/core-post/**/*.js'
+                                         ]
+        },
+      }
 
-      dev: {
-        options: {
-          sourceMap   : true,
-        },
-        files: {
-          'dev/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.js',
-                                        'dev/assets/js/vendor/bootstrap/bootstrap.js',
-										                    //'dev/assets/js/vendor/bootstrap/bootstrap/alert.js',
-                                        'dev/assets/js/vendor/moment/moment.js',
-                                        'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js',
-                                        'dev/assets/js/vendor/datetime-picker/datepicker.js',
-                                        'dev/assets/js/vendor/highlight/highlight.pack.js',
-                                        'dev/assets/js/src/preload/**/*.js',
-                                    ],
-          'dev/assets/js/postload.js' : [//'dev/assets/js/src/postload/**/*.js',
-                                          'dev/assets/js/src/postload/styleguide-palette.js',
-                                          'dev/assets/js/src/postload/codesamp.js',
-                                          'dev/assets/js/src/postload/init-highlight.js',
-										                      'dev/assets/js/src/postload/init-tooltip.js'
-                                        ],
-          'dev/assets/css/styleguide.css' : ['dev/assets/css/styleguide.css',
-                                             'dev/assets/css/vendor/highlight/xcode.css'
-                                            ],
-          'dev/assets/css/main.css': ['dev/assets/css/main.css',
-                                      'dev/assets/css/vendor/simple-line-icons/simple-line-icons.css'
-                                     ]
-        },
-      },
-      prod: {
-          options: {
-            sourceMap   : false,
-          },
-        files: {
-          /*'dev/assets/js/main.js' : ['dev/assets/js/src/*.js',
-                                     'dev/assets/js/vendor/jquery/jquery.js',
-                                     'dev/assets/js/vendor/bootstrap/bootstrap.js'
-                                    ]*/
-          // TODO: Add future vendor libraries as necesary
-          'prod/assets/js/preload.js' : ['dev/assets/js/vendor/jquery/jquery.min.js',
-                                         'dev/assets/js/vendor/bootstrap/bootstrap.min.js',
-                                         'dev/assets/js/vendor/moment/moment.min.js',
-                                         'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js',
-                                         'dev/assets/js/vendor/datetime-picker/datepicker.min.js',
-                                         'dev/assets/js/vendor/highlight.pack.min.js',
-                                         'prod/assets/js/src/preload/**/*.min.js',
-                                        ],
-          'prod/assets/js/postload.js' : [//'prod/assets/js/src/postload/**/*.min.js']
-                                          'prod/assets/js/src/postload/styleguide-palette.min.js',
-                                          'prod/assets/js/src/postload/codesamp.min.js',
-                                          'prod/assets/js/src/postload/init-highlight.js',
-                                          'prod/assets/js/src/postload/init-tooltip.js'
-                                        ],
-          'prod/assets/css/styleguide.css' : ['prod/assets/css/styleguide.css',
-                                              'prod/assets/css/vendor/highlight/xcode.css',
-                                            ],
-        }
-      },
     },
 
 
 // COPY =============================================================
+// NOTE: For usage :: https://www.npmjs.com/package/grunt-contrib-copy
     copy: {
       build: {
-        // For usage :: https://www.npmjs.com/package/grunt-contrib-copy
         files: {
           // 'desitination': 'source'
         }
       },
       deps: {
-        files: [
-          {
-            expand: true,
-            cwd: 'node_modules/bootstrap-sass/assets/stylesheets',
-            src: ['**/*.scss'],
-            dest: 'dev/assets/scss/vendor/bootstrap-sass'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/bootstrap-sass/assets/javascripts',
-            src: ['**/*.*'],
-            dest: 'dev/assets/js/vendor/bootstrap/'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/bootstrap-sass/assets/fonts',
-            src: ['**/*.*'],
-            dest: 'dev/assets/fonts'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jquery/dist',
-            src: ['*.*'],
-            dest: 'dev/assets/js/vendor/jquery/'
-          },
-          { // individual files
-            // moment
-            'dev/assets/js/vendor/moment/moment.js': 'node_modules/moment/moment.js',
-            'dev/assets/js/vendor/moment/moment.min.js': 'node_modules/moment/min/moment.min.js',
-            // datetime-picker
-            'dev/assets/js/vendor/datetime-picker/datepicker.js': 'node_modules/datetime-picker/dist/datepicker.js',
-            'dev/assets/scss/vendor/datetime-picker/_datepicker.scss': 'node_modules/datetime-picker/example/main.scss',
-            // bootstrap-datepicker
-            'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
-            'dev/assets/js/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js': 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-            'dev/assets/scss/vendor/bootstrap-datepicker/_bootstrap-datepicker3.scss': 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css',
-            // pwstrength-bootstrap
-            'dev/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.js': 'node_modules/pwstrength-bootstrap/dist/pwstrength-bootstrap-1.2.10.js',
-            'dev/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.min.js': 'node_modules/pwstrength-bootstrap/dist/pwstrength-bootstrap-1.2.10.min.js',
-
-          }
-        ]
+        files: {
+                'dev/assets/scss/vendor/normalize/_normalize.scss' : 'node_modules/normalize.css/normalize.css'
+               }
       }
     },
 
@@ -289,9 +189,8 @@ module.exports = function(grunt) {
           port: 3000,
           hostname: 'localhost',
           bases:['./dev'],
-          livereload: true
-
-        }
+          livereload: true,
+        },
       },
       prod: {
         options: {
@@ -299,16 +198,17 @@ module.exports = function(grunt) {
           hostname: 'localhost',
           bases:['./prod'],
           livereload: true
-        }
+
+        },
       },
 
     },
 
 
 // HTMLHINT =========================================================
-//          TODO: Consider https://www.npmjs.com/package/grunt-html-validation
-//                at later time to ensure W3C compliance. For now, KISS.
-//          NOTE: Ruleset is https://github.com/yaniswang/HTMLHint/wiki/Rules
+// TODO: Consider https://www.npmjs.com/package/grunt-html-validation
+//       at later time to ensure W3C compliance. For now, KISS.
+// NOTE: Ruleset is https://github.com/yaniswang/HTMLHint/wiki/Rules
     htmlhint: {
       options: {
           htmlhintrc: '.htmlhintrc',
@@ -335,12 +235,6 @@ module.exports = function(grunt) {
             src: ['**/*.html'],
             dest: 'prod/'
         }]
-      },
-
-      dev: {
-        files: {
-          // 'destination': 'source'
-        }
       }
     },
 
@@ -372,13 +266,13 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish')
       },
       // lint grundfile.js, everything in dev, except external libraries
-      prod: ['Gruntfile.js','dev/src/**/*.js','!dev/assets/js/vendor/**/*.js'],
-      dev: ['Gruntfile.js','dev/src/**/*.js','!dev/assets/js/vendor/**/*.js']
+      prod: ['Gruntfile.js','dev/assets/js/*/*.js','!dev/assets/js/vendor/**/*.js'],
+      dev: ['Gruntfile.js','dev/assets/js/*/*.js','!dev/assets/js/vendor/**/*.js']
     },
 
 
 // NEWER ============================================================
-  // TODO: https://www.npmjs.com/package/grunt-newer ////////////////
+// TODO: https://www.npmjs.com/package/grunt-newer
 
 
 // NOTIFY ===========================================================
@@ -390,26 +284,38 @@ module.exports = function(grunt) {
           max_jshint_notifications: 5, // maximum number of notifications from jshint output
           title: "UngaBunga its BudgetApp!", // defaults to the name in package.json, or will use project directory's name
           success: true, // whether successful grunt executions should be notified automatically
-          duration: 3 // the duration of notification in seconds, for `notify-send only
+          duration: 5 // the duration of notification in seconds, for `notify-send only
         }
       },
 
       fini: {
         options: {
-          title: 'GRUNT*SNORT*',  // optional
-          message: 'Grunt has finished.', //required
+          title: 'GRUNT*SNORT*',
+          message: 'SUCCESS!\nGrunt has finished building BudgetApp!',
         }
       },
+
+      reload: {
+        options: {
+          title: 'GRUNT*SNORT',
+          message: 'Webpage reloaded via livereload',
+
+        }
+      },
+
+      server: {
+        options: {
+          title:   'GRUNT*SNORT',
+          message: 'Server started @localhost:3000\nPage loading...',
+        }
+      }
     },
 
 
 // OPEN =============================================================
  open: {
-    dev: {
-        path: 'http://localhost:3000/' + fileName,
-        app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
-    },
-    prod: {
+
+    win: {
         path: 'http://localhost:3000/' + fileName,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
@@ -453,7 +359,6 @@ module.exports = function(grunt) {
     },
 
 
-
 // SCSSLINT =========================================================
    scsslint : {
         allFiles: ['dev/**/*.scss','!dev/assets/scss/vendor/**/*.scss'],
@@ -462,19 +367,6 @@ module.exports = function(grunt) {
           colorizeOutput: true,
           force: true
         }
-    },
-
-
-
-// TARGETHTML =======================================================
-    targethtml : {
-      prod: {
-        files: {
-          // desitination : source
-          'public/index.html' : 'dev/index.html'
-          // add as necessary...
-        }
-      }
     },
 
 
@@ -503,20 +395,24 @@ module.exports = function(grunt) {
       dev: {
         options: {
           banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
-          mangle: false,
+          mangle: true,
           mangleProperties: false,
           preserveComments: 'all',
           sourceMap: true,
           sourceMapIncludeSources: true,
         },
-        files: {
-          'dev/assets/js/main.js' : ['dev/assets/js/src/*.js','dev/assets/js/lib/boostrap/bootstrap.js']
-        }
+        files: [{
+            expand  : true,
+            cwd     : 'dev/assets/js',
+            src     : '*.js',
+            dest    : 'dev/assets/js',
+          }
+        ]
       },
 
       prod: {
           options: {
-            banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+            //banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
             compress: true,
             mangle: true,
             mangleProperties: false,
@@ -525,22 +421,9 @@ module.exports = function(grunt) {
         },
         files: [{
             expand  : true,
-            cwd     : 'dev/assets/js/src/preload',
-            src     : '**/*.js',
-            dest    : 'prod/assets/js/src/preload',
-            ext     : '.min.js',
-            extDot  : 'last'
-          },
-          {
-            expand  : true,
-            cwd     : 'dev/assets/js/src/postload',
-            src     : '**/*.js',
-            dest    : 'prod/assets/js/src/postload',
-            ext     : '.min.js',
-            extDot  : 'last'
-          },
-          {
-            'prod/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.js': 'dev/assets/js/vendor/pwstrength-bootstrap/pwstrength-bootstrap-1.2.10.min.js'
+            cwd     : 'dev/assets/js',
+            src     : '*.js',
+            dest    : 'prod/assets/js',
           }
         ]
       },
@@ -567,29 +450,132 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: 'dev/assets/js/src/**/*.js',
-        tasks: ['jshint','concat:dev']
+        files: 'dev/assets/js/**/*.js',
+        tasks: ['jshint','concat:js','notify:reload']
       },
       sass: {
         files: ['dev/assets/scss/**/*.scss'],
-        tasks: ['scsslint','sass','concat:dev']
+        tasks: ['scsslint','sass','notify:reload']
       },
       html: {
         files: ['dev/**/*.html'],
-        tasks: ['htmlhint']
+        tasks: ['htmlhint','notify:reload']
       }
 
     } //<---<
 
   });
 
-  // create the tasks
-  grunt.registerTask('dev-start-win',['express:dev','open:dev','watch']);
-  grunt.registerTask('dev-start-mac',['express:dev','open:mac','watch']);
 
-  grunt.registerTask('dev-build',['copy:deps','uglify:vendor','scsslint','sass:dev','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:dev','htmlhint']);
-  grunt.registerTask('prod-start-win',['express:prod','open:prod','watch']);
-	grunt.registerTask('prod-start-mac',['express:prod','open:mac','watch']);
-  grunt.registerTask('prod-build',['copy:deps','uglify:vendor', 'clean','scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:prod', 'htmlhint','htmlmin:prod','imagemin']);
+	
+
+// DYNAMIC CONCAT TASK TO BUILD JS-FILES =======================================================
+//   Poor man's version of a module loader in lieu of a major (complexity) solution like
+//   browserify, requireJS or similar. See the wiki: 
+//   @https://github.com/DaveMcCauley/BudgetApp-Mockups/wiki/How-the-Javascript-files-are-compiled
+
+
+  grunt.registerTask("concat:js", "Finds and prepares page-specifc js files for concatenation.", function() {
+
+    // get all module directories
+    grunt.file.expand("dev/assets/js/*/","!dev/assets/js/vendor/").forEach(function (dir) {
+
+        // since the glob pattern returns a directory name,
+        // with a trailing /, strip it.
+        dir=dir.slice(0,-1);
+
+        // get the module name from the directory name
+        var dirName = dir.substr(dir.lastIndexOf('/')+1);
+
+        // get the current concat object from initConfig
+        var concat = grunt.config.get('concat') || {};
+        var jsfiles ='';
+
+        if(grunt.file.exists(dir + '/config.inc')===true) {
+          jsfiles=grunt.file.read(dir + '/config.inc');
+        }
+        else {
+          jsfiles= dir + '/**/*.js';
+        }
+
+        // create a subtask for each module, find all src files
+        // and combine into a single js file per module
+        concat[dirName] = {
+            options: {sourceMap: true,},
+            src:  jsfiles.split(','),
+            dest: 'dev/assets/js/' + dirName + '.js'
+        };
+
+        // add module subtasks to the concat task in initConfig
+        grunt.config.set('concat', concat);
+        grunt.task.run('concat:' + dirName);
+    });
+  });
+
+
+
+
+// CLI TASKS ==========================================================================
+// 	dev-start-win		: build app into dev, start server+browser.For Windows.
+//  dev-start-mac		: build app into dev, start server+browser. For Mac.
+//	dev-build				: build app only.
+//  prod-start-win  : build minified app into prod, start server+browswer. For Windows.
+//  prod-start-mac  : build minified app into prod, start server+browser. For Mac.
+//  prod-build      : build miniified app only.
+
+
+  grunt.registerTask('dev-start-win',['dev-build',
+	                                    'express:dev',
+																			'open:win',
+																			'watch',
+                                      'notify:fini'
+																		]);
+
+  grunt.registerTask('dev-start-mac',['dev-build',
+																		  'express:dev',
+																			'open:mac',
+																			'watch',
+                                      'notify:fini'
+																		]);
+
+  grunt.registerTask('dev-build',['clean:predev',
+																	'scsslint',
+																	'sass:dev',
+																	'csslint:dev_lax',
+																	'autoprefixer:dev',
+																	'jshint:dev',
+																	'concat:js',
+																	'htmlhint',
+                                  'notify:fini'
+																 ]);
+
+  grunt.registerTask('prod-start-win',['express:prod',
+																			 'open:win',
+																			 'watch',
+                                       'notify:fini'
+																			]);
+
+	grunt.registerTask('prod-start-mac',['express:prod',
+																			 'open:mac',
+																			 'watch',
+                                       'notify:fini'
+																			]);
+
+  grunt.registerTask('prod-build',['clean:preprod',
+																	 'uglify:vendor',
+																	 'scsslint',
+																	 'sass:prod',
+																	 'csslint:prod_lax',
+																	 'autoprefixer:prod',
+																	 'cssmin:prod',
+																	 'jshint:prod',
+																	 'uglify:prod',
+																	 'concat:js',
+																	 'htmlhint',
+																	 'htmlmin:prod',
+																	 'imagemin',
+																	 'clean:postprod',
+                                   'notify:fini'
+																	]);
 
 };
