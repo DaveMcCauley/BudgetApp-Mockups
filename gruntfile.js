@@ -1,6 +1,3 @@
-// http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
-
-//install http://www.growlforwindows.com/gfw/ or http://snarl.fullphat.net/
 
 // our wrapper function
 module.exports = function(grunt) {
@@ -19,8 +16,8 @@ module.exports = function(grunt) {
 
 		//pull config info from package.json
     pkg: grunt.file.readJSON('package.json'),
-	
-	
+
+
 // AUTOPREFIXER =====================================================
 // TODO: Replace with postcss. This is depricated by the maintainers
 // TODO: Use better browser query.
@@ -74,9 +71,9 @@ module.exports = function(grunt) {
         dest   : 'prod/assets/'
       }
     },
-		
-		
-		
+
+
+
  // CLEAN ============================================================
     clean: {
       predev: {
@@ -97,7 +94,7 @@ module.exports = function(grunt) {
 // NOTE: Tasks concat:pages_dev and pages_prod are found below
 //       they are dynamically assigned tasks.
     concat: {
-			
+
       core_dev: {
         options: {
           sourceMap   : true,
@@ -300,7 +297,7 @@ module.exports = function(grunt) {
 
 
 // NEWER ============================================================
-// TODO: https://www.npmjs.com/package/grunt-newer 
+// TODO: https://www.npmjs.com/package/grunt-newer
 
 
 // NOTIFY ===========================================================
@@ -312,7 +309,7 @@ module.exports = function(grunt) {
           max_jshint_notifications: 5, // maximum number of notifications from jshint output
           title: "UngaBunga its BudgetApp!", // defaults to the name in package.json, or will use project directory's name
           success: true, // whether successful grunt executions should be notified automatically
-          duration: 3 // the duration of notification in seconds, for `notify-send only
+          duration: 5 // the duration of notification in seconds, for `notify-send only
         }
       },
 
@@ -327,7 +324,7 @@ module.exports = function(grunt) {
 
 // OPEN =============================================================
  open: {
-    
+
     win: {
         path: 'http://localhost:3000/' + fileName,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
@@ -499,27 +496,43 @@ module.exports = function(grunt) {
 grunt.registerTask("concat:testme", "Finds and prepares page-specifc js files for concatenation.", function() {
 
     // get all module directories
-    grunt.file.expand("dev/assets/js/pages/*").forEach(function (dir) {
+    grunt.file.expand("dev/assets/js/*/").forEach(function (dir) {
 
         // get the module name from the directory name
         var dirName = dir.substr(dir.lastIndexOf('/')+1);
 
         // get the current concat object from initConfig
         var concat = grunt.config.get('concat') || {};
-				
+
 				/////////
 				// grunt.file.exists(path) +> bool
 				// if it exists, build as the file instructs.
 				// if not, build, combining all *.js in subfolers
 				// below <dir> concatenating them into dev/assets/js/<dir>.js
-				// 
+				//
 
-        var jsfiles = grunt.file.read(dir + '/export.txt');
+        console.log('grunt.file.exists("' + dir + '/config.inc")  ---------------------');
+        console.log(grunt.file.exists(dir + '/config.inc'));
 
-        console.log(jsfiles.split(','));
+
+/*        if(grunt.file.exists(dir + '/config.inc')==true) {
+          var jsfiles=grunt.file.read(dir + '/config.inc');
+          console.log(jsfiles.split(','));
+          console.log(typeof jsfiles);
+          console.log(typeof jsfiles.split(','));
+        }
+        else { */
+//          var jsfiles= dir + '/**/*.js';
+/*          console.log('...using wildcard');
+          console.log(jsfiles);
+          console.log(typeof jsfiles);
+          console.log(jsfiles.split(','));
+          console.log(typeof jsfiles.split(','));
+        }
+*/
         // create a subtask for each module, find all src files
         // and combine into a single js file per module
-        concat[dirName] = {
+/*        concat[dirName] = {
             options: {sourceMap: true,},
             src:  jsfiles.split(','),
             dest: 'dev/assets/js/' + dirName + '.js'
@@ -527,7 +540,7 @@ grunt.registerTask("concat:testme", "Finds and prepares page-specifc js files fo
 
         // add module subtasks to the concat task in initConfig
         grunt.config.set('concat', concat);
-        grunt.task.run('concat:' + dirName);
+        grunt.task.run('concat:' + dirName);*/
     });
 });
 
@@ -595,20 +608,20 @@ grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js file
 	//  prod-start-win  : build minified app into prod, start server+browswer. For Windows.
 	//  prod-start-mac  : build minified app into prod, start server+browser. For Mac.
 	//  prod-build      : build miniified app only.
-	
-	
+
+
   grunt.registerTask('dev-start-win',['dev-build',
 	                                    'express:dev',
 																			'open:win',
 																			'watch'
 																		]);
-																		
+
   grunt.registerTask('dev-start-mac',['dev-build',
 																		  'express:dev',
 																			'open:mac',
 																			'watch'
 																		]);
-																		
+
   grunt.registerTask('dev-build',['clean:predev',
 																	'copy:deps',
 																	'uglify:vendor',
@@ -619,22 +632,23 @@ grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js file
 																	'jshint:dev',
 																	'concat:pages_dev',
 																	'concat:core_dev',
-																	'htmlhint'
+																	'htmlhint',
+                                  'notify:fini'
 																 ]);
-																 
+
   grunt.registerTask('prod-start-win',['express:prod',
 																			 'open:win',
 																			 'watch'
 																			]);
-																			
+
 	grunt.registerTask('prod-start-mac',['express:prod',
 																			 'open:mac',
 																			 'watch'
 																			]);
-																			
+
   grunt.registerTask('prod-build',['clean:preprod',
 																	 'copy:deps',
-																	 'uglify:vendor', 
+																	 'uglify:vendor',
 																	 'scsslint',
 																	 'sass:prod',
 																	 'csslint:prod_lax',
@@ -643,11 +657,12 @@ grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js file
 																	 'jshint:prod',
 																	 'uglify:prod',
 																	 'concat:pages_prod',
-																	 'concat:core_prod', 
+																	 'concat:core_prod',
 																	 'htmlhint',
 																	 'htmlmin:prod',
-																	 'imagemin', 
-																	 'clean:postprod'
+																	 'imagemin',
+																	 'clean:postprod',
+                                   'notify:fini'
 																	]);
 
 };
