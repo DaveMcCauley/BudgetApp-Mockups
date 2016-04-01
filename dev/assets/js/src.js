@@ -1,4 +1,10 @@
 
+hljs.initHighlightingOnLoad();
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 /* JSHINT will throw a superfluous warning on line 120, 122. No effect on
    operation. The "Expected an assignment or function call and instead saw
    an expression."  warns that there is a line of code that doesn't do anything
@@ -132,3 +138,41 @@ for (name in palette) {
     for (len = itemElsToAppend.length; j < len; j++) el = itemElsToAppend[j], i.appendChild(el);
     paletteElement.appendChild(i);
 }
+
+/* TESTING SAMPLE INPUTS */
+
+$(function() {
+  $('.date-range-picker input').picker({
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+    //}
+  });
+
+  $('.button-picker a').picker({
+    outputTo: $('.button-picker input'),
+    prefill: true,
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+   // }
+  });
+
+  $('.datebutton').picker({
+    outputTo: $('.datebutton input'),
+    prefill: true,
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+    //}
+  });
+
+  $('.prefilled-picker input').picker();
+
+  $('.button-picker a').on('datepicker.remove', function(e, el) {
+    $(el).val('');
+  });
+
+  $('input').on('datepicker.remove', function(e) {
+    $(this).val('');
+  });
+});
+
+//# sourceMappingURL=src.js.map
