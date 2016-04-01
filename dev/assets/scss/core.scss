@@ -3,11 +3,14 @@
 @import 'vendor/normalize/normalize';
 
 
-// LOAD CORE COMPONENTS =======================================================
+// LOAD CORE DEFINITIONS =======================================================
 @import 'core/colors';
 @import 'core/fonts';
 
 
-// LOAD LINE ICONS (manually managed vendor file) =============================
-@import 'vendor/simple-line-icons/simple-line-icons';
+// LOAD COMPONENTS =============================================================
+@import 'components/datepicker';
+@import 'components/topnav;
+
+
 
