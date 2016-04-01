@@ -25,16 +25,6 @@ module.exports = function(grunt) {
     autoprefixer: {
 
       options: {
-        /*browsers: [
-          'Android 2.3',
-          'Android >= 4',
-          'Chrome >= 20',
-          'Firefox >= 24', // Firefox 24 is the latest ESR
-          'Explorer >= 8',
-          'iOS >= 6',
-          'Opera >= 12',
-          'Safari >= 6'
-        ],*/
         /* my normal browser list */
         //browsers: ['last 5 versions', 'ie 8', 'ie 9', '> 1%'], <<--this is my
         /* bootstrap compliant browser list */
@@ -108,22 +98,7 @@ module.exports = function(grunt) {
                                          'dev/assets/js/core-post/**/*.js'
                                          ]
         },
-      },
-
-      core_prod: {
-          options: {
-            sourceMap   : false,
-          },
-        files: {
-          'prod/assets/js/core-pre.js' : ['node_modules/jquery/dist/jquery.min.js',
-                                          'node_modules/moment/min/moment.min.js',
-                                          'prod/assets/js/core-pre/**/*.min.js',
-                                         ],
-          'prod/assets/js/core-post.js' : [
-                                           'prod/assets/js/core-post/**/*.min.js'
-                                          ]
-        }
-      },
+      }
 
     },
 
@@ -214,9 +189,8 @@ module.exports = function(grunt) {
           port: 3000,
           hostname: 'localhost',
           bases:['./dev'],
-          livereload: true
-
-        }
+          livereload: true,
+        },
       },
       prod: {
         options: {
@@ -224,7 +198,8 @@ module.exports = function(grunt) {
           hostname: 'localhost',
           bases:['./prod'],
           livereload: true
-        }
+
+        },
       },
 
     },
@@ -315,10 +290,25 @@ module.exports = function(grunt) {
 
       fini: {
         options: {
-          title: 'GRUNT*SNORT*',  // optional
-          message: 'Grunt has finished.', //required
+          title: 'GRUNT*SNORT*',
+          message: 'SUCCESS!\nGrunt has finished building BudgetApp!',
         }
       },
+
+      reload: {
+        options: {
+          title: 'GRUNT*SNORT',
+          message: 'Webpage reloaded via livereload',
+
+        }
+      },
+
+      server: {
+        options: {
+          title:   'GRUNT*SNORT',
+          message: 'Server started @localhost:3000\nPage loading...',
+        }
+      }
     },
 
 
@@ -405,15 +395,19 @@ module.exports = function(grunt) {
       dev: {
         options: {
           banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
-          mangle: false,
+          mangle: true,
           mangleProperties: false,
           preserveComments: 'all',
           sourceMap: true,
           sourceMapIncludeSources: true,
         },
-        files: {
-          'dev/assets/js/main.js' : ['dev/assets/js/src/*.js','dev/assets/js/lib/boostrap/bootstrap.js']
-        }
+        files: [{
+            expand  : true,
+            cwd     : 'dev/assets/js',
+            src     : '*.js',
+            dest    : 'dev/assets/js',
+          }
+        ]
       },
 
       prod: {
@@ -427,27 +421,9 @@ module.exports = function(grunt) {
         },
         files: [{
             expand  : true,
-            cwd     : 'dev/assets/js/core-post',
-            src     : '**/*.js',
-            dest    : 'prod/assets/js/core-post',
-            ext     : '.min.js',
-            extDot  : 'last'
-          },
-          {
-            expand  : true,
-            cwd     : 'dev/assets/js/core-pre',
-            src     : '**/*.js',
-            dest    : 'prod/assets/js/core-pre',
-            ext     : '.min.js',
-            extDot  : 'first'
-          },
-          {
-            expand : true,
-            cwd    : 'dev/assets/js/pages',
-            src    : '**/*.js',
-            dest   : 'prod/assets/js/pages',
-            ext    : '.min.js',
-            extDot : 'first'
+            cwd     : 'dev/assets/js',
+            src     : '*.js',
+            dest    : 'prod/assets/js',
           }
         ]
       },
@@ -474,16 +450,16 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: 'dev/assets/js/src/**/*.js',
-        tasks: ['jshint','concat:pages_dev','concat:core_dev']
+        files: 'dev/assets/js/**/*.js',
+        tasks: ['jshint','concat:js','notify:reload']
       },
       sass: {
         files: ['dev/assets/scss/**/*.scss'],
-        tasks: ['scsslint','sass']
+        tasks: ['scsslint','sass','notify:reload']
       },
       html: {
         files: ['dev/**/*.html'],
-        tasks: ['htmlhint']
+        tasks: ['htmlhint','notify:reload']
       }
 
     } //<---<
@@ -492,47 +468,34 @@ module.exports = function(grunt) {
 
 
 
-// dynamically build a pages task.
-grunt.registerTask("concat:testme", "Finds and prepares page-specifc js files for concatenation.", function() {
+// Build a set of dynamic tasks to compile javascripts.
+// See the wiki @https://github.com/DaveMcCauley/BudgetApp-Mockups/wiki/How-the-Javascript-files-are-compiled
+  grunt.registerTask("concat:js", "Finds and prepares page-specifc js files for concatenation.", function() {
 
     // get all module directories
-    grunt.file.expand("dev/assets/js/*/").forEach(function (dir) {
+    grunt.file.expand("dev/assets/js/*/","!dev/assets/js/vendor/").forEach(function (dir) {
+
+        // since the glob pattern returns a directory name,
+        // with a trailing /, strip it.
+        dir=dir.slice(0,-1);
 
         // get the module name from the directory name
         var dirName = dir.substr(dir.lastIndexOf('/')+1);
 
         // get the current concat object from initConfig
         var concat = grunt.config.get('concat') || {};
+        var jsfiles ='';
 
-				/////////
-				// grunt.file.exists(path) +> bool
-				// if it exists, build as the file instructs.
-				// if not, build, combining all *.js in subfolers
-				// below <dir> concatenating them into dev/assets/js/<dir>.js
-				//
-
-        console.log('grunt.file.exists("' + dir + '/config.inc")  ---------------------');
-        console.log(grunt.file.exists(dir + '/config.inc'));
-
-
-/*        if(grunt.file.exists(dir + '/config.inc')==true) {
-          var jsfiles=grunt.file.read(dir + '/config.inc');
-          console.log(jsfiles.split(','));
-          console.log(typeof jsfiles);
-          console.log(typeof jsfiles.split(','));
+        if(grunt.file.exists(dir + '/config.inc')===true) {
+          jsfiles=grunt.file.read(dir + '/config.inc');
         }
-        else { */
-//          var jsfiles= dir + '/**/*.js';
-/*          console.log('...using wildcard');
-          console.log(jsfiles);
-          console.log(typeof jsfiles);
-          console.log(jsfiles.split(','));
-          console.log(typeof jsfiles.split(','));
+        else {
+          jsfiles= dir + '/**/*.js';
         }
-*/
+
         // create a subtask for each module, find all src files
         // and combine into a single js file per module
-/*        concat[dirName] = {
+        concat[dirName] = {
             options: {sourceMap: true,},
             src:  jsfiles.split(','),
             dest: 'dev/assets/js/' + dirName + '.js'
@@ -540,114 +503,60 @@ grunt.registerTask("concat:testme", "Finds and prepares page-specifc js files fo
 
         // add module subtasks to the concat task in initConfig
         grunt.config.set('concat', concat);
-        grunt.task.run('concat:' + dirName);*/
-    });
-});
-
-
-
-
-
-// dynamically build a pages task.
-grunt.registerTask("concat:pages_dev", "Finds and prepares page-specifc js files for concatenation.", function() {
-
-    // get all module directories
-    grunt.file.expand("dev/assets/js/pages/*").forEach(function (dir) {
-
-        // get the module name from the directory name
-        var dirName = dir.substr(dir.lastIndexOf('/')+1);
-
-        // get the current concat object from initConfig
-        var concat = grunt.config.get('concat') || {};
-
-        // create a subtask for each module, find all src files
-        // and combine into a single js file per module
-        concat[dirName] = {
-            options: {sourceMap: true,},
-            src: [dir + '/**/*.js'],
-            dest: 'dev/assets/js/' + dirName + '.js'
-        };
-
-        // add module subtasks to the concat task in initConfig
-        grunt.config.set('concat', concat);
         grunt.task.run('concat:' + dirName);
     });
-});
-
-// dynamically build a pages task.
-grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js files for concatenation.", function() {
-
-    // get all module directories
-    grunt.file.expand("prod/assets/js/pages/*").forEach(function (dir) {
-
-        // get the module name from the directory name
-        var dirName = dir.substr(dir.lastIndexOf('/')+1);
-
-        // get the current concat object from initConfig
-        var concat = grunt.config.get('concat') || {};
-
-        // create a subtask for each module, find all src files
-        // and combine into a single js file per module
-        concat[dirName] = {
-            options: {sourceMap: false,},
-            src: [dir + '/**/*.min.js'],
-            dest: 'prod/assets/js/' + dirName + '.js'
-        };
-
-        // add module subtasks to the concat task in initConfig
-        grunt.config.set('concat', concat);
-        grunt.task.run('concat:' + dirName);
-    });
-	});
+  });
 
 
-  // CLI TASKS ==========================================================================
-	// 	dev-start-win		: build app into dev, start server+browser.For Windows.
-	//  dev-start-mac		: build app into dev, start server+browser. For Mac.
-	//	dev-build				: build app only.
-	//  prod-start-win  : build minified app into prod, start server+browswer. For Windows.
-	//  prod-start-mac  : build minified app into prod, start server+browser. For Mac.
-	//  prod-build      : build miniified app only.
+
+
+// CLI TASKS ==========================================================================
+// 	dev-start-win		: build app into dev, start server+browser.For Windows.
+//  dev-start-mac		: build app into dev, start server+browser. For Mac.
+//	dev-build				: build app only.
+//  prod-start-win  : build minified app into prod, start server+browswer. For Windows.
+//  prod-start-mac  : build minified app into prod, start server+browser. For Mac.
+//  prod-build      : build miniified app only.
 
 
   grunt.registerTask('dev-start-win',['dev-build',
 	                                    'express:dev',
 																			'open:win',
-																			'watch'
+																			'watch',
+                                      'notify:fini'
 																		]);
 
   grunt.registerTask('dev-start-mac',['dev-build',
 																		  'express:dev',
 																			'open:mac',
-																			'watch'
+																			'watch',
+                                      'notify:fini'
 																		]);
 
   grunt.registerTask('dev-build',['clean:predev',
-																	'copy:deps',
-																	'uglify:vendor',
 																	'scsslint',
 																	'sass:dev',
 																	'csslint:dev_lax',
 																	'autoprefixer:dev',
 																	'jshint:dev',
-																	'concat:pages_dev',
-																	'concat:core_dev',
+																	'concat:js',
 																	'htmlhint',
                                   'notify:fini'
 																 ]);
 
   grunt.registerTask('prod-start-win',['express:prod',
 																			 'open:win',
-																			 'watch'
+																			 'watch',
+                                       'notify:fini'
 																			]);
 
 	grunt.registerTask('prod-start-mac',['express:prod',
 																			 'open:mac',
-																			 'watch'
+																			 'watch',
+                                       'notify:fini'
 																			]);
 
   grunt.registerTask('prod-build',['clean:preprod',
-																	 'copy:deps',
 																	 'uglify:vendor',
 																	 'scsslint',
 																	 'sass:prod',
@@ -656,8 +565,7 @@ grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js file
 																	 'cssmin:prod',
 																	 'jshint:prod',
 																	 'uglify:prod',
-																	 'concat:pages_prod',
-																	 'concat:core_prod',
+																	 'concat:js',
 																	 'htmlhint',
 																	 'htmlmin:prod',
 																	 'imagemin',

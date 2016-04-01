@@ -1,11 +1,4 @@
 
-$('.js-codesamp').each(function(i,obj) {
-	var htmlstring = $(this).html();
-	var escaped = $("<div>").text(htmlstring).html();
-	$(this).append("<pre><code>" + escaped + "</code></pre>");
-});
-hljs.initHighlighting();
-
 /* JSHINT will throw a superfluous warning on line 120, 122. No effect on
    operation. The "Expected an assignment or function call and instead saw
    an expression."  warns that there is a line of code that doesn't do anything
@@ -139,5 +132,3 @@ for (name in palette) {
     for (len = itemElsToAppend.length; j < len; j++) el = itemElsToAppend[j], i.appendChild(el);
     paletteElement.appendChild(i);
 }
-
-//# sourceMappingURL=core-post.js.map

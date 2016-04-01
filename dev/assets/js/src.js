@@ -1,10 +1,9 @@
 
-$('.js-codesamp').each(function(i,obj) {
-	var htmlstring = $(this).html();
-	var escaped = $("<div>").text(htmlstring).html();
-	$(this).append("<pre><code>" + escaped + "</code></pre>");
-});
-hljs.initHighlighting();
+hljs.initHighlightingOnLoad();
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 /* JSHINT will throw a superfluous warning on line 120, 122. No effect on
    operation. The "Expected an assignment or function call and instead saw
@@ -140,4 +139,40 @@ for (name in palette) {
     paletteElement.appendChild(i);
 }
 
-//# sourceMappingURL=core-post.js.map
+/* TESTING SAMPLE INPUTS */
+
+$(function() {
+  $('.date-range-picker input').picker({
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+    //}
+  });
+
+  $('.button-picker a').picker({
+    outputTo: $('.button-picker input'),
+    prefill: true,
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+   // }
+  });
+
+  $('.datebutton').picker({
+    outputTo: $('.datebutton input'),
+    prefill: true,
+    //onInitialize: function() {
+    //  console.log(this.formattedVal());
+    //}
+  });
+
+  $('.prefilled-picker input').picker();
+
+  $('.button-picker a').on('datepicker.remove', function(e, el) {
+    $(el).val('');
+  });
+
+  $('input').on('datepicker.remove', function(e) {
+    $(this).val('');
+  });
+});
+
+//# sourceMappingURL=src.js.map
