@@ -1,5 +1,6 @@
-// https://www.npmjs.com/package/grunt-neuter
 // http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
+
+//install http://www.growlforwindows.com/gfw/ or http://snarl.fullphat.net/
 
 // our wrapper function
 module.exports = function(grunt) {
@@ -16,12 +17,10 @@ module.exports = function(grunt) {
   // configure grunt
   grunt.initConfig({
 
-   //pull config info from package.json
+		//pull config info from package.json
     pkg: grunt.file.readJSON('package.json'),
-    // all configuration goes here
-
-
-
+	
+	
 // AUTOPREFIXER =====================================================
 // TODO: Replace with postcss. This is depricated by the maintainers
 // TODO: Use better browser query.
@@ -75,7 +74,10 @@ module.exports = function(grunt) {
         dest   : 'prod/assets/'
       }
     },
-    // CLEAN ============================================================
+		
+		
+		
+ // CLEAN ============================================================
     clean: {
       predev: {
         src: ['dev/assets/js/*.*',
@@ -92,31 +94,10 @@ module.exports = function(grunt) {
 
 
 // CONCAT ===========================================================
-//        NOTE: Tasks concat:pages_dev and pages_prod are found below
-//              they are dynamically assigned tasks.
+// NOTE: Tasks concat:pages_dev and pages_prod are found below
+//       they are dynamically assigned tasks.
     concat: {
-      devcss: {
-        // if some scripts depend upon eachother,
-        // make sure to list them here in order
-        // rather than just using the '*' wildcard.
-        // src: [BUILD_DIR_JS + '*.js'],
-        // dest: BUILD_FILE_JS
-
-        //for multiples...
-        //files: {
-        //  'dist/basic.js': ['src/main.js'],
-        //  'dist/with_extras.js': ['src/main.js', 'src/extras.js'],
-        //},
-        options: {
-          sourceMap   : true,
-        },
-        files: {
-          'dev/assets/css/core.css' : ['dev/assets/css/scss/test.css',
-                                       'dev/assets/css/scss/test2.css'
-                                      ]
-        }
-      },
-
+			
       core_dev: {
         options: {
           sourceMap   : true,
@@ -151,9 +132,9 @@ module.exports = function(grunt) {
 
 
 // COPY =============================================================
+// NOTE: For usage :: https://www.npmjs.com/package/grunt-contrib-copy
     copy: {
       build: {
-        // For usage :: https://www.npmjs.com/package/grunt-contrib-copy
         files: {
           // 'desitination': 'source'
         }
@@ -253,9 +234,9 @@ module.exports = function(grunt) {
 
 
 // HTMLHINT =========================================================
-//          TODO: Consider https://www.npmjs.com/package/grunt-html-validation
-//                at later time to ensure W3C compliance. For now, KISS.
-//          NOTE: Ruleset is https://github.com/yaniswang/HTMLHint/wiki/Rules
+// TODO: Consider https://www.npmjs.com/package/grunt-html-validation
+//       at later time to ensure W3C compliance. For now, KISS.
+// NOTE: Ruleset is https://github.com/yaniswang/HTMLHint/wiki/Rules
     htmlhint: {
       options: {
           htmlhintrc: '.htmlhintrc',
@@ -282,12 +263,6 @@ module.exports = function(grunt) {
             src: ['**/*.html'],
             dest: 'prod/'
         }]
-      },
-
-      dev: {
-        files: {
-          // 'destination': 'source'
-        }
       }
     },
 
@@ -325,7 +300,7 @@ module.exports = function(grunt) {
 
 
 // NEWER ============================================================
-  // TODO: https://www.npmjs.com/package/grunt-newer ////////////////
+// TODO: https://www.npmjs.com/package/grunt-newer 
 
 
 // NOTIFY ===========================================================
@@ -352,11 +327,8 @@ module.exports = function(grunt) {
 
 // OPEN =============================================================
  open: {
-    dev: {
-        path: 'http://localhost:3000/' + fileName,
-        app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
-    },
-    prod: {
+    
+    win: {
         path: 'http://localhost:3000/' + fileName,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
@@ -400,7 +372,6 @@ module.exports = function(grunt) {
     },
 
 
-
 // SCSSLINT =========================================================
    scsslint : {
         allFiles: ['dev/**/*.scss','!dev/assets/scss/vendor/**/*.scss'],
@@ -410,11 +381,6 @@ module.exports = function(grunt) {
           force: true
         }
     },
-
-
-
-// TARGETHTML =======================================================
-// (removed)
 
 
 // UGLIFY ===========================================================
@@ -540,6 +506,13 @@ grunt.registerTask("concat:testme", "Finds and prepares page-specifc js files fo
 
         // get the current concat object from initConfig
         var concat = grunt.config.get('concat') || {};
+				
+				/////////
+				// grunt.file.exists(path) +> bool
+				// if it exists, build as the file instructs.
+				// if not, build, combining all *.js in subfolers
+				// below <dir> concatenating them into dev/assets/js/<dir>.js
+				// 
 
         var jsfiles = grunt.file.read(dir + '/export.txt');
 
@@ -612,16 +585,69 @@ grunt.registerTask("concat:pages_prod", "Finds and prepares page-specifc js file
         grunt.config.set('concat', concat);
         grunt.task.run('concat:' + dirName);
     });
-});
+	});
 
 
-  // create the tasks
-  grunt.registerTask('dev-start-win',['dev-build','express:dev','open:dev','watch']);
-  grunt.registerTask('dev-start-mac',['dev-build','express:dev','open:mac','watch']);
-  grunt.registerTask('dev-build',['clean:predev','copy:deps','uglify:vendor','scsslint','sass:dev','csslint:dev_lax','autoprefixer:dev','jshint:dev','concat:pages_dev','concat:core_dev','htmlhint']);
-
-  grunt.registerTask('prod-start-win',['express:prod','open:prod','watch']);
-	grunt.registerTask('prod-start-mac',['express:prod','open:mac','watch']);
-  grunt.registerTask('prod-build',['clean:preprod','copy:deps','uglify:vendor', 'scsslint','sass:prod','csslint:prod_lax','autoprefixer:prod','cssmin:prod','jshint:prod','uglify:prod','concat:pages_prod','concat:core_prod', 'htmlhint','htmlmin:prod','imagemin', 'clean:postprod']);
+  // CLI TASKS ==========================================================================
+	// 	dev-start-win		: build app into dev, start server+browser.For Windows.
+	//  dev-start-mac		: build app into dev, start server+browser. For Mac.
+	//	dev-build				: build app only.
+	//  prod-start-win  : build minified app into prod, start server+browswer. For Windows.
+	//  prod-start-mac  : build minified app into prod, start server+browser. For Mac.
+	//  prod-build      : build miniified app only.
+	
+	
+  grunt.registerTask('dev-start-win',['dev-build',
+	                                    'express:dev',
+																			'open:win',
+																			'watch'
+																		]);
+																		
+  grunt.registerTask('dev-start-mac',['dev-build',
+																		  'express:dev',
+																			'open:mac',
+																			'watch'
+																		]);
+																		
+  grunt.registerTask('dev-build',['clean:predev',
+																	'copy:deps',
+																	'uglify:vendor',
+																	'scsslint',
+																	'sass:dev',
+																	'csslint:dev_lax',
+																	'autoprefixer:dev',
+																	'jshint:dev',
+																	'concat:pages_dev',
+																	'concat:core_dev',
+																	'htmlhint'
+																 ]);
+																 
+  grunt.registerTask('prod-start-win',['express:prod',
+																			 'open:win',
+																			 'watch'
+																			]);
+																			
+	grunt.registerTask('prod-start-mac',['express:prod',
+																			 'open:mac',
+																			 'watch'
+																			]);
+																			
+  grunt.registerTask('prod-build',['clean:preprod',
+																	 'copy:deps',
+																	 'uglify:vendor', 
+																	 'scsslint',
+																	 'sass:prod',
+																	 'csslint:prod_lax',
+																	 'autoprefixer:prod',
+																	 'cssmin:prod',
+																	 'jshint:prod',
+																	 'uglify:prod',
+																	 'concat:pages_prod',
+																	 'concat:core_prod', 
+																	 'htmlhint',
+																	 'htmlmin:prod',
+																	 'imagemin', 
+																	 'clean:postprod'
+																	]);
 
 };
