@@ -1,5 +1,23 @@
 
 
+$font-size-h1:            floor(($font-size-base * 2.25)); // ~36px
+$font-size-h2:            floor(($font-size-base * 1.9)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.5)) // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.125)); // ~18px
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.75)); // ~12px
+
+$font-size-blockquote: 		ceil(($font-size-base *1.5));
+
+$blockquote-border-color:	$red-800;
+
+// apply some basic styles to the entire body
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.6rem; //~16px
+	color: $black;
+	line-height: 1.6; // more relaxed than the app!
+}
 
 // Define headings.
 
@@ -16,8 +34,6 @@ h6,
 .h5,
 .h6 {
   font-weight: $font-wt-base;
-  line-height: 1.4;
-  color: $black;
 }
 
 h1,
@@ -72,6 +88,33 @@ h6,
 // Body text
 
 p {
-  font-size: 1.4rem;
   margin: 0 0 ($font-scale-factor / 2);
 }
+
+
+// Lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($font-scale-factor / 2);
+}
+ul ul,
+ul ol {
+    margin-bottom: 0;
+  }
+}
+
+blockquote {
+  padding: ($font-scale-factor / 2) $font-scale-factor;
+  margin: 0 0 $font-scale-factor;
+  font-size: $blockquote-font-size;
+  border-left: 5px solid $blockquote-border-color;
+}
+
+blockquote  p,
+blockquote  ul,
+blockquote  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }

@@ -408,8 +408,8 @@ textarea {
 
 @font-face {
   font-family: 'Simple-Line-Icons';
-  src: url("../fonts/simple-line-icons/Simple-Line-Icons.eot");
-  src: url("../fonts/simple-line-icons/Simple-Line-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/simple-line-icons/Simple-Line-Icons.woff") format("woff"), url("../fonts/simple-line-icons/Simple-Line-Icons.ttf") format("truetype"), url("../fonts/simple-line-icons/Simple-Line-Icons.svg#Simple-Line-Icons") format("svg");
+  src: url("../../fonts/simple-line-icons/Simple-Line-Icons.eot");
+  src: url("../../fonts/simple-line-icons/Simple-Line-Icons.eot?#iefix") format("embedded-opentype"), url("../../fonts/simple-line-icons/Simple-Line-Icons.woff") format("woff"), url("../../fonts/simple-line-icons/Simple-Line-Icons.ttf") format("truetype"), url("../../fonts/simple-line-icons/Simple-Line-Icons.svg#Simple-Line-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* line 25, ../../scss/core/_icons.scss */
@@ -1451,7 +1451,10 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 /* line 1, ../../scss/pages/styleguide/_html.scss */
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 62.5%; }
+  font-size: 62.5%; 
+  color: #404b55;
+  line-height: 1.6;
+}
 
 /* line 20, ../../scss/pages/styleguide/_code.scss */
 code,
@@ -1697,5 +1700,29 @@ p {
   margin: 0;
   position: absolute;
   right: .6em; }
+	
+	.grid-icon {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+  border-color: #0f0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.grid-icon-item {
+	order: 1;
+	flex: 1 1 200px;
+	align-self: flex-start;
+  border-color: #f00;
+  border-style: solid;
+  border-width: 1px;
+  height: 200px;
+  max-width: 200px;
+}
+
 
 /*# sourceMappingURL=styleguide.css.map */

@@ -1,4 +1,9 @@
+
+// we define a default size for the html element that allows
+// us to size everyting in rem, but easily relatable to px
+// at normal browser sizes. Thus, 1.0rem = 10px. 1.6rem = 16px, 
+// 2.4rem = 24px, etc.
+
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 62.5%
+  font-size: 62.5%  
 }

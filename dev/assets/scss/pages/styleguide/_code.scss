@@ -4,17 +4,18 @@
 // Some controlling variables...
 $code-color: 					 #c7254e;
 $code-bg:						   #f9f2f4;
-$code-inline-radius:	 4px ;
+$code-inline-radius:	 floor(.4rem);
 
 $kbd-color:					  $white;
 $kbd-bg:						  #333;
 $kbd-radius:				  3px;
 
-$pre-color:           $light-gray-800;
-$pre-scroll-height:	  350px;
+$pre-color:          	$light-gray-800;
 $pre-border-color:	  $light-gray-400;
 $pre-bg:       			  $light-gray-200;
-$pre-radius:				  4px;
+$pre-radius:				  floor(.4rem);
+
+$pre-scrollable-max-height:	350px;
 
 // base definition
 code,
@@ -68,9 +69,10 @@ pre {
   background-color: $pre-bg;
   border: 1px solid $pre-border-color;
   border-radius: $pre-radius;
+}
 
   // Account for some code outputs that place code tags in pre tags
-  code {
+pre code {
     padding: 0;
     font-size: 85%;
     color: inherit;
@@ -78,5 +80,9 @@ pre {
     background-color: transparent;
     border-radius: 0;
   }
-}
 
+// Enable scrollable blocks of code
+.pre-scrollable {
+  max-height: $pre-scrollable-max-height;
+  overflow-y: scroll;
+}
