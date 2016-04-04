@@ -47,7 +47,7 @@ module.exports = function(grunt) {
       dev: {
         expand : true,
         cwd    : 'dev/assets/',
-        src    : ['css/**/*.css','!css/normalize.css'],
+        src    : ['css/**/*.css','!css/vendor/**/*'],
         dest   : 'dev/assets/'
       },
 
@@ -467,11 +467,11 @@ module.exports = function(grunt) {
   });
 
 
-	
+
 
 // DYNAMIC CONCAT TASK TO BUILD JS-FILES =======================================================
 //   Poor man's version of a module loader in lieu of a major (complexity) solution like
-//   browserify, requireJS or similar. See the wiki: 
+//   browserify, requireJS or similar. See the wiki:
 //   @https://github.com/DaveMcCauley/BudgetApp-Mockups/wiki/How-the-Javascript-files-are-compiled
 
 
