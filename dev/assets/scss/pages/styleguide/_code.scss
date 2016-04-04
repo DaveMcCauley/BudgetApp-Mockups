@@ -1,6 +1,81 @@
+
+// Code, keyboard, definitions local to stylesheet
+
+// Some controlling variables...
+$code-color: 					#c7254e
+$code-bg:						#f9f2f4
+$code-inline-radius:			4px ;
+
+$kbd-color:					$white;
+$kbd-bg:						$333;
+$kbd-radius:				3px;
+
+$pre-scroll-height:	350px;
+$pre-border-color:	$gray-400;
+$pre-bg-color: 			$gray-200;
+$pre-radius:				4px;
+
+// base definition
 code,
 kbd,
 pre,
 samp {
   font-family: $font-family-monospace;
 }
+
+// Inline code
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: $code-color;
+  background-color: $code-bg;
+  border-radius: $code-inline-radius;
+}
+
+// Keyboard styling...
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: $kbd-color;
+  background-color: $kbd-bg;
+  border-radius: $kbd-radius;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+kbd kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+
+// Code blocks
+
+// Blocks of code
+pre {
+  display: block;
+  padding: (($font-scale-factor - 1) / 2);
+  margin: 0 0 ($font-scale-factor / 2);
+  font-size: ($font-size-base - 1); // 14px to 13px
+  line-height: $line-height-base;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $pre-color;
+  background-color: $pre-bg;
+  border: 1px solid $pre-border-color;
+  border-radius: $pre-radius;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+

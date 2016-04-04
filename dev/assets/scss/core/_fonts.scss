@@ -1,17 +1,20 @@
+
 // import the Lato font face (use Google fonts for now)
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900,700italic);
 
-// LOAD LINE ICONS (manually managed vendor file) =============================
-@import '../vendor/simple-line-icons/simple-line-icons';
 
-// font face stacks
+// Core type definitions
+
 $font-family-base: 'Lato', 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-monospace:   'Monaco', 'Consolas', 'Courier New', 'Lucida Console', monospace, mono;
+$font-family-monospace: 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', monospace, mono;
 
-
-// Basic Text weight definitions
 $font-wt-light:       300;
-$font-wt-base:      400;
+$font-wt-base:      	400;
 $font-wt-heavy:       700;
 $font-wt-extra-heavy: 900;
+
+$font-size-base:   		1.4rem; //~14px
+
+$line-height-base:  	1.428571429 !default; // 20/14
+$font-scale-factor: 	floor(($font-size-base * $line-height-base)) !default; // ~20px
 
