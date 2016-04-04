@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" >
   <script type="text/javascript" src="assets/js/core-pre.js"></script>
   <script type="text/javascript" src="assets/js/styleguide-pre.js"></script>
-  <link rel="stylesheet" href="assets/css/styleguide.css" >
+  <link rel="stylesheet" href="assets/css/pages/styleguide.css" >
 
   <title>Styleguide</title>
 </head>
@@ -56,8 +56,8 @@
         definitions use one of the following SCSS variables:
       </p>
       <ul>
-        <li>For normal purposes use the <code>$font-face-normal</code> scss variable.</li>
-        <li>For monospaced type use the <code>$font-face-mono</code> scss variable.</li>
+        <li>For normal purposes use the <code>$font-family-base</code> scss variable.</li>
+        <li>For monospaced type use the <code>$font-family-monospace</code> scss variable.</li>
       </ul>
       <p>
         Use font weights to create a visual heirarchy. For weights, use one of
@@ -70,19 +70,19 @@
         <li><code>$font-wt-extra-heavy</code></li>
       </ul>
       <blockquote>
-        For the monospaced font face, ONLY <code>$font-wt-normal</code> should be used.
+        For the monospaced font family, ONLY <code>$font-wt-normal</code> should be used.
       </blockquote>
-      <h4 class="font-example">Examples</h4>
-      <h5 class="font-example-modifier">font-face: $font-face-normal; font-weight: $font-wt-light</h5>
-      <p class="font-example-normal-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="font-example-modifier">font-face: $font-face-normal; font-weight: $font-wt-normal</h5>
-      <p class="font-example-normal-normal">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="font-example-modifier">font-face: $font-face-normal; font-weight: $font-wt-heavy;</h5>
-      <p class="font-example-normal-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="font-example-modifier">font-face: $font-face-normal; font-weight: $font-wt-extra-heavy;</h5>
-      <p class="font-example-normal-extra-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="font-example-modifier">font-face: $font-face-mono; font-weight: $font-wt-normal;</h5>
-      <p class="font-example-mono">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h4 class="example">Examples</h4>
+      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-light</h5>
+      <p class="example-font mod-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-normal</h5>
+      <p class="example-font">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-heavy;</h5>
+      <p class="example-font mod-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-extra-heavy;</h5>
+      <p class="example-font mod-extra-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+      <h5 class="example-font-desc">font-face: $font-family-mono; font-weight: $font-wt-normal;</h5>
+      <p class="example-font mod-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
 
       <h3>1.3.2 Hierarchy</h3>
       <p>
@@ -107,23 +107,45 @@
         the rendered display.
       </blockquote>
 
-      <h5 class="font-example-modifier">font-size: 2.4rem; // 24px</h5>
-      <p class="font-example-normal-normal mod-size24">Lorem ipsum dolor sit amet, consectetur.</p>
+      <h4 class="example">Examples</h4>
+      <h5 class="example-font-desc">font-size: 2.4rem; // 24px</h5>
+      <p class="example-font mod-size-24">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+      <h5 class="example-font-desc">font-size: 1.8rem; // 18px</h5>
+      <p class="example-font mod-size-18">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quando laudari requietis conficiuntque summumque nullas nimium
+      </p>
 
-      <h5 class="font-example-modifier">font-size: 1.8rem; // 18px</h5>
-      <p class="font-example-normal-normal mod-size18">Lorem ipsum dolor sit amet, consectetur.</p>
+      <h5 class="example-font-desc">font-size: 1.6rem; // 16px</h5>
+      <p class="example-font mod-size-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+        liberamur, comparandae vera tandem torquatis gratia aristotele </p>
 
-      <h5 class="font-example-modifier">font-size: 1.6rem; // 16px</h5>
-      <p class="font-example-normal-normal mod-size116">Lorem ipsum dolor sit amet, consectetur.</p>
+      <h5 class="example-font-desc">font-size: 1.2rem; // 12px</h5>
+      <p class="example-font mod-size-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+        latinam fama, quisquis placatae collegisti aliquam successerit
+      </p>
 
-      <h5 class="font-example-modifier">font-size: 1.2rem; // 12px</h5>
-      <p class="font-example-normal-normal mod-size12">Lorem ipsum dolor sit amet, consectetur.</p>
+      <h5 class="example-font-desc">font-size: 1.0rem; // 10px</h5>
+      <p class="example-font mod-size-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+        latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
+        pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
+      </p>
 
-      <h5 class="font-example-modifier">font-size: 1.0rem; // 10px</h5>
-      <p class="font-example-normal-normal mod-size10">Lorem ipsum dolor sit amet, consectetur.</p>
-
-      <h5 class="font-example-modifier">font-size: .8rem; // 8px</h5>
-      <p class="font-example-normal-normal mod-size08">Lorem ipsum dolor sit amet, consectetur.</p>
+      <h5 class="example-font-desc">font-size: .8rem; // 8px</h5>
+      <p class="example-font mod-size-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+        latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
+        pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
+        historiae bono. Succumbere disputandum duxit invenire gravissimis quoque, sensibus
+        id anteponant retinent doctrina tota quarum</p>
 
      <h3>1.3.3 Text Styling</h3>
 
@@ -160,7 +182,7 @@
       <h2>2.1 Buttons</h2>
 
       <p>Our buttons are created with standard bootstrap construction. For example:</p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default btn-sm"> Preferences </button>
 <button type="button" class="btn btn-default btn-sm"> Ok </button>
 <button type="button" class="btn btn-default btn-sm"> Schedule </button>
@@ -170,7 +192,7 @@
       <h3>2.1.1 Button Color</h3>
 
       <p>There are six basic button colors.</p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default btn-sm">Default</button>
 <button type="button" class="btn btn-primary btn-sm">Primary</button>
 <button type="button" class="btn btn-success btn-sm">Success</button>
@@ -192,7 +214,7 @@
       	 where the user is presented an option, or many options to aid in quickly
       	 recognizing the deisred action.
       </p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Preferences
 </button>
@@ -205,7 +227,7 @@
       </div>
 
       <p>Button can also use glyphs without any text, such as:</p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
 </button>
@@ -223,7 +245,7 @@
       	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
       	 the group, and not each button.
       </p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="btn-group btn-group-sm" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
@@ -240,7 +262,7 @@
 
       <h3>2.1.4 Button Dropdowns</h3>
       <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="btn-group btn-group-sm">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Default <span class="caret"></span>
@@ -318,7 +340,7 @@
       <h3>2.1.5 Diabled state</h3>
       <p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
 <button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
       </div>
@@ -346,7 +368,7 @@
 
       <p>Use labels to emphasize certain information.</p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <h1>Example heading <span class="label label-default">New</span></h1>
 <h2>Example heading <span class="label label-default">New</span></h2>
 <h3>Example heading <span class="label label-default">New</span></h3>
@@ -355,7 +377,7 @@
       <h3>2.2.1 Variations</h3>
 
       <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <span class="label label-default">Default</span>
 <span class="label label-primary">Primary</span>
 <span class="label label-success">Success</span>
@@ -379,7 +401,7 @@
          exists within.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <a href="#">Inbox <span class="badge">42</span></a>
 
 <button class="btn btn-primary" type="button">
@@ -394,7 +416,7 @@
          <code>.alert-success</code>) for basic alert messages.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="alert alert-success" role="alert">...</div>
 <div class="alert alert-info" role="alert">...</div>
 <div class="alert alert-warning" role="alert">...</div>
@@ -408,7 +430,7 @@
         <code>data-dismiss="alert"</code> data attribute.</b>
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="alert alert-warning alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Warning!</strong> Better check yourself, you're not looking too good.
@@ -418,7 +440,7 @@
       <h3>2.4.3 Links in alerts</h3>
       Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="alert alert-success" role="alert">
   <a href="#" class="alert-link">...</a>
 </div>
@@ -491,7 +513,7 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h3>2.5.1 Basic progress bar</h3>
       <p>This is the default progress bar</p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
     <span class="sr-only">60% Complete</span>
@@ -505,7 +527,7 @@ $('#myAlert').on('closed.bs.alert', function() {
          visible percentage.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
     60%
@@ -517,7 +539,7 @@ $('#myAlert').on('closed.bs.alert', function() {
 
       <p>To ensure the label text remains legible even for low percentages, add <code>min-width</code> to the progress bars.</p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
     0%
@@ -539,26 +561,26 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h2>3.1 Controls</h2>
 
       <h3>3.1.1 Text input form</h3>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label for="usr">Name:</label>
 <input type="text" class="form-control" id="usr">
       </div>
 
       <h3>3.1.2 Password input form</h3>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label for="pwd">Name:</label>
 <input type="password" class="form-control" id="pwd">
       </div>
 
       <h3>3.1.3 Email input form</h3>
       The input is evaluated by browser. (Developer should still santize it!)
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label for="exampleInputEmail1">Email address</label>
 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
       </div>
 
       <h3>3.1.4 File input</h3>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label for="exampleInputFile">File input</label>
 <input type="file" id="exampleInputFile">
       </div>
@@ -566,21 +588,21 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h3>3.1.5 Date/Time input</h3>
 
       As text input...
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="date-range-picker example">
   <input type="text" name="start" class="">
 </div>
       </div>
 
       Prefilled value (in markup)...
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="prefilled-picker example">
   <input type="text" name="schedule" value="12/12/2020 2:00 PM">
 </div>
       </div>
 
       As a clickable link...
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="button-picker example">
   <a href="#">Schedule</a>
   <input type="text" name="schedule">
@@ -588,7 +610,7 @@ $('#myAlert').on('closed.bs.alert', function() {
       </div>
 
       As a button...
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="datebutton">
   <button type="button" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
@@ -611,12 +633,12 @@ $('.button-picker a').picker({
       <h3>3.1.6 Text Area</h3>
       Use this for multi-line text entry. Adjust the vertical height with the "rows"
       attribute
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <textarea class="form-control" rows="3"></textarea>
       </div>
 
       <h3>3.1.7 Checkboxes</h3>
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label>
   <input type="checkbox" value="">
   Option one is this and that&mdash;be sure to include why it's great
@@ -636,7 +658,7 @@ $('.button-picker a').picker({
 
       <h3>3.1.8 Radio Buttons</h3>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -662,7 +684,7 @@ $('.button-picker a').picker({
       Use the .checkbox-inline or .radio-inline classes on a series of
       checkboxes or radios for controls that appear on the same line.
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label class="checkbox-inline">
   <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
 </label>
@@ -688,7 +710,7 @@ $('.button-picker a').picker({
 
       Note that many native select menus—namely in Safari and Chrome—have rounded
       corners that cannot be modified via border-radius properties.
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <select class="form-control">
   <option>1</option>
   <option>2</option>
@@ -701,7 +723,7 @@ $('.button-picker a').picker({
       For &lt;select&gt; controls with the multiple attribute, multiple options are
       shown by default.
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <select multiple class="form-control">
   <option>1</option>
   <option>2</option>
@@ -717,7 +739,7 @@ $('.button-picker a').picker({
       When you need to place plain text next to a form label within a form, use
       the .form-control-static class on a &lt;p&gt;.
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <form class="form-horizontal">
   <div class="form-group">
     <label class="col-sm-2 control-label">Email</label>
@@ -735,7 +757,7 @@ $('.button-picker a').picker({
       </div>
 
       Works as an inline as well...
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <form class="form-inline">
   <div class="form-group">
     <label class="sr-only">Email</label>
@@ -755,7 +777,7 @@ $('.button-picker a').picker({
          readers, will announce this help thest when the user focuses or enters the control.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <label class="sr-only" for="inputHelpBlock">Input with help text</label>
 <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock" >
 <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend
@@ -775,7 +797,7 @@ $('.button-picker a').picker({
 
       <p>Add teh <code>diabled</code> boolean attribute on an imput to prevent user interaction.</p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <input class="form-control" id="disabledInput" type="text" placeholder="Disambled input here..." disabled >
       </div>
 
@@ -788,7 +810,7 @@ $('.button-picker a').picker({
         </blockquote>
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <form>
   <fieldset disabled>
     <div class="form-group">
@@ -813,7 +835,7 @@ $('.button-picker a').picker({
          inputs look like disabled inputs, but retain the standard cursor.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <input class="form-control" type="text" placeholder="Readonly input here..." readonly >
       </div>
 
@@ -827,7 +849,7 @@ $('.button-picker a').picker({
          </blockquote>
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="form-group has-success">
   <label class="control-label" for="inputSuccess1">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" >
@@ -885,7 +907,7 @@ $('.button-picker a').picker({
         such as screen readers.
       </blockquote>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="form-group has-success has-feedback">
   <label class="control-label" for="inputSuccess2">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
@@ -922,7 +944,7 @@ $('.button-picker a').picker({
          least 768px wide.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <form class="form-inline">
   <div class="form-group">
     <label for="exampleInputName2">Name</label>
@@ -936,7 +958,7 @@ $('.button-picker a').picker({
 </form>
       </div>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <form class="form-inline">
   <div class="form-group">
     <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -962,7 +984,7 @@ $('.button-picker a').picker({
        Doing so changes <code>.form-groups</code> to behave as grid rows, so no need for <code>.row</code>.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <form class="form-horizontal">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -1005,7 +1027,7 @@ $('.button-picker a').picker({
 
       <p>A rendered modal with header, body, and set of actions in the footer.</p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <div class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1032,7 +1054,7 @@ $('.button-picker a').picker({
          down and fade in from the top of the page.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
   Launch demo modal
@@ -1062,7 +1084,7 @@ $('.button-picker a').picker({
 
       <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog.</code></p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <!-- Large modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
 
@@ -1094,7 +1116,7 @@ $('.button-picker a').picker({
         normal grid system classes.
       </p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGridSample">
   Launch demo modal
 </button>
@@ -1156,7 +1178,7 @@ $('.button-picker a').picker({
       Activate a modal without writing JavaScript. Set data-toggle="modal" on a controller element, like a button, along with a data-target="#foo" or href="#foo" to target a specific modal to toggle.
       Copy
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
       </div>
 
@@ -1334,7 +1356,7 @@ $(function () {
 
       <h3>3.5.1 Examples</h3>
       Hover over the links below to see tooltips in action:
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vera viam <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a> comparaverit historiae equos fructuosam, significet praesidium congressus perpetuam liberalitati affecti cupiditatibusque regula. Dicent. Fore philosophi conflixisse. <a href="#" data-toggle="tooltip" title="Some tooltip text!">Labefactetur</a> exitum ipsarum dici mirari, placet interesse quosvis humili redeamus erant, sanguinem morborum consilia corpore debilitati tranquillae locum intuemur bonum sollicitudines, amicum multis. Retinent.
       </div>
 
@@ -1342,7 +1364,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vera viam <a href="#" 
 
       <p>Tooltips have for directions: top, right, bottom, and left.</p>
 
-      <div class="code-sample js-inject-code">
+      <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 
 <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>

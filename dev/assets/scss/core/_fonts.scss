@@ -5,13 +5,13 @@
 @import '../vendor/simple-line-icons/simple-line-icons';
 
 // font face stacks
-$font-face-normal: 'Lato', 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-face-mono:   "Monaco", "Consolas", "Courier New", "Lucida Console", monospace, mono;
+$font-family-base: 'Lato', 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-monospace:   'Monaco', 'Consolas', 'Courier New', 'Lucida Console', monospace, mono;
 
 
 // Basic Text weight definitions
 $font-wt-light:       300;
-$font-wt-normal:      400;
+$font-wt-base:      400;
 $font-wt-heavy:       700;
 $font-wt-extra-heavy: 900;
 

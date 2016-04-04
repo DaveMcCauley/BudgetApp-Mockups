@@ -338,7 +338,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'dev/assets/scss',
-          src: ['*.scss'],
+          src: ['**/*.scss'],
           dest: 'dev/assets/css',
           ext: '.css'
         }]
@@ -351,7 +351,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'dev/assets/scss',
-          src: ['*.scss'],
+          src: ['**/*.scss'],
           dest: 'prod/assets/css',
           ext: '.css'
         }]

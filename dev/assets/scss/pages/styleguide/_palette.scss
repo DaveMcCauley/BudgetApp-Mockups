@@ -1,41 +1,4 @@
 
-// Imports
-@import 'core';
-@import 'vendor/highlight/xcode';
-
-
-
-// Layout
-
-.container {
-  width: 100%;
-  background-color: $white;
-  display: flex;
-  justify-content: center;
-}
-
-.container-content {
-  background-color: $white;
-  width: 100%;
-  max-width: 50rem;
-}
-
-
-
-// Document-wide overrides of Core
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-code, kbd, pre, samp {
-	font-family: $font-face-mono;
-}
-
-
-
-// Support for Color Palette
-
 .palette-section {
   margin: 0 auto;
   margin-bottom: 1.5em;
@@ -80,21 +43,4 @@ code, kbd, pre, samp {
   margin: 0;
   position: absolute;
   right: .6em;
-}
-
-
-
-// For example
-//   TODO: Where is this used?
-.example + .example {
-  margin-top: 00px;
-}
-
-
-
-// Code sample styling 
-
-.code-sample {
-  margin-bottom: 50px;
-  margin-top: 20px;
 }

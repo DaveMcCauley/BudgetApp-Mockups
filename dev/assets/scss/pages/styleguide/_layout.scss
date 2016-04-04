@@ -1,0 +1,12 @@
+.container {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-content {
+  background-color: $white;
+  max-width: 50rem;
+  width: 100%;
+}
