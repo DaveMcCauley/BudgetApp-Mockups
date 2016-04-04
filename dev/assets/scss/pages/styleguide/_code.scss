@@ -2,18 +2,19 @@
 // Code, keyboard, definitions local to stylesheet
 
 // Some controlling variables...
-$code-color: 					#c7254e
-$code-bg:						#f9f2f4
-$code-inline-radius:			4px ;
+$code-color: 					 #c7254e;
+$code-bg:						   #f9f2f4;
+$code-inline-radius:	 4px ;
 
-$kbd-color:					$white;
-$kbd-bg:						$333;
-$kbd-radius:				3px;
+$kbd-color:					  $white;
+$kbd-bg:						  #333;
+$kbd-radius:				  3px;
 
-$pre-scroll-height:	350px;
-$pre-border-color:	$gray-400;
-$pre-bg-color: 			$gray-200;
-$pre-radius:				4px;
+$pre-color:           $light-gray-800;
+$pre-scroll-height:	  350px;
+$pre-border-color:	  $light-gray-400;
+$pre-bg:       			  $light-gray-200;
+$pre-radius:				  4px;
 
 // base definition
 code,
@@ -59,7 +60,7 @@ pre {
   display: block;
   padding: (($font-scale-factor - 1) / 2);
   margin: 0 0 ($font-scale-factor / 2);
-  font-size: ($font-size-base - 1); // 14px to 13px
+ // font-size: ($font-size-base - .1); // 14px to 13px
   line-height: $line-height-base;
   word-break: break-all;
   word-wrap: break-word;
@@ -71,7 +72,7 @@ pre {
   // Account for some code outputs that place code tags in pre tags
   code {
     padding: 0;
-    font-size: inherit;
+    font-size: 85%;
     color: inherit;
     white-space: pre-wrap;
     background-color: transparent;
