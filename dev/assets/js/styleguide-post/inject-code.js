@@ -6,5 +6,6 @@
 $('.js-inject-code').each(function(i,obj) {
 	var htmlstring = $(this).html();
 	var escaped = $("<div>").text(htmlstring).html();
-	$(this).append("<pre><code>" + escaped + "</code></pre>");
+  console.error(escaped.trim());
+	$(this).append("<pre><code>" + escaped.trim() + "</code></pre>");
 });
