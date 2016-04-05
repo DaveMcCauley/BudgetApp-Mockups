@@ -9,8 +9,14 @@
   margin-top: 20px;
 }
 
-.example-code pre {
+.example-code pre, {
   margin-top: ($font-scale-factor / 2);
+}
+
+.example-code.mod-scroll pre {
+  margin-top: ($font-scale-factor / 2);
+  max-height: 350px;
+  overflow-y: scroll;
 }
 
 .example-font {
@@ -69,3 +75,5 @@
 .example-font.mod-size-8 {
   font-size: .8rem;
 }
+
+
