@@ -56,7 +56,7 @@ input[type="submit"][disabled],
 button[disabled] {
   background: $light-gray-100;
   box-shadow: none;
-  color: $quiet-font-color;
+  color: $quiet;
   cursor: default;
   font-weight: 300;
 }
@@ -134,8 +134,8 @@ button[disabled] {
 
   a.button.mod-transparent,
   button.mod-transparent {
-    background: fadeout($light-gray-500, 70%);
-    box-shadow: 0 1px fadeout($light-gray-800, 30%);
+    background: fade-out($light-gray-500, 70%);
+    box-shadow: 0 1px fade-out($light-gray-800, 30%);
     color: hsla(0, 0%, 0%, .7);
     font-weight: normal;
   }
@@ -144,15 +144,15 @@ button[disabled] {
     a.button.mod-transparent:hover,
     button.mod-transparent:not([disabled]):focus,
     button.mod-transparent:not([disabled]):hover {
-      background: fadeout($light-gray-500, 60%);
-      box-shadow: 0 1px fadeout($light-gray-800, 40%);
+      background: fade-out($light-gray-500, 60%);
+      box-shadow: 0 1px fade-out($light-gray-800, 40%);
       color: hsla(0, 0%, 0%, .9);
     }
 
     a.button.mod-transparent:active,
     button.mod-transparent:not([disabled]):active {
-      background: fadeout($light-gray-500, 50%);
-      box-shadow: 0 1px fadeout($light-gray-800, 50%);
+      background: fade-out($light-gray-500, 50%);
+      box-shadow: 0 1px fade-out($light-gray-800, 50%);
       color: hsl(0, 0%, 0%);
     }
 
@@ -173,7 +173,7 @@ button[disabled] {
   a.button.mod-transparent.mod-light-background,
   button.mod-transparent.mod-light-background {
     background: #fff;
-    box-shadow: 0 1px fadeout($light-gray-800, 70%);
+    box-shadow: 0 1px fade-out($light-gray-800, 70%);
   }
 
     a.button.mod-transparent.mod-light-background:focus,
@@ -181,13 +181,13 @@ button[disabled] {
     button.mod-transparent.mod-light-background:not([disabled]):focus,
     button.mod-transparent.mod-light-background:not([disabled]):hover {
       background: hsla(0, 0%, 100%, .7);
-      box-shadow: 0 1px fadeout($light-gray-800, 80%);
+      box-shadow: 0 1px fade-out($light-gray-800, 80%);
     }
 
     a.button.mod-transparent.mod-light-background:active,
     button.mod-transparent.mod-light-background:not([disabled]):active {
       background: hsla(0, 0%, 100%, .5);
-      box-shadow: 0 1px fadeout($light-gray-800, 90%);
+      box-shadow: 0 1px fade-out($light-gray-800, 90%);
     }
 
   // Inline
