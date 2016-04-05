@@ -175,11 +175,11 @@
          <code>&lt;span&gt;</code> tag with class selector from the list below.
       </p>
 
-<!-- htmlmin:ignore-->
+<!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
 <span class="icon-support"> </span>
 <span class="icon-chemistry"> </span></div>
-
+<!-- htmlmin:ignore -->
       <blockquote>
         Create new icons only as a last resort. Avoid the overhead of
         loading an entire font file and include any page-specific icons as a
@@ -194,18 +194,19 @@
 
       <p>Our buttons are created with standard bootstrap construction. For example:</p>
 
-
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default btn-sm"> Preferences </button>
 <button type="button" class="btn btn-default btn-sm"> Ok </button>
 <button type="button" class="btn btn-default btn-sm"> Schedule </button>
       </div>
-<!-- htmlmin:ignore-->
+<!-- htmlmin:ignore -->
 
 
       <h3>2.1.1 Button Color</h3>
 
       <p>There are six basic button colors.</p>
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default btn-sm">Default</button>
 <button type="button" class="btn btn-primary btn-sm">Primary</button>
@@ -214,6 +215,7 @@
 <button type="button" class="btn btn-warning btn-sm">Warning</button>
 <button type="button" class="btn btn-danger btn-sm">Danger</button>
       </div>
+<!-- htmlmin:ignore -->
 
 
       <h3>2.1.2 Button Size</h3>
@@ -228,6 +230,8 @@
       	 where the user is presented an option, or many options to aid in quickly
       	 recognizing the deisred action.
       </p>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Preferences
@@ -239,8 +243,11 @@
   <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
 </button>
       </div>
+<!-- htmlmin:ignore -->
 
       <p>Button can also use glyphs without any text, such as:</p>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
@@ -252,6 +259,7 @@
   <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
 </button>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.1.3 Button Groups</h3>
 
@@ -259,6 +267,8 @@
       	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
       	 the group, and not each button.
       </p>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="btn-group btn-group-sm" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Left</button>
@@ -266,6 +276,7 @@
   <button type="button" class="btn btn-default">Right</button>
 </div>
       </div>
+<!-- htmlmin:ignore -->
       <blockquote>
       	<b>Tooltips and popovers in button groups require special setting</b>
       	When using tooltips or popovers on elements within a .btn-group, you'll have
@@ -276,7 +287,8 @@
 
       <h3>2.1.4 Button Dropdowns</h3>
       <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
-      <div class="example-code mod-scroll js-inject-code">
+<!-- htmlmin:ignore -->
+<div class="example-code mod-scroll js-inject-code">
 <div class="btn-group btn-group-sm">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Default <span class="caret"></span>
@@ -350,22 +362,27 @@
   </ul>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.1.5 Diabled state</h3>
       <p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
 <button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
       </div>
+<!-- htmlmin:ignore -->
 
       <h4>For anchor elements shown as buttons...</h4>
       Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
 
-      <div class="js=codesamp">
+<!-- htmlmin:ignore -->
+      <div class="example-code js-inject-code">
       <a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
       <a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
       </div>
+<!-- htmlmin:ignore -->
 
       <p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
          requried
@@ -382,15 +399,19 @@
 
       <p>Use labels to emphasize certain information.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <h1>Example heading <span class="label label-default">New</span></h1>
 <h2>Example heading <span class="label label-default">New</span></h2>
 <h3>Example heading <span class="label label-default">New</span></h3>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.2.1 Variations</h3>
 
       <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <span class="label label-default">Default</span>
 <span class="label label-primary">Primary</span>
@@ -399,7 +420,7 @@
 <span class="label label-warning">Warning</span>
 <span class="label label-danger">Danger</span>
       </div>
-
+<!-- htmlmin:ignore -->
 
       <blockquote>
         <b>Have tons of labels?</b><br >
@@ -415,6 +436,7 @@
          exists within.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <a href="#">Inbox <span class="badge">42</span></a>
 
@@ -422,6 +444,7 @@
   Messages <span class="badge">4</span>
 </button>
       </div>
+<!-- htmlmin:ignore -->
 
       <h2>2.4 Alerts</h2>
       <h3>2.4.1 Basic alerts</h3>
@@ -430,12 +453,14 @@
          <code>.alert-success</code>) for basic alert messages.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="alert alert-success" role="alert">...</div>
 <div class="alert alert-info" role="alert">...</div>
 <div class="alert alert-warning" role="alert">...</div>
 <div class="alert alert-danger" role="alert">...</div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.4.2 Dismissible alerts</h3>
       <p>Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.
@@ -444,16 +469,19 @@
         <code>data-dismiss="alert"</code> data attribute.</b>
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="alert alert-warning alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Warning!</strong> Better check yourself, you're not looking too good.
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.4.3 Links in alerts</h3>
       Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="alert alert-success" role="alert">
   <a href="#" class="alert-link">...</a>
@@ -468,6 +496,7 @@
   <a href="#" class="alert-link">...</a>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.4.4 Usage</h3>
       <p>
@@ -527,6 +556,7 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h3>2.5.1 Basic progress bar</h3>
       <p>This is the default progress bar</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -534,6 +564,7 @@ $('#myAlert').on('closed.bs.alert', function() {
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.5.2 Porgress bar with label </h3>
 
@@ -541,6 +572,7 @@ $('#myAlert').on('closed.bs.alert', function() {
          visible percentage.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -548,11 +580,13 @@ $('#myAlert').on('closed.bs.alert', function() {
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.5.3 Use <code>min-width</code></h3>
 
       <p>To ensure the label text remains legible even for low percentages, add <code>min-width</code> to the progress bars.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
@@ -565,6 +599,7 @@ $('#myAlert').on('closed.bs.alert', function() {
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
 
 
@@ -575,55 +610,78 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h2>3.1 Controls</h2>
 
       <h3>3.1.1 Text input form</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="usr">Name:</label>
 <input type="text" class="form-control" id="usr">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.2 Password input form</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="pwd">Name:</label>
 <input type="password" class="form-control" id="pwd">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.3 Email input form</h3>
       The input is evaluated by browser. (Developer should still santize it!)
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="exampleInputEmail1">Email address</label>
 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.4 File input</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="exampleInputFile">File input</label>
 <input type="file" id="exampleInputFile">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.5 Date/Time input</h3>
 
       As text input...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="date-range-picker example">
   <input type="text" name="start" class="">
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       Prefilled value (in markup)...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="prefilled-picker example">
   <input type="text" name="schedule" value="12/12/2020 2:00 PM">
 </div>
+
       </div>
+<!-- htmlmin:ignore -->
 
       As a clickable link...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="button-picker example">
   <a href="#">Schedule</a>
   <input type="text" name="schedule">
 </div>
       </div>
-
+<!-- htmlmin:ignore -->
       As a button...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="datebutton">
   <button type="button" class="btn btn-default btn-sm">
@@ -632,9 +690,12 @@ $('#myAlert').on('closed.bs.alert', function() {
   <input type="text" name="butt-test">
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       Initialize the markup with something like the following in the document head. See the
       README.md for further options provided by the plug in in the dependency file folder.
+
+<!-- htmlmin:ignore -->
       <pre>
         <code>
 $('.button-picker a').picker({
@@ -643,15 +704,21 @@ $('.button-picker a').picker({
 });
         </code>
       </pre>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.6 Text Area</h3>
       Use this for multi-line text entry. Adjust the vertical height with the "rows"
       attribute
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <textarea class="form-control" rows="3"></textarea>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.7 Checkboxes</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label>
   <input type="checkbox" value="">
@@ -664,6 +731,7 @@ $('.button-picker a').picker({
   </label>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
       cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
@@ -672,6 +740,7 @@ $('.button-picker a').picker({
 
       <h3>3.1.8 Radio Buttons</h3>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="radio">
   <label>
@@ -692,12 +761,14 @@ $('.button-picker a').picker({
   </label>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.9 Inline checkboxes and radio buttons</h3>
 
       Use the .checkbox-inline or .radio-inline classes on a series of
       checkboxes or radios for controls that appear on the same line.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label class="checkbox-inline">
   <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
@@ -719,11 +790,14 @@ $('.button-picker a').picker({
   <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 3
 </label>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.10 Selects</h3>
 
       Note that many native select menus—namely in Safari and Chrome—have rounded
       corners that cannot be modified via border-radius properties.
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <select class="form-control">
   <option>1</option>
@@ -733,10 +807,12 @@ $('.button-picker a').picker({
   <option>5</option>
 </select>
       </div>
+<!-- htmlmin:ignore -->
 
       For &lt;select&gt; controls with the multiple attribute, multiple options are
       shown by default.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <select multiple class="form-control">
   <option>1</option>
@@ -746,7 +822,7 @@ $('.button-picker a').picker({
   <option>5</option>
 </select>
       </div>
-
+<!-- htmlmin:ignore -->
 
       <h3>3.1.11 Static contorls</h3>
 

@@ -237,8 +237,7 @@ module.exports = function(grunt) {
       prod: {
         options: {
           removeComments: false,
-          collapseWhitespace: true,
-          processConditionalComments: true
+          collapseWhitespace: false
         },
         files: [{
             expand: true,
