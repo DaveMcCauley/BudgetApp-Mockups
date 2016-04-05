@@ -169,27 +169,24 @@
     </p>
 
       <h2>1.4 Iconography</h2>
-      <p>BudgetApp ustilizes Bootstrap 3 as a base framework. Bootstrap comes with
-         a large set of glyphs pre-installed. In most cases attempt to find a glyph
-         that fits your needs from these icons. A handy tool for locating Bootstrap
-       	 icons can be found over at
-       	 <a href="http://glyphicons.bootstrapcheatsheets.com" target="_blank">Cheatsheets.com</a>
+      <p>BudgetApp includes a pre-defined set of simple line icons. The icons are
+         included <file>core.scss</file> via the <code>_icons.scss</code> partial
+         file. Icons come as named classes. To insert an icon, simply include a
+         <code>&lt;span&gt;</code> tag with class selector from the list below.
       </p>
-      <p>You may also use Google's Material icons by including the _material-icons.scss
-      	 partial in a page specific sass file. Icons and insertion codes can be found
-      	 over at <a href="https://design.google.com/icons/" target="_blank">design.google.com</a>
-      </p>
-      <p>Create new icons only as a last resort (for now.)</p>
-			
-			<div class="grid-icon">
-				<div class="grid-icon-item"><span class="icon-user-female"></span>.icon-user-female</div>
-				<div class="grid-icon-item"><span class="icon-user-following"></span>.icon-user-following</div>
-				<div class="grid-icon-item"><span class="icon-user-follow"></span>.icon-user-follow</div>
-				<div class="grid-icon-item"><span class="icon-user-unfollow"></span>icon-user-unfollow</div>
-				<div class="grid-icon-item"><span class="icon-trophy"></span>icon-trophy</div>
-			</div>
-			
-			
+      <div class="example-code js-inject-code">
+<span class="icon-support"> </span>
+<span class="icon-chemistry"> </span>
+      </div>
+
+      <blockquote>
+        Create new icons only as a last resort. Avoid the overhead of
+        loading an entire font file and include any page-specific icons as a
+        scalable vector graphic (svg)
+      </blockquote>
+
+			<div class="grid-icon js-inject-icons">	</div>
+
       <h1>2.0 Components</h1>
 
       <h2>2.1 Buttons</h2>
