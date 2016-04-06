@@ -219,6 +219,26 @@ button.mod-no-margin {
   margin: 0;
 }
 
+// Icon ONLY. No text label
+
+// make the icon larger, and center while
+// keeping the same height for a given
+// (parent) text size.
+
+a.button.mod-icon,
+input[type="submit"].mod-icon,
+button.mod-icon {
+  padding: .65em .9em;
+}
+
+a.button.mod-icon > [class*="icon-"],
+input[type="submit"].mod-icon > [class*="icon-"],
+button.mod-icon > [class*="icon-"] {
+  font-size: 1.3em;
+  padding: 0;
+  vertical-align: -.1em;
+}
+
 // Media Queries
 
 @media print {
@@ -231,3 +251,13 @@ button.mod-no-margin {
   }
 
 }
+
+// when using an icon in a button, it needs some
+// tweaking...
+
+.button > [class*="icon-"] {
+  font-size: 1.1em;
+  padding-right: .3em;
+  vertical-align: -.1em;
+}
+

@@ -463,3 +463,25 @@ a.btn {
   background-color: rgba(248, 246, 246, .3);
   box-shadow: inset 0 1px 2px rgba(235, 77, 92, .2);
 }
+
+//TODO! Make this a mod class like we did for buttons
+// NOTE: Had to make this btn-ico so not to confilt
+// with btn-icon above...
+.btn.btn-ico {
+  padding: 5px, 14px, 6px;
+}
+
+.btn.btn-ico > [class*="icon-"] {
+  font-size: 1.3em;
+  padding: 0;
+  vertical-align: -.1em;
+}
+
+// when using an icon in a button, it needs some
+// tweaking...
+// TODO: Include this as a mod class like for .buttons
+.btn > [class*="icon-"] {
+  font-size: 1.1em;
+  padding-right: .3em;
+  vertical-align: -.1em;
+}

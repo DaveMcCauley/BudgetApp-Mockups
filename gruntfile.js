@@ -4,9 +4,9 @@ module.exports = function(grunt) {
 
   // setup command line option to pass filename for the [prod|dev]-start-[mac|win]
   // by default it calls the file index.html. But calling, for example:
-  // dev-start-win --fileName='ungabunga.html' you can redirect the target to
+  // dev-start-win --filename='ungabunga.html' you can redirect the target to
   // ungabunga.html, rather than just 'index.html'.
-  var fileName = grunt.option('fileName') || 'index.html';
+  var filename = grunt.option('filename') || 'index.html';
 
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
@@ -326,11 +326,11 @@ module.exports = function(grunt) {
  open: {
 
     win: {
-        path: 'http://localhost:3000/' + fileName,
+        path: 'http://localhost:3000/' + filename,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
     mac: {
-        path: 'http://localhost:3000/' + fileName,
+        path: 'http://localhost:3000/' + filename,
         app: 'FirefoxDeveloperEdition'
     }
 
