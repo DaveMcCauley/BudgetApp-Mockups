@@ -188,22 +188,22 @@
 
       <div class="grid-icon js-inject-icons"> </div>
 
-   <h1>2.0 Components</h1>
+<h1>2.0 Components</h1>
 
-      <h2>2.1 Buttons</h2>
+<h2>2.1 Buttons</h2>
 
-      <p>
-        There are a few types of buttons you can use: a <code>&lt;button&gt;</code>
-        tag, an <code>&lt;input type="submit"&gt;</code>, and an
-        <code>&lt;a class="button"&gt;</code> tag. They largely look the same,
-        but have different functions…
-      </p>
-      <p>
-        If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
-        triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
-        If it submits a form, use <code>&lt;input type="submit"&gt;</code>.
-        (You probably want <code>.mod-primary</code>, too).
-      </p>
+<p>
+  There are a few types of buttons you can use: a <code>&lt;button&gt;</code>
+  tag, an <code>&lt;input type="submit"&gt;</code>, and an
+  <code>&lt;a class="button"&gt;</code> tag. They largely look the same,
+  but have different functions…
+</p>
+<p>
+  If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
+  triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
+  If it submits a form, use <code>&lt;input type="submit"&gt;</code>.
+  (You probably want <code>.mod-primary</code>, too).
+</p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
@@ -213,22 +213,22 @@
 </div>
 <!-- htmlmin:ignore -->
 
-      <h3>2.1.1 Button Modifiers</h3>
+<h3>2.1.1 Button Modifiers</h3>
 
-      <p>
-        There are five basic button modifiers. Primary for key actions like
-        confirming or saving. Generally, you should only have one primary
-        action per form. Use the Danger modifier for dangerous actions like
-        deleting where there might be a way to go back.
-      </p>
-      <p>
-        Transparent buttons are used within a page on sections with a non-white
-        background. Don’t use on forms or major call-outs. If on a white
-        background, don't use any additional modifiers. If on a darker, more
-        saturated background where white text is used, add <code>.mod-dark-background</code>.
-        If on a lighter, off-white background where dark text is still used,
-        add <code>.mod-light-background</code>.
-      </p>
+<p>
+  There are five basic button modifiers. Primary for key actions like
+  confirming or saving. Generally, you should only have one primary
+  action per form. Use the Danger modifier for dangerous actions like
+  deleting where there might be a way to go back.
+</p>
+<p>
+  Transparent buttons are used within a page on sections with a non-white
+  background. Don’t use on forms or major call-outs. If on a white
+  background, don't use any additional modifiers. If on a darker, more
+  saturated background where white text is used, add <code>.mod-dark-background</code>.
+  If on a lighter, off-white background where dark text is still used,
+  add <code>.mod-light-background</code>.
+</p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
@@ -291,7 +291,7 @@
 </div>
 <!-- htmlmin:ignore -->
 
-<p>Button can also use glyphs without any text, such as:</p>
+<p>Button can also use icon glyphs without any text, such as:</p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
@@ -306,6 +306,153 @@
 </button>
 </div>
 <!-- htmlmin:ignore -->
+
+
+
+
+
+<h2>2.2 EXPERIMENTAL Buttons</h2>
+
+<p>
+  This is a set of EXPERIMENTAL buttons…
+</p>
+<p>
+  If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
+  triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
+</p>
+<blockquote>
+  There is no <code>&lt;input&gt;</code> defined at this time.
+</blockquote>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn"> Preferences </button>
+<a class="btn"> Schedule </a>
+</div>
+<!-- htmlmin:ignore -->
+
+<h3>2.2.1 Button Modifiers</h3>
+
+<p>
+  There are five basic button modifiers. Primary for key actions like
+  confirming or saving. Generally, you should only have one primary
+  action per form. Use the Danger modifier for dangerous actions like
+  deleting where there might be a way to go back.
+</p>
+<p>
+  Transparent buttons are used within a page on sections with a non-white
+  background. Don’t use on forms or major call-outs. If on a white
+  background, don't use any additional modifiers. If on a darker, more
+  saturated background where white text is used, add <code>.mod-dark-background</code>.
+  If on a lighter, off-white background where dark text is still used,
+  add <code>.mod-light-background</code>.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn">Default</button>
+<button type="button" class="btn btn-success">Primary</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Danger</button>
+<button type="button" class="btn btn-danger">Transparent</button>
+<button type="button" class="btn btn-outline">Dark bg</button>
+<button type="button" class="btn btn-outline btn-transparent">Light bg</button>
+<button type="button" class="btn btn-border">Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+<h3>2.2.2 Button Sizing</h3>
+
+<p>
+  Buttons are sized relative to the text size of the button. Increasing or decreasing
+  the button's text size will scale the button appropriately. However, refrain from
+  chaning the button's size, unless absolutely necessary to solve a layout problem,
+  or deal with an unorthodox screen layout.
+</p>
+
+<h3>2.2.3 Button States</h3>
+
+<p>
+  Show a disabled button by appending <code>disabled</code> attribute. Note that
+  the <code>&lt;a&gt;</code> button has no disabled state.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn" disabled>Default</button>
+<button type="button" class="btn btn-success" disabled>Primary</button>
+<button type="button" class="btn btn-info" disabled>Info</button>
+<button type="button" class="btn btn-warning" disabled>Danger</button>
+<button type="button" class="btn btn-danger" disabled>Transparent</button>
+<button type="button" class="btn btn-outline" disabled>Dark bg</button>
+<button type="button" class="btn btn-outline btn-transparent" disabled>Light bg</button>
+<button type="button" class="btn btn-border" disabled>Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+<h3>2.1.4 Buttons with Glyphs</h3>
+
+<p>
+  Buttons with glyphs provide a fast way of picking choices. Use these in places
+  where the user is presented an option, or many options to aid in quickly
+  recognizing the deisred action.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn">
+  <span class="icon-settings"></span> Preferences
+</button>
+<button type="button" class="btn">
+  <span class="icon-check"></span> OK
+</button>
+<button type="button" class="btn">
+  <span class="icon-clock"></span> Schedule
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+<p>Button can also use icon glyphs without any text, such as:</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn">
+  <span class="icon-cloud-download"></span>
+</button>
+<button type="button" class="btn">
+  <span class="icon-users"></span>
+</button>
+<button type="button" class="btn">
+  <span class="icon-power"></span>
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <h3>2.1.4 Button Dropdowns</h3>
