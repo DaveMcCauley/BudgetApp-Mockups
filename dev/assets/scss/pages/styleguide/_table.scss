@@ -11,16 +11,16 @@ table {
 table,
 td,
 th {
+  border-left: 1px solid $light-gray-300;
+  border-top: 1px solid $light-gray-300;
   vertical-align: top;
-  border-top: 1px solid @light-gray-300;
-  border-left: 1px solid @light-gray-300;
 }
 
 td,
 th {
+  border-bottom: 1px solid $light-gray-300;
+  border-right: 1px solid $light-gray-300;
   padding: .4em .6em;
-  border-right: 1px solid @light-gray-300;
-  border-bottom: 1px solid @light-gray-300;
   text-align: left;
 }
 
@@ -29,9 +29,9 @@ th {
 }
 
 thead {
-  background: linear-gradient(to bottom, @light-gray-50 0%, @light-gray-100 100%);
+  background: linear-gradient(to bottom, $light-gray-50 0%, $light-gray-100 100%);
 }
 
 tbody {
-  background-color: #fff;
+  background-color: $white;
 }

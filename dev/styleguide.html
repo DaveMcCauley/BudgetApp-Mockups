@@ -16,7 +16,7 @@
 
 <div class="container">
   <div class="container-content">
-      <h1>1 Branding</h1>
+<h1>1 Branding</h1>
 
       <h2>1.1 Logo</h2>
       <p>TBA</p>
@@ -87,19 +87,19 @@
       <h3>1.3.2 Hierarchy</h3>
       <p>
         In most cases text should be sized to provide a clear visual heirarchy. Avoid em sizes,
-				as they do not cascade well. For the most part, you should define your text sizing using
-				rem units. Pixel sized text is acceptable where you want to ensure text retains the same
-				size at all browser configurations.
-			</p>
-			<p>
-				The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
-				default one can set rem units that correspond to px sizes at teh default zoom state. For
-				example:
-				<ul>
-					<li><code>font-size: 1.4rem</code> will produce a text size of 14px.</li>
-					<li><code>font-size: 2.4rem</code> will produce a text size of 24px.</li>
-				</ul>
-			</p>
+        as they do not cascade well. For the most part, you should define your text sizing using
+        rem units. Pixel sized text is acceptable where you want to ensure text retains the same
+        size at all browser configurations.
+      </p>
+      <p>
+        The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
+        default one can set rem units that correspond to px sizes at teh default zoom state. For
+        example:
+        <ul>
+          <li><code>font-size: 1.4rem</code> will produce a text size of 14px.</li>
+          <li><code>font-size: 2.4rem</code> will produce a text size of 24px.</li>
+        </ul>
+      </p>
       <blockquote>
         For text rendering greater than or equal to 18px (1.8rem), adjust the letter-spacing
         on the font. Use <code>letter-spacing: -1px;</code> in your class definition for
@@ -186,104 +186,127 @@
         scalable vector graphic (svg)
       </blockquote>
 
-			<div class="grid-icon js-inject-icons">	</div>
+      <div class="grid-icon js-inject-icons"> </div>
 
-      <h1>2.0 Components</h1>
+   <h1>2.0 Components</h1>
 
       <h2>2.1 Buttons</h2>
 
-      <p>Our buttons are created with standard bootstrap construction. For example:</p>
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default btn-sm"> Preferences </button>
-<button type="button" class="btn btn-default btn-sm"> Ok </button>
-<button type="button" class="btn btn-default btn-sm"> Schedule </button>
-      </div>
-<!-- htmlmin:ignore -->
-
-
-      <h3>2.1.1 Button Color</h3>
-
-      <p>There are six basic button colors.</p>
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default btn-sm">Default</button>
-<button type="button" class="btn btn-primary btn-sm">Primary</button>
-<button type="button" class="btn btn-success btn-sm">Success</button>
-<button type="button" class="btn btn-info btn-sm">Info</button>
-<button type="button" class="btn btn-warning btn-sm">Warning</button>
-<button type="button" class="btn btn-danger btn-sm">Danger</button>
-      </div>
-<!-- htmlmin:ignore -->
-
-
-      <h3>2.1.2 Button Size</h3>
-
-      BudgetApp buttons are sized with .btn-sm by default. Only use alternate sizes of
-      the bootstrap default (no included class) or large (.btn-lg). Never use the
-      extra small button class (.btn-xs).
-
-      <h3>2.1.2 Buttons with Glyphs</h3>
-
-      <p>Buttons with glyphs provide a fast way of picking choices. Use these in places
-      	 where the user is presented an option, or many options to aid in quickly
-      	 recognizing the deisred action.
+      <p>
+        There are a few types of buttons you can use: a <code>&lt;button&gt;</code>
+        tag, an <code>&lt;input type="submit"&gt;</code>, and an
+        <code>&lt;a class="button"&gt;</code> tag. They largely look the same,
+        but have different functions…
+      </p>
+      <p>
+        If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
+        triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
+        If it submits a form, use <code>&lt;input type="submit"&gt;</code>.
+        (You probably want <code>.mod-primary</code>, too).
       </p>
 
 <!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Preferences
-</button>
-<button type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ok
-</button>
-<button type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
-</button>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <p>Button can also use glyphs without any text, such as:</p>
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-</button>
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
-</button>
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
-</button>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <h3>2.1.3 Button Groups</h3>
-
-      <p>Buttons can may grouped when they share a common useage. Basic sample is to wrap
-      	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
-      	 the group, and not each button.
-      </p>
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="btn-group btn-group-sm" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+<div class="example-code js-inject-code">
+<button type="button"> Preferences </button>
+<input class="button" value=" OK " type="submit">
+<a class="button"> Schedule </a>
 </div>
-      </div>
 <!-- htmlmin:ignore -->
-      <blockquote>
-      	<b>Tooltips and popovers in button groups require special setting</b>
-      	When using tooltips or popovers on elements within a .btn-group, you'll have
-      	to specify the option container: 'body' to avoid unwanted side effects (such
-      	as the element growing wider and/or losing its rounded corners when the
-      	tooltip or popover is triggered).
-      </blockquote>
+
+      <h3>2.1.1 Button Modifiers</h3>
+
+      <p>
+        There are five basic button modifiers. Primary for key actions like
+        confirming or saving. Generally, you should only have one primary
+        action per form. Use the Danger modifier for dangerous actions like
+        deleting where there might be a way to go back.
+      </p>
+      <p>
+        Transparent buttons are used within a page on sections with a non-white
+        background. Don’t use on forms or major call-outs. If on a white
+        background, don't use any additional modifiers. If on a darker, more
+        saturated background where white text is used, add <code>.mod-dark-background</code>.
+        If on a lighter, off-white background where dark text is still used,
+        add <code>.mod-light-background</code>.
+      </p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button">Default</button>
+<button type="button" class="button mod-primary">Primary</button>
+<button type="button" class="button mod-danger">Danger</button>
+<button type="button" class="button mod-transparent">Transparent</button>
+<button type="button" class="button mod-transparent mod-dark-background">Dark bg</button>
+<button type="button" class="button mod-transparent mod-light-background">Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+<h3>2.1.2 Button Sizing</h3>
+
+<p>
+  Buttons are sized relative to the text size of the button. Increasing or decreasing
+  the button's text size will scale the button appropriately. However, refrain from
+  chaning the button's size, unless absolutely necessary to solve a layout problem,
+  or deal with an unorthodox screen layout.
+</p>
+
+<h3>2.1.3 Button States</h3>
+
+<p>
+  Show a disabled button by appending <code>disabled</code> attribute. Note that
+  the <code>&lt;a&gt;</code> button has no disabled state.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button" disabled>Default</button>
+<button type="button" class="button mod-primary" disabled>Primary</button>
+<button type="button" class="button mod-danger" disabled>Danger</button>
+<button type="button" class="button mod-transparent" disabled>Transparent</button>
+<button type="button" class="button mod-transparent mod-dark-background" disabled>Dark bg</button>
+<button type="button" class="button mod-transparent mod-light-background" disabled>Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+<h3>2.1.4 Buttons with Glyphs</h3>
+
+<p>
+  Buttons with glyphs provide a fast way of picking choices. Use these in places
+  where the user is presented an option, or many options to aid in quickly
+  recognizing the deisred action.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button">
+  <span class="icon-settings"></span> Preferences
+</button>
+<button type="button" class="button mod-primary">
+  <span class="icon-check"></span> OK
+</button>
+<button type="button" class="button">
+  <span class="icon-clock"></span> Schedule
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+<p>Button can also use glyphs without any text, such as:</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button">
+  <span class="icon-cloud-download"></span>
+</button>
+<button type="button" class="button">
+  <span class="icon-users"></span>
+</button>
+<button type="button" class="button">
+  <span class="icon-power"></span>
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
 
       <h3>2.1.4 Button Dropdowns</h3>
       <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
@@ -849,7 +872,7 @@ $('.button-picker a').picker({
 <!-- htmlmin:ignore -->
 
       Works as an inline as well...
-			
+
 <!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <form class="form-inline">
@@ -996,7 +1019,7 @@ $('.button-picker a').picker({
 </div>
       </div>
 <!-- htmlmin:ignore -->
-			
+
       <h3>3.2.6 Validation states with icons</h3>
 
       <blockquote>Depreication notice: In the next version, all validation states will be required to use icons
@@ -1013,8 +1036,8 @@ $('.button-picker a').picker({
         such as screen readers.
       </blockquote>
 
-			
-<!-- htmlmin:ignore -->			
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="form-group has-success has-feedback">
   <label class="control-label" for="inputSuccess2">Input with success</label>
@@ -1143,7 +1166,7 @@ $('.button-picker a').picker({
 
       <p>A rendered modal with header, body, and set of actions in the footer.</p>
 
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
@@ -1239,7 +1262,7 @@ $('.button-picker a').picker({
         <code>.rows</code> within the <code>.modal-body</code> and then use the
         normal grid system classes.
       </p>
-			
+
 <!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGridSample">
@@ -1364,7 +1387,7 @@ $('#myModal').modal(options)
       <p>Activates your content as a modal. Accepts an optional options object.</p>
 
 
-			<!-- htmlmin:ignore -->
+      <!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal({
   keyboard: false
@@ -1391,8 +1414,8 @@ $('#myModal').modal('toggle')
         Manually opens a modal. <b>Returns to the caller before the modal has actually
         been shown</b> (i.e. before the <code>shown.bs.modal</code> event occurs).
       </p>
-			
-<!-- htmlmin:ignore -->			
+
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal('show')
       </code></pre>
@@ -1417,7 +1440,7 @@ $('#myModal').modal('hide')
         which would make the modal jump to the left. Only needed when the height of
         the modal changes while it is open.
       </p>
-			
+
 <!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal('handleUpdate')
@@ -1732,7 +1755,7 @@ $('#example').tooltip(options)
         the <code>shown.bs.tooltip</code> event occurs). This is considered a 'manual' trigering of the tooltip. Tooltips
         with zero-length titles are never displayed.
       </p>
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('show')
       </code></pre>
@@ -1743,11 +1766,11 @@ $('#element').tooltip('show')
         Hides an element's tooltip. <b>Returns to the caller before the tooltip has actually been hidden</b> (i.e. before
         the <code>hidden.bs.tooltip</code> event occurs). This is considered a "manual" triggering of the tooltip.
       </p>
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('hide')
       </code></pre>
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
 
       <h4><code>.tooltip('toggle')</code></h4>
       <p>
@@ -1755,11 +1778,11 @@ $('#element').tooltip('hide')
         before the <code>shown.bs.tooltip</code> or <code>hidden.bs.tooltip</code> event occurs). This is considered a
         "manual" triggering of the tooltip.
       </p>
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('toggle')
       </code></pre>
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
 
       <h4><code>.tooltip('destroy')</code></h4>
       <p>
@@ -1767,11 +1790,11 @@ $('#element').tooltip('toggle')
         option) cannot be individually destroyed on descendent trigger elements.
       </p>
 
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('destroy')
       </code></pre>
-<!-- htmlmin:ignore -->			
+<!-- htmlmin:ignore -->
 
       <h3>3.5.7 Events</h3>
       <table class="table table-striped table-bordered">
@@ -1816,6 +1839,15 @@ $('#myTooltip').on('hidden.bs.tooltip', function() {
   // do something
 })
       </code></pre>
+
+
+
+
+
+
+
+
+
 
 
   </div><!--container-content-->
