@@ -2,36 +2,53 @@
 // For now these are in styleguide's page specific file.
 // If found to be useful, bunt these up to core
 
+$table-bg: #fff;
+$table-bg-accent: $light-gray-400;
+$table-cell-padding: 8px;
+$table-border-color: $light-gray-800;
+
 table {
-  font-size: .9em;
-  margin-bottom: 1em;
+  background-color: $table-bg;
   width: 100%;
+  max-width: 100%;
+  margin-bottom: $font-scale-factor;
+  border: 1px solid $table-border-color;
 }
 
-table,
-td,
 th {
-  border-left: 1px solid $light-gray-300;
-  border-top: 1px solid $light-gray-300;
-  vertical-align: top;
-}
-
-td,
-th {
-  border-bottom: 1px solid $light-gray-300;
-  border-right: 1px solid $light-gray-300;
-  padding: .4em .6em;
   text-align: left;
 }
 
+thead,
+tbody,
+tfoot, 
+tr,
+th,
+td, {
+  padding: $table-cell-padding;
+  line-height: $line-height-base;
+  vertical-align: top;
+  //border-top: 1px solid $table-border-color;
+  border: 1px solid $table-border-color;
+}
+
+// Bottom align for column headings
+thead,
+tr,
 th {
-  font-weight: bold;
+  vertical-align: bottom;
+  border-bottom: 2px solid $table-border-color;
 }
 
-thead {
-  background: linear-gradient(to bottom, $light-gray-50 0%, $light-gray-100 100%);
+// Remove top border from thead by default
+thead:first-child,
+tr:first-child, 
+  border-top: 0;
 }
 
-tbody {
-  background-color: $white;
+// striped tables
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $table-bg-accent;
+  }
 }
