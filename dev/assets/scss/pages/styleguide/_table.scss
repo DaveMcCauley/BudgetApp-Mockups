@@ -21,7 +21,7 @@ th {
 
 thead,
 tbody,
-tfoot, 
+tfoot,
 tr,
 th,
 td, {
@@ -42,7 +42,7 @@ th {
 
 // Remove top border from thead by default
 thead:first-child,
-tr:first-child, 
+tr:first-child {
   border-top: 0;
 }
 
