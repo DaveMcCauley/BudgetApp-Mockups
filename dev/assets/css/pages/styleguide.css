@@ -2106,7 +2106,9 @@ textarea:disabled {
 /* line 141, ../../scss/core/_inputs.scss */
 select {
   background: #fff;
-  padding-right: 3rem; }
+  padding-right: 3rem; 
+background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #fff;
+}
 
 /* line 146, ../../scss/core/_inputs.scss */
 label {

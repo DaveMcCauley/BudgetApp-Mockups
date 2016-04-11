@@ -141,6 +141,8 @@ textarea:disabled {
 select {
   background: #fff;
   padding-right: 3rem;
+  // line below "works". Check styling and make something locally downloaded.
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
 }
 
 label {
