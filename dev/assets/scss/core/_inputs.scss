@@ -1,0 +1,81 @@
+
+// form input defintions and styling.
+
+// scss-lint:disable QualifyingElement, ColorVariable
+
+input[type=url],
+input[type=text],
+input[type=tel],
+input[type=number],
+input[type=email],
+input[type=password],
+select,
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #c5c5c5;
+  border-radius: .25rem;
+  box-shadow: none;
+  color: #555459;
+  font-family: Slack-Lato,appleLogo,sans-serif;
+  font-size: 1.25rem;
+  //-moz-osx-font-smoothing: grayscale;
+  //-webkit-font-smoothing: antialiased;
+  height: auto;
+  line-height: normal;
+  margin: 0 0 .5rem;
+  max-width: 100%;
+  outline: 0;
+  padding: .75rem;
+  //-moz-transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
+  //-webkit-transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
+  transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
+  width: 100%;
+}
+
+input[type=url]::-ms-clear,
+input[type=text]::-ms-clear,
+input[type=tel]::-ms-clear,
+input[type=number]::-ms-clear,
+input[type=email]::-ms-clear,
+input[type=password]::-ms-clear,
+select::-ms-clear,
+textarea::-ms-clear {
+  display: none;
+}
+
+input[type=file] {
+  font-family: sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  line-height: 9pt;
+  width: auto;
+}
+
+.no-touch input:hover,
+.no-touch select:hover,
+.no-touch textarea:hover {
+  border-color: #2780f8;
+}
+
+.focus,
+input[type=url]:active,
+input[type=url]:focus,
+input[type=text]:active,
+input[type=text]:focus,
+input[type=number]:active,
+input[type=number]:focus,
+input[type=email]:active,
+input[type=email]:focus,
+input[type=password]:active,
+input[type=password]:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+  border-color: #2780f8;
+  box-shadow: 0 0 7px rgba(39, 128, 248, .15);
+  outline: 0;
+  outline-offset: 0;
+}
