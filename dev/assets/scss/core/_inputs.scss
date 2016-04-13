@@ -53,9 +53,12 @@ input[type=file] {
   width: auto;
 }
 
-.no-touch input:hover,
-.no-touch select:hover,
-.no-touch textarea:hover {
+//.no-touch input:hover,
+//.no-touch select:hover,
+//.no-touch textarea:hover
+input:hover,
+select:hover,
+textarea:hover{
   border-color: #2780f8;
 }
 
@@ -89,10 +92,6 @@ textarea {
   width: 100%;
 }
 
-textarea.small {
-  padding: .5rem;
-}
-
 ::-webkit-input-placeholder {
   color: #aaa;
 }
@@ -124,32 +123,34 @@ textarea:disabled {
   float: none;
 }
 
-.error input,
-.error select,
-.error textarea {
+input.mod-error,
+select.mod-error,
+textarea.mod-error {
   background: #fff6f6;
   border: 1px solid #cb5234;
 }
 
-.error input:focus,
-.error select:focus,
-.error textarea:focus {
+input:focus.mod-error,
+select:focus.mod-error,
+textarea:focus.mod-error {
   border-color: #cb5234;
   box-shadow: 0 0 7px rgba(255, 0, 0, .15);
 }
 
 select {
-  background: #fff;
+  //background: #fff;
   padding-right: 3rem;
   // line below "works". Check styling and make something locally downloaded.
   // also... http://red-team-design.com/making-html-dropdowns-not-suck/
   // and ... http://codepen.io/ericrasch/pen/zjDBx
-  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 label {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 .4rem;
 }
@@ -166,6 +167,10 @@ label.radio input[type=radio],
 label.radio input[type=checkbox] {
   margin: -2px .4rem 0 -1.5rem;
   vertical-align: middle;
+}
+
+label.mod-error {
+  color: #cb5234;
 }
 
 label.disabled {
@@ -185,21 +190,14 @@ label.select {
 }
 
 label.select:after {
-  bottom: 22px;
-  content: '\E271';
-  font-family: $font-family-base;
-  font-size: 20px;
+  bottom: 1.3rem;
+  content: ' ';
   pointer-events: none;
   position: absolute;
-  right: 22px;
-}
-
-label.select.with-hint:after {
-  bottom: 14px;
-}
-
-label.select.with-hint.small:after {
-  bottom: 6px;
+  right: 1rem;
+  background: url(../../img/down.png) no-repeat center transparent;
+  width: 20px;
+  height: 20px;
 }
 
 label.select.disabled:after {
