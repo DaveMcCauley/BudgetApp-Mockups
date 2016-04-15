@@ -15,182 +15,263 @@
 <body>
 
 <div class="container">
-  <div class="container-content">
+<div class="container-content">
+
+
+
+
+
+<h1>Introduction</h1>
+<p>
+  This styleguide gives a rough outline of what our application will look like.
+  It is an outline rather than a prescription. These are starting point that lay
+  out our graphic language rather than to provide a formula for every situation
+  the designer and coder will run into.
+</p>
+<p>
+  Any well designed product evokes a feeling. Our graphic choices presented here are
+  crafted to imbue emotions of "simplicity", "at-a-glance information", and should
+  give the user the impression of using an <b>application</b> rather than a series
+  of web <b>pages</b>. The graphic elements you create later, should set those
+  same emotional tones.
+</p>
+<p>
+  Numerous samples are included in this styleguide. We have made every attempt to
+  stick to a defined <a href="coding-style.html">coding styleguide</a>. The <code>
+  core.css</code> file includes the classes, styles, elements, colors, fonts,
+  that will be commonly reused thoughout the application. You as developer or
+  coder will create extensions and new classes as the app is developed over time.
+  Create those styles in accordance with the <a href="coding-style.html">coding styleguide</a>
+  wherever possible. The coding style provides a common language for all of the
+  developers and designers that you collaborate with. It's worth studying the
+  and understanding the <a href="coding-style.html">codng styleguide</a>.
+</p>
+
+
+
+
+
+
 <h1>1 Branding</h1>
 
-      <h2>1.1 Logo</h2>
-      <p>TBA</p>
-
-      <h2>1.2 Colors</h2>
-      <div class="palette-section js-fill-palette"> </div>
-
-      <h2>1.3 Typography</h2>
-      <p>
-        BudgetApp uses Lato typeface exclusively in both the application client
-        and marketing materials. The Lato typeface is imported in the _fonts.scss partial
-        file.
-      </p>
-      <p>
-        The only typeface exception is where a monospaced typeface
-        is required. Our monspaced typeface prefrence is Monaco. Consolas and
-        Courier New are acceptable fallbacks.
-      </p>
-      <p>
-        These preferred font faces should always be available to any page
-        that includes a sass-compiled stylesheet that imports the _fonts.scss partial
-        (ex: <code>@import core/fonts</code>), or any page that includes the
-        compiled core.css stylesheet. However, the font stack variable defined in
-        _fonts.scss includes alternate typefaces for fallback. Always ensure your pages,
-        components, and elements render the proper font face.
-      </p>
 
 
-      <h3>1.3.1 Typefaces and Weights</h3>
-      <p>
-        For consistency, always style your classes using the SCSS variables
-        defined in the _fonts.scss file.
-      </p>
-      <p>
-        In most cases you will not need to define the font face, as "Lato" is defined
-        from the <code>&lt;html&gt;</code> element. However, for font face
-        definitions use one of the following SCSS variables:
-      </p>
-      <ul>
-        <li>For normal purposes use the <code>$font-family-base</code> scss variable.</li>
-        <li>For monospaced type use the <code>$font-family-monospace</code> scss variable.</li>
-      </ul>
-      <p>
-        Use font weights to create a visual heirarchy. For weights, use one of
-        the following definitions:
-      </p>
-      <ul>
-        <li><code>$font-wt-light</code></li>
-        <li><code>$font-wt-normal</code></li>
-        <li><code>$font-wt-heavy</code></li>
-        <li><code>$font-wt-extra-heavy</code></li>
-      </ul>
-      <blockquote>
-        For the monospaced font family, ONLY <code>$font-wt-normal</code> should be used.
-      </blockquote>
-      <h4 class="example">Examples</h4>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-light</h5>
-      <p class="example-font mod-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-normal</h5>
-      <p class="example-font">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-heavy;</h5>
-      <p class="example-font mod-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-extra-heavy;</h5>
-      <p class="example-font mod-extra-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-mono; font-weight: $font-wt-normal;</h5>
-      <p class="example-font mod-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
 
-      <h3>1.3.2 Hierarchy</h3>
-      <p>
-        In most cases text should be sized to provide a clear visual heirarchy. Avoid em sizes,
-        as they do not cascade well. For the most part, you should define your text sizing using
-        rem units. Pixel sized text is acceptable where you want to ensure text retains the same
-        size at all browser configurations.
-      </p>
-      <p>
-        The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
-        default one can set rem units that correspond to px sizes at teh default zoom state. For
-        example:
-        <ul>
-          <li><code>font-size: 1.4rem</code> will produce a text size of 14px.</li>
-          <li><code>font-size: 2.4rem</code> will produce a text size of 24px.</li>
-        </ul>
-      </p>
-      <blockquote>
-        For text rendering greater than or equal to 18px (1.8rem), adjust the letter-spacing
-        on the font. Use <code>letter-spacing: -1px;</code> in your class definition for
-        text expected to render up to 36px (3.6rem). Above 36px (3.6rem) adjust according to
-        the rendered display.
-      </blockquote>
+<h2>1.1 Logo</h2>
 
-      <h4 class="example">Examples</h4>
-      <h5 class="example-font-desc">font-size: 3.6rem; // 36px</h5>
-      <p class="example-font mod-size-36">
-        Lorem ipsum dolor sit amet
-      </p>
-      <h5 class="example-font-desc">font-size: 2.4rem; // 24px</h5>
-      <p class="example-font mod-size-24">
-        Lorem ipsum dolor sit amet, consectetur
-      </p>
-      <h5 class="example-font-desc">font-size: 1.8rem; // 18px</h5>
-      <p class="example-font mod-size-18">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium
-      </p>
+<p>TBA</p>
 
-      <h5 class="example-font-desc">font-size: 1.6rem; // 16px</h5>
-      <p class="example-font mod-size-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia aristotele </p>
 
-      <h5 class="example-font-desc">font-size: 1.2rem; // 12px</h5>
-      <p class="example-font mod-size-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
-        latinam fama, quisquis placatae collegisti aliquam successerit
-      </p>
 
-      <h5 class="example-font-desc">font-size: 1.0rem; // 10px</h5>
-      <p class="example-font mod-size-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
-        latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
-        pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
-      </p>
 
-      <h5 class="example-font-desc">font-size: .8rem; // 8px</h5>
-      <p class="example-font mod-size-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
-        latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
-        pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
-        historiae bono. Succumbere disputandum duxit invenire gravissimis quoque, sensibus
-        id anteponant retinent doctrina tota quarum</p>
+<h2>1.2 Colors</h2>
 
-     <h3>1.3.3 Text Styling</h3>
+<div class="palette-section js-fill-palette"> </div>
 
-     <p>
-      Avoid underlining in text items for emphasis. Because underline is often used
-      for link (including our own styling) readers are often confused by underlined
-      words when it's used for emphasis. Use underlining ONLY for links.
-    </p>
-    <p>
-      For emphasis use <span class="u-heavy">bold text</span>, <span class="u-blue-700">color</span>, or
-      <span class="u-heavy u-blue-700">both</span>. Italic text can be used, but because
-      it sometimes renders poorly on small devices, only use it sparingly.
-    </p>
-    <p>
-      In general do not use all caps (<code>text-transform: uppercase;</code>), except
-      for small text sizes where using bold would make the small text unreadable.
-    </p>
 
-      <h2>1.4 Iconography</h2>
-      <p>BudgetApp includes a pre-defined set of simple line icons. The icons are
-         included <file>core.scss</file> via the <code>_icons.scss</code> partial
-         file. Icons come as named classes. To insert an icon, simply include a
-         <code>&lt;span&gt;</code> tag with class selector from the list below.
-      </p>
+
+
+<h2>1.3 Typography</h2>
+
+
+<p>
+  BudgetApp uses Lato typeface exclusively in both the application client
+  and marketing materials. The Lato typeface is imported in the _fonts.scss partial
+  file.
+</p>
+<p>
+  The only typeface exception is where a monospaced typeface
+  is required. Our monspaced typeface prefrence is Monaco. Consolas and
+  Courier New are acceptable fallbacks.
+</p>
+<p>
+  These preferred font faces should always be available to any page
+  that includes a sass-compiled stylesheet that imports the _fonts.scss partial
+  (ex: <code>@import core/fonts</code>), or any page that includes the
+  compiled core.css stylesheet. However, the font stack variable defined in
+  _fonts.scss includes alternate typefaces for fallback. Always ensure your pages,
+  components, and elements render the proper font face.
+</p>
+
+
+<h3>1.3.1 Typefaces and Weights</h3>
+<p>
+  For consistency, always style your classes using the SCSS variables
+  defined in the _fonts.scss file.
+</p>
+<p>
+  In most cases you will not need to define the font face, as "Lato" is defined
+  from the <code>&lt;html&gt;</code> element. However, for font face
+  definitions use one of the following SCSS variables:
+</p>
+<ul>
+  <li>For normal purposes use the <code>$font-family-base</code> scss variable.</li>
+  <li>For monospaced type use the <code>$font-family-monospace</code> scss variable.</li>
+</ul>
+<p>
+  Use font weights to create a visual heirarchy. For weights, use one of
+  the following definitions:
+</p>
+<ul>
+  <li><code>$font-wt-light</code></li>
+  <li><code>$font-wt-normal</code></li>
+  <li><code>$font-wt-heavy</code></li>
+  <li><code>$font-wt-extra-heavy</code></li>
+</ul>
+<blockquote>
+  For the monospaced font family, ONLY <code>$font-wt-normal</code> should be used.
+</blockquote>
+
+<h4 class="example">Examples</h4>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-light</h5>
+<p class="example-font mod-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-normal</h5>
+<p class="example-font">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-heavy;</h5>
+<p class="example-font mod-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-extra-heavy;</h5>
+<p class="example-font mod-extra-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-mono; font-weight: $font-wt-normal;</h5>
+<p class="example-font mod-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+
+<h3>1.3.2 Hierarchy</h3>
+
+
+<p>
+  In most cases text should be sized to provide a clear visual heirarchy. Avoid em sizes,
+  as they do not cascade well. For the most part, you should define your text sizing using
+  rem units. Pixel sized text is acceptable where you want to ensure text retains the same
+  size at all browser configurations.
+</p>
+<p>
+  The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
+  default one can set rem units that correspond to px sizes at teh default zoom state. For
+  example:
+  <ul>
+    <li><code>font-size: 1.4rem</code> will produce a text size of 14px.</li>
+    <li><code>font-size: 2.4rem</code> will produce a text size of 24px.</li>
+  </ul>
+</p>
+<blockquote>
+  For text rendering greater than or equal to 18px (1.8rem), adjust the letter-spacing
+  on the font. Use <code>letter-spacing: -1px;</code> in your class definition for
+  text expected to render up to 36px (3.6rem). Above 36px (3.6rem) adjust according to
+  the rendered display.
+</blockquote>
+
+
+<h4 class="example">Examples</h4>
+
+
+<h5 class="example-font-desc">font-size: 3.6rem; // 36px</h5>
+<p class="example-font mod-size-36">
+  Lorem ipsum dolor sit amet
+</p>
+<h5 class="example-font-desc">font-size: 2.4rem; // 24px</h5>
+<p class="example-font mod-size-24">
+  Lorem ipsum dolor sit amet, consectetur
+</p>
+<h5 class="example-font-desc">font-size: 1.8rem; // 18px</h5>
+<p class="example-font mod-size-18">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium
+</p>
+
+<h5 class="example-font-desc">font-size: 1.6rem; // 16px</h5>
+<p class="example-font mod-size-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia aristotele </p>
+
+<h5 class="example-font-desc">font-size: 1.2rem; // 12px</h5>
+<p class="example-font mod-size-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+  latinam fama, quisquis placatae collegisti aliquam successerit
+</p>
+
+<h5 class="example-font-desc">font-size: 1.0rem; // 10px</h5>
+<p class="example-font mod-size-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+  latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
+  pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
+</p>
+
+<h5 class="example-font-desc">font-size: .8rem; // 8px</h5>
+<p class="example-font mod-size-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+  latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
+  pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
+  historiae bono. Succumbere disputandum duxit invenire gravissimis quoque, sensibus
+  id anteponant retinent doctrina tota quarum
+</p>
+
+
+<h3>1.3.3 Text Styling</h3>
+
+
+<p>
+  Avoid underlining in text items for emphasis. Because underline is often used
+  for link (including our own styling) readers are often confused by underlined
+  words when it's used for emphasis. Use underlining ONLY for links.
+</p>
+<p>
+  For emphasis use <span class="u-heavy">bold text</span>, <span class="u-blue-700">color</span>, or
+  <span class="u-heavy u-blue-700">both</span>. Italic text can be used, but because
+  it sometimes renders poorly on small devices, only use it sparingly.
+</p>
+<p>
+  In general do not use all caps (<code>text-transform: uppercase;</code>), except
+  for small text sizes where using bold would make the small text unreadable.
+</p>
+
+
+
+
+<h2>1.4 Iconography</h2>
+
+
+<p>
+  BudgetApp includes a pre-defined set of simple line icons. The icons are
+  included <file>core.scss</file> via the <code>_icons.scss</code> partial
+  file. Icons come as named classes. To insert an icon, simply include a
+  <code>&lt;span&gt;</code> tag with class selector from the list below.
+</p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
 <span class="icon-support"> </span>
 <span class="icon-chemistry"> </span></div>
 <!-- htmlmin:ignore -->
-      <blockquote>
-        Create new icons only as a last resort. Avoid the overhead of
-        loading an entire font file and include any page-specific icons as a
-        scalable vector graphic (svg)
-      </blockquote>
 
-      <div class="grid-icon js-inject-icons"> </div>
+<blockquote>
+  Create new icons only as a last resort. Avoid the overhead of
+  loading an entire font file and include any page-specific icons as a
+  scalable vector graphic (svg)
+</blockquote>
+
+<div class="grid-icon js-inject-icons"> </div>
+
+
+
+
+
+
 
 <h1>2.0 Components</h1>
 
+
+
+
 <h2>2.1 Buttons</h2>
+
 
 <p>
   There are a few types of buttons you can use: a <code>&lt;button&gt;</code>
@@ -198,6 +279,7 @@
   <code>&lt;a class="button"&gt;</code> tag. They largely look the same,
   but have different functions…
 </p>
+
 <p>
   If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
   triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
@@ -213,7 +295,9 @@
 </div>
 <!-- htmlmin:ignore -->
 
+
 <h3>2.1.1 Button Modifiers</h3>
+
 
 <p>
   There are five basic button modifiers. Primary for key actions like
@@ -242,7 +326,9 @@
 <!-- htmlmin:ignore -->
 
 
+
 <h3>2.1.2 Button Sizing</h3>
+
 
 <p>
   Buttons are sized relative to the text size of the button. Increasing or decreasing
@@ -251,7 +337,10 @@
   or deal with an unorthodox screen layout.
 </p>
 
+
+
 <h3>2.1.3 Button States</h3>
+
 
 <p>
   Show a disabled button by appending <code>disabled</code> attribute. Note that
@@ -269,7 +358,10 @@
 </div>
 <!-- htmlmin:ignore -->
 
+
+
 <h3>2.1.4 Buttons with Glyphs</h3>
+
 
 <p>
   Buttons with glyphs provide a fast way of picking choices. Use these in places
@@ -313,6 +405,7 @@
 
 <h2>2.2 EXPERIMENTAL Buttons</h2>
 
+
 <p>
   This is a set of EXPERIMENTAL buttons…
 </p>
@@ -331,7 +424,10 @@
 </div>
 <!-- htmlmin:ignore -->
 
+
+
 <h3>2.2.1 Button Modifiers</h3>
+
 
 <p>
   There are five basic button modifiers. Primary for key actions like
@@ -362,7 +458,9 @@
 <!-- htmlmin:ignore -->
 
 
+
 <h3>2.2.2 Button Sizing</h3>
+
 
 <p>
   Buttons are sized relative to the text size of the button. Increasing or decreasing
@@ -371,7 +469,10 @@
   or deal with an unorthodox screen layout.
 </p>
 
+
+
 <h3>2.2.3 Button States</h3>
+
 
 <p>
   Show a disabled button by appending <code>disabled</code> attribute. Note that
@@ -391,7 +492,10 @@
 </div>
 <!-- htmlmin:ignore -->
 
+
+
 <h3>2.1.4 Buttons with Glyphs</h3>
+
 
 <p>
   Buttons with glyphs provide a fast way of picking choices. Use these in places
