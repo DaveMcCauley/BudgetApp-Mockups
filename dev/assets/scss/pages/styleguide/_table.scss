@@ -1,0 +1,55 @@
+// Tables
+// For now these are in styleguide's page specific file.
+// If found to be useful, bunt these up to core
+
+$table-bg: #fff;
+$table-bg-accent: $light-gray-100;
+$table-cell-padding: 8px;
+$table-border-color: $light-gray-800;
+
+table {
+  background-color: $table-bg;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $font-scale-factor;
+  border: 1px solid $table-border-color;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td, {
+  padding: $table-cell-padding;
+  line-height: $line-height-base;
+  vertical-align: top;
+  //border-top: 1px solid $table-border-color;
+  border: 1px solid $table-border-color;
+}
+
+// Bottom align for column headings
+thead,
+th {
+  vertical-align: bottom;
+  border-bottom: 2px solid $table-border-color;
+}
+
+// Remove top border from thead by default
+thead:first-child,
+tr:first-child {
+  border-top: 0;
+}
+
+// striped tables
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $table-bg-accent;
+  }
+}

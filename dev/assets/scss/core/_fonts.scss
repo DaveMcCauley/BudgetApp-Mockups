@@ -15,6 +15,6 @@ $font-wt-extra-heavy: 900;
 
 $font-size-base:   		1.6rem; //~14px
 
-$line-height-base:  	1.4 //~20px
-$font-scale-factor: 	floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-base:  	1.4; //~20px
+$font-scale-factor: 	floor($font-size-base * $line-height-base); // ~20px
 

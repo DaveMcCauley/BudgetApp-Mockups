@@ -5,14 +5,25 @@
 //}
 
 .example-code {
+  font-family: $font-family-base;
   margin-bottom: 50px;
   margin-top: 20px;
 }
 
+.example-code pre, {
+  margin-top: ($font-scale-factor / 2);
+}
+
+.example-code.mod-scroll pre {
+  margin-top: ($font-scale-factor / 2);
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
 .example-font {
   color: $black;
-  font-weight: $font-wt-base;
   font-family: $font-family-base;
+  font-weight: $font-wt-base;
 }
 
 .example-font-desc {
@@ -28,7 +39,7 @@
 }
 
 .example-font.mod-extra-heavy {
-  font-weight: $font-wt-extra-heavy
+  font-weight: $font-wt-extra-heavy;
 }
 
 .example-font.mod-monospace {
@@ -39,6 +50,7 @@
   font-size: 3.6rem;
   letter-spacing: -1px;
 }
+
 .example-font.mod-size-24 {
   font-size: 2.4rem;
   letter-spacing: -1px;
@@ -58,9 +70,11 @@
 }
 
 .example-font.mod-size-10 {
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 .example-font.mod-size-8 {
   font-size: .8rem;
 }
+
+

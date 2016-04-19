@@ -1,0 +1,263 @@
+// Button
+
+// There are a few types of buttons you can use: a <button> tag, a
+// <input type="submit">, and an <a class="button"> tag. They largely look the
+// same, but have different functions…
+
+// If clicking takes you to another page, use an <a> tag.
+// If clicking triggers something on the page via JavaScript, use a <button>.
+// If it submits a form, use <input type="submit">. (You probably want
+// .mod-primary, too)
+
+// ignore some SCSS-linters. This is the only sensible way to defne button elements
+// scss-lint:disable QualifyingElement, ColorVariable
+
+a.button,
+input[type="submit"],
+button {
+  background: linear-gradient(to bottom, $light-gray-100 0%, $light-gray-300 100%);
+  border: 1px solid #aaa;
+  border-radius: .25em;
+  box-shadow: 0 1px 0 $light-gray-400;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-base;
+  font-weight: $font-wt-extra-heavy;
+  line-height: 1.2;
+  margin: 0;
+  outline: 0;
+  padding: .25em 1em;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+a.button:focus,
+a.button:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+button:not([disabled]):focus,
+button:not([disabled]):hover {
+ // background: linear-gradient(to bottom, $light-gray-200 0%, $light-gray-300 100%);
+ background: linear-gradient(to bottom, $blue-200 0%, $blue-400 100%);
+ color: $white;
+}
+
+a.button:active,
+input[type="submit"]:active,
+button:not([disabled]):active {
+  background: linear-gradient(to bottom, $blue-400 0%, $blue-500 100%);
+  color: $black;
+}
+
+
+
+// States
+
+// There is no disabled state for <a> tags
+
+input[type="submit"][disabled],
+button[disabled] {
+  background: $light-gray-100;
+  box-shadow: none;
+  color: $quiet;
+  cursor: default;
+  font-weight: 300;
+}
+
+
+// Modifiers
+
+  // Primary
+
+  // For primary actions like confirming or saving. Generally, you should only
+  // have one primary action per form.
+
+a.button.mod-primary,
+input[type="submit"].mod-primary,
+button.mod-primary {
+  background: linear-gradient(to bottom, $green-300 0%, $green-500 100%);
+  box-shadow: 0 1px 0 $green-800;
+  border: 1px solid $green-700;
+  color: #fff;
+}
+
+a.button.mod-primary:focus,
+a.button.mod-primary:hover,
+input[type="submit"].mod-primary:focus,
+input[type="submit"].mod-primary:hover,
+button.mod-primary:not([disabled]):focus,
+button.mod-primary:not([disabled]):hover {
+  background: linear-gradient(to bottom, $green-500 0%, $green-700 100%);
+  color: #fff;
+}
+
+a.button.mod-primary:active,
+input[type="submit"].mod-primary:active,
+button.mod-primary:not([disabled]):active {
+  background: linear-gradient(to bottom, $green-700 0%, $green-800 100%);
+  color: #fff;
+}
+
+
+  // Danger
+
+  // For dangerous actions like deleting where there might be a way to go back.
+
+a.button.mod-danger,
+input[type="submit"].mod-danger,
+button.mod-danger {
+  color: $red-500;
+}
+
+a.button.mod-danger:focus,
+a.button.mod-danger:hover,
+input[type="submit"].mod-danger:not([disabled]):focus,
+input[type="submit"].mod-danger:not([disabled]):hover,
+button.mod-danger:not([disabled]):focus,
+button.mod-danger:not([disabled]):hover {
+  background: linear-gradient(to bottom, $red-500 0%, $red-600 100%);
+  box-shadow: 0 1px 0 $red-700;
+  color: #fff;
+}
+
+a.button.mod-danger:active,
+input[type="submit"].mod-danger:not([disabled]):active,
+button.mod-danger:not([disabled]):active {
+  background: linear-gradient(to bottom, $red-600 0%, $red-700 100%);
+  box-shadow: 0 1px 0 $red-700;
+  color: #fff;
+}
+
+
+// Transparent
+
+// Used within the page on sections with a non-white background.
+// Don’t use on forms or major call-outs.
+
+a.button.mod-transparent,
+button.mod-transparent {
+  background: fade-out($light-gray-500, .7);
+  box-shadow: 0 1px fade-out($light-gray-800, .3);
+  color: hsla(0, 0%, 0%, .7);
+}
+
+a.button.mod-transparent:focus,
+a.button.mod-transparent:hover,
+button.mod-transparent:not([disabled]):focus,
+button.mod-transparent:not([disabled]):hover {
+  background: fade-out($light-gray-500, .6);
+  box-shadow: 0 1px fade-out($light-gray-800, .4);
+  color: hsla(0, 0%, 0%, .9);
+}
+
+a.button.mod-transparent:active,
+button.mod-transparent:not([disabled]):active {
+  background: fade-out($light-gray-500, .5);
+  box-shadow: 0 1px fade-out($light-gray-800, .5);
+  color: hsl(0, 0%, 0%);
+}
+
+// If on a white background, don't use any additional modifiers.
+
+// If on a darker, more saturated background where white text is used,
+// add .mod-dark-background.
+
+a.button.mod-transparent.mod-dark-background,
+button.mod-transparent.mod-dark-background {
+  box-shadow: 0 1px hsla(0, 0%, 0%, 10%);
+  color: #fff;
+}
+
+// If on a lighter, off-white background where dark text is still used,
+// add .mod-light-background.
+
+a.button.mod-transparent.mod-light-background,
+button.mod-transparent.mod-light-background {
+  background: #fff;
+  box-shadow: 0 1px fade-out($light-gray-500, .7);
+}
+
+a.button.mod-transparent.mod-light-background:focus,
+a.button.mod-transparent.mod-light-background:hover,
+button.mod-transparent.mod-light-background:not([disabled]):focus,
+button.mod-transparent.mod-light-background:not([disabled]):hover {
+  background: hsla(0, 0%, 100%, .7);
+  box-shadow: 0 1px fade-out($light-gray-500, .8);
+}
+
+a.button.mod-transparent.mod-light-background:active,
+button.mod-transparent.mod-light-background:not([disabled]):active {
+  background: hsla(0, 0%, 100%, .5);
+  box-shadow: 0 1px fade-out($light-gray-800, .9);
+}
+
+// Inline
+
+button.mod-inline {
+  box-shadow: 0 1px 0 $light-gray-500;
+  display: inline;
+  font-size: .8em;
+  padding: .3em .8em;
+}
+
+
+// Full
+
+a.button.mod-full,
+input[type="submit"].mod-full,
+button.mod-full {
+  width: 100%;
+}
+
+// No Margin
+
+a.button.mod-no-margin,
+input[type="submit"].mod-no-margin,
+button.mod-no-margin {
+  margin: 0;
+}
+
+// Icon ONLY. No text label
+
+// make the icon larger, and center while
+// keeping the same height for a given
+// (parent) text size.
+
+a.button.mod-icon,
+input[type="submit"].mod-icon,
+button.mod-icon {
+  padding: .65em .9em;
+}
+
+a.button.mod-icon > [class*="icon-"],
+input[type="submit"].mod-icon > [class*="icon-"],
+button.mod-icon > [class*="icon-"] {
+  font-size: 1.3em;
+  padding: 0;
+  vertical-align: -.1em;
+}
+
+// Media Queries
+
+@media print {
+
+  a.button,
+  input[type="submit"],
+  button {
+    border: 1px solid $black;
+    color: $black;
+  }
+
+}
+
+// when using an icon in a button, it needs some
+// tweaking...
+
+.button > [class*="icon-"] {
+  font-size: 1.1em;
+  padding-right: .3em;
+  vertical-align: -.1em;
+}
+

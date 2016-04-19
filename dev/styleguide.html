@@ -15,267 +15,629 @@
 <body>
 
 <div class="container">
-  <div class="container-content">
-      <h1>1 Branding</h1>
-
-      <h2>1.1 Logo</h2>
-      <p>TBA</p>
-
-      <h2>1.2 Colors</h2>
-      <div class="palette-section js-fill-palette"> </div>
-
-      <h2>1.3 Typography</h2>
-      <p>
-        BudgetApp uses Lato typeface exclusively in both the application client
-        and marketing materials. The Lato typeface is imported in the _fonts.scss partial
-        file.
-      </p>
-      <p>
-        The only typeface exception is where a monospaced typeface
-        is required. Our monspaced typeface prefrence is Monaco. Consolas and
-        Courier New are acceptable fallbacks.
-      </p>
-      <p>
-        These preferred font faces should always be available to any page
-        that includes a sass-compiled stylesheet that imports the _fonts.scss partial
-        (ex: <code>@import core/fonts</code>), or any page that includes the
-        compiled core.css stylesheet. However, the font stack variable defined in
-        _fonts.scss includes alternate typefaces for fallback. Always ensure your pages,
-        components, and elements render the proper font face.
-      </p>
+<div class="container-content">
 
 
-      <h3>1.3.1 Typefaces and Weights</h3>
-      <p>
-        For consistency, always style your classes using the SCSS variables
-        defined in the _fonts.scss file.
-      </p>
-      <p>
-        In most cases you will not need to define the font face, as "Lato" is defined
-        from the <code>&lt;html&gt;</code> element. However, for font face
-        definitions use one of the following SCSS variables:
-      </p>
-      <ul>
-        <li>For normal purposes use the <code>$font-family-base</code> scss variable.</li>
-        <li>For monospaced type use the <code>$font-family-monospace</code> scss variable.</li>
-      </ul>
-      <p>
-        Use font weights to create a visual heirarchy. For weights, use one of
-        the following definitions:
-      </p>
-      <ul>
-        <li><code>$font-wt-light</code></li>
-        <li><code>$font-wt-normal</code></li>
-        <li><code>$font-wt-heavy</code></li>
-        <li><code>$font-wt-extra-heavy</code></li>
-      </ul>
-      <blockquote>
-        For the monospaced font family, ONLY <code>$font-wt-normal</code> should be used.
-      </blockquote>
-      <h4 class="example">Examples</h4>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-light</h5>
-      <p class="example-font mod-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-normal</h5>
-      <p class="example-font">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-heavy;</h5>
-      <p class="example-font mod-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-extra-heavy;</h5>
-      <p class="example-font mod-extra-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-      <h5 class="example-font-desc">font-face: $font-family-mono; font-weight: $font-wt-normal;</h5>
-      <p class="example-font mod-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
-
-      <h3>1.3.2 Hierarchy</h3>
-      <p>
-        In most cases text should be sized to provide a clear visual heirarchy. Avoid em sizes,
-				as they do not cascade well. For the most part, you should define your text sizing using
-				rem units. Pixel sized text is acceptable where you want to ensure text retains the same
-				size at all browser configurations.
-			</p>
-			<p>
-				The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
-				default one can set rem units that correspond to px sizes at teh default zoom state. For
-				example:
-				<ul>
-					<li><code>font-size: 1.4rem</code> will produce a text size of 14px.</li>
-					<li><code>font-size: 2.4rem</code> will produce a text size of 24px.</li>
-				</ul>
-			</p>
-      <blockquote>
-        For text rendering greater than or equal to 18px (1.8rem), adjust the letter-spacing
-        on the font. Use <code>letter-spacing: -1px;</code> in your class definition for
-        text expected to render up to 36px (3.6rem). Above 36px (3.6rem) adjust according to
-        the rendered display.
-      </blockquote>
-
-      <h4 class="example">Examples</h4>
-      <h5 class="example-font-desc">font-size: 3.6rem; // 36px</h5>
-      <p class="example-font mod-size-36">
-        Lorem ipsum dolor sit amet
-      </p>
-      <h5 class="example-font-desc">font-size: 2.4rem; // 24px</h5>
-      <p class="example-font mod-size-24">
-        Lorem ipsum dolor sit amet, consectetur
-      </p>
-      <h5 class="example-font-desc">font-size: 1.8rem; // 18px</h5>
-      <p class="example-font mod-size-18">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium
-      </p>
-
-      <h5 class="example-font-desc">font-size: 1.6rem; // 16px</h5>
-      <p class="example-font mod-size-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia aristotele </p>
-
-      <h5 class="example-font-desc">font-size: 1.2rem; // 12px</h5>
-      <p class="example-font mod-size-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
-        latinam fama, quisquis placatae collegisti aliquam successerit
-      </p>
-
-      <h5 class="example-font-desc">font-size: 1.0rem; // 10px</h5>
-      <p class="example-font mod-size-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
-        latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
-        pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
-      </p>
-
-      <h5 class="example-font-desc">font-size: .8rem; // 8px</h5>
-      <p class="example-font mod-size-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
-        liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
-        latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
-        pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
-        historiae bono. Succumbere disputandum duxit invenire gravissimis quoque, sensibus
-        id anteponant retinent doctrina tota quarum</p>
-
-     <h3>1.3.3 Text Styling</h3>
-
-     <p>
-      Avoid underlining in text items for emphasis. Because underline is often used
-      for link (including our own styling) readers are often confused by underlined
-      words when it's used for emphasis. Use underlining ONLY for links.
-    </p>
-    <p>
-      For emphasis use <span class="u-heavy">bold text</span>, <span class="u-blue-700">color</span>, or
-      <span class="u-heavy u-blue-700">both</span>. Italic text can be used, but because
-      it sometimes renders poorly on small devices, only use it sparingly.
-    </p>
-    <p>
-      In general do not use all caps (<code>text-transform: uppercase;</code>), except
-      for small text sizes where using bold would make the small text unreadable.
-    </p>
-
-      <h2>1.4 Iconography</h2>
-      <p>BudgetApp ustilizes Bootstrap 3 as a base framework. Bootstrap comes with
-         a large set of glyphs pre-installed. In most cases attempt to find a glyph
-         that fits your needs from these icons. A handy tool for locating Bootstrap
-       	 icons can be found over at
-       	 <a href="http://glyphicons.bootstrapcheatsheets.com" target="_blank">Cheatsheets.com</a>
-      </p>
-      <p>You may also use Google's Material icons by including the _material-icons.scss
-      	 partial in a page specific sass file. Icons and insertion codes can be found
-      	 over at <a href="https://design.google.com/icons/" target="_blank">design.google.com</a>
-      </p>
-      <p>Create new icons only as a last resort (for now.)</p>
-			
-			<div class="grid-icon">
-				<div class="grid-icon-item"><span class="icon-user-female"></span>.icon-user-female</div>
-				<div class="grid-icon-item"><span class="icon-user-following"></span>.icon-user-following</div>
-				<div class="grid-icon-item"><span class="icon-user-follow"></span>.icon-user-follow</div>
-				<div class="grid-icon-item"><span class="icon-user-unfollow"></span>icon-user-unfollow</div>
-				<div class="grid-icon-item"><span class="icon-trophy"></span>icon-trophy</div>
-			</div>
-			
-			
-      <h1>2.0 Components</h1>
-
-      <h2>2.1 Buttons</h2>
-
-      <p>Our buttons are created with standard bootstrap construction. For example:</p>
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default btn-sm"> Preferences </button>
-<button type="button" class="btn btn-default btn-sm"> Ok </button>
-<button type="button" class="btn btn-default btn-sm"> Schedule </button>
-      </div>
 
 
-      <h3>2.1.1 Button Color</h3>
 
-      <p>There are six basic button colors.</p>
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default btn-sm">Default</button>
-<button type="button" class="btn btn-primary btn-sm">Primary</button>
-<button type="button" class="btn btn-success btn-sm">Success</button>
-<button type="button" class="btn btn-info btn-sm">Info</button>
-<button type="button" class="btn btn-warning btn-sm">Warning</button>
-<button type="button" class="btn btn-danger btn-sm">Danger</button>
-      </div>
+<h1>1.0 Introduction</h1>
+<p>
+  This styleguide gives a rough outline of what our application will look like.
+  It is an outline rather than a prescription. These are starting point that lay
+  out our graphic language rather than to provide a formula for every situation
+  the designer and coder will run into.
+</p>
+<p>
+  Any well designed product evokes a feeling. Our graphic choices presented here are
+  crafted to imbue emotions of "simplicity", "at-a-glance information", and should
+  give the user the impression of using an <b>application</b> rather than a series
+  of web <b>pages</b>. The graphic elements you create later, should set those
+  same emotional tones.
+</p>
+<p>
+  Numerous samples are included in this styleguide. We have made every attempt to
+  stick to a defined <a href="coding-style.html">coding styleguide</a>. The <code>
+  core.css</code> file includes the classes, styles, elements, colors, fonts,
+  that will be commonly reused thoughout the application. You as developer or
+  coder will create extensions and new classes as the app is developed over time.
+  Create those styles in accordance with the <a href="coding-style.html">coding styleguide</a>
+  wherever possible. The coding style provides a common language for all of the
+  developers and designers that you collaborate with. It's worth studying the
+  and understanding the <a href="coding-style.html">codng styleguide</a>.
+</p>
 
 
-      <h3>2.1.2 Button Size</h3>
 
-      BudgetApp buttons are sized with .btn-sm by default. Only use alternate sizes of
-      the bootstrap default (no included class) or large (.btn-lg). Never use the
-      extra small button class (.btn-xs).
 
-      <h3>2.1.2 Buttons with Glyphs</h3>
 
-      <p>Buttons with glyphs provide a fast way of picking choices. Use these in places
-      	 where the user is presented an option, or many options to aid in quickly
-      	 recognizing the deisred action.
-      </p>
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Preferences
-</button>
-<button type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ok
-</button>
-<button type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
-</button>
-      </div>
 
-      <p>Button can also use glyphs without any text, such as:</p>
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-</button>
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
-</button>
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
-</button>
-      </div>
+<h1>2.0 Branding</h1>
 
-      <h3>2.1.3 Button Groups</h3>
 
-      <p>Buttons can may grouped when they share a common useage. Basic sample is to wrap
-      	 the buttons with .bth-group. Note that the btn-group-sm attribute is only requred for
-      	 the group, and not each button.
-      </p>
-      <div class="example-code js-inject-code">
-<div class="btn-group btn-group-sm" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+
+
+<h2>2.1 Logo</h2>
+
+<p>TBA</p>
+
+
+
+
+<h1>3.0 Colors</h1>
+
+
+
+
+<p>
+  Chose colors from the palette below. Colors are defined in the <code>core/_colors.scss</code>
+  When using a background color, use text colors (light or dark) as shown in the swatches below.
+  Always refer to the color by using the SCSS variable name rather than their hex, rgb, or hsl
+  equivalents. Only use hex, rgb, or hsl definitions in the code base when using custom colors--which
+  is somthing you should avoid. We want application client color scheme to be self-contained and redefinable
+  like any other component.
+</p>
+
+
+<div class="palette-section js-fill-palette"> </div>
+
+
+
+
+<h1>4.0 Typography</h1>
+
+
+<p>
+  BudgetApp uses Lato typeface exclusively in both the application client
+  and marketing materials, except where a monospaced typeface
+  is required. Our monspaced typeface preference is Monaco. Consolas and
+  Courier New are acceptable fallbacks.
+</p>
+<p>
+  These preferred font face definition files should always be available to any page
+  that includes a sass-compiled stylesheet that imports the _fonts.scss partial
+  (ex: <code>@import core/fonts</code>), or any page that includes the
+  compiled core.css stylesheet. The definition files are stored under <code>assets/fonts</code>
+  folder as part of the core distribution. However, the <code>$font-family-*</code> variables
+  in <code>_fonts.scss</code> includes alternate typefaces for fallback.
+</p>
+
+
+<h2>4.1 Typefaces</h2>
+
+
+<p>
+  Define <code>font-family:</code> attributes using the <code>$font-family-base</code>
+  and <code>$font-family-monospace</code> scss variables. Avoid custom font stacks,
+  so that fallbacks can be consistent across the app.
+</p>
+<p>
+  Always ensure your pages, components, and elements render the proper font face.
+</p>
+
+
+
+
+<h2>4.2 Type Weights</h2>
+
+<p>
+  Use font weights to create a visual heirarchy. For weights, use:
+</p>
+<ul>
+  <li><code>$font-wt-light</code></li>
+  <li><code>$font-wt-normal</code></li>
+  <li><code>$font-wt-heavy</code></li>
+  <li><code>$font-wt-extra-heavy</code></li>
+</ul>
+<blockquote>
+  For the monospaced font family, ONLY <code>$font-wt-normal</code> font weight
+  should be used.
+</blockquote>
+
+<h4 class="example">Examples</h4>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-light</h5>
+<p class="example-font mod-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-normal</h5>
+<p class="example-font">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-heavy;</h5>
+<p class="example-font mod-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-base; font-weight: $font-wt-extra-heavy;</h5>
+<p class="example-font mod-extra-heavy">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+<h5 class="example-font-desc">font-face: $font-family-mono; font-weight: $font-wt-normal;</h5>
+<p class="example-font mod-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
+
+
+
+
+<h2>4.3 Type Size</h2>
+
+
+<p>
+  Size text to provide a clear visual heirarchy. Generally avoid em sizes, as they do not cascade well,
+  unless you are specifically sizing text to be relative to a parent element. For the most part, define
+  text sizing using rem units. Pixel sized text is perfectly acceptable where you want to ensure text
+  retains the same size at all browser configurations.
+</p>
+<p>
+  The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
+  default one can set rem units that correspond to px sizes at the browser default text sizing.
+  For example:
+  <ul>
+    <li><code>font-size: 1.4rem</code> produces text @ 14px</li>
+    <li><code>font-size: 2.4rem</code> produces text @ 24px</li>
+  </ul>
+</p>
+<blockquote>
+  For text rendering greater than or equal to 18px (1.8rem), adjust the letter-spacing
+  on the font. Use <code>letter-spacing: -1px;</code> in your class definition for
+  text expected to render up to 36px (3.6rem). Above 36px (3.6rem) adjust according to
+  the rendered display.
+</blockquote>
+
+
+<h4 class="example">Examples</h4>
+
+<h5 class="example-font-desc">font-size: 3.6rem; // 36px</h5>
+<p class="example-font mod-size-36">
+  Lorem ipsum dolor sit amet
+</p>
+<h5 class="example-font-desc">font-size: 2.4rem; // 24px</h5>
+<p class="example-font mod-size-24">
+  Lorem ipsum dolor sit amet, consectetur
+</p>
+<h5 class="example-font-desc">font-size: 1.8rem; // 18px</h5>
+<p class="example-font mod-size-18">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium
+</p>
+
+<h5 class="example-font-desc">font-size: 1.6rem; // 16px</h5>
+<p class="example-font mod-size-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia aristotele </p>
+
+<h5 class="example-font-desc">font-size: 1.2rem; // 12px</h5>
+<p class="example-font mod-size-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+  latinam fama, quisquis placatae collegisti aliquam successerit
+</p>
+
+<h5 class="example-font-desc">font-size: 1.0rem; // 10px</h5>
+<p class="example-font mod-size-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+  latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
+  pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
+</p>
+
+<h5 class="example-font-desc">font-size: .8rem; // 8px</h5>
+<p class="example-font mod-size-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Quando laudari requietis conficiuntque summumque nullas nimium doloribus optabilem
+  liberamur, comparandae vera tandem torquatis gratia ignorant aristotele tritani
+  latinam fama, quisquis placatae collegisti aliquam successerit sed cohaerescant
+  pedalis pertinax mediocriterne, possimus aegritudinem putas ornamenta periculum sed
+  historiae bono. Succumbere disputandum duxit invenire gravissimis quoque, sensibus
+  id anteponant retinent doctrina tota quarum
+</p>
+
+
+
+
+<h2>4.4 Text Styling</h2>
+
+
+<p>
+  Avoid underlining in text items for emphasis. Underlined text indicates links.
+  Use underlining ONLY for links.
+</p>
+<p>
+  <span class="u-heavy">Bold text</span>, <span class="u-blue-500">color</span>,
+  or possibly <span class="u-heavy u-blue-500">both</span> can emphasize text.
+  Italic text can be used, but because it sometimes renders poorly on small
+  devices, only use it sparingly.
+</p>
+<p>
+  In general do not use all caps (<code>text-transform: uppercase;</code>), except
+  for small text sizes where using bold would make the small text unreadable.
+</p>
+
+
+
+
+<h1>5.0 Iconography</h1>
+
+
+
+
+<p>
+  BudgetApp includes a pre-defined set of simple line icons. The icons are
+  included <file>core.scss</file> via the <code>_icons.scss</code> partial
+  file. Icons come as named classes. To insert an icon, simply include a
+  <code>&lt;span&gt;</code> tag with class selector from the list below.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<span class="icon-support"> </span>
+<span class="icon-chemistry"> </span></div>
+<!-- htmlmin:ignore -->
+
+<blockquote>
+  Create new icons only as a last resort. Avoid the overhead of
+  loading an entire font file and include any page-specific icons as a
+  scalable vector graphic (svg).
+</blockquote>
+
+<div class="grid-icon js-inject-icons"> </div>
+
+
+
+
+<h1>6.0 Grids</h1>
+
+
+
+
+<p>
+  Grids are defined in the <code>_grid.scss</code> partial and included in the
+  compiled <code>core.css</code> file. Grids come in divisions from 1 to 12, with
+  the width managed by the scss definitions.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<section>
+  <div class="col span-1-1">
+    Column span 1 of 1 (col.span-1-1)
+  </div>
+</section>
+<section>
+  <div class="col span-1-2">
+    Comumn span 1 of 2 (col.span-1-2)
+  </div>
+  <div class="col span-1-2">
+    Column span 2 of 2 (col.span-1-2)
+  </div>
+</section>
+<section>
+  <div class= "col span-2-2">
+    Comumn span 2of2 (col.span-2-2)
+  </div>
+</section>
+<section>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+</section>
+<section>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+  <div class="col span-2-3">
+    Column 2of3 (col.span-2-3)
+  </div>
+</section>
+<section>
+  <div class="col span-2-3">
+    Column 2of3 (col.span-2-3)
+  </div>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+</section>
 </div>
-      </div>
-      <blockquote>
-      	<b>Tooltips and popovers in button groups require special setting</b>
-      	When using tooltips or popovers on elements within a .btn-group, you'll have
-      	to specify the option container: 'body' to avoid unwanted side effects (such
-      	as the element growing wider and/or losing its rounded corners when the
-      	tooltip or popover is triggered).
-      </blockquote>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h1>7.0 Buttons</h1>
+
+
+
+
+<p>
+  There are a few types of buttons you can use: a <code>&lt;button&gt;</code>
+  tag, an <code>&lt;input type="submit"&gt;</code>, and an
+  <code>&lt;a class="button"&gt;</code> tag. They largely look the same,
+  but have different functions…
+</p>
+
+<p>
+  If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
+  triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
+  If it submits a form, use <code>&lt;input type="submit"&gt;</code>.
+  (You probably want <code>.mod-primary</code>, too).
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button"> Preferences </button>
+<input class="button" value=" OK " type="submit">
+<a class="button"> Schedule </a>
+</div>
+<!-- htmlmin:ignore -->
+
+
+<h3>2.1.1 Button Modifiers</h3>
+
+
+<p>
+  There are five basic button modifiers. Primary for key actions like
+  confirming or saving. Generally, you should only have one primary
+  action per form. Use the Danger modifier for dangerous actions like
+  deleting where there might be a way to go back.
+</p>
+<p>
+  Transparent buttons are used within a page on sections with a non-white
+  background. Don’t use on forms or major call-outs. If on a white
+  background, don't use any additional modifiers. If on a darker, more
+  saturated background where white text is used, add <code>.mod-dark-background</code>.
+  If on a lighter, off-white background where dark text is still used,
+  add <code>.mod-light-background</code>.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button">Default</button>
+<button type="button" class="button mod-primary">Primary</button>
+<button type="button" class="button mod-danger">Danger</button>
+<button type="button" class="button mod-transparent">Transparent</button>
+<button type="button" class="button mod-transparent mod-dark-background">Dark bg</button>
+<button type="button" class="button mod-transparent mod-light-background">Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+<h3>2.1.2 Button Sizing</h3>
+
+
+<p>
+  Buttons are sized relative to the text size of the button. Increasing or decreasing
+  the button's text size will scale the button appropriately. However, refrain from
+  chaning the button's size, unless absolutely necessary to solve a layout problem,
+  or deal with an unorthodox screen layout.
+</p>
+
+
+
+<h3>2.1.3 Button States</h3>
+
+
+<p>
+  Show a disabled button by appending <code>disabled</code> attribute. Note that
+  the <code>&lt;a&gt;</code> button has no disabled state.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button" disabled>Default</button>
+<button type="button" class="button mod-primary" disabled>Primary</button>
+<button type="button" class="button mod-danger" disabled>Danger</button>
+<button type="button" class="button mod-transparent" disabled>Transparent</button>
+<button type="button" class="button mod-transparent mod-dark-background" disabled>Dark bg</button>
+<button type="button" class="button mod-transparent mod-light-background" disabled>Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+<h3>2.1.4 Buttons with Glyphs</h3>
+
+
+<p>
+  Buttons with glyphs provide a fast way of picking choices. Use these in places
+  where the user is presented an option, or many options to aid in quickly
+  recognizing the deisred action.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button">
+  <span class="icon-settings"></span> Preferences
+</button>
+<button type="button" class="button mod-primary">
+  <span class="icon-check"></span> OK
+</button>
+<button type="button" class="button">
+  <span class="icon-clock"></span> Schedule
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+<p>Button can also use icon glyphs without any text, such as:</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="button mod-icon">
+  <span class="icon-cloud-download"></span>
+</button>
+<button type="button" class="button mod-icon">
+  <span class="icon-users"></span>
+</button>
+<button type="button" class="button mod-icon">
+  <span class="icon-power"></span>
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+
+<h2>2.2 EXPERIMENTAL Buttons</h2>
+
+
+<p>
+  This is a set of EXPERIMENTAL buttons…
+</p>
+<p>
+  If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
+  triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
+</p>
+<blockquote>
+  There is no <code>&lt;input&gt;</code> defined at this time.
+</blockquote>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn"> Preferences </button>
+<a class="btn"> Schedule </a>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+<h3>2.2.1 Button Modifiers</h3>
+
+
+<p>
+  There are five basic button modifiers. Primary for key actions like
+  confirming or saving. Generally, you should only have one primary
+  action per form. Use the Danger modifier for dangerous actions like
+  deleting where there might be a way to go back.
+</p>
+<p>
+  Transparent buttons are used within a page on sections with a non-white
+  background. Don’t use on forms or major call-outs. If on a white
+  background, don't use any additional modifiers. If on a darker, more
+  saturated background where white text is used, add <code>.mod-dark-background</code>.
+  If on a lighter, off-white background where dark text is still used,
+  add <code>.mod-light-background</code>.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn">Default</button>
+<button type="button" class="btn btn-success">Primary</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Danger</button>
+<button type="button" class="btn btn-danger">Transparent</button>
+<button type="button" class="btn btn-outline">Dark bg</button>
+<button type="button" class="btn btn-outline btn-transparent">Light bg</button>
+<button type="button" class="btn btn-border">Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+<h3>2.2.2 Button Sizing</h3>
+
+
+<p>
+  Buttons are sized relative to the text size of the button. Increasing or decreasing
+  the button's text size will scale the button appropriately. However, refrain from
+  chaning the button's size, unless absolutely necessary to solve a layout problem,
+  or deal with an unorthodox screen layout.
+</p>
+
+
+
+<h3>2.2.3 Button States</h3>
+
+
+<p>
+  Show a disabled button by appending <code>disabled</code> attribute. Note that
+  the <code>&lt;a&gt;</code> button has no disabled state.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn" disabled>Default</button>
+<button type="button" class="btn btn-success" disabled>Primary</button>
+<button type="button" class="btn btn-info" disabled>Info</button>
+<button type="button" class="btn btn-warning" disabled>Danger</button>
+<button type="button" class="btn btn-danger" disabled>Transparent</button>
+<button type="button" class="btn btn-outline" disabled>Dark bg</button>
+<button type="button" class="btn btn-outline btn-transparent" disabled>Light bg</button>
+<button type="button" class="btn btn-border" disabled>Light bg</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+<h3>2.1.4 Buttons with Glyphs</h3>
+
+
+<p>
+  Buttons with glyphs provide a fast way of picking choices. Use these in places
+  where the user is presented an option, or many options to aid in quickly
+  recognizing the deisred action.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn">
+  <span class="icon-settings"></span> Preferences
+</button>
+<button type="button" class="btn">
+  <span class="icon-check"></span> OK
+</button>
+<button type="button" class="btn">
+  <span class="icon-clock"></span> Schedule
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+<p>Button can also use icon glyphs without any text, such as:</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<button type="button" class="btn btn-ico">
+  <span class="icon-cloud-download"></span>
+</button>
+<button type="button" class="btn btn-ico">
+  <span class="icon-users"></span>
+</button>
+<button type="button" class="btn btn-ico">
+  <span class="icon-power"></span>
+</button>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <h3>2.1.4 Button Dropdowns</h3>
       <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
-      <div class="example-code js-inject-code">
+<!-- htmlmin:ignore -->
+<div class="example-code mod-scroll js-inject-code">
 <div class="btn-group btn-group-sm">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Default <span class="caret"></span>
@@ -349,22 +711,27 @@
   </ul>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.1.5 Diabled state</h3>
       <p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
 <button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
       </div>
+<!-- htmlmin:ignore -->
 
       <h4>For anchor elements shown as buttons...</h4>
       Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
 
-      <div class="js=codesamp">
+<!-- htmlmin:ignore -->
+      <div class="example-code js-inject-code">
       <a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
       <a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
       </div>
+<!-- htmlmin:ignore -->
 
       <p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
          requried
@@ -381,15 +748,19 @@
 
       <p>Use labels to emphasize certain information.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <h1>Example heading <span class="label label-default">New</span></h1>
 <h2>Example heading <span class="label label-default">New</span></h2>
 <h3>Example heading <span class="label label-default">New</span></h3>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.2.1 Variations</h3>
 
       <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <span class="label label-default">Default</span>
 <span class="label label-primary">Primary</span>
@@ -398,7 +769,7 @@
 <span class="label label-warning">Warning</span>
 <span class="label label-danger">Danger</span>
       </div>
-
+<!-- htmlmin:ignore -->
 
       <blockquote>
         <b>Have tons of labels?</b><br >
@@ -414,6 +785,7 @@
          exists within.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <a href="#">Inbox <span class="badge">42</span></a>
 
@@ -421,6 +793,7 @@
   Messages <span class="badge">4</span>
 </button>
       </div>
+<!-- htmlmin:ignore -->
 
       <h2>2.4 Alerts</h2>
       <h3>2.4.1 Basic alerts</h3>
@@ -429,12 +802,14 @@
          <code>.alert-success</code>) for basic alert messages.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="alert alert-success" role="alert">...</div>
 <div class="alert alert-info" role="alert">...</div>
 <div class="alert alert-warning" role="alert">...</div>
 <div class="alert alert-danger" role="alert">...</div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.4.2 Dismissible alerts</h3>
       <p>Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.
@@ -443,16 +818,19 @@
         <code>data-dismiss="alert"</code> data attribute.</b>
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="alert alert-warning alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Warning!</strong> Better check yourself, you're not looking too good.
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.4.3 Links in alerts</h3>
       Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="alert alert-success" role="alert">
   <a href="#" class="alert-link">...</a>
@@ -467,6 +845,7 @@
   <a href="#" class="alert-link">...</a>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.4.4 Usage</h3>
       <p>
@@ -526,6 +905,7 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h3>2.5.1 Basic progress bar</h3>
       <p>This is the default progress bar</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -533,6 +913,7 @@ $('#myAlert').on('closed.bs.alert', function() {
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.5.2 Porgress bar with label </h3>
 
@@ -540,6 +921,7 @@ $('#myAlert').on('closed.bs.alert', function() {
          visible percentage.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -547,11 +929,13 @@ $('#myAlert').on('closed.bs.alert', function() {
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>2.5.3 Use <code>min-width</code></h3>
 
       <p>To ensure the label text remains legible even for low percentages, add <code>min-width</code> to the progress bars.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
@@ -564,6 +948,7 @@ $('#myAlert').on('closed.bs.alert', function() {
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
 
 
@@ -574,55 +959,78 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h2>3.1 Controls</h2>
 
       <h3>3.1.1 Text input form</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="usr">Name:</label>
 <input type="text" class="form-control" id="usr">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.2 Password input form</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="pwd">Name:</label>
 <input type="password" class="form-control" id="pwd">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.3 Email input form</h3>
       The input is evaluated by browser. (Developer should still santize it!)
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="exampleInputEmail1">Email address</label>
 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.4 File input</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label for="exampleInputFile">File input</label>
 <input type="file" id="exampleInputFile">
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.5 Date/Time input</h3>
 
       As text input...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="date-range-picker example">
   <input type="text" name="start" class="">
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       Prefilled value (in markup)...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="prefilled-picker example">
   <input type="text" name="schedule" value="12/12/2020 2:00 PM">
 </div>
+
       </div>
+<!-- htmlmin:ignore -->
 
       As a clickable link...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="button-picker example">
   <a href="#">Schedule</a>
   <input type="text" name="schedule">
 </div>
       </div>
-
+<!-- htmlmin:ignore -->
       As a button...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="datebutton">
   <button type="button" class="btn btn-default btn-sm">
@@ -631,9 +1039,12 @@ $('#myAlert').on('closed.bs.alert', function() {
   <input type="text" name="butt-test">
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       Initialize the markup with something like the following in the document head. See the
       README.md for further options provided by the plug in in the dependency file folder.
+
+<!-- htmlmin:ignore -->
       <pre>
         <code>
 $('.button-picker a').picker({
@@ -642,15 +1053,21 @@ $('.button-picker a').picker({
 });
         </code>
       </pre>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.6 Text Area</h3>
       Use this for multi-line text entry. Adjust the vertical height with the "rows"
       attribute
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <textarea class="form-control" rows="3"></textarea>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.7 Checkboxes</h3>
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label>
   <input type="checkbox" value="">
@@ -663,6 +1080,7 @@ $('.button-picker a').picker({
   </label>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
       cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
@@ -671,6 +1089,7 @@ $('.button-picker a').picker({
 
       <h3>3.1.8 Radio Buttons</h3>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="radio">
   <label>
@@ -691,12 +1110,14 @@ $('.button-picker a').picker({
   </label>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.9 Inline checkboxes and radio buttons</h3>
 
       Use the .checkbox-inline or .radio-inline classes on a series of
       checkboxes or radios for controls that appear on the same line.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label class="checkbox-inline">
   <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
@@ -718,24 +1139,31 @@ $('.button-picker a').picker({
   <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 3
 </label>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.10 Selects</h3>
 
       Note that many native select menus—namely in Safari and Chrome—have rounded
       corners that cannot be modified via border-radius properties.
-      <div class="example-code js-inject-code">
-<select class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-      </div>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label class="select">
+  <select class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+</label>
+</div>
+<!-- htmlmin:ignore -->
 
       For &lt;select&gt; controls with the multiple attribute, multiple options are
       shown by default.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <select multiple class="form-control">
   <option>1</option>
@@ -745,13 +1173,14 @@ $('.button-picker a').picker({
   <option>5</option>
 </select>
       </div>
-
+<!-- htmlmin:ignore -->
 
       <h3>3.1.11 Static contorls</h3>
 
       When you need to place plain text next to a form label within a form, use
       the .form-control-static class on a &lt;p&gt;.
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <form class="form-horizontal">
   <div class="form-group">
@@ -768,8 +1197,11 @@ $('.button-picker a').picker({
   </div>
 </form>
       </div>
+<!-- htmlmin:ignore -->
 
       Works as an inline as well...
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <form class="form-inline">
   <div class="form-group">
@@ -783,6 +1215,7 @@ $('.button-picker a').picker({
   <button type="submit" class="btn btn-default">Confirm identity</button>
 </form>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.1.12 Help text</h3>
       <p>Block level help text for for controls. Help text should be explicity associated with the form control it relates
@@ -790,6 +1223,7 @@ $('.button-picker a').picker({
          readers, will announce this help thest when the user focuses or enters the control.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <label class="sr-only" for="inputHelpBlock">Input with help text</label>
 <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock" >
@@ -797,6 +1231,7 @@ $('.button-picker a').picker({
   beyond one line
 </span>
       </div>
+<!-- htmlmin:ignore -->
 
       <h2>3.2 Control States</h2>
 
@@ -810,9 +1245,11 @@ $('.button-picker a').picker({
 
       <p>Add teh <code>diabled</code> boolean attribute on an imput to prevent user interaction.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <input class="form-control" id="disabledInput" type="text" placeholder="Disambled input here..." disabled >
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.2.3 Disabled fieldsets</h3>
       <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls
@@ -823,6 +1260,7 @@ $('.button-picker a').picker({
         </blockquote>
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <form>
   <fieldset disabled>
@@ -841,6 +1279,8 @@ $('.button-picker a').picker({
   </fieldset>
 </form>
       </div>
+<!-- htmlmin:ignore -->
+
 
       <h3>3.2.4 Readonly state</h3>
 
@@ -848,21 +1288,24 @@ $('.button-picker a').picker({
          inputs look like disabled inputs, but retain the standard cursor.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <input class="form-control" type="text" placeholder="Readonly input here..." readonly >
       </div>
+<!-- htmlmin:ignore -->
 
-      <h3>3.2.5 Validation states</h3>
+<h3>3.2.5 Validation states</h3>
 
-      <p>To show validation results add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code>
-         to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code>
-         within htat element will receive the validation styles.
-         <blockquote>
-            NOTE:Depricated in next release. Use only validation with glyphs as described in the following section
-         </blockquote>
-      </p>
+<p>To show validation results add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code>
+   to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code>
+   within htat element will receive the validation styles.
+   <blockquote>
+      NOTE:Depricated in next release. Use only validation with glyphs as described in the following section
+   </blockquote>
+</p>
 
-      <div class="example-code js-inject-code">
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
 <div class="form-group has-success">
   <label class="control-label" for="inputSuccess1">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" >
@@ -874,9 +1317,9 @@ $('.button-picker a').picker({
   <label class="control-label" for="inputWarning1">Input with warning</label>
   <input type="text" class="form-control" id="inputWarning1" >
 </div>
-<div class="form-group has-error">
-  <label class="control-label" for="inputError1">Input with error</label>
-  <input type="text" class="form-control" id="inputError1" >
+<div class="form-group">
+  <label class="mod-error" for="inputError1">Input with error</label>
+  <input type="text" class="mod-error" id="inputError1" >
 </div>
 <div class="has-success">
   <div class="checkbox">
@@ -887,22 +1330,23 @@ $('.button-picker a').picker({
   </div>
 </div>
 <div class="has-warning">
-  <div class="checkbox">
+  <div class="mod-error">
     <label>
       <input type="checkbox" id="checkboxWarning" value="option1">
       Checkbox with warning
     </label>
   </div>
 </div>
-<div class="has-error">
+<div class="error">
   <div class="checkbox">
-    <label>
+    <label class="mod-error">
       <input type="checkbox" id="checkboxError" value="option1">
       Checkbox with error
     </label>
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.2.6 Validation states with icons</h3>
 
@@ -920,6 +1364,8 @@ $('.button-picker a').picker({
         such as screen readers.
       </blockquote>
 
+
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="form-group has-success has-feedback">
   <label class="control-label" for="inputSuccess2">Input with success</label>
@@ -949,6 +1395,8 @@ $('.button-picker a').picker({
   <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
 </div>
       </div>
+<!-- htmlmin:ignore -->
+
 
       <h2>3.3 Form layouts</h2>
 
@@ -957,6 +1405,7 @@ $('.button-picker a').picker({
          least 768px wide.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <form class="form-inline">
   <div class="form-group">
@@ -989,6 +1438,8 @@ $('.button-picker a').picker({
   <button type="submit" class="btn btn-default">Sign in</button>
 </form>
       </div>
+<!-- htmlmin:ignore -->
+
 
       <h3>3.3.2 Horizontal form</h3>
 
@@ -997,6 +1448,7 @@ $('.button-picker a').picker({
        Doing so changes <code>.form-groups</code> to behave as grid rows, so no need for <code>.row</code>.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <form class="form-horizontal">
   <div class="form-group">
@@ -1027,6 +1479,8 @@ $('.button-picker a').picker({
   </div>
 </form>
       </div>
+<!-- htmlmin:ignore -->
+
 
       <h2>3.4 Modals</h2>
 
@@ -1040,6 +1494,7 @@ $('.button-picker a').picker({
 
       <p>A rendered modal with header, body, and set of actions in the footer.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <div class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
@@ -1059,6 +1514,8 @@ $('.button-picker a').picker({
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
       </div>
+<!-- htmlmin:ignore -->
+
 
 
       <h3>3.4.2 Live demo</h3>
@@ -1067,6 +1524,7 @@ $('.button-picker a').picker({
          down and fade in from the top of the page.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -1092,11 +1550,13 @@ $('.button-picker a').picker({
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.4.3 Sizing</h3>
 
       <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog.</code></p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <!-- Large modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
@@ -1120,6 +1580,8 @@ $('.button-picker a').picker({
   </div>
 </div>
       </div>
+<!-- htmlmin:ignore -->
+
 
       <h3>3.4.5 Modal Layouts</h3>
 
@@ -1129,6 +1591,7 @@ $('.button-picker a').picker({
         normal grid system classes.
       </p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGridSample">
   Launch demo modal
@@ -1175,6 +1638,8 @@ $('.button-picker a').picker({
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
       </div>
+<!-- htmlmin:ignore -->
+
 
       <h3>3.4.6 Modal usage</h3>
 
@@ -1191,17 +1656,20 @@ $('.button-picker a').picker({
       Activate a modal without writing JavaScript. Set data-toggle="modal" on a controller element, like a button, along with a data-target="#foo" or href="#foo" to target a specific modal to toggle.
       Copy
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
       </div>
-
+<!-- htmlmin:ignore -->
       <h4>Via JavaScript</h4>
 
       <p>Call a modal with id myModal with a single line of JavaScript:</p>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal(options)
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h3>3.4.7 Options</h3>
 
@@ -1246,11 +1714,15 @@ $('#myModal').modal(options)
 
       <p>Activates your content as a modal. Accepts an optional options object.</p>
 
+
+      <!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal({
   keyboard: false
 })
       </code></pre>
+<!-- htmlmin:ignore -->
+
 
       <h4><code>.modal('toggle')</code></h4>
       <p>
@@ -1259,18 +1731,23 @@ $('#myModal').modal({
         or <code>hidden.bs.modal</code> event occurs).
       </p>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal('toggle')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h4><code>.modal('show')</code></h4>
       <p>
         Manually opens a modal. <b>Returns to the caller before the modal has actually
         been shown</b> (i.e. before the <code>shown.bs.modal</code> event occurs).
       </p>
+
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal('show')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h4><code>.modal('hide')</code></h4>
       <p>
@@ -1279,9 +1756,11 @@ $('#myModal').modal('show')
         occurs).
       </p>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal('hide')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h4><code>.modal('handleUpdate')</code></h4>
       <p>
@@ -1290,9 +1769,11 @@ $('#myModal').modal('hide')
         the modal changes while it is open.
       </p>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').modal('handleUpdate')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h3>3.4.8 Modal Events</h3>
       <p>
@@ -1339,11 +1820,13 @@ $('#myModal').modal('handleUpdate')
         </tr>
       </table>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#myModal').on('hidden.bs.modal',function(e){
   // do something...
 })
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h2>3.5 Tooltips</h2>
       <p>
@@ -1359,11 +1842,13 @@ $('#myModal').on('hidden.bs.modal',function(e){
           <code>data-toggle</code> attribute:
         </p>
 
+<!-- htmlmin:ignore -->
         <pre><code>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
         </code></pre>
+<!-- htmlmin:ignore -->
 
       </blockquote>
 
@@ -1377,6 +1862,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vera viam <a href="#" 
 
       <p>Tooltips have for directions: top, right, bottom, and left.</p>
 
+<!-- htmlmin:ignore -->
       <div class="example-code js-inject-code">
 <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 
@@ -1386,6 +1872,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vera viam <a href="#" 
 
 <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
       </div>
+<!-- htmlmin:ignore -->
 
       <h3>3.5.3 Usage</h3>
 
@@ -1394,9 +1881,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vera viam <a href="#" 
         element. Ititialize the tooltip via Javascript:
       </p>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#example').tooltip(options)
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h3>3.5.4 Markup</h3>
 
@@ -1406,6 +1895,7 @@ $('#example').tooltip(options)
         location is somehting other than the default <code>top</code>.
       </p>
 
+<!-- htmlmin:ignore -->
       <pre><code>
 &lt;!-- HTML to write --&gt;
 &lt;a href="#" data-toggle="tooltip" title="Some tooltip text!"&gt;Hover over me&lt;/a&gt;
@@ -1418,6 +1908,7 @@ $('#example').tooltip(options)
   &lt;/div&gt;
 &lt;/div&gt;
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <blockquote>
         <h4>Multiple-line elements</h4>
@@ -1592,18 +2083,22 @@ $('#example').tooltip(options)
         the <code>shown.bs.tooltip</code> event occurs). This is considered a 'manual' trigering of the tooltip. Tooltips
         with zero-length titles are never displayed.
       </p>
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('show')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h4><code>.tooltip('hide')</code></h4>
       <p>
         Hides an element's tooltip. <b>Returns to the caller before the tooltip has actually been hidden</b> (i.e. before
         the <code>hidden.bs.tooltip</code> event occurs). This is considered a "manual" triggering of the tooltip.
       </p>
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('hide')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h4><code>.tooltip('toggle')</code></h4>
       <p>
@@ -1611,18 +2106,23 @@ $('#element').tooltip('hide')
         before the <code>shown.bs.tooltip</code> or <code>hidden.bs.tooltip</code> event occurs). This is considered a
         "manual" triggering of the tooltip.
       </p>
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('toggle')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h4><code>.tooltip('destroy')</code></h4>
       <p>
         Hides and destroys an element's tooltip. Tooltips that use delegation (which are created using the <code>selector</code>
         option) cannot be individually destroyed on descendent trigger elements.
       </p>
+
+<!-- htmlmin:ignore -->
       <pre><code>
 $('#element').tooltip('destroy')
       </code></pre>
+<!-- htmlmin:ignore -->
 
       <h3>3.5.7 Events</h3>
       <table class="table table-striped table-bordered">
@@ -1667,6 +2167,15 @@ $('#myTooltip').on('hidden.bs.tooltip', function() {
   // do something
 })
       </code></pre>
+
+
+
+
+
+
+
+
+
 
 
   </div><!--container-content-->
