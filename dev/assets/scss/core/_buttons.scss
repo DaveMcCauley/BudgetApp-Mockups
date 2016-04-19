@@ -15,7 +15,7 @@
 a.button,
 input[type="submit"],
 button {
-  background: linear-gradient(to bottom, $light-gray-100 0%, $light-gray-300 100%);
+  background: linear-gradient(to bottom, $light-gray-200 0%, $light-gray-400 100%);
   border: 1px solid #aaa;
   border-radius: .25em;
   box-shadow: 0 1px 0 $light-gray-400;
@@ -40,15 +40,14 @@ input[type="submit"]:hover,
 button:not([disabled]):focus,
 button:not([disabled]):hover {
  // background: linear-gradient(to bottom, $light-gray-200 0%, $light-gray-300 100%);
- background: linear-gradient(to bottom, $blue-200 0%, $blue-400 100%);
+ background: linear-gradient(to bottom, $blue-300 0%, $blue-500 100%);
  color: $white;
 }
 
 a.button:active,
 input[type="submit"]:active,
 button:not([disabled]):active {
-  background: linear-gradient(to bottom, $blue-400 0%, $blue-500 100%);
-  color: $black;
+  background: linear-gradient(to bottom, $blue-500 0%, $blue-700 100%);
 }
 
 
@@ -191,6 +190,36 @@ a.button.mod-transparent.mod-light-background:active,
 button.mod-transparent.mod-light-background:not([disabled]):active {
   background: hsla(0, 0%, 100%, .5);
   box-shadow: 0 1px fade-out($light-gray-800, .9);
+}
+
+
+// Outlined button
+
+// Used within the page on sections with a white background.
+// Don’t use on forms or major call-outs.
+
+a.button.mod-outline,
+button.mod-outline {
+  background: $white;
+  border: 1px solid #aaa;
+  color: $black;
+}
+
+a.button.mod-outline:focus,
+a.button.mod-outline:hover,
+button.mod-outline:not([disabled]):focus,
+button.mod-outline:not([disabled]):hover {
+  background: fade-out($light-gray-100, .6);
+  //box-shadow: 0 1px fade-out($light-gray-800, .4);
+  border: 1px solid $blue-700;
+  color: $blue-700;
+}
+
+a.button.mod-outline:active,
+button.mod-outline:not([disabled]):active {
+  background: fade-out($light-gray-300, .5);
+  //box-shadow: 0 1px fade-out($light-gray-800, .5);
+  color: $blue-900;
 }
 
 // Inline
