@@ -4,9 +4,9 @@ module.exports = function(grunt) {
 
   // setup command line option to pass filename for the [prod|dev]-start-[mac|win]
   // by default it calls the file index.html. But calling, for example:
-  // dev-start-win --fileName='ungabunga.html' you can redirect the target to
+  // dev-start-win --filename='ungabunga.html' you can redirect the target to
   // ungabunga.html, rather than just 'index.html'.
-  var fileName = grunt.option('fileName') || 'index.html';
+  var filename = grunt.option('filename') || 'index.html';
 
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
@@ -115,6 +115,16 @@ module.exports = function(grunt) {
         files: {
                 'dev/assets/scss/vendor/normalize/_normalize.scss' : 'node_modules/normalize.css/normalize.css'
                }
+      },
+      prod: {
+        files: [
+                { // copy fonts
+                  expand: true,
+                  cwd: 'dev/assets/fonts/simple-line-icons',
+                  src: ['**/*.*'],
+                  dest: 'prod/assets/fonts/simple-line-icons'
+                }
+        ]
       }
     },
 
@@ -226,8 +236,8 @@ module.exports = function(grunt) {
 
       prod: {
         options: {
-          removeComments: true,
-          collapseWhitespace: true
+          removeComments: false,
+          collapseWhitespace: false
         },
         files: [{
             expand: true,
@@ -316,11 +326,11 @@ module.exports = function(grunt) {
  open: {
 
     win: {
-        path: 'http://localhost:3000/' + fileName,
+        path: 'http://localhost:3000/' + filename,
         app: 'C:/Program Files (x86)/Firefox Developer Edition/firefox.exe'
     },
     mac: {
-        path: 'http://localhost:3000/' + fileName,
+        path: 'http://localhost:3000/' + filename,
         app: 'FirefoxDeveloperEdition'
     }
 
@@ -437,9 +447,7 @@ module.exports = function(grunt) {
         // ext     : '.min.js',           // replace .js to .min.js
         //  extDot  : 'last'               // use the last dot to append to.
         //}],
-        files: {
-          'dev/assets/js/vendor/datetime-picker/datepicker.min.js': 'dev/assets/js/vendor/datetime-picker/datepicker.js'
-        }
+
       }
     },
 
@@ -549,28 +557,29 @@ module.exports = function(grunt) {
                                   'notify:fini'
 																 ]);
 
-  grunt.registerTask('prod-start-win',['express:prod',
+  grunt.registerTask('prod-start-win',['prod-build',
+                                      'express:prod',
 																			 'open:win',
 																			 'watch',
                                        'notify:fini'
 																			]);
 
-	grunt.registerTask('prod-start-mac',['express:prod',
+	grunt.registerTask('prod-start-mac',['prod-build',
+                                       'express:prod',
 																			 'open:mac',
 																			 'watch',
                                        'notify:fini'
 																			]);
 
   grunt.registerTask('prod-build',['clean:preprod',
-																	 'uglify:vendor',
+                                   'copy:prod',
 																	 'scsslint',
 																	 'sass:prod',
-																	 'csslint:prod_lax',
 																	 'autoprefixer:prod',
 																	 'cssmin:prod',
 																	 'jshint:prod',
+                                   'concat:js',
 																	 'uglify:prod',
-																	 'concat:js',
 																	 'htmlhint',
 																	 'htmlmin:prod',
 																	 'imagemin',
