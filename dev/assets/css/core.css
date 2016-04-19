@@ -561,8 +561,8 @@ a.button.mod-outline:hover,
 button.mod-outline:not([disabled]):focus,
 button.mod-outline:not([disabled]):hover {
   background: rgba(237, 239, 240, 0.4);
-  border: 1px solid #055a8c;
-  color: #055a8c; }
+  border: 1px solid #00c2e0;
+  color: #00c2e0; }
 
 /* line 218, ../scss/core/_buttons.scss */
 a.button.mod-outline:active,
