@@ -21,7 +21,7 @@
 
 
 
-<h1>Introduction</h1>
+<h1>1.0 Introduction</h1>
 <p>
   This styleguide gives a rough outline of what our application will look like.
   It is an outline rather than a prescription. These are starting point that lay
@@ -52,65 +52,76 @@
 
 
 
-<h1>1 Branding</h1>
+<h1>2.0 Branding</h1>
 
 
 
 
-<h2>1.1 Logo</h2>
+<h2>2.1 Logo</h2>
 
 <p>TBA</p>
 
 
 
 
-<h2>1.2 Colors</h2>
+<h1>3.0 Colors</h1>
+
+
+
+
+<p>
+  Chose colors from the palette below. Colors are defined in the <code>core/_colors.scss</code>
+  When using a background color, use text colors (light or dark) as shown in the swatches below.
+  Always refer to the color by using the SCSS variable name rather than their hex, rgb, or hsl
+  equivalents. Only use hex, rgb, or hsl definitions in the code base when using custom colors--which
+  is somthing you should avoid. We want application client color scheme to be self-contained and redefinable
+  like any other component.
+</p>
+
 
 <div class="palette-section js-fill-palette"> </div>
 
 
 
 
-<h2>1.3 Typography</h2>
+<h1>4.0 Typography</h1>
 
 
 <p>
   BudgetApp uses Lato typeface exclusively in both the application client
-  and marketing materials. The Lato typeface is imported in the _fonts.scss partial
-  file.
-</p>
-<p>
-  The only typeface exception is where a monospaced typeface
-  is required. Our monspaced typeface prefrence is Monaco. Consolas and
+  and marketing materials, except where a monospaced typeface
+  is required. Our monspaced typeface preference is Monaco. Consolas and
   Courier New are acceptable fallbacks.
 </p>
 <p>
-  These preferred font faces should always be available to any page
+  These preferred font face definition files should always be available to any page
   that includes a sass-compiled stylesheet that imports the _fonts.scss partial
   (ex: <code>@import core/fonts</code>), or any page that includes the
-  compiled core.css stylesheet. However, the font stack variable defined in
-  _fonts.scss includes alternate typefaces for fallback. Always ensure your pages,
-  components, and elements render the proper font face.
+  compiled core.css stylesheet. The definition files are stored under <code>assets/fonts</code>
+  folder as part of the core distribution. However, the <code>$font-family-*</code> variables
+  in <code>_fonts.scss</code> includes alternate typefaces for fallback.
 </p>
 
 
-<h3>1.3.1 Typefaces and Weights</h3>
+<h2>4.1 Typefaces</h2>
+
+
 <p>
-  For consistency, always style your classes using the SCSS variables
-  defined in the _fonts.scss file.
+  Define <code>font-family:</code> attributes using the <code>$font-family-base</code>
+  and <code>$font-family-monospace</code> scss variables. Avoid custom font stacks,
+  so that fallbacks can be consistent across the app.
 </p>
 <p>
-  In most cases you will not need to define the font face, as "Lato" is defined
-  from the <code>&lt;html&gt;</code> element. However, for font face
-  definitions use one of the following SCSS variables:
+  Always ensure your pages, components, and elements render the proper font face.
 </p>
-<ul>
-  <li>For normal purposes use the <code>$font-family-base</code> scss variable.</li>
-  <li>For monospaced type use the <code>$font-family-monospace</code> scss variable.</li>
-</ul>
+
+
+
+
+<h2>4.2 Type Weights</h2>
+
 <p>
-  Use font weights to create a visual heirarchy. For weights, use one of
-  the following definitions:
+  Use font weights to create a visual heirarchy. For weights, use:
 </p>
 <ul>
   <li><code>$font-wt-light</code></li>
@@ -119,7 +130,8 @@
   <li><code>$font-wt-extra-heavy</code></li>
 </ul>
 <blockquote>
-  For the monospaced font family, ONLY <code>$font-wt-normal</code> should be used.
+  For the monospaced font family, ONLY <code>$font-wt-normal</code> font weight
+  should be used.
 </blockquote>
 
 <h4 class="example">Examples</h4>
@@ -140,22 +152,24 @@
 <p class="example-font mod-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmopqrstuvwxyz<br>1234567890</p>
 
 
-<h3>1.3.2 Hierarchy</h3>
+
+
+<h2>4.3 Type Size</h2>
 
 
 <p>
-  In most cases text should be sized to provide a clear visual heirarchy. Avoid em sizes,
-  as they do not cascade well. For the most part, you should define your text sizing using
-  rem units. Pixel sized text is acceptable where you want to ensure text retains the same
-  size at all browser configurations.
+  Size text to provide a clear visual heirarchy. Generally avoid em sizes, as they do not cascade well,
+  unless you are specifically sizing text to be relative to a parent element. For the most part, define
+  text sizing using rem units. Pixel sized text is perfectly acceptable where you want to ensure text
+  retains the same size at all browser configurations.
 </p>
 <p>
   The <code>&lt;html&gt;</code> element has a text size set by default to 62.5%. Using this
-  default one can set rem units that correspond to px sizes at teh default zoom state. For
-  example:
+  default one can set rem units that correspond to px sizes at the browser default text sizing.
+  For example:
   <ul>
-    <li><code>font-size: 1.4rem</code> will produce a text size of 14px.</li>
-    <li><code>font-size: 2.4rem</code> will produce a text size of 24px.</li>
+    <li><code>font-size: 1.4rem</code> produces text @ 14px</li>
+    <li><code>font-size: 2.4rem</code> produces text @ 24px</li>
   </ul>
 </p>
 <blockquote>
@@ -167,7 +181,6 @@
 
 
 <h4 class="example">Examples</h4>
-
 
 <h5 class="example-font-desc">font-size: 3.6rem; // 36px</h5>
 <p class="example-font mod-size-36">
@@ -214,18 +227,20 @@
 </p>
 
 
-<h3>1.3.3 Text Styling</h3>
+
+
+<h2>4.4 Text Styling</h2>
 
 
 <p>
-  Avoid underlining in text items for emphasis. Because underline is often used
-  for link (including our own styling) readers are often confused by underlined
-  words when it's used for emphasis. Use underlining ONLY for links.
+  Avoid underlining in text items for emphasis. Underlined text indicates links.
+  Use underlining ONLY for links.
 </p>
 <p>
-  For emphasis use <span class="u-heavy">bold text</span>, <span class="u-blue-700">color</span>, or
-  <span class="u-heavy u-blue-700">both</span>. Italic text can be used, but because
-  it sometimes renders poorly on small devices, only use it sparingly.
+  <span class="u-heavy">Bold text</span>, <span class="u-blue-500">color</span>,
+  or possibly <span class="u-heavy u-blue-500">both</span> can emphasize text.
+  Italic text can be used, but because it sometimes renders poorly on small
+  devices, only use it sparingly.
 </p>
 <p>
   In general do not use all caps (<code>text-transform: uppercase;</code>), except
@@ -235,7 +250,9 @@
 
 
 
-<h2>1.4 Iconography</h2>
+<h1>5.0 Iconography</h1>
+
+
 
 
 <p>
@@ -254,7 +271,7 @@
 <blockquote>
   Create new icons only as a last resort. Avoid the overhead of
   loading an entire font file and include any page-specific icons as a
-  scalable vector graphic (svg)
+  scalable vector graphic (svg).
 </blockquote>
 
 <div class="grid-icon js-inject-icons"> </div>
@@ -262,15 +279,73 @@
 
 
 
-
-
-
-<h1>2.0 Components</h1>
+<h1>6.0 Grids</h1>
 
 
 
 
-<h2>2.1 Buttons</h2>
+<p>
+  Grids are defined in the <code>_grid.scss</code> partial and included in the
+  compiled <code>core.css</code> file. Grids come in divisions from 1 to 12, with
+  the width managed by the scss definitions.
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<section>
+  <div class="col span-1-1">
+    Column span 1 of 1 (col.span-1-1)
+  </div>
+</section>
+<section>
+  <div class="col span-1-2">
+    Comumn span 1 of 2 (col.span-1-2)
+  </div>
+  <div class="col span-1-2">
+    Column span 2 of 2 (col.span-1-2)
+  </div>
+</section>
+<section>
+  <div class= "col span-2-2">
+    Comumn span 2of2 (col.span-2-2)
+  </div>
+</section>
+<section>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+</section>
+<section>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+  <div class="col span-2-3">
+    Column 2of3 (col.span-2-3)
+  </div>
+</section>
+<section>
+  <div class="col span-2-3">
+    Column 2of3 (col.span-2-3)
+  </div>
+  <div class="col span-1-3">
+    Column 1of3 (col.span-1-3)
+  </div>
+</section>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h1>7.0 Buttons</h1>
+
+
 
 
 <p>
