@@ -47,7 +47,7 @@ button:not([disabled]):hover {
 a.button:active,
 input[type="submit"]:active,
 button:not([disabled]):active {
-  background: linear-gradient(to bottom, $light-gray-300 0%, $light-gray-400 100%);
+  background: linear-gradient(to bottom, $blue-400 0%, $blue-500 100%);
   color: $black;
 }
 
@@ -141,7 +141,6 @@ button.mod-transparent {
   background: fade-out($light-gray-500, .7);
   box-shadow: 0 1px fade-out($light-gray-800, .3);
   color: hsla(0, 0%, 0%, .7);
-  font-weight: normal;
 }
 
 a.button.mod-transparent:focus,
@@ -177,7 +176,7 @@ button.mod-transparent.mod-dark-background {
 a.button.mod-transparent.mod-light-background,
 button.mod-transparent.mod-light-background {
   background: #fff;
-  box-shadow: 0 1px fade-out($light-gray-800, .7);
+  box-shadow: 0 1px fade-out($light-gray-500, .7);
 }
 
 a.button.mod-transparent.mod-light-background:focus,
@@ -185,7 +184,7 @@ a.button.mod-transparent.mod-light-background:hover,
 button.mod-transparent.mod-light-background:not([disabled]):focus,
 button.mod-transparent.mod-light-background:not([disabled]):hover {
   background: hsla(0, 0%, 100%, .7);
-  box-shadow: 0 1px fade-out($light-gray-800, .8);
+  box-shadow: 0 1px fade-out($light-gray-500, .8);
 }
 
 a.button.mod-transparent.mod-light-background:active,
