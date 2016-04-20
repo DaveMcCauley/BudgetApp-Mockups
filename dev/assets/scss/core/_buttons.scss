@@ -27,10 +27,13 @@ button {
   line-height: 1.2;
   margin: 0;
   outline: 0;
+  overflow: hidden;
   padding: .25em 1em;
   position: relative;
   text-decoration: none;
+  text-overflow: ellipsis;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  white-space: nowrap;
 }
 
 a.button:focus,
@@ -220,6 +223,16 @@ button.mod-outline:not([disabled]):active {
   background: fade-out($light-gray-300, .5);
   //box-shadow: 0 1px fade-out($light-gray-800, .5);
   color: $blue-600;
+}
+
+// Vertically stacked
+
+a.button.mod-stack,
+button.mod-stack {
+  clear: both;
+  min-width: 100px;
+  text-align: start;
+  width: 100%;
 }
 
 // Inline

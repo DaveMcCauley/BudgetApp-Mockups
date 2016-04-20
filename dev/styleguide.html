@@ -371,7 +371,9 @@
 <!-- htmlmin:ignore -->
 
 
-<h3>2.1.1 Button Modifiers</h3>
+
+
+<h2>7.1 Button Modifiers</h2>
 
 
 <p>
@@ -403,7 +405,8 @@
 
 
 
-<h3>2.1.2 Button Sizing</h3>
+
+<h2>7.2 Button Sizing</h2>
 
 
 <p>
@@ -415,7 +418,8 @@
 
 
 
-<h3>2.1.3 Button States</h3>
+
+<h2>7.3 Button States</h2>
 
 
 <p>
@@ -436,7 +440,11 @@
 
 
 
-<h3>2.1.4 Buttons with Glyphs</h3>
+
+<h2>7.4 Buttons with Glyphs</h2>
+
+
+<h3>7.4.1 Buttons with Glyphs and Text</h3>
 
 
 <p>
@@ -459,6 +467,12 @@
 </div>
 <!-- htmlmin:ignore -->
 
+
+
+
+<h3>7.4.2 Buttons with Glyphs Only</h3>
+
+
 <p>Button can also use icon glyphs without any text, such as:</p>
 
 <!-- htmlmin:ignore -->
@@ -478,272 +492,78 @@
 
 
 
-
-<h2>2.2 EXPERIMENTAL Buttons</h2>
-
-
-<p>
-  This is a set of EXPERIMENTAL buttons…
-</p>
-<p>
-  If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
-  triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
-</p>
-<blockquote>
-  There is no <code>&lt;input&gt;</code> defined at this time.
-</blockquote>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<button type="button" class="btn"> Preferences </button>
-<a class="btn"> Schedule </a>
-</div>
-<!-- htmlmin:ignore -->
+<h2>7.5 Vertically Aligned Buttons</h2>
 
 
-
-<h3>2.2.1 Button Modifiers</h3>
+<h3>7.5.1 Buttons with Text Only</h3>
 
 
 <p>
-  There are five basic button modifiers. Primary for key actions like
-  confirming or saving. Generally, you should only have one primary
-  action per form. Use the Danger modifier for dangerous actions like
-  deleting where there might be a way to go back.
-</p>
-<p>
-  Transparent buttons are used within a page on sections with a non-white
-  background. Don’t use on forms or major call-outs. If on a white
-  background, don't use any additional modifiers. If on a darker, more
-  saturated background where white text is used, add <code>.mod-dark-background</code>.
-  If on a lighter, off-white background where dark text is still used,
-  add <code>.mod-light-background</code>.
+  When you have vertcially stacked buttons, use the <code>.mod-stack</code> class
+  to align the labels, rather than have them centered, to make scanning easier. The
+  modifier will fit the button width to the parent and align the text to the left.
 </p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
-<button type="button" class="btn">Default</button>
-<button type="button" class="btn btn-success">Primary</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-warning">Danger</button>
-<button type="button" class="btn btn-danger">Transparent</button>
-<button type="button" class="btn btn-outline">Dark bg</button>
-<button type="button" class="btn btn-outline btn-transparent">Light bg</button>
-<button type="button" class="btn btn-border">Light bg</button>
+<div style="width: 150px;">
+  <button type="button" class="button mod-stack">
+    Preferences
+  </button>
+  <button type="button" class="button mod-stack">
+    Members
+  </button>
+  <button type="button" class="button mod-stack">
+    Schedule
+  </button>
+  <button type="button" class="button mod-stack">
+    Subscribe
+  </button>
+  <button type="button" class="button mod-stack">
+    Attach
+  </button
+  <button type="button" class="button mod-stack">
+    Archive
+  </button>
+</div>
 </div>
 <!-- htmlmin:ignore -->
 
 
 
-<h3>2.2.2 Button Sizing</h3>
+
+<h3>7.5.2 Buttons with Icons and Text</h3>
 
 
 <p>
-  Buttons are sized relative to the text size of the button. Increasing or decreasing
-  the button's text size will scale the button appropriately. However, refrain from
-  chaning the button's size, unless absolutely necessary to solve a layout problem,
-  or deal with an unorthodox screen layout.
-</p>
-
-
-
-<h3>2.2.3 Button States</h3>
-
-
-<p>
-  Show a disabled button by appending <code>disabled</code> attribute. Note that
-  the <code>&lt;a&gt;</code> button has no disabled state.
-</p>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<button type="button" class="btn" disabled>Default</button>
-<button type="button" class="btn btn-success" disabled>Primary</button>
-<button type="button" class="btn btn-info" disabled>Info</button>
-<button type="button" class="btn btn-warning" disabled>Danger</button>
-<button type="button" class="btn btn-danger" disabled>Transparent</button>
-<button type="button" class="btn btn-outline" disabled>Dark bg</button>
-<button type="button" class="btn btn-outline btn-transparent" disabled>Light bg</button>
-<button type="button" class="btn btn-border" disabled>Light bg</button>
-</div>
-<!-- htmlmin:ignore -->
-
-
-
-<h3>2.1.4 Buttons with Glyphs</h3>
-
-
-<p>
-  Buttons with glyphs provide a fast way of picking choices. Use these in places
-  where the user is presented an option, or many options to aid in quickly
-  recognizing the deisred action.
+  Stacked buttons work with icons as well.
 </p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
-<button type="button" class="btn">
-  <span class="icon-settings"></span> Preferences
-</button>
-<button type="button" class="btn">
-  <span class="icon-check"></span> OK
-</button>
-<button type="button" class="btn">
-  <span class="icon-clock"></span> Schedule
-</button>
-</div>
-<!-- htmlmin:ignore -->
-
-<p>Button can also use icon glyphs without any text, such as:</p>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<button type="button" class="btn btn-ico">
-  <span class="icon-cloud-download"></span>
-</button>
-<button type="button" class="btn btn-ico">
-  <span class="icon-users"></span>
-</button>
-<button type="button" class="btn btn-ico">
-  <span class="icon-power"></span>
-</button>
-</div>
-<!-- htmlmin:ignore -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <h3>2.1.4 Button Dropdowns</h3>
-      <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
-<!-- htmlmin:ignore -->
-<div class="example-code mod-scroll js-inject-code">
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Default <span class="caret"></span>
+<div style="width: 150px;">
+  <button type="button" class="button">
+    <span class="icon-settings"></span> Preferences
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Primary <span class="caret"></span>
+  <button type="button" class="button mod-primary">
+    <span class="icon-check"></span> Members
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Success <span class="caret"></span>
+  <button type="button" class="button">
+    <span class="icon-clock"></span> Schedule
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Info <span class="caret"></span>
+  <button type="button" class="button mod-stack">
+    <span class="icon-user-follow"></span> Subscribe
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Warning <span class="caret"></span>
+  <button type="button" class="button mod-stack">
+    <span class="icon-paper-clip"></span> Attach
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Danger <span class="caret"></span>
+  <button type="button" class="button mod-stack">
+    <span class="icon-briefcase"></span> Archive
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
 </div>
-      </div>
+</div>
 <!-- htmlmin:ignore -->
-
-      <h3>2.1.5 Diabled state</h3>
-      <p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
-<button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <h4>For anchor elements shown as buttons...</h4>
-      Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-      <a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
-      <a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
-         requried
-      </p>
-      <blockquote>
-        <b>Link funtionality caveat</b>
-        This class uses <code>pointer-events: none</code> to try to disable the link funcationaly of the
-        <code>&lt;a&gt;</code> elements, bu that CSS property is not yet standardized and isn't fully supported
-        in older browsers. Also, keyboard naviation remain unaffected, so users can still activate thse links.
-        To be safe we have a javascript that disables links programatically.
-      </blockquote>
+  
 
       <h2>2.2 Labels</h2>
 
