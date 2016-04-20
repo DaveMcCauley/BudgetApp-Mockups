@@ -565,6 +565,378 @@
 <!-- htmlmin:ignore -->
 
 
+
+
+<h1>8.0 Inputs</h1>
+
+
+
+
+<p>
+  Form inputs are largely managed by the browser. Some of the specific forms 
+  may not be availabe in all browsers. Everything falls back to standard 
+  text input where unavailable. The application is always responsible for 
+  validating and escaping user inputs.
+</p>
+
+
+
+
+<h2>8.1 Text input form</h2>
+
+
+<p>A simple text input... </p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label for="usr">Name:</label>
+<input type="text" class="form-control" id="usr">
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.2 Password input form</h2>
+
+
+<p>Password hides the input...</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label for="pwd">Name:</label>
+<input type="password" class="form-control" id="pwd">
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.3 Email input form</h2>
+     
+
+<p>
+  The input is evaluated by browser. (Developer should still santize it!)
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.4 Phone</h2>
+
+
+
+
+<h2>8.5 etc... </h2
+
+
+
+
+
+<h2>8.5 File input</h2>
+
+
+<p>
+  File inputs bring up a file chooser in the browser...
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label for="exampleInputFile">File input</label>
+<input type="file" id="exampleInputFile">
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.6 Text Area</h2>
+
+
+<p>
+  Use this for multi-line text entry. Adjust the vertical height with the "rows"
+  attribute
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<textarea class="form-control" rows="3"></textarea>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.7 Selects</h2>
+
+
+<p>
+  Note that many native select menus—namely in Safari and Chrome—have rounded
+  corners that cannot be modified via border-radius properties.
+</p>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label class="select">
+  <select class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+</label>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.8 Multiple Select</h2>
+
+ 
+<p>
+  For <code>&lt;select&gt</code> controls with the multiple attribute, multiple 
+   options are shown by default.
+</p>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<select multiple class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.9 Checkboxes</h2>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label>
+  <input type="checkbox" value="">
+  Option one is this
+</label>
+<label>
+  <input type="checkbox" value="">
+  Options two is that
+</label>
+<!-- TODO delete the parent div here! -->
+<div class="checkbox disabled">
+  <label>
+    <input type="checkbox" value="" disabled>
+    Option two is disabled
+  </label>
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+<!-- TODO VERIFY THIS -->
+<blockquote>
+  Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
+  cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
+  <code>.disabled</code> class to the parent <code>.radio</code>,
+  <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
+</blockquote>
+
+
+
+
+<h2>8.10 Radio Buttons</h2>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one is this... 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div>
+<div class="radio disabled">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Option three is disabled
+  </label>
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.11 Date and Time Input</h2>
+
+
+<p>
+  Since browers implement date/time inputs inconsistently, we include our own
+  customized date time picker to assit the user in choosing and entering dates
+  and times. 
+</P>
+<p>
+  Time entry can be applied to multiple controls as follows
+</p>
+
+
+
+
+<h3>8.11.1 Date and Time as Text Input<h3>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div class="date-range-picker example">
+  <input type="text" name="start" class="">
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+<p>
+  Supply the <code>value=</code> attribute for prefilled values
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div class="prefilled-picker example">
+  <input type="text" name="schedule" value="12/12/2020 2:00 PM">
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h3>8.11.2 Date and Time as Clickable Link</h3>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div class="button-picker example">
+  <a href="#">Schedule</a>
+  <input type="text" name="schedule">
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h3>8.11.3 Date and Time as Button</h3>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div class="datebutton">
+  <button type="button" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
+  </button>
+  <input type="text" name="butt-test">
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h3>8.11.4 Initializing Date and Time Picker</h3>
+
+
+<p>
+  Initialize the markup with something like the following in the document head. 
+  See the Wiki for further options provided by the plug in in the dependency 
+  file folder.
+</p>
+
+
+<!-- htmlmin:ignore -->
+<pre><code>$('.button-picker a').picker({
+  outputTo: $('.button-picker input'),
+  prefill: true,
+});
+</code></pre>
+<!-- htmlmin:ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================================================== -->
+
       <h2>2.2 Labels</h2>
 
       <p>Use labels to emphasize certain information.</p>
@@ -779,223 +1151,54 @@ $('#myAlert').on('closed.bs.alert', function() {
 
       <h2>3.1 Controls</h2>
 
-      <h3>3.1.1 Text input form</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="usr">Name:</label>
-<input type="text" class="form-control" id="usr">
-      </div>
-<!-- htmlmin:ignore -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
-      <h3>3.1.2 Password input form</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="pwd">Name:</label>
-<input type="password" class="form-control" id="pwd">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.3 Email input form</h3>
-      The input is evaluated by browser. (Developer should still santize it!)
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.4 File input</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="exampleInputFile">File input</label>
-<input type="file" id="exampleInputFile">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.5 Date/Time input</h3>
 
-      As text input...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="date-range-picker example">
-  <input type="text" name="start" class="">
-</div>
-      </div>
-<!-- htmlmin:ignore -->
 
-      Prefilled value (in markup)...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="prefilled-picker example">
-  <input type="text" name="schedule" value="12/12/2020 2:00 PM">
-</div>
 
-      </div>
-<!-- htmlmin:ignore -->
 
-      As a clickable link...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="button-picker example">
-  <a href="#">Schedule</a>
-  <input type="text" name="schedule">
-</div>
-      </div>
-<!-- htmlmin:ignore -->
-      As a button...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="datebutton">
-  <button type="button" class="btn btn-default btn-sm">
-    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
-  </button>
-  <input type="text" name="butt-test">
-</div>
-      </div>
-<!-- htmlmin:ignore -->
 
-      Initialize the markup with something like the following in the document head. See the
-      README.md for further options provided by the plug in in the dependency file folder.
 
-<!-- htmlmin:ignore -->
-      <pre>
-        <code>
-$('.button-picker a').picker({
-  outputTo: $('.button-picker input'),
-  prefill: true,
-});
-        </code>
-      </pre>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.6 Text Area</h3>
-      Use this for multi-line text entry. Adjust the vertical height with the "rows"
-      attribute
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<textarea class="form-control" rows="3"></textarea>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <h3>3.1.7 Checkboxes</h3>
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label>
-  <input type="checkbox" value="">
-  Option one is this and that&mdash;be sure to include why it's great
-</label>
-<div class="checkbox disabled">
-  <label>
-    <input type="checkbox" value="" disabled>
-    Option two is disabled
-  </label>
-</div>
-      </div>
-<!-- htmlmin:ignore -->
-
-      Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
-      cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
-      <code>.disabled</code> class to the parent <code>.radio</code>,
-      <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
-
-      <h3>3.1.8 Radio Buttons</h3>
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Option one is this and that&mdash;be sure to include why it's great
-  </label>
-</div>
-<div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Option two can be something else and selecting it will deselect option one
-  </label>
-</div>
-<div class="radio disabled">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    Option three is disabled
-  </label>
-</div>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <h3>3.1.9 Inline checkboxes and radio buttons</h3>
-
-      Use the .checkbox-inline or .radio-inline classes on a series of
-      checkboxes or radios for controls that appear on the same line.
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-</label>
-
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 3
-</label>
-      </div>
-<!-- htmlmin:ignore -->
-
-      <h3>3.1.10 Selects</h3>
-
-      Note that many native select menus—namely in Safari and Chrome—have rounded
-      corners that cannot be modified via border-radius properties.
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<label class="select">
-  <select class="form-control">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </select>
-</label>
-</div>
-<!-- htmlmin:ignore -->
-
-      For &lt;select&gt; controls with the multiple attribute, multiple options are
-      shown by default.
-
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<select multiple class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-      </div>
-<!-- htmlmin:ignore -->
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <h3>3.1.11 Static contorls</h3>
 
       When you need to place plain text next to a form label within a form, use
