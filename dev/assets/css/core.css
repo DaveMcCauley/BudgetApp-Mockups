@@ -418,12 +418,19 @@ button {
   line-height: 1.2;
   margin: 0;
   outline: 0;
+  overflow: hidden;
   padding: .25em 1em;
   position: relative;
   text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; }
 
-/* line 36, ../scss/core/_buttons.scss */
+/* line 40, ../scss/core/_buttons.scss */
+a.button {
+  display: inline; }
+
+/* line 44, ../scss/core/_buttons.scss */
 a.button:focus,
 a.button:hover,
 input[type="submit"]:focus,
@@ -433,13 +440,13 @@ button:not([disabled]):hover {
   background: linear-gradient(to bottom, #5ba4cf 0%, #0079bf 100%);
   color: #fff; }
 
-/* line 47, ../scss/core/_buttons.scss */
+/* line 55, ../scss/core/_buttons.scss */
 a.button:active,
 input[type="submit"]:active,
 button:not([disabled]):active {
   background: linear-gradient(to bottom, #0079bf 0%, #055a8c 100%); }
 
-/* line 59, ../scss/core/_buttons.scss */
+/* line 67, ../scss/core/_buttons.scss */
 input[type="submit"][disabled],
 button[disabled] {
   background: #edeff0;
@@ -448,7 +455,7 @@ button[disabled] {
   cursor: default;
   font-weight: 300; }
 
-/* line 76, ../scss/core/_buttons.scss */
+/* line 84, ../scss/core/_buttons.scss */
 a.button.mod-primary,
 input[type="submit"].mod-primary,
 button.mod-primary {
@@ -457,7 +464,7 @@ button.mod-primary {
   border: 1px solid #519839;
   color: #fff; }
 
-/* line 85, ../scss/core/_buttons.scss */
+/* line 93, ../scss/core/_buttons.scss */
 a.button.mod-primary:focus,
 a.button.mod-primary:hover,
 input[type="submit"].mod-primary:focus,
@@ -467,20 +474,20 @@ button.mod-primary:not([disabled]):hover {
   background: linear-gradient(to bottom, #61bd4f 0%, #519839 100%);
   color: #fff; }
 
-/* line 95, ../scss/core/_buttons.scss */
+/* line 103, ../scss/core/_buttons.scss */
 a.button.mod-primary:active,
 input[type="submit"].mod-primary:active,
 button.mod-primary:not([disabled]):active {
   background: linear-gradient(to bottom, #519839 0%, #49852e 100%);
   color: #fff; }
 
-/* line 107, ../scss/core/_buttons.scss */
+/* line 115, ../scss/core/_buttons.scss */
 a.button.mod-danger,
 input[type="submit"].mod-danger,
 button.mod-danger {
   color: #eb5a46; }
 
-/* line 113, ../scss/core/_buttons.scss */
+/* line 121, ../scss/core/_buttons.scss */
 a.button.mod-danger:focus,
 a.button.mod-danger:hover,
 input[type="submit"].mod-danger:not([disabled]):focus,
@@ -491,7 +498,7 @@ button.mod-danger:not([disabled]):hover {
   box-shadow: 0 1px 0 #b04632;
   color: #fff; }
 
-/* line 124, ../scss/core/_buttons.scss */
+/* line 132, ../scss/core/_buttons.scss */
 a.button.mod-danger:active,
 input[type="submit"].mod-danger:not([disabled]):active,
 button.mod-danger:not([disabled]):active {
@@ -499,14 +506,14 @@ button.mod-danger:not([disabled]):active {
   box-shadow: 0 1px 0 #b04632;
   color: #fff; }
 
-/* line 138, ../scss/core/_buttons.scss */
+/* line 146, ../scss/core/_buttons.scss */
 a.button.mod-transparent,
 button.mod-transparent {
   background: rgba(196, 201, 204, 0.3);
   box-shadow: 0 1px rgba(149, 157, 161, 0.7);
   color: rgba(0, 0, 0, 0.7); }
 
-/* line 145, ../scss/core/_buttons.scss */
+/* line 153, ../scss/core/_buttons.scss */
 a.button.mod-transparent:focus,
 a.button.mod-transparent:hover,
 button.mod-transparent:not([disabled]):focus,
@@ -515,26 +522,26 @@ button.mod-transparent:not([disabled]):hover {
   box-shadow: 0 1px rgba(149, 157, 161, 0.6);
   color: rgba(0, 0, 0, 0.9); }
 
-/* line 154, ../scss/core/_buttons.scss */
+/* line 162, ../scss/core/_buttons.scss */
 a.button.mod-transparent:active,
 button.mod-transparent:not([disabled]):active {
   background: rgba(196, 201, 204, 0.5);
   box-shadow: 0 1px rgba(149, 157, 161, 0.5);
   color: black; }
 
-/* line 166, ../scss/core/_buttons.scss */
+/* line 174, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-dark-background,
 button.mod-transparent.mod-dark-background {
-  box-shadow: 0 1px black;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
   color: #fff; }
 
-/* line 175, ../scss/core/_buttons.scss */
+/* line 183, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-light-background,
 button.mod-transparent.mod-light-background {
   background: #fff;
   box-shadow: 0 1px rgba(196, 201, 204, 0.3); }
 
-/* line 181, ../scss/core/_buttons.scss */
+/* line 189, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-light-background:focus,
 a.button.mod-transparent.mod-light-background:hover,
 button.mod-transparent.mod-light-background:not([disabled]):focus,
@@ -542,60 +549,69 @@ button.mod-transparent.mod-light-background:not([disabled]):hover {
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px rgba(196, 201, 204, 0.2); }
 
-/* line 189, ../scss/core/_buttons.scss */
+/* line 197, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-light-background:active,
 button.mod-transparent.mod-light-background:not([disabled]):active {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px rgba(149, 157, 161, 0.1); }
 
-/* line 201, ../scss/core/_buttons.scss */
+/* line 209, ../scss/core/_buttons.scss */
 a.button.mod-outline,
 button.mod-outline {
   background: #fff;
   border: 1px solid #aaa;
   color: #404b55; }
 
-/* line 208, ../scss/core/_buttons.scss */
+/* line 216, ../scss/core/_buttons.scss */
 a.button.mod-outline:focus,
 a.button.mod-outline:hover,
 button.mod-outline:not([disabled]):focus,
 button.mod-outline:not([disabled]):hover {
   background: rgba(237, 239, 240, 0.4);
-  border: 1px solid #00c2e0;
-  color: #00c2e0; }
+  border: 1px solid #0079bf;
+  color: #0079bf; }
 
-/* line 218, ../scss/core/_buttons.scss */
+/* line 226, ../scss/core/_buttons.scss */
 a.button.mod-outline:active,
 button.mod-outline:not([disabled]):active {
   background: rgba(214, 218, 220, 0.5);
-  color: #0c3953; }
+  color: #026aa7; }
 
-/* line 227, ../scss/core/_buttons.scss */
+/* line 235, ../scss/core/_buttons.scss */
+a.button.mod-stack,
+button.mod-stack {
+  clear: both;
+  margin-bottom: 10px;
+  min-width: 100px;
+  text-align: start;
+  width: 100%; }
+
+/* line 246, ../scss/core/_buttons.scss */
 button.mod-inline {
   box-shadow: 0 1px 0 #c4c9cc;
   display: inline;
   font-size: .8em;
   padding: .3em .8em; }
 
-/* line 237, ../scss/core/_buttons.scss */
+/* line 256, ../scss/core/_buttons.scss */
 a.button.mod-full,
 input[type="submit"].mod-full,
 button.mod-full {
   width: 100%; }
 
-/* line 245, ../scss/core/_buttons.scss */
+/* line 264, ../scss/core/_buttons.scss */
 a.button.mod-no-margin,
 input[type="submit"].mod-no-margin,
 button.mod-no-margin {
   margin: 0; }
 
-/* line 257, ../scss/core/_buttons.scss */
+/* line 276, ../scss/core/_buttons.scss */
 a.button.mod-icon,
 input[type="submit"].mod-icon,
 button.mod-icon {
   padding: .65em .9em; }
 
-/* line 263, ../scss/core/_buttons.scss */
+/* line 282, ../scss/core/_buttons.scss */
 a.button.mod-icon > [class*="icon-"],
 input[type="submit"].mod-icon > [class*="icon-"],
 button.mod-icon > [class*="icon-"] {
@@ -604,479 +620,14 @@ button.mod-icon > [class*="icon-"] {
   vertical-align: -.1em; }
 
 @media print {
-  /* line 275, ../scss/core/_buttons.scss */
+  /* line 294, ../scss/core/_buttons.scss */
   a.button,
   input[type="submit"],
   button {
     border: 1px solid #404b55;
     color: #404b55; } }
-/* line 287, ../scss/core/_buttons.scss */
+/* line 306, ../scss/core/_buttons.scss */
 .button > [class*="icon-"] {
-  font-size: 1.1em;
-  padding-right: .3em;
-  vertical-align: -.1em; }
-
-/* line 11, ../scss/core/_buttons2.scss */
-.btn {
-  -webkit-appearance: none;
-  background: #2ab27b;
-  border: 0;
-  border-radius: .25rem;
-  box-shadow: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 900;
-  line-height: 1.2rem;
-  margin: 0;
-  position: relative;
-  -webkit-tap-highlight-color: transparent;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  user-select: none;
-  vertical-align: bottom;
-  white-space: nowrap; }
-
-/* line 38, ../scss/core/_buttons2.scss */
-.btn:after {
-  border-radius: .25rem;
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-/* line 48, ../scss/core/_buttons2.scss */
-a.btn {
-  color: #fff; }
-
-/* line 52, ../scss/core/_buttons2.scss */
-.no-touch .btn.hover,
-.no-touch .btn:focus,
-.no-touch .btn:hover {
-  outline: 0;
-  text-decoration: none; }
-
-/* line 59, ../scss/core/_buttons2.scss */
-.btn.hover,
-.btn:focus,
-.btn:hover {
-  background: #2ab27b;
-  color: #fff; }
-
-/* line 66, ../scss/core/_buttons2.scss */
-.btn.hover:after,
-.btn:focus:after,
-.btn:hover:after {
-  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.25); }
-
-/* line 72, ../scss/core/_buttons2.scss */
-.btn.active,
-.btn:active {
-  color: #fff; }
-
-/* line 77, ../scss/core/_buttons2.scss */
-.btn.active:after,
-.btn:active:after {
-  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2); }
-
-/* line 82, ../scss/core/_buttons2.scss */
-.btn-outline {
-  background: #fbfbfa;
-  color: #555459 !important;
-  font-weight: 700;
-  text-shadow: none; }
-
-/* line 89, ../scss/core/_buttons2.scss */
-.btn-outline:after {
-  border: 1px solid #c7cacd; }
-
-/* line 93, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent {
-  background-color: transparent !important;
-  color: rgba(255, 255, 255, 0.9) !important; }
-
-/* line 98, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent:after {
-  border: 1px solid rgba(255, 255, 255, 0.5); }
-
-/* line 102, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent.active,
-.btn-outline.btn-transparent.hover,
-.btn-outline.btn-transparent:active,
-.btn-outline.btn-transparent:focus,
-.btn-outline.btn-transparent:hover {
-  background: rgba(255, 255, 255, 0.9) !important;
-  color: #3aa3e3 !important; }
-
-/* line 111, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent.active:after,
-.btn-outline.btn-transparent.hover:after,
-.btn-outline.btn-transparent:active:after,
-.btn-outline.btn-transparent:focus:after,
-.btn-outline.btn-transparent:hover:after {
-  border-color: transparent;
-  box-shadow: none; }
-
-/* line 120, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent.active,
-.btn-outline.btn-transparent:active {
-  background-color: rgba(255, 255, 255, 0.8) !important; }
-
-/* line 125, ../scss/core/_buttons2.scss */
-.btn-outline.hover,
-.btn-outline:focus,
-.btn-outline:hover {
-  background: #fff;
-  color: #3aa3e3 !important; }
-
-/* line 132, ../scss/core/_buttons2.scss */
-.btn-outline.hover:after,
-.btn-outline:focus:after,
-.btn-outline:hover:after {
-  box-shadow: none; }
-
-/* line 138, ../scss/core/_buttons2.scss */
-.btn-outline:active {
-  color: #3aa3e3; }
-
-/* line 142, ../scss/core/_buttons2.scss */
-.btn-outline:active:after {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2); }
-
-/* line 146, ../scss/core/_buttons2.scss */
-.btn-outline.active {
-  color: #666 !important;
-  font-weight: 900;
-  margin-top: 0; }
-
-/* line 152, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger,
-.btn.btn-outline.btn-warning {
-  background: #fbfbfa !important; }
-
-/* line 157, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger:focus,
-.btn.btn-outline.btn-danger:hover,
-.btn.btn-outline.btn-warning:focus,
-.btn.btn-outline.btn-warning:hover {
-  background: #fff !important; }
-
-/* line 164, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-warning:focus,
-.btn.btn-outline.btn-warning:hover {
-  color: #dfa941 !important; }
-
-/* line 169, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-warning:focus:after,
-.btn.btn-outline.btn-warning:hover:after {
-  border-color: #dfa941; }
-
-/* line 174, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger:focus,
-.btn.btn-outline.btn-danger:hover {
-  color: #cb5234 !important; }
-
-/* line 179, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger:focus:after,
-.btn.btn-outline.btn-danger:hover:after {
-  border-color: #cb5234; }
-
-/* line 184, ../scss/core/_buttons2.scss */
-.btn.btn-outline.disabled,
-.btn.btn-outline.disabled:hover {
-  background: #fff !important;
-  color: #9e9ea6 !important; }
-
-/* line 190, ../scss/core/_buttons2.scss */
-.btn-unstyle {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background: 0 0;
-  border: 0;
-  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: inherit;
-  -webkit-font-smoothing: antialiased;
-  font-weight: inherit;
-  line-height: inherit;
-  padding: 0; }
-
-/* line 204, ../scss/core/_buttons2.scss */
-.btn.btn-border {
-  background: 0 0;
-  border: 2px solid #fff; }
-
-/* line 209, ../scss/core/_buttons2.scss */
-.btn.btn-border:after {
-  box-shadow: none; }
-
-/* line 213, ../scss/core/_buttons2.scss */
-.btn.disabled,
-.btn.disabled:active,
-.btn.disabled:hover,
-.btn:disabled,
-.btn:disabled:active,
-.btn:disabled:hover {
-  background-color: #9e9ea6 !important;
-  box-shadow: none !important;
-  -khtml-opacity: .35;
-  -moz-opacity: .35;
-  opacity: .35;
-  pointer-events: none; }
-
-/* line 227, ../scss/core/_buttons2.scss */
-.btn {
-  font-size: 15px;
-  padding: 8px 14px 9px; }
-
-/* line 232, ../scss/core/_buttons2.scss */
-.btn-small {
-  font-size: 14px;
-  padding: 5px 10px; }
-
-/* line 237, ../scss/core/_buttons2.scss */
-.btn-small i:before {
-  font-size: 15px; }
-
-/* line 241, ../scss/core/_buttons2.scss */
-.btn-large {
-  font-size: 20px;
-  padding: 14px 2pc 1pc; }
-
-/* line 246, ../scss/core/_buttons2.scss */
-.btn-extra-large {
-  font-size: 1.125rem;
-  padding: 1.25rem; }
-
-/* line 251, ../scss/core/_buttons2.scss */
-.btn-expand {
-  display: block;
-  width: 100%; }
-
-@media only screen and (max-width: 640px) {
-  /* line 257, ../scss/core/_buttons2.scss */
-  .btn-large {
-    padding: 14px 20px 1pc; }
-
-  /* line 261, ../scss/core/_buttons2.scss */
-  .btn-extra-large {
-    padding: .9375rem 2rem; } }
-/* line 268, ../scss/core/_buttons2.scss */
-.btn-info {
-  background: #3aa3e3 !important; }
-
-/* line 272, ../scss/core/_buttons2.scss */
-.btn-warning {
-  background: #dfa941 !important; }
-
-/* line 276, ../scss/core/_buttons2.scss */
-.btn-danger {
-  background: #cb5234 !important; }
-
-/* line 280, ../scss/core/_buttons2.scss */
-.btn-transparent {
-  background: rgba(255, 255, 255, 0.25) !important; }
-
-/* line 284, ../scss/core/_buttons2.scss */
-.btn.btn-success {
-  background-color: #56b68b; }
-
-/* line 288, ../scss/core/_buttons2.scss */
-.btn.btn-success.disabled,
-.btn.btn-success:disabled {
-  background-color: #56b68b !important; }
-
-/* line 293, ../scss/core/_buttons2.scss */
-.btn i {
-  margin-right: .25rem; }
-
-/* line 297, ../scss/core/_buttons2.scss */
-.btn i:before {
-  font-size: inherit;
-  vertical-align: bottom; }
-
-/* line 302, ../scss/core/_buttons2.scss */
-.btn-large i {
-  font-size: 18px;
-  margin-right: .5rem; }
-
-/* line 307, ../scss/core/_buttons2.scss */
-.btn-extra-large i {
-  font-size: 1.25rem;
-  vertical-align: middle; }
-
-/* line 312, ../scss/core/_buttons2.scss */
-.btn-with-icon {
-  padding-left: 3rem !important;
-  position: relative; }
-
-/* line 317, ../scss/core/_buttons2.scss */
-.btn-with-icon i {
-  background: rgba(0, 0, 0, 0.2);
-  background-clip: padding-box;
-  border-bottom-left-radius: .25rem;
-  border-bottom-right-radius: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-  border-top-left-radius: .25rem;
-  border-top-right-radius: 0;
-  bottom: 0;
-  display: inline-block;
-  font-size: 1.4rem !important;
-  left: 0;
-  line-height: 2.25rem;
-  padding: .5rem .75rem;
-  position: absolute;
-  top: 0; }
-
-/* line 335, ../scss/core/_buttons2.scss */
-.btn-icon {
-  height: 30px;
-  padding: 0;
-  width: 2pc; }
-
-/* line 341, ../scss/core/_buttons2.scss */
-.btn-icon:before {
-  display: block; }
-
-/* line 345, ../scss/core/_buttons2.scss */
-.btn.dropdown-toggle .caret {
-  border-top-color: #fff; }
-
-/* line 349, ../scss/core/_buttons2.scss */
-.pill-btn {
-  border-radius: 2rem;
-  font-weight: 600;
-  padding: 5px 13px 6px; }
-
-/* line 355, ../scss/core/_buttons2.scss */
-.pill-btn:after {
-  border-radius: 2rem; }
-
-/* line 359, ../scss/core/_buttons2.scss */
-.pill-btn i {
-  margin-right: .1rem; }
-
-/* line 363, ../scss/core/_buttons2.scss */
-.pill-btn.btn-small {
-  padding: 3px 10px; }
-
-/* line 367, ../scss/core/_buttons2.scss */
-.pill-btn.btn-large {
-  padding: 14px 2pc 1pc; }
-
-/* line 371, ../scss/core/_buttons2.scss */
-.pill-btn.btn-large i {
-  margin-right: .4rem; }
-
-/* line 375, ../scss/core/_buttons2.scss */
-.btn.btn-attachment {
-  background-color: #fff !important;
-  border: 1px solid rgba(160, 160, 162, 0.7);
-  color: #565759;
-  font-size: 13px;
-  font-weight: 700;
-  height: 30px;
-  margin: 0 8px 8px 0;
-  max-width: 150px;
-  padding: 0 10px;
-  text-shadow: none;
-  vertical-align: middle; }
-
-/* line 389, ../scss/core/_buttons2.scss */
-.btn.btn-attachment .emoji-outer {
-  height: 1rem;
-  margin-top: -5px;
-  width: 1rem; }
-
-/* line 395, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:focus,
-.btn.btn-attachment:hover {
-  color: #565759; }
-
-/* line 400, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:focus:after,
-.btn.btn-attachment:hover:after {
-  box-shadow: 0 1px 2px rgba(160, 160, 162, 0.7); }
-
-/* line 405, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:active {
-  background-color: rgba(248, 249, 250, 0.6) !important;
-  box-shadow: inset 0 1px 2px rgba(160, 160, 162, 0.4); }
-
-/* line 410, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:active:not(:hover):after {
-  box-shadow: none !important; }
-
-/* line 414, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:disabled {
-  background-color: rgba(248, 249, 250, 0.6) !important;
-  border-color: rgba(186, 187, 191, 0.7) !important;
-  color: #a0a0a2 !important;
-  opacity: 1 !important; }
-
-/* line 421, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:disabled .emoji-outer {
-  opacity: .4; }
-
-/* line 425, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.loading {
-  padding-right: 34px;
-  position: relative; }
-
-/* line 430, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.loading ts-inline-saver {
-  color: #a0a0a2;
-  margin-left: 0;
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%); }
-
-/* line 439, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-primary {
-  border-color: rgba(42, 178, 123, 0.7);
-  color: #2ab27b; }
-
-/* line 444, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-primary:hover::after {
-  box-shadow: 0 1px 2px rgba(42, 178, 123, 0.7); }
-
-/* line 448, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-primary:active {
-  background-color: rgba(248, 250, 249, 0.4);
-  box-shadow: inset 0 1px 2px rgba(42, 178, 123, 0.4); }
-
-/* line 453, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-danger {
-  border-color: rgba(235, 77, 92, 0.7);
-  color: #eb4d5c; }
-
-/* line 458, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-danger:hover::after {
-  box-shadow: 0 1px 2px rgba(235, 77, 92, 0.7); }
-
-/* line 462, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-danger:active {
-  background-color: rgba(248, 246, 246, 0.3);
-  box-shadow: inset 0 1px 2px rgba(235, 77, 92, 0.2); }
-
-/* line 470, ../scss/core/_buttons2.scss */
-.btn.btn-ico {
-  padding: 5px, 14px, 6px; }
-
-/* line 474, ../scss/core/_buttons2.scss */
-.btn.btn-ico > [class*="icon-"] {
-  font-size: 1.3em;
-  padding: 0;
-  vertical-align: -.1em; }
-
-/* line 483, ../scss/core/_buttons2.scss */
-.btn > [class*="icon-"] {
   font-size: 1.1em;
   padding-right: .3em;
   vertical-align: -.1em; }

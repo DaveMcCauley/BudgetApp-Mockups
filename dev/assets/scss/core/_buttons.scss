@@ -36,6 +36,11 @@ button {
   white-space: nowrap;
 }
 
+// needs a tweak
+a.button {
+  display: inline;
+}
+
 a.button:focus,
 a.button:hover,
 input[type="submit"]:focus,
@@ -230,6 +235,7 @@ button.mod-outline:not([disabled]):active {
 a.button.mod-stack,
 button.mod-stack {
   clear: both;
+  margin-bottom: 10px;
   min-width: 100px;
   text-align: start;
   width: 100%;
