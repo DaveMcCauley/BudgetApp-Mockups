@@ -15,7 +15,7 @@
 a.button,
 input[type="submit"],
 button {
-  background: linear-gradient(to bottom, $light-gray-100 0%, $light-gray-300 100%);
+  background: linear-gradient(to bottom, $light-gray-200 0%, $light-gray-400 100%);
   border: 1px solid #aaa;
   border-radius: .25em;
   box-shadow: 0 1px 0 $light-gray-400;
@@ -27,10 +27,18 @@ button {
   line-height: 1.2;
   margin: 0;
   outline: 0;
+  overflow: hidden;
   padding: .25em 1em;
   position: relative;
   text-decoration: none;
+  text-overflow: ellipsis;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  white-space: nowrap;
+}
+
+// needs a tweak
+a.button {
+  display: inline;
 }
 
 a.button:focus,
@@ -40,15 +48,14 @@ input[type="submit"]:hover,
 button:not([disabled]):focus,
 button:not([disabled]):hover {
  // background: linear-gradient(to bottom, $light-gray-200 0%, $light-gray-300 100%);
- background: linear-gradient(to bottom, $blue-200 0%, $blue-400 100%);
+ background: linear-gradient(to bottom, $blue-300 0%, $blue-500 100%);
  color: $white;
 }
 
 a.button:active,
 input[type="submit"]:active,
 button:not([disabled]):active {
-  background: linear-gradient(to bottom, $light-gray-300 0%, $light-gray-400 100%);
-  color: $black;
+  background: linear-gradient(to bottom, $blue-500 0%, $blue-700 100%);
 }
 
 
@@ -141,7 +148,6 @@ button.mod-transparent {
   background: fade-out($light-gray-500, .7);
   box-shadow: 0 1px fade-out($light-gray-800, .3);
   color: hsla(0, 0%, 0%, .7);
-  font-weight: normal;
 }
 
 a.button.mod-transparent:focus,
@@ -167,7 +173,7 @@ button.mod-transparent:not([disabled]):active {
 
 a.button.mod-transparent.mod-dark-background,
 button.mod-transparent.mod-dark-background {
-  box-shadow: 0 1px hsla(0, 0%, 0%, 10%);
+  box-shadow: 0 1px rgba(0, 0, 0, .2);
   color: #fff;
 }
 
@@ -177,7 +183,7 @@ button.mod-transparent.mod-dark-background {
 a.button.mod-transparent.mod-light-background,
 button.mod-transparent.mod-light-background {
   background: #fff;
-  box-shadow: 0 1px fade-out($light-gray-800, .7);
+  box-shadow: 0 1px fade-out($light-gray-500, .7);
 }
 
 a.button.mod-transparent.mod-light-background:focus,
@@ -185,13 +191,54 @@ a.button.mod-transparent.mod-light-background:hover,
 button.mod-transparent.mod-light-background:not([disabled]):focus,
 button.mod-transparent.mod-light-background:not([disabled]):hover {
   background: hsla(0, 0%, 100%, .7);
-  box-shadow: 0 1px fade-out($light-gray-800, .8);
+  box-shadow: 0 1px fade-out($light-gray-500, .8);
 }
 
 a.button.mod-transparent.mod-light-background:active,
 button.mod-transparent.mod-light-background:not([disabled]):active {
   background: hsla(0, 0%, 100%, .5);
   box-shadow: 0 1px fade-out($light-gray-800, .9);
+}
+
+
+// Outlined button
+
+// Used within the page on sections with a white background.
+// Don’t use on forms or major call-outs.
+
+a.button.mod-outline,
+button.mod-outline {
+  background: $white;
+  border: 1px solid #aaa;
+  color: $black;
+}
+
+a.button.mod-outline:focus,
+a.button.mod-outline:hover,
+button.mod-outline:not([disabled]):focus,
+button.mod-outline:not([disabled]):hover {
+  background: fade-out($light-gray-100, .6);
+  //box-shadow: 0 1px fade-out($light-gray-800, .4);
+  border: 1px solid $blue-500;
+  color: $blue-500;
+}
+
+a.button.mod-outline:active,
+button.mod-outline:not([disabled]):active {
+  background: fade-out($light-gray-300, .5);
+  //box-shadow: 0 1px fade-out($light-gray-800, .5);
+  color: $blue-600;
+}
+
+// Vertically stacked
+
+a.button.mod-stack,
+button.mod-stack {
+  clear: both;
+  margin-bottom: 10px;
+  min-width: 100px;
+  text-align: start;
+  width: 100%;
 }
 
 // Inline
