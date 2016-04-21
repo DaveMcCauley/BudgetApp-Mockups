@@ -573,9 +573,9 @@
 
 
 <p>
-  Form inputs are largely managed by the browser. Some of the specific forms 
-  may not be availabe in all browsers. Everything falls back to standard 
-  text input where unavailable. The application is always responsible for 
+  Form inputs are largely managed by the browser. Some of the specific forms
+  may not be availabe in all browsers. Everything falls back to standard
+  text input where unavailable. The application is always responsible for
   validating and escaping user inputs.
 </p>
 
@@ -604,7 +604,7 @@
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
-<label for="pwd">Name:</label>
+<label for="pwd">Password:</label>
 <input type="password" class="form-control" id="pwd">
 </div>
 <!-- htmlmin:ignore -->
@@ -612,52 +612,7 @@
 
 
 
-<h2>8.3 Email input form</h2>
-     
-
-<p>
-  The input is evaluated by browser. (Developer should still santize it!)
-</p>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-</div>
-<!-- htmlmin:ignore -->
-
-
-
-
-<h2>8.4 Phone</h2>
-
-
-
-
-<h2>8.5 etc... </h2
-
-
-
-
-
-<h2>8.5 File input</h2>
-
-
-<p>
-  File inputs bring up a file chooser in the browser...
-</p>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<label for="exampleInputFile">File input</label>
-<input type="file" id="exampleInputFile">
-</div>
-<!-- htmlmin:ignore -->
-
-
-
-
-<h2>8.6 Text Area</h2>
+<h2>8.5 Text Area</h2>
 
 
 <p>
@@ -674,7 +629,7 @@
 
 
 
-<h2>8.7 Selects</h2>
+<h2>8.6 Selects</h2>
 
 
 <p>
@@ -684,7 +639,7 @@
 
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
+<div class="example-code mod-narrow-select js-inject-code">
 <label class="select">
   <select class="form-control">
     <option>1</option>
@@ -700,31 +655,31 @@
 
 
 
-<h2>8.8 Multiple Select</h2>
+<h2>8.7 Multiple Select</h2>
 
- 
+
 <p>
-  For <code>&lt;select&gt</code> controls with the multiple attribute, multiple 
+  For <code>&lt;select&gt</code> controls with the multiple attribute, multiple
    options are shown by default.
 </p>
 
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<select multiple class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
+<div class="example-code mod-narrow-multi js-inject-code">
+  <select multiple class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
 </div>
 <!-- htmlmin:ignore -->
 
 
 
 
-<h2>8.9 Checkboxes</h2>
+<h2>8.8 Checkboxes</h2>
 
 
 <!-- htmlmin:ignore -->
@@ -758,7 +713,7 @@
 
 
 
-<h2>8.10 Radio Buttons</h2>
+<h2>8.9 Radio Buttons</h2>
 
 
 <!-- htmlmin:ignore -->
@@ -766,7 +721,7 @@
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Option one is this... 
+    Option one is this...
   </label>
 </div>
 <div class="radio">
@@ -787,14 +742,39 @@
 
 
 
+<h2>8.10 File input</h2>
+
+
+<p>
+  File inputs look like crap defaulting to the browsers built-in styles for the "browse"
+  button. So, always use a <code>&lt;label&gt;</code> and set its <code>for</code>
+  attribute to the <code>id</code> of the <code>&lt;input&gt;</code>. They must match.
+  Then add the <code>.input-file</code> class to the input.
+</p>
+<p>
+  Clicking the button brings up a file chooser in the browser...
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<input type="file" name="file" id="file-1" class="input-file" />
+<label for="file-1">Add a File...</label>
+<input type="file" name="file" id="file-2" class="input-file" />
+<label for="file-2"><span class="icon-paper-clip"></span> Attach</label>
+<input type="file" name="file" id="file-3" class="input-file" disabled />
+<label for="file-3"><span class="icon-ban"></span>Disabled</label>
+</div>
+<!-- htmlmin:ignore -->
+
+
 <h2>8.11 Date and Time Input</h2>
 
 
 <p>
   Since browers implement date/time inputs inconsistently, we include our own
   customized date time picker to assit the user in choosing and entering dates
-  and times. 
-</P>
+  and times.
+</p>
 <p>
   Time entry can be applied to multiple controls as follows
 </p>
@@ -802,7 +782,7 @@
 
 
 
-<h3>8.11.1 Date and Time as Text Input<h3>
+<h3>8.11.1 Date and Time as Text Input</h3>
 
 
 <!-- htmlmin:ignore -->
@@ -865,8 +845,8 @@
 
 
 <p>
-  Initialize the markup with something like the following in the document head. 
-  See the Wiki for further options provided by the plug in in the dependency 
+  Initialize the markup with something like the following in the document head.
+  See the Wiki for further options provided by the plug in in the dependency
   file folder.
 </p>
 
@@ -1152,22 +1132,6 @@ $('#myAlert').on('closed.bs.alert', function() {
       <h2>3.1 Controls</h2>
 
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
 
 
 
@@ -1187,18 +1151,34 @@ $('#myAlert').on('closed.bs.alert', function() {
 
 
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <h3>3.1.11 Static contorls</h3>
 
       When you need to place plain text next to a form label within a form, use

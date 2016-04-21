@@ -77,4 +77,13 @@
   font-size: .8rem;
 }
 
+// special modifiers to the exmample-code class
+.example-code.mod-narrow-select > .select {
+  width: 60px;
+}
+
+.example-code.mod-narrow-multi > select {
+  width: 60px;
+}
+
 

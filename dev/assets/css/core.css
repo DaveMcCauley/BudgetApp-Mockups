@@ -1473,11 +1473,7 @@ button.mod-icon > [class*="icon-"] {
   color: #055a8c; }
 
 /* line 6, ../scss/core/_inputs.scss */
-input[type=url],
 input[type=text],
-input[type=tel],
-input[type=number],
-input[type=email],
 input[type=password],
 select,
 textarea {
@@ -1499,41 +1495,32 @@ textarea {
   transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
   width: 100%; }
 
-/* line 37, ../scss/core/_inputs.scss */
-input[type=url]::-ms-clear,
+/* line 33, ../scss/core/_inputs.scss */
 input[type=text]::-ms-clear,
-input[type=tel]::-ms-clear,
-input[type=number]::-ms-clear,
-input[type=email]::-ms-clear,
 input[type=password]::-ms-clear,
 select::-ms-clear,
 textarea::-ms-clear {
   display: none; }
 
-/* line 48, ../scss/core/_inputs.scss */
+/* line 40, ../scss/core/_inputs.scss */
 input[type=file] {
   font-family: sans-serif;
   font-size: 9pt;
   font-weight: 400;
   line-height: 9pt;
-  width: auto; }
+  width: auto;
+  border: 2px dotted #00f; }
 
-/* line 59, ../scss/core/_inputs.scss */
+/* line 53, ../scss/core/_inputs.scss */
 input:hover,
 select:hover,
 textarea:hover {
   border-color: #2780f8; }
 
-/* line 65, ../scss/core/_inputs.scss */
+/* line 59, ../scss/core/_inputs.scss */
 .focus,
-input[type=url]:active,
-input[type=url]:focus,
 input[type=text]:active,
 input[type=text]:focus,
-input[type=number]:active,
-input[type=number]:focus,
-input[type=email]:active,
-input[type=email]:focus,
 input[type=password]:active,
 input[type=password]:focus,
 select:active,
@@ -1545,7 +1532,7 @@ textarea:focus {
   outline: 0;
   outline-offset: 0; }
 
-/* line 86, ../scss/core/_inputs.scss */
+/* line 74, ../scss/core/_inputs.scss */
 textarea {
   font-size: 1.6rem;
   height: 81pt;
@@ -1554,23 +1541,23 @@ textarea {
   vertical-align: top;
   width: 100%; }
 
-/* line 95, ../scss/core/_inputs.scss */
+/* line 83, ../scss/core/_inputs.scss */
 ::-webkit-input-placeholder {
   color: #aaa; }
 
-/* line 99, ../scss/core/_inputs.scss */
+/* line 87, ../scss/core/_inputs.scss */
 :-moz-placeholder {
   color: #aaa; }
 
-/* line 103, ../scss/core/_inputs.scss */
+/* line 91, ../scss/core/_inputs.scss */
 ::-moz-placeholder {
   color: #aaa; }
 
-/* line 107, ../scss/core/_inputs.scss */
+/* line 95, ../scss/core/_inputs.scss */
 :-ms-input-placeholder {
   color: #aaa; }
 
-/* line 111, ../scss/core/_inputs.scss */
+/* line 99, ../scss/core/_inputs.scss */
 input:disabled,
 input:disabled:active,
 select:disabled,
@@ -1580,46 +1567,50 @@ textarea:disabled {
   box-shadow: none;
   color: #9e9ea6; }
 
-/* line 121, ../scss/core/_inputs.scss */
+/* line 109, ../scss/core/_inputs.scss */
 .checkbox input[type=checkbox],
 .radio input[type=radio] {
   float: none; }
 
-/* line 126, ../scss/core/_inputs.scss */
+/* line 114, ../scss/core/_inputs.scss */
 input.mod-error,
 select.mod-error,
 textarea.mod-error {
   background: #fff6f6;
   border: 1px solid #cb5234; }
 
-/* line 133, ../scss/core/_inputs.scss */
+/* line 121, ../scss/core/_inputs.scss */
 input:focus.mod-error,
 select:focus.mod-error,
 textarea:focus.mod-error {
   border-color: #cb5234;
   box-shadow: 0 0 7px rgba(255, 0, 0, 0.15); }
 
-/* line 140, ../scss/core/_inputs.scss */
+/* line 128, ../scss/core/_inputs.scss */
 select {
   padding-right: 3rem;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none; }
 
-/* line 151, ../scss/core/_inputs.scss */
+/* line 139, ../scss/core/_inputs.scss */
+select[multiple] {
+  padding-right: 0; }
+
+/* line 143, ../scss/core/_inputs.scss */
 label {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 .4rem; }
 
-/* line 158, ../scss/core/_inputs.scss */
+/* line 150, ../scss/core/_inputs.scss */
 label.checkbox,
 label.radio {
   cursor: pointer;
   padding-left: 1.5rem; }
 
-/* line 164, ../scss/core/_inputs.scss */
+/* line 156, ../scss/core/_inputs.scss */
 label.checkbox input[type=radio],
 label.checkbox input[type=checkbox],
 label.radio input[type=radio],
@@ -1627,27 +1618,27 @@ label.radio input[type=checkbox] {
   margin: -2px .4rem 0 -1.5rem;
   vertical-align: middle; }
 
-/* line 172, ../scss/core/_inputs.scss */
+/* line 164, ../scss/core/_inputs.scss */
 label.mod-error {
   color: #cb5234; }
 
-/* line 176, ../scss/core/_inputs.scss */
+/* line 168, ../scss/core/_inputs.scss */
 label.disabled {
   color: #9e9ea6; }
 
-/* line 180, ../scss/core/_inputs.scss */
+/* line 172, ../scss/core/_inputs.scss */
 label select {
   margin-top: .25rem; }
 
-/* line 184, ../scss/core/_inputs.scss */
+/* line 176, ../scss/core/_inputs.scss */
 label select::-ms-expand {
   display: none; }
 
-/* line 188, ../scss/core/_inputs.scss */
+/* line 180, ../scss/core/_inputs.scss */
 label.select {
   position: relative; }
 
-/* line 192, ../scss/core/_inputs.scss */
+/* line 184, ../scss/core/_inputs.scss */
 label.select:after {
   bottom: 1.3rem;
   content: ' ';
@@ -1658,9 +1649,70 @@ label.select:after {
   width: 20px;
   height: 20px; }
 
-/* line 203, ../scss/core/_inputs.scss */
+/* line 195, ../scss/core/_inputs.scss */
 label.select.disabled:after {
   color: #9e9ea6; }
+
+/* line 206, ../scss/core/_inputs.scss */
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+/* line 217, ../scss/core/_inputs.scss */
+.input-file + label {
+  background: linear-gradient(to bottom, #e2e4e6 0%, #cdd2d4 100%);
+  border: 1px solid #aaa;
+  border-radius: .25em;
+  box-shadow: 0 1px 0 #cdd2d4;
+  color: #404b55;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: .25em 1em;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; }
+
+/* line 239, ../scss/core/_inputs.scss */
+.input-file:focus + label,
+.input-file + label:hover {
+  background: linear-gradient(to bottom, #5ba4cf 0%, #0079bf 100%);
+  color: #fff; }
+
+/* line 245, ../scss/core/_inputs.scss */
+.inputfile + label * {
+  pointer-events: none; }
+
+/* line 249, ../scss/core/_inputs.scss */
+.input-file:active + label {
+  background: linear-gradient(to bottom, #0079bf 0%, #055a8c 100%); }
+
+/* line 253, ../scss/core/_inputs.scss */
+.input-file[disabled] + label,
+.input-file + label.disabled {
+  background: #edeff0;
+  box-shadow: none;
+  box-shadow: 0 1px 0 #cdd2d4;
+  color: #8c8c8c;
+  cursor: default;
+  font-weight: 300; }
+
+/* line 263, ../scss/core/_inputs.scss */
+.input-file + label > [class*="icon-"] {
+  font-size: 1.1em;
+  padding-right: .3em;
+  vertical-align: -.1em; }
 
 /* line 3, ../scss/core/_grids.scss */
 section {
