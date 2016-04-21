@@ -27,7 +27,7 @@ body {
  * 1. Add the correct display in Edge, IE, and Firefox.
  * 2. Add the correct display in IE.
  */
-/* line 31, ../scss/vendor/normalize/_normalize.scss */
+/* line 33, ../scss/vendor/normalize/_normalize.scss */
 article,
 aside,
 details,
@@ -46,7 +46,7 @@ summary {
 /**
  * Add the correct display in IE 9-.
  */
-/* line 50, ../scss/vendor/normalize/_normalize.scss */
+/* line 52, ../scss/vendor/normalize/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -56,7 +56,7 @@ video {
 /**
  * Add the correct display in iOS 4-7.
  */
-/* line 61, ../scss/vendor/normalize/_normalize.scss */
+/* line 63, ../scss/vendor/normalize/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -64,7 +64,7 @@ audio:not([controls]) {
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-/* line 70, ../scss/vendor/normalize/_normalize.scss */
+/* line 72, ../scss/vendor/normalize/_normalize.scss */
 progress {
   vertical-align: baseline; }
 
@@ -72,7 +72,7 @@ progress {
  * Add the correct display in IE 10-.
  * 1. Add the correct display in IE.
  */
-/* line 79, ../scss/vendor/normalize/_normalize.scss */
+/* line 81, ../scss/vendor/normalize/_normalize.scss */
 template,
 [hidden] {
   display: none; }
@@ -82,7 +82,7 @@ template,
 /**
  * Remove the gray background on active links in IE 10.
  */
-/* line 91, ../scss/vendor/normalize/_normalize.scss */
+/* line 93, ../scss/vendor/normalize/_normalize.scss */
 a {
   background-color: transparent; }
 
@@ -90,7 +90,7 @@ a {
  * Remove the outline on focused links when they are also active or hovered
  * in all browsers (opinionated).
  */
-/* line 100, ../scss/vendor/normalize/_normalize.scss */
+/* line 102, ../scss/vendor/normalize/_normalize.scss */
 a:active,
 a:hover {
   outline-width: 0; }
@@ -101,7 +101,7 @@ a:hover {
  * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/* line 113, ../scss/vendor/normalize/_normalize.scss */
+/* line 115, ../scss/vendor/normalize/_normalize.scss */
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -113,7 +113,7 @@ abbr[title] {
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-/* line 123, ../scss/vendor/normalize/_normalize.scss */
+/* line 125, ../scss/vendor/normalize/_normalize.scss */
 b,
 strong {
   font-weight: inherit; }
@@ -121,7 +121,7 @@ strong {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-/* line 132, ../scss/vendor/normalize/_normalize.scss */
+/* line 134, ../scss/vendor/normalize/_normalize.scss */
 b,
 strong {
   font-weight: bolder; }
@@ -129,7 +129,7 @@ strong {
 /**
  * Add the correct font style in Android 4.3-.
  */
-/* line 141, ../scss/vendor/normalize/_normalize.scss */
+/* line 143, ../scss/vendor/normalize/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -137,7 +137,7 @@ dfn {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-/* line 150, ../scss/vendor/normalize/_normalize.scss */
+/* line 152, ../scss/vendor/normalize/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -145,7 +145,7 @@ h1 {
 /**
  * Add the correct background and color in IE 9-.
  */
-/* line 159, ../scss/vendor/normalize/_normalize.scss */
+/* line 161, ../scss/vendor/normalize/_normalize.scss */
 mark {
   background-color: #ff0;
   color: #000; }
@@ -153,7 +153,7 @@ mark {
 /**
  * Add the correct font size in all browsers.
  */
-/* line 168, ../scss/vendor/normalize/_normalize.scss */
+/* line 170, ../scss/vendor/normalize/_normalize.scss */
 small {
   font-size: 80%; }
 
@@ -161,7 +161,7 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-/* line 177, ../scss/vendor/normalize/_normalize.scss */
+/* line 179, ../scss/vendor/normalize/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -169,11 +169,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 185, ../scss/vendor/normalize/_normalize.scss */
+/* line 187, ../scss/vendor/normalize/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 189, ../scss/vendor/normalize/_normalize.scss */
+/* line 191, ../scss/vendor/normalize/_normalize.scss */
 sup {
   top: -0.5em; }
 
@@ -182,14 +182,14 @@ sup {
 /**
  * Remove the border on images inside links in IE 10-.
  */
-/* line 200, ../scss/vendor/normalize/_normalize.scss */
+/* line 203, ../scss/vendor/normalize/_normalize.scss */
 img {
   border-style: none; }
 
 /**
  * Hide the overflow in IE.
  */
-/* line 208, ../scss/vendor/normalize/_normalize.scss */
+/* line 211, ../scss/vendor/normalize/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -199,7 +199,7 @@ svg:not(:root) {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-/* line 220, ../scss/vendor/normalize/_normalize.scss */
+/* line 223, ../scss/vendor/normalize/_normalize.scss */
 code,
 kbd,
 pre,
@@ -212,7 +212,7 @@ samp {
 /**
  * Add the correct margin in IE 8.
  */
-/* line 232, ../scss/vendor/normalize/_normalize.scss */
+/* line 235, ../scss/vendor/normalize/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
@@ -220,7 +220,7 @@ figure {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-/* line 241, ../scss/vendor/normalize/_normalize.scss */
+/* line 244, ../scss/vendor/normalize/_normalize.scss */
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -234,7 +234,7 @@ hr {
 /**
  * Change font properties to `inherit` in all browsers (opinionated).
  */
-/* line 254, ../scss/vendor/normalize/_normalize.scss */
+/* line 258, ../scss/vendor/normalize/_normalize.scss */
 button,
 input,
 select,
@@ -244,7 +244,7 @@ textarea {
 /**
  * Restore the font weight unset by the previous rule.
  */
-/* line 265, ../scss/vendor/normalize/_normalize.scss */
+/* line 270, ../scss/vendor/normalize/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -253,7 +253,7 @@ optgroup {
  * 1. Show the overflow in Edge.
  * 2. Show the overflow in Edge, Firefox, and IE.
  */
-/* line 275, ../scss/vendor/normalize/_normalize.scss */
+/* line 280, ../scss/vendor/normalize/_normalize.scss */
 button,
 input,
 select {
@@ -264,7 +264,7 @@ select {
  * Remove the margin in Safari.
  * 1. Remove the margin in Firefox and Safari.
  */
-/* line 286, ../scss/vendor/normalize/_normalize.scss */
+/* line 293, ../scss/vendor/normalize/_normalize.scss */
 button,
 input,
 select,
@@ -276,7 +276,7 @@ textarea {
  * Remove the inheritence of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritence of text transform in Firefox.
  */
-/* line 298, ../scss/vendor/normalize/_normalize.scss */
+/* line 305, ../scss/vendor/normalize/_normalize.scss */
 button,
 select {
   /* 1 */
@@ -285,7 +285,7 @@ select {
 /**
  * Change the cursor in all browsers (opinionated).
  */
-/* line 307, ../scss/vendor/normalize/_normalize.scss */
+/* line 314, ../scss/vendor/normalize/_normalize.scss */
 button,
 [type="button"],
 [type="reset"],
@@ -295,7 +295,7 @@ button,
 /**
  * Restore the default cursor to disabled elements unset by the previous rule.
  */
-/* line 318, ../scss/vendor/normalize/_normalize.scss */
+/* line 325, ../scss/vendor/normalize/_normalize.scss */
 [disabled] {
   cursor: default; }
 
@@ -304,7 +304,7 @@ button,
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS.
  */
-/* line 328, ../scss/vendor/normalize/_normalize.scss */
+/* line 335, ../scss/vendor/normalize/_normalize.scss */
 button,
 html [type="button"],
 [type="reset"],
@@ -315,7 +315,7 @@ html [type="button"],
 /**
  * Remove the inner border and padding in Firefox.
  */
-/* line 339, ../scss/vendor/normalize/_normalize.scss */
+/* line 346, ../scss/vendor/normalize/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -324,7 +324,7 @@ input::-moz-focus-inner {
 /**
  * Restore the focus styles unset by the previous rule.
  */
-/* line 349, ../scss/vendor/normalize/_normalize.scss */
+/* line 356, ../scss/vendor/normalize/_normalize.scss */
 button:-moz-focusring,
 input:-moz-focusring {
   outline: 1px dotted ButtonText; }
@@ -332,7 +332,7 @@ input:-moz-focusring {
 /**
  * Change the border, margin, and padding in all browsers (opinionated).
  */
-/* line 358, ../scss/vendor/normalize/_normalize.scss */
+/* line 365, ../scss/vendor/normalize/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -344,7 +344,7 @@ fieldset {
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
-/* line 371, ../scss/vendor/normalize/_normalize.scss */
+/* line 378, ../scss/vendor/normalize/_normalize.scss */
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -362,7 +362,7 @@ legend {
 /**
  * Remove the default vertical scrollbar in IE.
  */
-/* line 384, ../scss/vendor/normalize/_normalize.scss */
+/* line 391, ../scss/vendor/normalize/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -370,7 +370,7 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-/* line 393, ../scss/vendor/normalize/_normalize.scss */
+/* line 400, ../scss/vendor/normalize/_normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
@@ -381,7 +381,7 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-/* line 403, ../scss/vendor/normalize/_normalize.scss */
+/* line 410, ../scss/vendor/normalize/_normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -389,7 +389,7 @@ textarea {
 /**
  * Correct the odd appearance of search inputs in Chrome and Safari.
  */
-/* line 412, ../scss/vendor/normalize/_normalize.scss */
+/* line 419, ../scss/vendor/normalize/_normalize.scss */
 [type="search"] {
   -webkit-appearance: textfield; }
 
@@ -397,7 +397,7 @@ textarea {
  * Remove the inner padding and cancel buttons in Chrome on OS X and
  * Safari on OS X.
  */
-/* line 421, ../scss/vendor/normalize/_normalize.scss */
+/* line 428, ../scss/vendor/normalize/_normalize.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -1477,9 +1477,6 @@ input[type=text],
 input[type=password],
 select,
 textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   border: 1px solid #c5c5c5;
   border-radius: .25rem;
   box-shadow: none;
@@ -1593,24 +1590,26 @@ select {
   -webkit-appearance: none;
   appearance: none; }
 
-/* line 139, ../scss/core/_inputs.scss */
+/* line 141, ../scss/core/_inputs.scss */
 select[multiple] {
-  padding-right: 0; }
+  padding-right: 0;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
-/* line 143, ../scss/core/_inputs.scss */
+/* line 148, ../scss/core/_inputs.scss */
 label {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 .4rem; }
 
-/* line 150, ../scss/core/_inputs.scss */
+/* line 155, ../scss/core/_inputs.scss */
 label.checkbox,
 label.radio {
   cursor: pointer;
   padding-left: 1.5rem; }
 
-/* line 156, ../scss/core/_inputs.scss */
+/* line 161, ../scss/core/_inputs.scss */
 label.checkbox input[type=radio],
 label.checkbox input[type=checkbox],
 label.radio input[type=radio],
@@ -1618,27 +1617,27 @@ label.radio input[type=checkbox] {
   margin: -2px .4rem 0 -1.5rem;
   vertical-align: middle; }
 
-/* line 164, ../scss/core/_inputs.scss */
+/* line 169, ../scss/core/_inputs.scss */
 label.mod-error {
   color: #cb5234; }
 
-/* line 168, ../scss/core/_inputs.scss */
+/* line 173, ../scss/core/_inputs.scss */
 label.disabled {
   color: #9e9ea6; }
 
-/* line 172, ../scss/core/_inputs.scss */
+/* line 177, ../scss/core/_inputs.scss */
 label select {
   margin-top: .25rem; }
 
-/* line 176, ../scss/core/_inputs.scss */
+/* line 181, ../scss/core/_inputs.scss */
 label select::-ms-expand {
   display: none; }
 
-/* line 180, ../scss/core/_inputs.scss */
+/* line 185, ../scss/core/_inputs.scss */
 label.select {
   position: relative; }
 
-/* line 184, ../scss/core/_inputs.scss */
+/* line 189, ../scss/core/_inputs.scss */
 label.select:after {
   bottom: 1.3rem;
   content: ' ';
@@ -1649,11 +1648,11 @@ label.select:after {
   width: 20px;
   height: 20px; }
 
-/* line 195, ../scss/core/_inputs.scss */
+/* line 200, ../scss/core/_inputs.scss */
 label.select.disabled:after {
   color: #9e9ea6; }
 
-/* line 206, ../scss/core/_inputs.scss */
+/* line 211, ../scss/core/_inputs.scss */
 .input-file {
   width: 0.1px;
   height: 0.1px;
@@ -1662,7 +1661,7 @@ label.select.disabled:after {
   position: absolute;
   z-index: -1; }
 
-/* line 217, ../scss/core/_inputs.scss */
+/* line 222, ../scss/core/_inputs.scss */
 .input-file + label {
   background: linear-gradient(to bottom, #e2e4e6 0%, #cdd2d4 100%);
   border: 1px solid #aaa;
@@ -1684,21 +1683,21 @@ label.select.disabled:after {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   white-space: nowrap; }
 
-/* line 239, ../scss/core/_inputs.scss */
+/* line 244, ../scss/core/_inputs.scss */
 .input-file:focus + label,
 .input-file + label:hover {
   background: linear-gradient(to bottom, #5ba4cf 0%, #0079bf 100%);
   color: #fff; }
 
-/* line 245, ../scss/core/_inputs.scss */
+/* line 250, ../scss/core/_inputs.scss */
 .inputfile + label * {
   pointer-events: none; }
 
-/* line 249, ../scss/core/_inputs.scss */
+/* line 254, ../scss/core/_inputs.scss */
 .input-file:active + label {
   background: linear-gradient(to bottom, #0079bf 0%, #055a8c 100%); }
 
-/* line 253, ../scss/core/_inputs.scss */
+/* line 258, ../scss/core/_inputs.scss */
 .input-file[disabled] + label,
 .input-file + label.disabled {
   background: #edeff0;
@@ -1708,11 +1707,18 @@ label.select.disabled:after {
   cursor: default;
   font-weight: 300; }
 
-/* line 263, ../scss/core/_inputs.scss */
+/* line 268, ../scss/core/_inputs.scss */
 .input-file + label > [class*="icon-"] {
   font-size: 1.1em;
   padding-right: .3em;
   vertical-align: -.1em; }
+
+/* line 274, ../scss/core/_inputs.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 5px; }
 
 /* line 3, ../scss/core/_grids.scss */
 section {
