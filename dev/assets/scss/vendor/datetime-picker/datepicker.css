@@ -31,3 +31,50 @@
 .example + .example {
   margin-top: 50px;
 }
+
+/* customization to ditch bootstrap starts here ============================= */
+
+.datepicker-header-left {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 10px;
+  position: relative;
+  min-height: 1px;
+}
+
+.datepicker-header-right {
+  float: right;
+  width: 50%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+
+}
+
+.datepicker-header-date {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.datepicker-header-time {
+  box-sizing: border-box;
+}
+
+.datepicker-table-condensed {
+  padding: 5px;
+}
+
+.datepicker-table-condensed > thead > tr > th {
+  background-color: red;
+  border: 2px solid blue;
+  padding: 3px;
+}
+
+.datepicker-table-condensed > tbody > tr > td {
+  background-color: green;
+  border: 1px solid yellow;
+  padding: 3px;
+}
+
