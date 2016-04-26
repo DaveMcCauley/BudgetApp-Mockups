@@ -5,7 +5,7 @@ $(function() {
     //}
   });
 
-/*
+
   $('.button-picker a').picker({
     outputTo: $('.button-picker input'),
     prefill: true,
@@ -13,6 +13,11 @@ $(function() {
     //  console.log(this.formattedVal());
    // }
   });
+
+  $('.button-picker a').on('datepicker.remove', function(e, el) {
+    $(el).val('');
+  });
+
 
   $('.datebutton').picker({
     outputTo: $('.datebutton input'),
@@ -24,13 +29,10 @@ $(function() {
 
   $('.prefilled-picker input').picker();
 
-  $('.button-picker a').on('datepicker.remove', function(e, el) {
-    $(el).val('');
-  });
-
   $('input').on('datepicker.remove', function(e) {
     $(this).val('');
-  }); */
+  });
+
 });
 console.log("Unga-Bunga");
 //# sourceMappingURL=styleguide-pre.js.map

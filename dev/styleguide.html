@@ -786,11 +786,14 @@
 
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
+<div class="example-code mod-tight js-inject-code">
 <div class="date-range-picker example">
-  <input type="text" name="start" class="">
+  <input type="text" name="start" class="example-datetime">
 </div>
 </div>
+<pre><code>$('.date-range-picker input').picker({
+
+  });</code></pre>
 <!-- htmlmin:ignore -->
 
 <p>
@@ -798,11 +801,12 @@
 </p>
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
+<div class="example-code mod-tight js-inject-code">
 <div class="prefilled-picker example">
   <input type="text" name="schedule" value="12/12/2020 2:00 PM">
 </div>
 </div>
+<pre><code>$('.prefilled-picker input').picker();</code></pre>
 <!-- htmlmin:ignore -->
 
 
@@ -812,12 +816,16 @@
 
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
+<div class="example-code mod-tight js-inject-code">
 <div class="button-picker example">
   <a href="#">Schedule</a>
   <input type="text" name="schedule">
 </div>
 </div>
+<pre><code>$('.button-picker a').picker({
+    outputTo: $('.button-picker input'),
+    prefill: true,
+});</code></pre>
 <!-- htmlmin:ignore -->
 
 
@@ -827,14 +835,18 @@
 
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
+<div class="example-code mod-tight js-inject-code">
 <div class="datebutton">
   <button type="button" class="btn btn-default btn-sm">
-    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
+    Schedule
   </button>
-  <input type="text" name="butt-test">
+  <input type="text" name="button-test">
 </div>
 </div>
+<pre><code>$('.datebutton').picker({
+    outputTo: $('.datebutton input'),
+    prefill: true,
+});</code></pre>
 <!-- htmlmin:ignore -->
 
 
