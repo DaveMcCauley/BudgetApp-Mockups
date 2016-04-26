@@ -355,7 +355,7 @@ if (!Function.prototype.bind) {
   };
 }
 
-templates["datepicker"] = "<div id=\"datepicker\">  <div class=\"row\">    <div class=\"col-xs-6\">      <label for=\"date-picker\">Date</label>      <input type=\"text\" value=\"{date}\" name=\"date\" id=\"date-picker\" class=\"form-control\">    </div>    <div class=\"col-xs-6\">    <label for=\"time-picker\">Time</label>      <input type=\"text\" value=\"{time}\" name=\"time\" id=\"time-picker\" class=\"form-control\">    </div>  </div>  <div class=\"calendar\"></div>  <a href=\"#\" class=\"btn btn-primary pull-left done\">{doneText}</a>  <a href=\"#\" class=\"btn text-danger pull-right remove hidden\">{removeText}</a></div>";
+templates["datepicker"] = "<div id=\"datepicker\">  <div class=\"datepicker-header\">    <div class=\"datepicker-header-left\">      <label for=\"date-picker\" class=\"datepicker-header-label\">Date</label>      <input type=\"text\" value=\"{date}\" name=\"date\" id=\"date-picker\" class=\"datepicker-header-date\">    </div>    <div class=\"datepicker-header-right\">    <label for=\"time-picker\" class=\"datepicker-header-label\">Time</label>      <input type=\"text\" value=\"{time}\" name=\"time\" id=\"time-picker\" class=\"datepicker-header-time\">    </div>  </div>  <div class=\"calendar js-bootstrap-datepicker\"></div>  <a href=\"#\" class=\"button mod-primary u-pull-right done\">{doneText}</a>  <a href=\"#\" class=\"button mod-danger u-pull-left remove hidden\">{removeText}</a></div>";
 
   window.Picker = Picker;
 }(this));
