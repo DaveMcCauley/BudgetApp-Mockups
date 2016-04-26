@@ -20,6 +20,10 @@
   overflow-y: scroll;
 }
 
+.example-code.mod-tight {
+  margin-bottom: 0;
+}
+
 .example-font {
   color: $black;
   font-family: $font-family-base;
@@ -75,6 +79,22 @@
 
 .example-font.mod-size-8 {
   font-size: .8rem;
+}
+
+// special modifiers to the exmample-code class
+.example-code.mod-narrow-select > .select {
+  width: 60px;
+}
+
+.example-code.mod-narrow-multi > select {
+  width: 60px;
+}
+
+.date-range-picker > input,
+.prefilled-picker > input,
+.button-picker > input,
+.datebutton > input {
+  width: 125px;
 }
 
 

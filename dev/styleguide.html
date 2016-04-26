@@ -371,7 +371,9 @@
 <!-- htmlmin:ignore -->
 
 
-<h3>2.1.1 Button Modifiers</h3>
+
+
+<h2>7.1 Button Modifiers</h2>
 
 
 <p>
@@ -403,7 +405,8 @@
 
 
 
-<h3>2.1.2 Button Sizing</h3>
+
+<h2>7.2 Button Sizing</h2>
 
 
 <p>
@@ -415,7 +418,8 @@
 
 
 
-<h3>2.1.3 Button States</h3>
+
+<h2>7.3 Button States</h2>
 
 
 <p>
@@ -436,7 +440,11 @@
 
 
 
-<h3>2.1.4 Buttons with Glyphs</h3>
+
+<h2>7.4 Buttons with Glyphs</h2>
+
+
+<h3>7.4.1 Buttons with Glyphs and Text</h3>
 
 
 <p>
@@ -459,6 +467,12 @@
 </div>
 <!-- htmlmin:ignore -->
 
+
+
+
+<h3>7.4.2 Buttons with Glyphs Only</h3>
+
+
 <p>Button can also use icon glyphs without any text, such as:</p>
 
 <!-- htmlmin:ignore -->
@@ -478,272 +492,441 @@
 
 
 
+<h2>7.5 Vertically Aligned Buttons</h2>
 
-<h2>2.2 EXPERIMENTAL Buttons</h2>
+
+<h3>7.5.1 Buttons with Text Only</h3>
 
 
 <p>
-  This is a set of EXPERIMENTAL buttons…
+  When you have vertcially stacked buttons, use the <code>.mod-stack</code> class
+  to align the labels, rather than have them centered, to make scanning easier. The
+  modifier will fit the button width to the parent and align the text to the left.
 </p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div style="width: 150px;">
+  <button type="button" class="button mod-stack">
+    Preferences
+  </button>
+  <button type="button" class="button mod-stack">
+    Members
+  </button>
+  <button type="button" class="button mod-stack">
+    Schedule
+  </button>
+  <button type="button" class="button mod-stack">
+    Subscribe
+  </button>
+  <button type="button" class="button mod-stack">
+    Attach
+  </button>
+  <button type="button" class="button mod-stack">
+    Archive
+  </button>
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h3>7.5.2 Buttons with Icons and Text</h3>
+
+
 <p>
-  If clicking takes you to another page, use an <code>&lt;a&gt;</code> tag. If clicking
-  triggers something on the page via JavaScript, use a <code>&lt;button&gt;</code>.
+  Stacked buttons work with icons as well.
 </p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<div style="width: 150px;">
+  <button type="button" class="button mod-stack">
+    <span class="icon-settings"></span> Preferences
+  </button>
+  <button type="button" class="button mod-stack">
+    <span class="icon-check"></span> Members
+  </button>
+  <button type="button" class="button mod-stack">
+    <span class="icon-clock"></span> Schedule
+  </button>
+  <button type="button" class="button mod-stack">
+    <span class="icon-user-follow"></span> Subscribe
+  </button>
+  <button type="button" class="button mod-stack">
+    <span class="icon-paper-clip"></span> Attach
+  </button>
+  <button type="button" class="button mod-stack">
+    <span class="icon-briefcase"></span> Archive
+  </button>
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h1>8.0 Inputs</h1>
+
+
+
+
+<p>
+  Form inputs are largely managed by the browser. Some of the specific forms
+  may not be availabe in all browsers. Everything falls back to standard
+  text input where unavailable. The application is always responsible for
+  validating and escaping user inputs.
+</p>
+
+
+
+
+<h2>8.1 Text input form</h2>
+
+
+<p>A simple text input... </p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label for="usr">Name:</label>
+<input type="text" class="form-control" id="usr">
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.2 Password input form</h2>
+
+
+<p>Password hides the input...</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" id="pwd">
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.5 Text Area</h2>
+
+
+<p>
+  Use this for multi-line text entry. Adjust the vertical height with the "rows"
+  attribute
+</p>
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<textarea class="form-control" rows="3"></textarea>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.6 Selects</h2>
+
+
+<p>
+  Note that many native select menus—namely in Safari and Chrome—have rounded
+  corners that cannot be modified via border-radius properties.
+</p>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code mod-narrow-select js-inject-code">
+<label class="select">
+  <select class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+</label>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.7 Multiple Select</h2>
+
+
+<p>
+  For <code>&lt;select&gt</code> controls with the multiple attribute, multiple
+   options are shown by default.
+</p>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code mod-narrow-multi js-inject-code">
+  <select multiple class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+</div>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h2>8.8 Checkboxes</h2>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code js-inject-code">
+<label>
+  <input type="checkbox" value="">
+  Option one is this
+</label>
+<label>
+  <input type="checkbox" value="">
+  Options two is that
+</label>
+<!-- TODO delete the parent div here! -->
+<div class="checkbox disabled">
+  <label>
+    <input type="checkbox" value="" disabled>
+    Option two is disabled
+  </label>
+</div>
+</div>
+<!-- htmlmin:ignore -->
+
+<!-- TODO VERIFY THIS -->
 <blockquote>
-  There is no <code>&lt;input&gt;</code> defined at this time.
+  Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
+  cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
+  <code>.disabled</code> class to the parent <code>.radio</code>,
+  <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
 </blockquote>
 
+
+
+
+<h2>8.9 Radio Buttons</h2>
+
+
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
-<button type="button" class="btn"> Preferences </button>
-<a class="btn"> Schedule </a>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one is this...
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div>
+<div class="radio disabled">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Option three is disabled
+  </label>
+</div>
 </div>
 <!-- htmlmin:ignore -->
 
 
 
-<h3>2.2.1 Button Modifiers</h3>
+
+<h2>8.10 File input</h2>
 
 
 <p>
-  There are five basic button modifiers. Primary for key actions like
-  confirming or saving. Generally, you should only have one primary
-  action per form. Use the Danger modifier for dangerous actions like
-  deleting where there might be a way to go back.
+  File inputs look like crap defaulting to the browsers built-in styles for the "browse"
+  button. So, always use a <code>&lt;label&gt;</code> and set its <code>for</code>
+  attribute to the <code>id</code> of the <code>&lt;input&gt;</code>. They must match.
+  Then add the <code>.input-file</code> class to the input.
 </p>
 <p>
-  Transparent buttons are used within a page on sections with a non-white
-  background. Don’t use on forms or major call-outs. If on a white
-  background, don't use any additional modifiers. If on a darker, more
-  saturated background where white text is used, add <code>.mod-dark-background</code>.
-  If on a lighter, off-white background where dark text is still used,
-  add <code>.mod-light-background</code>.
-</p>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<button type="button" class="btn">Default</button>
-<button type="button" class="btn btn-success">Primary</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-warning">Danger</button>
-<button type="button" class="btn btn-danger">Transparent</button>
-<button type="button" class="btn btn-outline">Dark bg</button>
-<button type="button" class="btn btn-outline btn-transparent">Light bg</button>
-<button type="button" class="btn btn-border">Light bg</button>
-</div>
-<!-- htmlmin:ignore -->
-
-
-
-<h3>2.2.2 Button Sizing</h3>
-
-
-<p>
-  Buttons are sized relative to the text size of the button. Increasing or decreasing
-  the button's text size will scale the button appropriately. However, refrain from
-  chaning the button's size, unless absolutely necessary to solve a layout problem,
-  or deal with an unorthodox screen layout.
-</p>
-
-
-
-<h3>2.2.3 Button States</h3>
-
-
-<p>
-  Show a disabled button by appending <code>disabled</code> attribute. Note that
-  the <code>&lt;a&gt;</code> button has no disabled state.
+  Clicking the button brings up a file chooser in the browser...
 </p>
 
 <!-- htmlmin:ignore -->
 <div class="example-code js-inject-code">
-<button type="button" class="btn" disabled>Default</button>
-<button type="button" class="btn btn-success" disabled>Primary</button>
-<button type="button" class="btn btn-info" disabled>Info</button>
-<button type="button" class="btn btn-warning" disabled>Danger</button>
-<button type="button" class="btn btn-danger" disabled>Transparent</button>
-<button type="button" class="btn btn-outline" disabled>Dark bg</button>
-<button type="button" class="btn btn-outline btn-transparent" disabled>Light bg</button>
-<button type="button" class="btn btn-border" disabled>Light bg</button>
+<input type="file" name="file" id="file-1" class="input-file" />
+<label for="file-1">Add a File...</label>
+<input type="file" name="file" id="file-2" class="input-file" />
+<label for="file-2"><span class="icon-paper-clip"></span> Attach</label>
+<input type="file" name="file" id="file-3" class="input-file" disabled />
+<label for="file-3"><span class="icon-ban"></span>Disabled</label>
 </div>
 <!-- htmlmin:ignore -->
 
 
-
-<h3>2.1.4 Buttons with Glyphs</h3>
+<h2>8.11 Date and Time Input</h2>
 
 
 <p>
-  Buttons with glyphs provide a fast way of picking choices. Use these in places
-  where the user is presented an option, or many options to aid in quickly
-  recognizing the deisred action.
+  Since browers implement date/time inputs inconsistently, we include our own
+  customized date time picker to assit the user in choosing and entering dates
+  and times.
+</p>
+<p>
+  Time entry can be applied to multiple controls as follows
+</p>
+
+
+
+
+<h3>8.11.1 Date and Time as Text Input</h3>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code mod-tight js-inject-code">
+<div class="date-range-picker example">
+  <input type="text" name="start" class="example-datetime">
+</div>
+</div>
+<pre><code>$('.date-range-picker input').picker({
+
+  });</code></pre>
+<!-- htmlmin:ignore -->
+
+<p>
+  Supply the <code>value=</code> attribute for prefilled values
 </p>
 
 <!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<button type="button" class="btn">
-  <span class="icon-settings"></span> Preferences
-</button>
-<button type="button" class="btn">
-  <span class="icon-check"></span> OK
-</button>
-<button type="button" class="btn">
-  <span class="icon-clock"></span> Schedule
-</button>
+<div class="example-code mod-tight js-inject-code">
+<div class="prefilled-picker example">
+  <input type="text" name="schedule" value="12/12/2020 2:00 PM">
 </div>
-<!-- htmlmin:ignore -->
-
-<p>Button can also use icon glyphs without any text, such as:</p>
-
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<button type="button" class="btn btn-ico">
-  <span class="icon-cloud-download"></span>
-</button>
-<button type="button" class="btn btn-ico">
-  <span class="icon-users"></span>
-</button>
-<button type="button" class="btn btn-ico">
-  <span class="icon-power"></span>
-</button>
 </div>
+<pre><code>$('.prefilled-picker input').picker();</code></pre>
 <!-- htmlmin:ignore -->
 
 
 
 
+<h3>8.11.2 Date and Time as Clickable Link</h3>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <h3>2.1.4 Button Dropdowns</h3>
-      <p>Always construct dropdowns as single-button dropdowns. Avoid split buttons </p>
 <!-- htmlmin:ignore -->
-<div class="example-code mod-scroll js-inject-code">
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Default <span class="caret"></span>
+<div class="example-code mod-tight js-inject-code">
+<div class="button-picker example">
+  <a href="#">Schedule</a>
+  <input type="text" name="schedule">
+</div>
+</div>
+<pre><code>$('.button-picker a').picker({
+    outputTo: $('.button-picker input'),
+    prefill: true,
+});</code></pre>
+<!-- htmlmin:ignore -->
+
+
+
+
+<h3>8.11.3 Date and Time as Button</h3>
+
+
+<!-- htmlmin:ignore -->
+<div class="example-code mod-tight js-inject-code">
+<div class="datebutton">
+  <button type="button" class="btn btn-default btn-sm">
+    Schedule
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
+  <input type="text" name="button-test">
 </div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Primary <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
 </div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Success <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Info <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Warning <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group btn-group-sm">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Danger <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-      </div>
+<pre><code>$('.datebutton').picker({
+    outputTo: $('.datebutton input'),
+    prefill: true,
+});</code></pre>
 <!-- htmlmin:ignore -->
 
-      <h3>2.1.5 Diabled state</h3>
-      <p>Make buttons look unclickable by adding the <code>diabled</code> attribute to the <code>&lt;button&gt;</code></p>
+
+
+
+<h3>8.11.4 Initializing Date and Time Picker</h3>
+
+
+<p>
+  Initialize the markup with something like the following in the document head.
+  See the Wiki for further options provided by the plug in in the dependency
+  file folder.
+</p>
+
 
 <!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<button type="button" class="btn btn-sm btn-primary" disabled="disabled">Primary button</button>
-<button type="button" class="btn btn-sm btn-default" disabled="disabled">Buttong</button>
-      </div>
+<pre><code>$('.button-picker a').picker({
+  outputTo: $('.button-picker input'),
+  prefill: true,
+});
+</code></pre>
 <!-- htmlmin:ignore -->
 
-      <h4>For anchor elements shown as buttons...</h4>
-      Add the <code>.diabled</code> class to <code>&lt;a&gt;</code>.
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-      <a href="#" class="btn btn-primary btn-sm disabled" role="button">Primary link</a>
-      <a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
-      </div>
-<!-- htmlmin:ignore -->
 
-      <p>We use teh <code>.disabled</code> as autilty class, simliar to the <code>.active</code> class so no prefix is
-         requried
-      </p>
-      <blockquote>
-        <b>Link funtionality caveat</b>
-        This class uses <code>pointer-events: none</code> to try to disable the link funcationaly of the
-        <code>&lt;a&gt;</code> elements, bu that CSS property is not yet standardized and isn't fully supported
-        in older browsers. Also, keyboard naviation remain unaffected, so users can still activate thse links.
-        To be safe we have a javascript that disables links programatically.
-      </blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================================================== -->
 
       <h2>2.2 Labels</h2>
 
@@ -959,222 +1142,53 @@ $('#myAlert').on('closed.bs.alert', function() {
 
       <h2>3.1 Controls</h2>
 
-      <h3>3.1.1 Text input form</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="usr">Name:</label>
-<input type="text" class="form-control" id="usr">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.2 Password input form</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="pwd">Name:</label>
-<input type="password" class="form-control" id="pwd">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.3 Email input form</h3>
-      The input is evaluated by browser. (Developer should still santize it!)
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.4 File input</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label for="exampleInputFile">File input</label>
-<input type="file" id="exampleInputFile">
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.5 Date/Time input</h3>
 
-      As text input...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="date-range-picker example">
-  <input type="text" name="start" class="">
-</div>
-      </div>
-<!-- htmlmin:ignore -->
 
-      Prefilled value (in markup)...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="prefilled-picker example">
-  <input type="text" name="schedule" value="12/12/2020 2:00 PM">
-</div>
 
-      </div>
-<!-- htmlmin:ignore -->
 
-      As a clickable link...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="button-picker example">
-  <a href="#">Schedule</a>
-  <input type="text" name="schedule">
-</div>
-      </div>
-<!-- htmlmin:ignore -->
-      As a button...
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="datebutton">
-  <button type="button" class="btn btn-default btn-sm">
-    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Schedule
-  </button>
-  <input type="text" name="butt-test">
-</div>
-      </div>
-<!-- htmlmin:ignore -->
 
-      Initialize the markup with something like the following in the document head. See the
-      README.md for further options provided by the plug in in the dependency file folder.
 
-<!-- htmlmin:ignore -->
-      <pre>
-        <code>
-$('.button-picker a').picker({
-  outputTo: $('.button-picker input'),
-  prefill: true,
-});
-        </code>
-      </pre>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.6 Text Area</h3>
-      Use this for multi-line text entry. Adjust the vertical height with the "rows"
-      attribute
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<textarea class="form-control" rows="3"></textarea>
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.7 Checkboxes</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label>
-  <input type="checkbox" value="">
-  Option one is this and that&mdash;be sure to include why it's great
-</label>
-<div class="checkbox disabled">
-  <label>
-    <input type="checkbox" value="" disabled>
-    Option two is disabled
-  </label>
-</div>
-      </div>
-<!-- htmlmin:ignore -->
 
-      Disabled checkboxes (and radios) are supported, but to provide a "not-allowed"
-      cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the
-      <code>.disabled</code> class to the parent <code>.radio</code>,
-      <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline.</code>
 
-      <h3>3.1.8 Radio Buttons</h3>
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Option one is this and that&mdash;be sure to include why it's great
-  </label>
-</div>
-<div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Option two can be something else and selecting it will deselect option one
-  </label>
-</div>
-<div class="radio disabled">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    Option three is disabled
-  </label>
-</div>
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.9 Inline checkboxes and radio buttons</h3>
 
-      Use the .checkbox-inline or .radio-inline classes on a series of
-      checkboxes or radios for controls that appear on the same line.
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-</label>
 
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 3
-</label>
-      </div>
-<!-- htmlmin:ignore -->
 
-      <h3>3.1.10 Selects</h3>
 
-      Note that many native select menus—namely in Safari and Chrome—have rounded
-      corners that cannot be modified via border-radius properties.
 
-<!-- htmlmin:ignore -->
-<div class="example-code js-inject-code">
-<label class="select">
-  <select class="form-control">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </select>
-</label>
-</div>
-<!-- htmlmin:ignore -->
 
-      For &lt;select&gt; controls with the multiple attribute, multiple options are
-      shown by default.
 
-<!-- htmlmin:ignore -->
-      <div class="example-code js-inject-code">
-<select multiple class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-      </div>
-<!-- htmlmin:ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <h3>3.1.11 Static contorls</h3>
 

@@ -418,12 +418,19 @@ button {
   line-height: 1.2;
   margin: 0;
   outline: 0;
+  overflow: hidden;
   padding: .25em 1em;
   position: relative;
   text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; }
 
-/* line 36, ../scss/core/_buttons.scss */
+/* line 40, ../scss/core/_buttons.scss */
+a.button {
+  display: inline; }
+
+/* line 44, ../scss/core/_buttons.scss */
 a.button:focus,
 a.button:hover,
 input[type="submit"]:focus,
@@ -433,13 +440,13 @@ button:not([disabled]):hover {
   background: linear-gradient(to bottom, #5ba4cf 0%, #0079bf 100%);
   color: #fff; }
 
-/* line 47, ../scss/core/_buttons.scss */
+/* line 55, ../scss/core/_buttons.scss */
 a.button:active,
 input[type="submit"]:active,
 button:not([disabled]):active {
   background: linear-gradient(to bottom, #0079bf 0%, #055a8c 100%); }
 
-/* line 59, ../scss/core/_buttons.scss */
+/* line 67, ../scss/core/_buttons.scss */
 input[type="submit"][disabled],
 button[disabled] {
   background: #edeff0;
@@ -448,7 +455,7 @@ button[disabled] {
   cursor: default;
   font-weight: 300; }
 
-/* line 76, ../scss/core/_buttons.scss */
+/* line 84, ../scss/core/_buttons.scss */
 a.button.mod-primary,
 input[type="submit"].mod-primary,
 button.mod-primary {
@@ -457,7 +464,7 @@ button.mod-primary {
   border: 1px solid #519839;
   color: #fff; }
 
-/* line 85, ../scss/core/_buttons.scss */
+/* line 93, ../scss/core/_buttons.scss */
 a.button.mod-primary:focus,
 a.button.mod-primary:hover,
 input[type="submit"].mod-primary:focus,
@@ -467,20 +474,20 @@ button.mod-primary:not([disabled]):hover {
   background: linear-gradient(to bottom, #61bd4f 0%, #519839 100%);
   color: #fff; }
 
-/* line 95, ../scss/core/_buttons.scss */
+/* line 103, ../scss/core/_buttons.scss */
 a.button.mod-primary:active,
 input[type="submit"].mod-primary:active,
 button.mod-primary:not([disabled]):active {
   background: linear-gradient(to bottom, #519839 0%, #49852e 100%);
   color: #fff; }
 
-/* line 107, ../scss/core/_buttons.scss */
+/* line 115, ../scss/core/_buttons.scss */
 a.button.mod-danger,
 input[type="submit"].mod-danger,
 button.mod-danger {
   color: #eb5a46; }
 
-/* line 113, ../scss/core/_buttons.scss */
+/* line 121, ../scss/core/_buttons.scss */
 a.button.mod-danger:focus,
 a.button.mod-danger:hover,
 input[type="submit"].mod-danger:not([disabled]):focus,
@@ -491,7 +498,7 @@ button.mod-danger:not([disabled]):hover {
   box-shadow: 0 1px 0 #b04632;
   color: #fff; }
 
-/* line 124, ../scss/core/_buttons.scss */
+/* line 132, ../scss/core/_buttons.scss */
 a.button.mod-danger:active,
 input[type="submit"].mod-danger:not([disabled]):active,
 button.mod-danger:not([disabled]):active {
@@ -499,14 +506,14 @@ button.mod-danger:not([disabled]):active {
   box-shadow: 0 1px 0 #b04632;
   color: #fff; }
 
-/* line 138, ../scss/core/_buttons.scss */
+/* line 146, ../scss/core/_buttons.scss */
 a.button.mod-transparent,
 button.mod-transparent {
   background: rgba(196, 201, 204, 0.3);
   box-shadow: 0 1px rgba(149, 157, 161, 0.7);
   color: rgba(0, 0, 0, 0.7); }
 
-/* line 145, ../scss/core/_buttons.scss */
+/* line 153, ../scss/core/_buttons.scss */
 a.button.mod-transparent:focus,
 a.button.mod-transparent:hover,
 button.mod-transparent:not([disabled]):focus,
@@ -515,26 +522,26 @@ button.mod-transparent:not([disabled]):hover {
   box-shadow: 0 1px rgba(149, 157, 161, 0.6);
   color: rgba(0, 0, 0, 0.9); }
 
-/* line 154, ../scss/core/_buttons.scss */
+/* line 162, ../scss/core/_buttons.scss */
 a.button.mod-transparent:active,
 button.mod-transparent:not([disabled]):active {
   background: rgba(196, 201, 204, 0.5);
   box-shadow: 0 1px rgba(149, 157, 161, 0.5);
   color: black; }
 
-/* line 166, ../scss/core/_buttons.scss */
+/* line 174, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-dark-background,
 button.mod-transparent.mod-dark-background {
-  box-shadow: 0 1px black;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
   color: #fff; }
 
-/* line 175, ../scss/core/_buttons.scss */
+/* line 183, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-light-background,
 button.mod-transparent.mod-light-background {
   background: #fff;
   box-shadow: 0 1px rgba(196, 201, 204, 0.3); }
 
-/* line 181, ../scss/core/_buttons.scss */
+/* line 189, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-light-background:focus,
 a.button.mod-transparent.mod-light-background:hover,
 button.mod-transparent.mod-light-background:not([disabled]):focus,
@@ -542,60 +549,69 @@ button.mod-transparent.mod-light-background:not([disabled]):hover {
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px rgba(196, 201, 204, 0.2); }
 
-/* line 189, ../scss/core/_buttons.scss */
+/* line 197, ../scss/core/_buttons.scss */
 a.button.mod-transparent.mod-light-background:active,
 button.mod-transparent.mod-light-background:not([disabled]):active {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px rgba(149, 157, 161, 0.1); }
 
-/* line 201, ../scss/core/_buttons.scss */
+/* line 209, ../scss/core/_buttons.scss */
 a.button.mod-outline,
 button.mod-outline {
   background: #fff;
   border: 1px solid #aaa;
   color: #404b55; }
 
-/* line 208, ../scss/core/_buttons.scss */
+/* line 216, ../scss/core/_buttons.scss */
 a.button.mod-outline:focus,
 a.button.mod-outline:hover,
 button.mod-outline:not([disabled]):focus,
 button.mod-outline:not([disabled]):hover {
   background: rgba(237, 239, 240, 0.4);
-  border: 1px solid #00c2e0;
-  color: #00c2e0; }
+  border: 1px solid #0079bf;
+  color: #0079bf; }
 
-/* line 218, ../scss/core/_buttons.scss */
+/* line 226, ../scss/core/_buttons.scss */
 a.button.mod-outline:active,
 button.mod-outline:not([disabled]):active {
   background: rgba(214, 218, 220, 0.5);
-  color: #0c3953; }
+  color: #026aa7; }
 
-/* line 227, ../scss/core/_buttons.scss */
+/* line 235, ../scss/core/_buttons.scss */
+a.button.mod-stack,
+button.mod-stack {
+  clear: both;
+  margin-bottom: 10px;
+  min-width: 100px;
+  text-align: start;
+  width: 100%; }
+
+/* line 246, ../scss/core/_buttons.scss */
 button.mod-inline {
   box-shadow: 0 1px 0 #c4c9cc;
   display: inline;
   font-size: .8em;
   padding: .3em .8em; }
 
-/* line 237, ../scss/core/_buttons.scss */
+/* line 256, ../scss/core/_buttons.scss */
 a.button.mod-full,
 input[type="submit"].mod-full,
 button.mod-full {
   width: 100%; }
 
-/* line 245, ../scss/core/_buttons.scss */
+/* line 264, ../scss/core/_buttons.scss */
 a.button.mod-no-margin,
 input[type="submit"].mod-no-margin,
 button.mod-no-margin {
   margin: 0; }
 
-/* line 257, ../scss/core/_buttons.scss */
+/* line 276, ../scss/core/_buttons.scss */
 a.button.mod-icon,
 input[type="submit"].mod-icon,
 button.mod-icon {
   padding: .65em .9em; }
 
-/* line 263, ../scss/core/_buttons.scss */
+/* line 282, ../scss/core/_buttons.scss */
 a.button.mod-icon > [class*="icon-"],
 input[type="submit"].mod-icon > [class*="icon-"],
 button.mod-icon > [class*="icon-"] {
@@ -604,479 +620,14 @@ button.mod-icon > [class*="icon-"] {
   vertical-align: -.1em; }
 
 @media print {
-  /* line 275, ../scss/core/_buttons.scss */
+  /* line 294, ../scss/core/_buttons.scss */
   a.button,
   input[type="submit"],
   button {
     border: 1px solid #404b55;
     color: #404b55; } }
-/* line 287, ../scss/core/_buttons.scss */
+/* line 306, ../scss/core/_buttons.scss */
 .button > [class*="icon-"] {
-  font-size: 1.1em;
-  padding-right: .3em;
-  vertical-align: -.1em; }
-
-/* line 11, ../scss/core/_buttons2.scss */
-.btn {
-  -webkit-appearance: none;
-  background: #2ab27b;
-  border: 0;
-  border-radius: .25rem;
-  box-shadow: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 900;
-  line-height: 1.2rem;
-  margin: 0;
-  position: relative;
-  -webkit-tap-highlight-color: transparent;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  user-select: none;
-  vertical-align: bottom;
-  white-space: nowrap; }
-
-/* line 38, ../scss/core/_buttons2.scss */
-.btn:after {
-  border-radius: .25rem;
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-/* line 48, ../scss/core/_buttons2.scss */
-a.btn {
-  color: #fff; }
-
-/* line 52, ../scss/core/_buttons2.scss */
-.no-touch .btn.hover,
-.no-touch .btn:focus,
-.no-touch .btn:hover {
-  outline: 0;
-  text-decoration: none; }
-
-/* line 59, ../scss/core/_buttons2.scss */
-.btn.hover,
-.btn:focus,
-.btn:hover {
-  background: #2ab27b;
-  color: #fff; }
-
-/* line 66, ../scss/core/_buttons2.scss */
-.btn.hover:after,
-.btn:focus:after,
-.btn:hover:after {
-  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.25); }
-
-/* line 72, ../scss/core/_buttons2.scss */
-.btn.active,
-.btn:active {
-  color: #fff; }
-
-/* line 77, ../scss/core/_buttons2.scss */
-.btn.active:after,
-.btn:active:after {
-  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2); }
-
-/* line 82, ../scss/core/_buttons2.scss */
-.btn-outline {
-  background: #fbfbfa;
-  color: #555459 !important;
-  font-weight: 700;
-  text-shadow: none; }
-
-/* line 89, ../scss/core/_buttons2.scss */
-.btn-outline:after {
-  border: 1px solid #c7cacd; }
-
-/* line 93, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent {
-  background-color: transparent !important;
-  color: rgba(255, 255, 255, 0.9) !important; }
-
-/* line 98, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent:after {
-  border: 1px solid rgba(255, 255, 255, 0.5); }
-
-/* line 102, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent.active,
-.btn-outline.btn-transparent.hover,
-.btn-outline.btn-transparent:active,
-.btn-outline.btn-transparent:focus,
-.btn-outline.btn-transparent:hover {
-  background: rgba(255, 255, 255, 0.9) !important;
-  color: #3aa3e3 !important; }
-
-/* line 111, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent.active:after,
-.btn-outline.btn-transparent.hover:after,
-.btn-outline.btn-transparent:active:after,
-.btn-outline.btn-transparent:focus:after,
-.btn-outline.btn-transparent:hover:after {
-  border-color: transparent;
-  box-shadow: none; }
-
-/* line 120, ../scss/core/_buttons2.scss */
-.btn-outline.btn-transparent.active,
-.btn-outline.btn-transparent:active {
-  background-color: rgba(255, 255, 255, 0.8) !important; }
-
-/* line 125, ../scss/core/_buttons2.scss */
-.btn-outline.hover,
-.btn-outline:focus,
-.btn-outline:hover {
-  background: #fff;
-  color: #3aa3e3 !important; }
-
-/* line 132, ../scss/core/_buttons2.scss */
-.btn-outline.hover:after,
-.btn-outline:focus:after,
-.btn-outline:hover:after {
-  box-shadow: none; }
-
-/* line 138, ../scss/core/_buttons2.scss */
-.btn-outline:active {
-  color: #3aa3e3; }
-
-/* line 142, ../scss/core/_buttons2.scss */
-.btn-outline:active:after {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2); }
-
-/* line 146, ../scss/core/_buttons2.scss */
-.btn-outline.active {
-  color: #666 !important;
-  font-weight: 900;
-  margin-top: 0; }
-
-/* line 152, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger,
-.btn.btn-outline.btn-warning {
-  background: #fbfbfa !important; }
-
-/* line 157, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger:focus,
-.btn.btn-outline.btn-danger:hover,
-.btn.btn-outline.btn-warning:focus,
-.btn.btn-outline.btn-warning:hover {
-  background: #fff !important; }
-
-/* line 164, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-warning:focus,
-.btn.btn-outline.btn-warning:hover {
-  color: #dfa941 !important; }
-
-/* line 169, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-warning:focus:after,
-.btn.btn-outline.btn-warning:hover:after {
-  border-color: #dfa941; }
-
-/* line 174, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger:focus,
-.btn.btn-outline.btn-danger:hover {
-  color: #cb5234 !important; }
-
-/* line 179, ../scss/core/_buttons2.scss */
-.btn.btn-outline.btn-danger:focus:after,
-.btn.btn-outline.btn-danger:hover:after {
-  border-color: #cb5234; }
-
-/* line 184, ../scss/core/_buttons2.scss */
-.btn.btn-outline.disabled,
-.btn.btn-outline.disabled:hover {
-  background: #fff !important;
-  color: #9e9ea6 !important; }
-
-/* line 190, ../scss/core/_buttons2.scss */
-.btn-unstyle {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background: 0 0;
-  border: 0;
-  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: inherit;
-  -webkit-font-smoothing: antialiased;
-  font-weight: inherit;
-  line-height: inherit;
-  padding: 0; }
-
-/* line 204, ../scss/core/_buttons2.scss */
-.btn.btn-border {
-  background: 0 0;
-  border: 2px solid #fff; }
-
-/* line 209, ../scss/core/_buttons2.scss */
-.btn.btn-border:after {
-  box-shadow: none; }
-
-/* line 213, ../scss/core/_buttons2.scss */
-.btn.disabled,
-.btn.disabled:active,
-.btn.disabled:hover,
-.btn:disabled,
-.btn:disabled:active,
-.btn:disabled:hover {
-  background-color: #9e9ea6 !important;
-  box-shadow: none !important;
-  -khtml-opacity: .35;
-  -moz-opacity: .35;
-  opacity: .35;
-  pointer-events: none; }
-
-/* line 227, ../scss/core/_buttons2.scss */
-.btn {
-  font-size: 15px;
-  padding: 8px 14px 9px; }
-
-/* line 232, ../scss/core/_buttons2.scss */
-.btn-small {
-  font-size: 14px;
-  padding: 5px 10px; }
-
-/* line 237, ../scss/core/_buttons2.scss */
-.btn-small i:before {
-  font-size: 15px; }
-
-/* line 241, ../scss/core/_buttons2.scss */
-.btn-large {
-  font-size: 20px;
-  padding: 14px 2pc 1pc; }
-
-/* line 246, ../scss/core/_buttons2.scss */
-.btn-extra-large {
-  font-size: 1.125rem;
-  padding: 1.25rem; }
-
-/* line 251, ../scss/core/_buttons2.scss */
-.btn-expand {
-  display: block;
-  width: 100%; }
-
-@media only screen and (max-width: 640px) {
-  /* line 257, ../scss/core/_buttons2.scss */
-  .btn-large {
-    padding: 14px 20px 1pc; }
-
-  /* line 261, ../scss/core/_buttons2.scss */
-  .btn-extra-large {
-    padding: .9375rem 2rem; } }
-/* line 268, ../scss/core/_buttons2.scss */
-.btn-info {
-  background: #3aa3e3 !important; }
-
-/* line 272, ../scss/core/_buttons2.scss */
-.btn-warning {
-  background: #dfa941 !important; }
-
-/* line 276, ../scss/core/_buttons2.scss */
-.btn-danger {
-  background: #cb5234 !important; }
-
-/* line 280, ../scss/core/_buttons2.scss */
-.btn-transparent {
-  background: rgba(255, 255, 255, 0.25) !important; }
-
-/* line 284, ../scss/core/_buttons2.scss */
-.btn.btn-success {
-  background-color: #56b68b; }
-
-/* line 288, ../scss/core/_buttons2.scss */
-.btn.btn-success.disabled,
-.btn.btn-success:disabled {
-  background-color: #56b68b !important; }
-
-/* line 293, ../scss/core/_buttons2.scss */
-.btn i {
-  margin-right: .25rem; }
-
-/* line 297, ../scss/core/_buttons2.scss */
-.btn i:before {
-  font-size: inherit;
-  vertical-align: bottom; }
-
-/* line 302, ../scss/core/_buttons2.scss */
-.btn-large i {
-  font-size: 18px;
-  margin-right: .5rem; }
-
-/* line 307, ../scss/core/_buttons2.scss */
-.btn-extra-large i {
-  font-size: 1.25rem;
-  vertical-align: middle; }
-
-/* line 312, ../scss/core/_buttons2.scss */
-.btn-with-icon {
-  padding-left: 3rem !important;
-  position: relative; }
-
-/* line 317, ../scss/core/_buttons2.scss */
-.btn-with-icon i {
-  background: rgba(0, 0, 0, 0.2);
-  background-clip: padding-box;
-  border-bottom-left-radius: .25rem;
-  border-bottom-right-radius: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-  border-top-left-radius: .25rem;
-  border-top-right-radius: 0;
-  bottom: 0;
-  display: inline-block;
-  font-size: 1.4rem !important;
-  left: 0;
-  line-height: 2.25rem;
-  padding: .5rem .75rem;
-  position: absolute;
-  top: 0; }
-
-/* line 335, ../scss/core/_buttons2.scss */
-.btn-icon {
-  height: 30px;
-  padding: 0;
-  width: 2pc; }
-
-/* line 341, ../scss/core/_buttons2.scss */
-.btn-icon:before {
-  display: block; }
-
-/* line 345, ../scss/core/_buttons2.scss */
-.btn.dropdown-toggle .caret {
-  border-top-color: #fff; }
-
-/* line 349, ../scss/core/_buttons2.scss */
-.pill-btn {
-  border-radius: 2rem;
-  font-weight: 600;
-  padding: 5px 13px 6px; }
-
-/* line 355, ../scss/core/_buttons2.scss */
-.pill-btn:after {
-  border-radius: 2rem; }
-
-/* line 359, ../scss/core/_buttons2.scss */
-.pill-btn i {
-  margin-right: .1rem; }
-
-/* line 363, ../scss/core/_buttons2.scss */
-.pill-btn.btn-small {
-  padding: 3px 10px; }
-
-/* line 367, ../scss/core/_buttons2.scss */
-.pill-btn.btn-large {
-  padding: 14px 2pc 1pc; }
-
-/* line 371, ../scss/core/_buttons2.scss */
-.pill-btn.btn-large i {
-  margin-right: .4rem; }
-
-/* line 375, ../scss/core/_buttons2.scss */
-.btn.btn-attachment {
-  background-color: #fff !important;
-  border: 1px solid rgba(160, 160, 162, 0.7);
-  color: #565759;
-  font-size: 13px;
-  font-weight: 700;
-  height: 30px;
-  margin: 0 8px 8px 0;
-  max-width: 150px;
-  padding: 0 10px;
-  text-shadow: none;
-  vertical-align: middle; }
-
-/* line 389, ../scss/core/_buttons2.scss */
-.btn.btn-attachment .emoji-outer {
-  height: 1rem;
-  margin-top: -5px;
-  width: 1rem; }
-
-/* line 395, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:focus,
-.btn.btn-attachment:hover {
-  color: #565759; }
-
-/* line 400, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:focus:after,
-.btn.btn-attachment:hover:after {
-  box-shadow: 0 1px 2px rgba(160, 160, 162, 0.7); }
-
-/* line 405, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:active {
-  background-color: rgba(248, 249, 250, 0.6) !important;
-  box-shadow: inset 0 1px 2px rgba(160, 160, 162, 0.4); }
-
-/* line 410, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:active:not(:hover):after {
-  box-shadow: none !important; }
-
-/* line 414, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:disabled {
-  background-color: rgba(248, 249, 250, 0.6) !important;
-  border-color: rgba(186, 187, 191, 0.7) !important;
-  color: #a0a0a2 !important;
-  opacity: 1 !important; }
-
-/* line 421, ../scss/core/_buttons2.scss */
-.btn.btn-attachment:disabled .emoji-outer {
-  opacity: .4; }
-
-/* line 425, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.loading {
-  padding-right: 34px;
-  position: relative; }
-
-/* line 430, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.loading ts-inline-saver {
-  color: #a0a0a2;
-  margin-left: 0;
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%); }
-
-/* line 439, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-primary {
-  border-color: rgba(42, 178, 123, 0.7);
-  color: #2ab27b; }
-
-/* line 444, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-primary:hover::after {
-  box-shadow: 0 1px 2px rgba(42, 178, 123, 0.7); }
-
-/* line 448, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-primary:active {
-  background-color: rgba(248, 250, 249, 0.4);
-  box-shadow: inset 0 1px 2px rgba(42, 178, 123, 0.4); }
-
-/* line 453, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-danger {
-  border-color: rgba(235, 77, 92, 0.7);
-  color: #eb4d5c; }
-
-/* line 458, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-danger:hover::after {
-  box-shadow: 0 1px 2px rgba(235, 77, 92, 0.7); }
-
-/* line 462, ../scss/core/_buttons2.scss */
-.btn.btn-attachment.btn-danger:active {
-  background-color: rgba(248, 246, 246, 0.3);
-  box-shadow: inset 0 1px 2px rgba(235, 77, 92, 0.2); }
-
-/* line 470, ../scss/core/_buttons2.scss */
-.btn.btn-ico {
-  padding: 5px, 14px, 6px; }
-
-/* line 474, ../scss/core/_buttons2.scss */
-.btn.btn-ico > [class*="icon-"] {
-  font-size: 1.3em;
-  padding: 0;
-  vertical-align: -.1em; }
-
-/* line 483, ../scss/core/_buttons2.scss */
-.btn > [class*="icon-"] {
   font-size: 1.1em;
   padding-right: .3em;
   vertical-align: -.1em; }
@@ -1921,18 +1472,19 @@ a.btn {
 .u-blue-700 {
   color: #055a8c; }
 
+/* line 14, ../scss/core/_utilities.scss */
+.u-pull-left {
+  float: left; }
+
+/* line 18, ../scss/core/_utilities.scss */
+.u-pull-right {
+  float: right; }
+
 /* line 6, ../scss/core/_inputs.scss */
-input[type=url],
 input[type=text],
-input[type=tel],
-input[type=number],
-input[type=email],
 input[type=password],
 select,
 textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   border: 1px solid #c5c5c5;
   border-radius: .25rem;
   box-shadow: none;
@@ -1948,41 +1500,32 @@ textarea {
   transition: box-shadow 70ms ease-out,border-color 70ms ease-out;
   width: 100%; }
 
-/* line 37, ../scss/core/_inputs.scss */
-input[type=url]::-ms-clear,
+/* line 33, ../scss/core/_inputs.scss */
 input[type=text]::-ms-clear,
-input[type=tel]::-ms-clear,
-input[type=number]::-ms-clear,
-input[type=email]::-ms-clear,
 input[type=password]::-ms-clear,
 select::-ms-clear,
 textarea::-ms-clear {
   display: none; }
 
-/* line 48, ../scss/core/_inputs.scss */
+/* line 40, ../scss/core/_inputs.scss */
 input[type=file] {
   font-family: sans-serif;
   font-size: 9pt;
   font-weight: 400;
   line-height: 9pt;
-  width: auto; }
+  width: auto;
+  border: 2px dotted #00f; }
 
-/* line 59, ../scss/core/_inputs.scss */
+/* line 53, ../scss/core/_inputs.scss */
 input:hover,
 select:hover,
 textarea:hover {
   border-color: #2780f8; }
 
-/* line 65, ../scss/core/_inputs.scss */
+/* line 59, ../scss/core/_inputs.scss */
 .focus,
-input[type=url]:active,
-input[type=url]:focus,
 input[type=text]:active,
 input[type=text]:focus,
-input[type=number]:active,
-input[type=number]:focus,
-input[type=email]:active,
-input[type=email]:focus,
 input[type=password]:active,
 input[type=password]:focus,
 select:active,
@@ -1994,7 +1537,7 @@ textarea:focus {
   outline: 0;
   outline-offset: 0; }
 
-/* line 86, ../scss/core/_inputs.scss */
+/* line 74, ../scss/core/_inputs.scss */
 textarea {
   font-size: 1.6rem;
   height: 81pt;
@@ -2003,23 +1546,23 @@ textarea {
   vertical-align: top;
   width: 100%; }
 
-/* line 95, ../scss/core/_inputs.scss */
+/* line 83, ../scss/core/_inputs.scss */
 ::-webkit-input-placeholder {
   color: #aaa; }
 
-/* line 99, ../scss/core/_inputs.scss */
+/* line 87, ../scss/core/_inputs.scss */
 :-moz-placeholder {
   color: #aaa; }
 
-/* line 103, ../scss/core/_inputs.scss */
+/* line 91, ../scss/core/_inputs.scss */
 ::-moz-placeholder {
   color: #aaa; }
 
-/* line 107, ../scss/core/_inputs.scss */
+/* line 95, ../scss/core/_inputs.scss */
 :-ms-input-placeholder {
   color: #aaa; }
 
-/* line 111, ../scss/core/_inputs.scss */
+/* line 99, ../scss/core/_inputs.scss */
 input:disabled,
 input:disabled:active,
 select:disabled,
@@ -2029,46 +1572,52 @@ textarea:disabled {
   box-shadow: none;
   color: #9e9ea6; }
 
-/* line 121, ../scss/core/_inputs.scss */
+/* line 109, ../scss/core/_inputs.scss */
 .checkbox input[type=checkbox],
 .radio input[type=radio] {
   float: none; }
 
-/* line 126, ../scss/core/_inputs.scss */
+/* line 114, ../scss/core/_inputs.scss */
 input.mod-error,
 select.mod-error,
 textarea.mod-error {
   background: #fff6f6;
   border: 1px solid #cb5234; }
 
-/* line 133, ../scss/core/_inputs.scss */
+/* line 121, ../scss/core/_inputs.scss */
 input:focus.mod-error,
 select:focus.mod-error,
 textarea:focus.mod-error {
   border-color: #cb5234;
   box-shadow: 0 0 7px rgba(255, 0, 0, 0.15); }
 
-/* line 140, ../scss/core/_inputs.scss */
+/* line 128, ../scss/core/_inputs.scss */
 select {
   padding-right: 3rem;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none; }
 
-/* line 151, ../scss/core/_inputs.scss */
+/* line 141, ../scss/core/_inputs.scss */
+select[multiple] {
+  padding-right: 0;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+/* line 148, ../scss/core/_inputs.scss */
 label {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 .4rem; }
 
-/* line 158, ../scss/core/_inputs.scss */
+/* line 155, ../scss/core/_inputs.scss */
 label.checkbox,
 label.radio {
   cursor: pointer;
   padding-left: 1.5rem; }
 
-/* line 164, ../scss/core/_inputs.scss */
+/* line 161, ../scss/core/_inputs.scss */
 label.checkbox input[type=radio],
 label.checkbox input[type=checkbox],
 label.radio input[type=radio],
@@ -2076,27 +1625,27 @@ label.radio input[type=checkbox] {
   margin: -2px .4rem 0 -1.5rem;
   vertical-align: middle; }
 
-/* line 172, ../scss/core/_inputs.scss */
+/* line 169, ../scss/core/_inputs.scss */
 label.mod-error {
   color: #cb5234; }
 
-/* line 176, ../scss/core/_inputs.scss */
+/* line 173, ../scss/core/_inputs.scss */
 label.disabled {
   color: #9e9ea6; }
 
-/* line 180, ../scss/core/_inputs.scss */
+/* line 177, ../scss/core/_inputs.scss */
 label select {
   margin-top: .25rem; }
 
-/* line 184, ../scss/core/_inputs.scss */
+/* line 181, ../scss/core/_inputs.scss */
 label select::-ms-expand {
   display: none; }
 
-/* line 188, ../scss/core/_inputs.scss */
+/* line 185, ../scss/core/_inputs.scss */
 label.select {
   position: relative; }
 
-/* line 192, ../scss/core/_inputs.scss */
+/* line 189, ../scss/core/_inputs.scss */
 label.select:after {
   bottom: 1.3rem;
   content: ' ';
@@ -2107,9 +1656,77 @@ label.select:after {
   width: 20px;
   height: 20px; }
 
-/* line 203, ../scss/core/_inputs.scss */
+/* line 200, ../scss/core/_inputs.scss */
 label.select.disabled:after {
   color: #9e9ea6; }
+
+/* line 211, ../scss/core/_inputs.scss */
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+/* line 222, ../scss/core/_inputs.scss */
+.input-file + label {
+  background: linear-gradient(to bottom, #e2e4e6 0%, #cdd2d4 100%);
+  border: 1px solid #aaa;
+  border-radius: .25em;
+  box-shadow: 0 1px 0 #cdd2d4;
+  color: #404b55;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: .25em 1em;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; }
+
+/* line 244, ../scss/core/_inputs.scss */
+.input-file:focus + label,
+.input-file + label:hover {
+  background: linear-gradient(to bottom, #5ba4cf 0%, #0079bf 100%);
+  color: #fff; }
+
+/* line 250, ../scss/core/_inputs.scss */
+.inputfile + label * {
+  pointer-events: none; }
+
+/* line 254, ../scss/core/_inputs.scss */
+.input-file:active + label {
+  background: linear-gradient(to bottom, #0079bf 0%, #055a8c 100%); }
+
+/* line 258, ../scss/core/_inputs.scss */
+.input-file[disabled] + label,
+.input-file + label.disabled {
+  background: #edeff0;
+  box-shadow: none;
+  box-shadow: 0 1px 0 #cdd2d4;
+  color: #8c8c8c;
+  cursor: default;
+  font-weight: 300; }
+
+/* line 268, ../scss/core/_inputs.scss */
+.input-file + label > [class*="icon-"] {
+  font-size: 1.1em;
+  padding-right: .3em;
+  vertical-align: -.1em; }
+
+/* line 274, ../scss/core/_inputs.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 5px; }
 
 /* line 3, ../scss/core/_grids.scss */
 section {
@@ -2280,24 +1897,863 @@ section {
   /* line 172, ../scss/core/_grids.scss */
   .col + .col {
     margin-left: 0; } }
-/* line 7, ../scss/components/_datepicker.scss */
+/*!
+ * Datepicker for Bootstrap v1.6.0 (https://github.com/eternicode/bootstrap-datepicker)
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ */
+/* line 8, ../scss/components/_datepicker.scss */
+.datepicker {
+  border-radius: 4px;
+  direction: ltr; }
+
+/* line 12, ../scss/components/_datepicker.scss */
+.datepicker-inline {
+  width: 220px; }
+
+/* line 15, ../scss/components/_datepicker.scss */
+.datepicker.datepicker-rtl {
+  direction: rtl; }
+
+/* line 18, ../scss/components/_datepicker.scss */
+.datepicker.datepicker-rtl table tr td span {
+  float: right; }
+
+/* line 21, ../scss/components/_datepicker.scss */
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+  padding: 4px; }
+
+/* line 26, ../scss/components/_datepicker.scss */
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute; }
+
+/* line 36, ../scss/components/_datepicker.scss */
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-top: 0;
+  position: absolute; }
+
+/* line 45, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px; }
+
+/* line 48, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px; }
+
+/* line 51, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px; }
+
+/* line 54, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px; }
+
+/* line 57, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  top: -7px; }
+
+/* line 60, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  top: -6px; }
+
+/* line 63, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-top:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid rgba(0, 0, 0, 0.15); }
+
+/* line 68, ../scss/components/_datepicker.scss */
+.datepicker-dropdown.datepicker-orient-top:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #ffffff; }
+
+/* line 73, ../scss/components/_datepicker.scss */
+.datepicker > div {
+  display: none; }
+
+/* line 76, ../scss/components/_datepicker.scss */
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 85, ../scss/components/_datepicker.scss */
+.datepicker table tr td,
+.datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 25px;
+  border-radius: 0;
+  border: none; }
+
+/* line 93, ../scss/components/_datepicker.scss */
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent; }
+
+/* line 97, ../scss/components/_datepicker.scss */
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #b6bbbf; }
+
+/* line 101, ../scss/components/_datepicker.scss */
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+  color: #fff;
+  background: #0079bf;
+  cursor: pointer; }
+
+/* line 107, ../scss/components/_datepicker.scss */
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background-color: #edeff0;
+  color: #b6bbbf;
+  cursor: default; }
+
+/* line 114, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted {
+  color: #000000;
+  background-color: #d9edf7;
+  border-color: #85c5e5;
+  border-radius: 0; }
+
+/* line 120, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.focus {
+  color: #fff;
+  background-color: #0079bf;
+  border-color: #055a8c; }
+
+/* line 126, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted:hover {
+  color: #fff;
+  background-color: #0079bf;
+  border-color: #055a8c; }
+
+/* line 131, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted:active,
+.datepicker table tr td.highlighted.active {
+  color: #000000;
+  background-color: #afd9ee;
+  border-color: #52addb; }
+
+/* line 137, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted:active:hover,
+.datepicker table tr td.highlighted.active:hover,
+.datepicker table tr td.highlighted:active:focus,
+.datepicker table tr td.highlighted.active:focus,
+.datepicker table tr td.highlighted:active.focus,
+.datepicker table tr td.highlighted.active.focus {
+  color: #000000;
+  background-color: #91cbe8;
+  border-color: #298fc2; }
+
+/* line 147, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted.disabled:hover,
+.datepicker table tr td.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.highlighted:hover,
+.datepicker table tr td.highlighted.disabled:focus,
+.datepicker table tr td.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.disabled.focus,
+.datepicker table tr td.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.highlighted.focus {
+  background-color: #d9edf7;
+  border-color: #85c5e5; }
+
+/* line 159, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted.focused {
+  background: #afd9ee; }
+
+/* line 162, ../scss/components/_datepicker.scss */
+.datepicker table tr td.highlighted.disabled,
+.datepicker table tr td.highlighted.disabled:active {
+  background: #d9edf7;
+  color: #777777; }
+
+/* line 167, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today {
+  color: #000000;
+  background-color: #ffdb99;
+  border-color: #ffb733;
+  font-weight: 900; }
+
+/* line 173, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today:focus,
+.datepicker table tr td.today.focus {
+  color: #000000;
+  background-color: #ffc966;
+  border-color: #b37400; }
+
+/* line 179, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today:hover {
+  color: #000000;
+  background-color: #ffc966;
+  border-color: #f59e00; }
+
+/* line 184, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today:active,
+.datepicker table tr td.today.active {
+  color: #000000;
+  background-color: #ffc966;
+  border-color: #f59e00; }
+
+/* line 190, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today:active:hover,
+.datepicker table tr td.today.active:hover,
+.datepicker table tr td.today:active:focus,
+.datepicker table tr td.today.active:focus,
+.datepicker table tr td.today:active.focus,
+.datepicker table tr td.today.active.focus {
+  color: #000000;
+  background-color: #ffbc42;
+  border-color: #b37400; }
+
+/* line 200, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.today:focus,
+.datepicker table tr td.today.disabled.focus,
+.datepicker table tr td.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.today.focus {
+  background-color: #ffdb99;
+  border-color: #ffb733; }
+
+/* line 212, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today.focused {
+  background: #ffc966; }
+
+/* line 215, ../scss/components/_datepicker.scss */
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:active {
+  background: #ffdb99;
+  color: #777777; }
+
+/* line 220, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range {
+  color: #000000;
+  background-color: #eeeeee;
+  border-color: #bbbbbb;
+  border-radius: 0; }
+
+/* line 226, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range:focus,
+.datepicker table tr td.range.focus {
+  color: #000000;
+  background-color: #d5d5d5;
+  border-color: #7c7c7c; }
+
+/* line 232, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range:hover {
+  color: #000000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d; }
+
+/* line 237, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range:active,
+.datepicker table tr td.range.active {
+  color: #000000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d; }
+
+/* line 243, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range:active:hover,
+.datepicker table tr td.range.active:hover,
+.datepicker table tr td.range:active:focus,
+.datepicker table tr td.range.active:focus,
+.datepicker table tr td.range:active.focus,
+.datepicker table tr td.range.active.focus {
+  color: #000000;
+  background-color: #c3c3c3;
+  border-color: #7c7c7c; }
+
+/* line 253, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.disabled:hover,
+.datepicker table tr td.range[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range:hover,
+.datepicker table tr td.range.disabled:focus,
+.datepicker table tr td.range[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range:focus,
+.datepicker table tr td.range.disabled.focus,
+.datepicker table tr td.range[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.focus {
+  background-color: #eeeeee;
+  border-color: #bbbbbb; }
+
+/* line 265, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.focused {
+  background: #d5d5d5; }
+
+/* line 268, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:active {
+  background: #eeeeee;
+  color: #777777; }
+
+/* line 273, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted {
+  color: #000000;
+  background-color: #e4eef3;
+  border-color: #9dc1d3; }
+
+/* line 278, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.focus {
+  color: #000000;
+  background-color: #c1d7e3;
+  border-color: #4b88a6; }
+
+/* line 284, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted:hover {
+  color: #000000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0; }
+
+/* line 289, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted:active,
+.datepicker table tr td.range.highlighted.active {
+  color: #000000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0; }
+
+/* line 295, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted:active:hover,
+.datepicker table tr td.range.highlighted.active:hover,
+.datepicker table tr td.range.highlighted:active:focus,
+.datepicker table tr td.range.highlighted.active:focus,
+.datepicker table tr td.range.highlighted:active.focus,
+.datepicker table tr td.range.highlighted.active.focus {
+  color: #000000;
+  background-color: #a8c8d8;
+  border-color: #4b88a6; }
+
+/* line 305, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted.disabled:hover,
+.datepicker table tr td.range.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.highlighted:hover,
+.datepicker table tr td.range.highlighted.disabled:focus,
+.datepicker table tr td.range.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.disabled.focus,
+.datepicker table tr td.range.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted.focus {
+  background-color: #e4eef3;
+  border-color: #9dc1d3; }
+
+/* line 317, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted.focused {
+  background: #c1d7e3; }
+
+/* line 320, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.highlighted.disabled,
+.datepicker table tr td.range.highlighted.disabled:active {
+  background: #e4eef3;
+  color: #777777; }
+
+/* line 325, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today {
+  color: #000000;
+  background-color: #f7ca77;
+  border-color: #f1a417; }
+
+/* line 330, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.focus {
+  color: #000000;
+  background-color: #f4b747;
+  border-color: #815608; }
+
+/* line 336, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today:hover {
+  color: #000000;
+  background-color: #f4b747;
+  border-color: #bf800c; }
+
+/* line 341, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today.active {
+  color: #000000;
+  background-color: #f4b747;
+  border-color: #bf800c; }
+
+/* line 347, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today:active:hover,
+.datepicker table tr td.range.today.active:hover,
+.datepicker table tr td.range.today:active:focus,
+.datepicker table tr td.range.today.active:focus,
+.datepicker table tr td.range.today:active.focus,
+.datepicker table tr td.range.today.active.focus {
+  color: #000000;
+  background-color: #f2aa25;
+  border-color: #815608; }
+
+/* line 357, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled:focus,
+.datepicker table tr td.range.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.disabled.focus,
+.datepicker table tr td.range.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.today.focus {
+  background-color: #f7ca77;
+  border-color: #f1a417; }
+
+/* line 369, ../scss/components/_datepicker.scss */
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:active {
+  background: #f7ca77;
+  color: #777777; }
+
+/* line 374, ../scss/components/_datepicker.scss */
+.datepicker table tr td.selected,
+.datepicker table tr td.selected.highlighted {
+  color: #ffffff;
+  background-color: #777777;
+  border-color: #555555;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+/* line 381, ../scss/components/_datepicker.scss */
+.datepicker table tr td.selected:focus,
+.datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.focus,
+.datepicker table tr td.selected.highlighted.focus {
+  color: #ffffff;
+  background-color: #5e5e5e;
+  border-color: #161616; }
+
+/* line 389, ../scss/components/_datepicker.scss */
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.highlighted:hover {
+  color: #ffffff;
+  background-color: #5e5e5e;
+  border-color: #373737; }
+
+/* line 395, ../scss/components/_datepicker.scss */
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected.highlighted:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected.highlighted.active {
+  color: #ffffff;
+  background-color: #5e5e5e;
+  border-color: #373737; }
+
+/* line 403, ../scss/components/_datepicker.scss */
+.datepicker table tr td.selected:active:hover,
+.datepicker table tr td.selected.highlighted:active:hover,
+.datepicker table tr td.selected.active:hover,
+.datepicker table tr td.selected.highlighted.active:hover,
+.datepicker table tr td.selected:active:focus,
+.datepicker table tr td.selected.highlighted:active:focus,
+.datepicker table tr td.selected.active:focus,
+.datepicker table tr td.selected.highlighted.active:focus,
+.datepicker table tr td.selected:active.focus,
+.datepicker table tr td.selected.highlighted:active.focus,
+.datepicker table tr td.selected.active.focus,
+.datepicker table tr td.selected.highlighted.active.focus {
+  color: #ffffff;
+  background-color: #4c4c4c;
+  border-color: #161616; }
+
+/* line 419, ../scss/components/_datepicker.scss */
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.highlighted.disabled:hover,
+.datepicker table tr td.selected[disabled]:hover,
+.datepicker table tr td.selected.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.selected:hover,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:hover,
+.datepicker table tr td.selected.disabled:focus,
+.datepicker table tr td.selected.highlighted.disabled:focus,
+.datepicker table tr td.selected[disabled]:focus,
+.datepicker table tr td.selected.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.selected:focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.disabled.focus,
+.datepicker table tr td.selected.highlighted.disabled.focus,
+.datepicker table tr td.selected[disabled].focus,
+.datepicker table tr td.selected.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.selected.focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
+  background-color: #777777;
+  border-color: #555555; }
+
+/* line 440, ../scss/components/_datepicker.scss */
+.datepicker table tr td.active,
+.datepicker table tr td.active.highlighted {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+/* line 447, ../scss/components/_datepicker.scss */
+.datepicker table tr td.active:focus,
+.datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.focus,
+.datepicker table tr td.active.highlighted.focus {
+  color: #ffffff;
+  background-color: #5ba4cf;
+  border-color: #0079bf; }
+
+/* line 455, ../scss/components/_datepicker.scss */
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.highlighted:hover {
+  color: #ffffff;
+  background-color: #5ba4cf;
+  border-color: #0079bf; }
+
+/* line 461, ../scss/components/_datepicker.scss */
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active {
+  color: #fff;
+  background-color: #0079bf;
+  border-color: #055a8c; }
+
+/* line 469, ../scss/components/_datepicker.scss */
+.datepicker table tr td.active:active:hover,
+.datepicker table tr td.active.highlighted:active:hover,
+.datepicker table tr td.active.active:hover,
+.datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active:active:focus,
+.datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.highlighted.active:focus,
+.datepicker table tr td.active:active.focus,
+.datepicker table tr td.active.highlighted:active.focus,
+.datepicker table tr td.active.active.focus,
+.datepicker table tr td.active.highlighted.active.focus {
+  color: #ffffff;
+  background-color: #5ba4cf;
+  border-color: #0079bf; }
+
+/* line 485, ../scss/components/_datepicker.scss */
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.highlighted.disabled:hover,
+.datepicker table tr td.active[disabled]:hover,
+.datepicker table tr td.active.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.active:hover,
+fieldset[disabled] .datepicker table tr td.active.highlighted:hover,
+.datepicker table tr td.active.disabled:focus,
+.datepicker table tr td.active.highlighted.disabled:focus,
+.datepicker table tr td.active[disabled]:focus,
+.datepicker table tr td.active.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.active:focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.disabled.focus,
+.datepicker table tr td.active.highlighted.disabled.focus,
+.datepicker table tr td.active[disabled].focus,
+.datepicker table tr td.active.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.active.focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+
+/* line 506, ../scss/components/_datepicker.scss */
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px; }
+
+/* line 516, ../scss/components/_datepicker.scss */
+.datepicker table tr td span:hover,
+.datepicker table tr td span.focused {
+  background: #eeeeee; }
+
+/* line 520, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: default; }
+
+/* line 526, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+/* line 535, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.active:focus,
+.datepicker table tr td span.active:hover:focus,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.focus,
+.datepicker table tr td span.active:hover.focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.focus {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #122b40; }
+
+/* line 547, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204d74; }
+
+/* line 555, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204d74; }
+
+/* line 567, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.active:active:hover,
+.datepicker table tr td span.active:hover:active:hover,
+.datepicker table tr td span.active.disabled:active:hover,
+.datepicker table tr td span.active.disabled:hover:active:hover,
+.datepicker table tr td span.active.active:hover,
+.datepicker table tr td span.active:hover.active:hover,
+.datepicker table tr td span.active.disabled.active:hover,
+.datepicker table tr td span.active.disabled:hover.active:hover,
+.datepicker table tr td span.active:active:focus,
+.datepicker table tr td span.active:hover:active:focus,
+.datepicker table tr td span.active.disabled:active:focus,
+.datepicker table tr td span.active.disabled:hover:active:focus,
+.datepicker table tr td span.active.active:focus,
+.datepicker table tr td span.active:hover.active:focus,
+.datepicker table tr td span.active.disabled.active:focus,
+.datepicker table tr td span.active.disabled:hover.active:focus,
+.datepicker table tr td span.active:active.focus,
+.datepicker table tr td span.active:hover:active.focus,
+.datepicker table tr td span.active.disabled:active.focus,
+.datepicker table tr td span.active.disabled:hover:active.focus,
+.datepicker table tr td span.active.active.focus,
+.datepicker table tr td span.active:hover.active.focus,
+.datepicker table tr td span.active.disabled.active.focus,
+.datepicker table tr td span.active.disabled:hover.active.focus {
+  color: #ffffff;
+  background-color: #204d74;
+  border-color: #122b40; }
+
+/* line 595, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active:hover.disabled:hover,
+.datepicker table tr td span.active.disabled.disabled:hover,
+.datepicker table tr td span.active.disabled:hover.disabled:hover,
+.datepicker table tr td span.active[disabled]:hover,
+.datepicker table tr td span.active:hover[disabled]:hover,
+.datepicker table tr td span.active.disabled[disabled]:hover,
+.datepicker table tr td span.active.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active:hover.disabled:focus,
+.datepicker table tr td span.active.disabled.disabled:focus,
+.datepicker table tr td span.active.disabled:hover.disabled:focus,
+.datepicker table tr td span.active[disabled]:focus,
+.datepicker table tr td span.active:hover[disabled]:focus,
+.datepicker table tr td span.active.disabled[disabled]:focus,
+.datepicker table tr td span.active.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td span.active:focus,
+fieldset[disabled] .datepicker table tr td span.active:hover:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active:hover.disabled.focus,
+.datepicker table tr td span.active.disabled.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.disabled.focus,
+.datepicker table tr td span.active[disabled].focus,
+.datepicker table tr td span.active:hover[disabled].focus,
+.datepicker table tr td span.active.disabled[disabled].focus,
+.datepicker table tr td span.active.disabled:hover[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active.focus,
+fieldset[disabled] .datepicker table tr td span.active:hover.focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled.focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+
+/* line 634, ../scss/components/_datepicker.scss */
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+  color: #777777; }
+
+/* line 638, ../scss/components/_datepicker.scss */
+.datepicker .datepicker-switch {
+  width: 145px; }
+
+/* line 641, ../scss/components/_datepicker.scss */
+.datepicker .datepicker-switch,
+.datepicker .prev,
+.datepicker .next,
+.datepicker tfoot tr th {
+  cursor: pointer; }
+
+/* line 647, ../scss/components/_datepicker.scss */
+.datepicker .datepicker-switch:hover,
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
+  background: #eeeeee; }
+
+/* line 653, ../scss/components/_datepicker.scss */
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle; }
+
+/* line 659, ../scss/components/_datepicker.scss */
+.input-group.date .input-group-addon {
+  cursor: pointer; }
+
+/* line 662, ../scss/components/_datepicker.scss */
+.input-daterange {
+  width: 100%; }
+
+/* line 665, ../scss/components/_datepicker.scss */
+.input-daterange input {
+  text-align: center; }
+
+/* line 668, ../scss/components/_datepicker.scss */
+.input-daterange input:first-child {
+  border-radius: 3px 0 0 3px; }
+
+/* line 671, ../scss/components/_datepicker.scss */
+.input-daterange input:last-child {
+  border-radius: 0 3px 3px 0; }
+
+/* line 674, ../scss/components/_datepicker.scss */
+.input-daterange .input-group-addon {
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  line-height: 1.42857143;
+  text-shadow: 0 1px 0 #fff;
+  border-width: 1px 0;
+  margin-left: -5px;
+  margin-right: -5px; }
+
+/* line 692, ../scss/components/_datepicker.scss */
 #datepicker {
-  background: #f7f7f7;
-  border-radius: 3px;
+  background: #edeff0;
+  border: 1px solid #cdd2d4;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  margin-top: 10px;
+  border-radius: 3px;
+  width: 240px;
   padding: 10px;
-  width: 300px; }
-  /* line 16, ../scss/components/_datepicker.scss */
+  margin-top: 10px;
+  margin-bottom: 20px; }
+  /* line 702, ../scss/components/_datepicker.scss */
   #datepicker input {
     margin-bottom: 15px; }
-  /* line 20, ../scss/components/_datepicker.scss */
+  /* line 706, ../scss/components/_datepicker.scss */
   #datepicker .datepicker-inline {
     width: 100%; }
-  /* line 24, ../scss/components/_datepicker.scss */
+  /* line 710, ../scss/components/_datepicker.scss */
   #datepicker .datepicker table {
     width: 100% !important; }
+
+/* For example */
+/* line 718, ../scss/components/_datepicker.scss */
+#root {
+  margin: 50px;
+  text-align: center; }
+
+/* line 723, ../scss/components/_datepicker.scss */
+.example + .example {
+  margin-top: 50px; }
+
+/* customization to ditch bootstrap starts here ============================= */
+/* line 729, ../scss/components/_datepicker.scss */
+.datepicker-days {
+  margin-bottom: 15px; }
+
+/* line 733, ../scss/components/_datepicker.scss */
+.datepicker-header-left {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 10px;
+  position: relative;
+  min-height: 1px; }
+
+/* line 742, ../scss/components/_datepicker.scss */
+.datepicker-header-right {
+  float: right;
+  width: 50%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px; }
+
+/* line 752, ../scss/components/_datepicker.scss */
+.datepicker-header-label {
+  font-size: 1.4rem; }
+
+/* line 756, ../scss/components/_datepicker.scss */
+input.datepicker-header-date {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .4rem; }
+
+/* line 762, ../scss/components/_datepicker.scss */
+input.datepicker-header-time {
+  box-sizing: border-box;
+  padding: .4rem; }
+
+/* line 767, ../scss/components/_datepicker.scss */
+.datepicker-table-condensed {
+  padding: 5px;
+  font-size: 1.4rem; }
+
+/* line 772, ../scss/components/_datepicker.scss */
+.datepicker-table-condensed > thead > tr > th {
+  padding: 3px; }
+
+/* line 778, ../scss/components/_datepicker.scss */
+.datepicker-table-condensed > tbody > tr > td {
+  background-color: #fff;
+  border: 1px solid #cdd2d4;
+  padding: 3px; }
 
 /* line 23, ../scss/components/_topnav.scss */
 .topnav {

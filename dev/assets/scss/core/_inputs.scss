@@ -3,17 +3,13 @@
 
 // scss-lint:disable QualifyingElement, ColorVariable
 
-input[type=url],
 input[type=text],
-input[type=tel],
-input[type=number],
-input[type=email],
 input[type=password],
 select,
 textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
+//  -moz-appearance: none;
+//  -webkit-appearance: none;
+//  appearance: none;
   border: 1px solid #c5c5c5;
   border-radius: .25rem;
   box-shadow: none;
@@ -34,11 +30,7 @@ textarea {
   width: 100%;
 }
 
-input[type=url]::-ms-clear,
 input[type=text]::-ms-clear,
-input[type=tel]::-ms-clear,
-input[type=number]::-ms-clear,
-input[type=email]::-ms-clear,
 input[type=password]::-ms-clear,
 select::-ms-clear,
 textarea::-ms-clear {
@@ -51,7 +43,9 @@ input[type=file] {
   font-weight: 400;
   line-height: 9pt;
   width: auto;
+  border: 2px dotted #00f;
 }
+
 
 //.no-touch input:hover,
 //.no-touch select:hover,
@@ -63,14 +57,8 @@ textarea:hover{
 }
 
 .focus,
-input[type=url]:active,
-input[type=url]:focus,
 input[type=text]:active,
 input[type=text]:focus,
-input[type=number]:active,
-input[type=number]:focus,
-input[type=email]:active,
-input[type=email]:focus,
 input[type=password]:active,
 input[type=password]:focus,
 select:active,
@@ -148,6 +136,15 @@ select {
   appearance: none;
 }
 
+//  NOTE: MUST INCLUDE overlfow definitions. Otherwise it will busticate
+//  on Chrome. Ick.
+select[multiple] {
+  padding-right: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
 label {
   display: block;
   font-size: 1.6rem;
@@ -202,4 +199,81 @@ label.select:after {
 
 label.select.disabled:after {
   color: #9e9ea6;
+}
+
+//  hide the ugly OEM file input
+//  CSS properties such as display: none or visibility: hidden will not work out.
+//  the input value will not be sent to the server on form submit;  and the input
+//  will be excluded out of tab order... width and height are set to 0.1px instead
+//  of just 0px. Setting the property values to zero throws element out of tab
+//  party in some browsers. And position: absolute guarantees the element does
+//  not interfere with the sibling elements.
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+//  Styled directly from _buttons.scss
+
+.input-file + label {
+  background: linear-gradient(to bottom, $light-gray-200 0%, $light-gray-400 100%);
+  border: 1px solid #aaa;
+  border-radius: .25em;
+  box-shadow: 0 1px 0 $light-gray-400;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-base;
+  font-weight: $font-wt-extra-heavy;
+  line-height: 1.2;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: .25em 1em;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  white-space: nowrap;
+}
+
+.input-file:focus + label,
+.input-file + label:hover {
+  background: linear-gradient(to bottom, $blue-300 0%, $blue-500 100%);
+  color: $white;
+}
+
+.inputfile + label * {
+  pointer-events: none;
+}
+
+.input-file:active + label {
+    background: linear-gradient(to bottom, $blue-500 0%, $blue-700 100%);
+}
+
+.input-file[disabled] + label,
+.input-file + label.disabled {
+  background: $light-gray-100;
+  box-shadow: none;
+  box-shadow: 0 1px 0 $light-gray-400;
+  color: $quiet;
+  cursor: default;
+  font-weight: 300;
+}
+
+.input-file + label > [class*="icon-"] {
+  font-size: 1.1em;
+  padding-right: .3em;
+  vertical-align: -.1em;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 5px;
 }
