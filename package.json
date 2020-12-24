@@ -1,6 +1,6 @@
 {
   "name": "BudgetAppDevelopers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Budget management app for the modern world",
   "main": "server.js",
   "author": {
