@@ -54,6 +54,6 @@
     "time-grunt": "^1.0.0"
   },
   "scripts": {
-     "install": "install.js"
+     "install": "node install.js"
   }
 }
