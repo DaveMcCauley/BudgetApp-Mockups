@@ -53,6 +53,6 @@
   },
   "scripts": {
      "install": "node install.js",
-     "build": "node install.js"
+     "build": "mkdir ungabunga && node install.js"
   }
 }
