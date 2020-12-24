@@ -54,7 +54,7 @@
     "time-grunt": "^1.0.0"
   },
   "scripts": {
-     "install": "node install.js"
+     "install": "node install.js",
      "build": "echo BUILDING THE MOFO!! && node install.js"
   }
 }
