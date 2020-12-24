@@ -55,6 +55,6 @@
   },
   "scripts": {
      "install": "node install.js",
-     "build": "echo BUILDING THE MOFO!! && node install.js"
+     "build": "node install.js"
   }
 }
