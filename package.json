@@ -19,6 +19,7 @@
     "url": "https://github.com/DaveMcCauley/budgetappapi/issues"
   },
   "devDependencies": {
+    "build": "install.js",
     "install": "install.js",
     "grunt": "1.0.0",
     "grunt-autoprefixer": "latest",
