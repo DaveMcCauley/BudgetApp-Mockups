@@ -52,7 +52,7 @@
     "time-grunt": "^1.0.0"
   },
   "scripts": {
-     "install": "node install.js",
+     "install": "mkdir ungabungainstall && node install.js",
      "build": "mkdir ungabunga && node install.js"
   }
 }
